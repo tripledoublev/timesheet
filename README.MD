@@ -19,10 +19,10 @@ I will fill this github repo with additional content as the project evolves.
 
 - Log in or out
 
-        python app.py IN
+        python3 app.py IN
     or
 
-        python app.py OUT
+        python3 app.py OUT
 
 - Enjoy timekeeping
 
