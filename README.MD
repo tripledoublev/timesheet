@@ -20,7 +20,9 @@ I will fill this github repo with additional content as the project evolves.
 - Log in or out
 
         python app.py IN
-        or
+
+    or
+
         python app.py OUT
 
 - Enjoy timekeeping
