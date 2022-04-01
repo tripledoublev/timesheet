@@ -14,7 +14,6 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('timeout', help='IN or OUT')
 args = parser.parse_args()
-all_Lines = ' '
 
 # in or out and time and time again
 status = args.timeout
