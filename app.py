@@ -9,11 +9,13 @@
 import time
 import datetime
 import argparse
+import twitter.post_tweet as tweetMachine
 
 # parsing arguments
 parser = argparse.ArgumentParser()
 parser.add_argument('--time', type=str, help='IN or OUT', required=False)
 parser.add_argument('--text', type=str, help='text entry', required=False)
+parser.add_argument("--tweet", help="Send tweet as @vncntxyz", action="store_true")
 args = parser.parse_args()
 
 # in or out and time and time again
@@ -39,6 +41,8 @@ if status is None:
         msg_file.write("\n")
         # and write to file
         msg_file.write(str(timeNow) + ', ' + str(textEntry))
+        if args.tweet:
+            tweetMachine.main(textEntry)
         print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
         print('░░░    Your message was logged in m.txt   ░░░')
         print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')    
