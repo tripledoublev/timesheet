@@ -5,8 +5,8 @@
 I created a simple Python script that allows me to timestamp my presence in the workspace.
 The data is stored in t.txt and will be used as basic material for generative art.
 
-I added the possibility to log thoughts as strings in m.txt by using --text
-As you might want to share some of those thoughts, I added the option to --tweet in order to send these text logs directly to Twitter. 
+I added the possibility to log thoughts as strings in m.txt by using **--text**.
+As you might want to share some of those thoughts, I added the option to **--tweet** in order to send these text logs directly to Twitter. 
 
 I will fill this github repo with additional content as the project evolves.
 
