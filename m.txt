@@ -3,3 +3,7 @@
 1648934543, For the first time in 10 years of art practice, I have now a studio space. After so much time without such a dedicated space, I find my art and my life entangled to an extent where I can't seem to understand how to locate my practice within such a delimited place.
 1649019034,  
 1649019127, Locating labour within place, space and time
+1649106256,  
+1649106376, Tweeting from the command line interface.
+1649106756,  
+1649107004, Reducing noise by tweeting from the code editor's terminal.
