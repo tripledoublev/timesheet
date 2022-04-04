@@ -2,11 +2,12 @@
 
 ## A Python experiment to create a timecard for logging my time spent at the studio
 
-I created a simple Python script that allows me to timestamp my presence in the workspace.
-The data is stored in t.txt and will be used as basic material for generative art.
+I created a simple Python script that allows me to timestamp my presence in the workspace by using *--time IN* or *--time OUT*.
+The data is stored in t.txt and will be used as basic material to generate alternate visualizations.
 
-I added the possibility to log thoughts as strings in m.txt by using **--text**.
-As you might want to share some of those thoughts, I added the option to **--tweet** in order to send these text logs directly to Twitter. 
+I added the possibility to log thoughts as strings in another file named m.txt by using **--text**.
+As we live in a connected world, I thought I might want to share some of those thoughts.
+ I added the option **--tweet** in order to send these text logs directly to Twitter. 
 
 I will fill this github repo with additional content as the project evolves.
 
@@ -29,13 +30,21 @@ I will fill this github repo with additional content as the project evolves.
 
 - Log your thoughts with --text
 
-        python3 app.py -text "Your text comes here"
+        python3 app.py --text "Your text comes here"
 
-- Add --tweet to send text log entry from command line interface to twitter
+- To be able to tweet, you will need to do the following steps
 
-        python3 app.py -text "Your tweet comes here" --tweet
-    
-    The code used to tweet is located locally in the subfolder 'twitter' and saved as 'post_tweet.py'. In the file 'app.py', the tweeting component is imported on line 12 and the main() function is called on line 47. The 'post_tweet.py' file contains the following code which can be modified after setting up your own twitter credentials:   
+        1. Sign up as a [Twitter developer](https://developer.twitter.com/) to use its API 
+
+        2. Create a folder name twitter
+
+        mkdir twitter
+
+        3. Change directory into that new folder 
+
+        cd twitter
+
+        4. Create a new file named post_tweet.py and insert the following code
 
         import tweepy
 
@@ -48,7 +57,18 @@ I will fill this github repo with additional content as the project evolves.
 
         ### Tweeting to the linked twitter account
         API.update_status(status = (tweet))
+        
+        5. Insert your access credentials where it says API KEY, SECRET, ACCESS TOKEN and ACCESS TOKEN SECRET
+        
+        6. Install tweepy
 
+        pip install tweepy
+
+        - You can now add --tweet to send your text log entry from the command line interface to twitter
+
+        python3 app.py --text "Your tweet comes here" --tweet
+    
+    The tweeting component is located locally in a subfolder 'twitter' and saved as 'post_tweet.py'. In the file 'app.py', the tweeting component is imported on line 12 and the main() function is called on line 47. 
 
 - Enjoy timekeeping
 
