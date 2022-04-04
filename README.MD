@@ -32,19 +32,20 @@ I will fill this github repo with additional content as the project evolves.
 
         python3 app.py --text "Your text comes here"
 
-- To be able to tweet, you will need to do the following steps
+- To be able to tweet, you will need to do the following steps. The tweeting component is located in a subfolder 'twitter' and saved as 'post_tweet.py'. 
+In the file 'app.py', the file is imported on line 12 and the main() function is called on line 47. 
 
-        1. Sign up as a [Twitter developer](https://developer.twitter.com/) to use its API 
+1. Sign up as a [Twitter developer](https://developer.twitter.com/) to use its API 
 
-        2. Create a folder name twitter
+2. Create a folder name twitter
 
         mkdir twitter
 
-        3. Change directory into that new folder 
+3. Change directory into that new folder 
 
         cd twitter
 
-        4. Create a new file named post_tweet.py and insert the following code
+4. Create a new file named post_tweet.py and insert the following code
 
         import tweepy
 
@@ -57,18 +58,18 @@ I will fill this github repo with additional content as the project evolves.
 
         ### Tweeting to the linked twitter account
         API.update_status(status = (tweet))
-        
-        5. Insert your access credentials where it says API KEY, SECRET, ACCESS TOKEN and ACCESS TOKEN SECRET
-        
-        6. Install tweepy
+
+5. Insert your access credentials where it says API KEY, SECRET, ACCESS TOKEN and ACCESS TOKEN SECRET
+
+6. Install tweepy
 
         pip install tweepy
 
-        - You can now add --tweet to send your text log entry from the command line interface to twitter
+- You can now add --tweet to send your text log entry from the command line interface to twitter
 
         python3 app.py --text "Your tweet comes here" --tweet
-    
-    The tweeting component is located locally in a subfolder 'twitter' and saved as 'post_tweet.py'. In the file 'app.py', the tweeting component is imported on line 12 and the main() function is called on line 47. 
+
+
 
 - Enjoy timekeeping
 
