@@ -41,15 +41,16 @@ if status is None:
         msg_file.write("\n")
         # and write to file
         msg_file.write(str(timeNow) + ', ' + str(textEntry))
-        if args.tweet:
-            tweetMachine.main(textEntry)
         print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
         print('░░░    Your message was logged in m.txt   ░░░')
-        print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')    
-        print('')
-        print('Logged: "' + textEntry + '"')
-        print('')
-        print('')
+        print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░') 
+        if args.tweet:
+            tweetMachine.main(textEntry)
+                print('')
+                print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
+                print('░░░    Tweeted: "' + textEntry + '"   ░░░')
+                print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
+                print('')
 
 
 else:
