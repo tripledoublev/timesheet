@@ -9,7 +9,7 @@
 import time
 import datetime
 import argparse
-import twitter.post_tweet as tweetMachine
+#import twitter.post_tweet as tweetMachine
 
 # parsing arguments
 parser = argparse.ArgumentParser()
@@ -50,7 +50,7 @@ if status is None:
         # if --tweet is present
         if args.tweet:
             # tweet it
-            tweetMachine.main(textEntry)
+            #tweetMachine.main(textEntry)
             print('')
             print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░') 
             print('Tweeted: "' + textEntry + '"')

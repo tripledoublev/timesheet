@@ -33,7 +33,7 @@ I will fill this github repo with additional content as the project evolves.
         python3 app.py --text "Your text comes here"
 
 - To be able to tweet, you will need to do the following steps. The tweeting component is located in a subfolder 'twitter' and saved as 'post_tweet.py'. 
-In the file 'app.py', the file is imported on line 12 and the main() function is called on line 47. 
+In the file 'app.py', the file is imported on line 12 and the main() function is called on line 53. To avoid errors when this component isn't installed, these have been commented out. 
 
 1. Sign up as a [Twitter developer](https://developer.twitter.com/) to use its API 
 
@@ -64,6 +64,8 @@ In the file 'app.py', the file is imported on line 12 and the main() function is
 6. Install tweepy
 
         pip install tweepy
+
+7. You can now uncomment line 12 and 53 in 'app.py' (remove '#' at the beginning of the line).
 
 - You can now add --tweet to send your text log entry from the command line interface to twitter
 
