@@ -32,8 +32,8 @@ I will fill this github repo with additional content as the project evolves.
 
         python3 app.py --text "Your text comes here"
 
-- To be able to tweet, you will need to do the following steps. The tweeting component is located in a subfolder 'twitter' and saved as 'post_tweet.py'. 
-In the file 'app.py', the file is imported on line 12 and the main() function is called on line 53. To avoid errors when this component isn't installed, these have been commented out. 
+- The tweeting component is located in a subfolder 'twitter' and saved as 'post_tweet.py'. 
+In the file 'app.py', the file is imported on line 12 and the main() function is called on line 53. To avoid errors when this component isn't installed, these have been commented out. To be able to tweet, you will need to do the following steps.
 
 1. Sign up as a [Twitter developer](https://developer.twitter.com/) to use its API 
 
