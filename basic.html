@@ -1,0 +1,109 @@
+<html>
+<!-- using javascript to generate abstract timesheet visualization -->
+<!-- version 0 -->
+<head>
+<style>
+    /* defines margin for the main content */
+    body {
+        margin-top: 5%;
+        margin-left:2%;
+    }
+    /* defines styles for div */
+    div.textColor {
+        
+        font-size:5vh;
+        word-wrap: break-word;
+        border-radius: 0px;
+        margin:calc(0.5vw + 1vh);
+        padding:10px;
+        text-align: center;
+        border: 1px solid black;
+    }
+    div.flexbox {
+        display: flex;
+        justify-content: center;
+            align-items: center;
+            height: 100vh;
+    }
+</style>
+</head>
+<body id="dcontain">
+    <div class="flexbox" id="fbox">
+<script>
+seconds = [
+"9690",
+"1992",
+"4943",
+"15671",
+"12570",
+"6820",
+"5451",
+"2365"
+];
+
+let divcount = 1;
+document.addEventListener('DOMContentLoaded', seconds.forEach(myFunction));
+function myFunction(item) {
+const bode = document.getElementById("dcontain");
+const flbx = document.getElementById("fbox");
+var timeNow = Math.round(Date.now() / 1000);
+divcount++;
+var div = document.createElement('div');
+var color = (item / 20671) * 255
+var borderR = (item / 15671) * 100
+div.innerHTML = item;
+div.id = divcount;
+div.className = "textColor";
+div.style.height = (item * 0.01) + 'px';
+div.style.width = (100 * 0.25) + 'vw';
+var gsFactor = color / 255;
+console.log(gsFactor)
+div.style.borderRadius = borderR + 'px';
+function toColor(num) {
+  num >>>= 0;
+var b = num & 0xFF,
+g = (num & 0xFF00) >>> 8,
+r = (num & 0xFF0000) >>> 16,
+a = ( ((num & 0xFF000000) >>> 24 ) / 255) + 0.027451;
+return "rgba(" + [r, g, b, a].join(",") + ")"
+}
+function fgColor(num) {
+  num >>>= 0;
+var b = num & 0xFF,
+g = (num & 0xFF00) >>> 8,
+r = (num & 0xFF0000) >>> 16,
+a = ( ((num & 0xFF000000) >>> 24 ) / 200) + 0.027451;
+return "rgba(" + [255 - (r * gsFactor), 255 - (g * gsFactor), 255 - (b * gsFactor), 255 - (a * gsFactor)].join(",") + ")"}
+
+
+ 
+rgba = toColor(timeNow * 20009);
+hex = fgColor(timeNow * 20009);
+bode.style.backgroundColor = rgba;
+bode.style.color = hex;
+div.style.backgroundColor = hex;
+div.style.color = hex;
+flbx.appendChild(div);
+
+};
+
+
+function Count() {
+
+
+setTimeout(Count, 3000);
+
+
+//rr = (255 - r).toString(16);
+//gg = (255 - g).toString(16);
+//bb = (255 - b).toString(16);
+// pad each with zeros and return
+// return "#" + padZero(r) + padZero(g) + padZero(b);
+}
+
+Count();
+
+</script>
+</div>
+</body>
+</html>
