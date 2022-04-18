@@ -5,31 +5,70 @@
 <style>
     /* defines margin for the main content */
     body {
-        margin-top: 5%;
-        margin-left:2%;
+        margin: 0;
+    
+    }
+    .dcontain {
+        position:absolute;
+        left:0;
+        top:0;
+        cursor: pointer;
+        width:100%;
+        height:100%;
     }
     /* defines styles for div */
     div.textColor {
         
-        font-size:5vh;
+        font-size:1vh;
         word-wrap: break-word;
         border-radius: 0px;
         margin:calc(0.5vw + 1vh);
         padding:10px;
         text-align: center;
-        border: 1px solid black;
+        border: 2px solid black;
+    }
+    .textColor:hover {
+        border: 2px solid black;
+        box-shadow: 2px 4px 5px 3px #333333;
+    }
+    .textColor:active {
+        opacity:0.333;
+        cursor:pointer;
     }
     div.flexbox {
         display: flex;
-        justify-content: center;
-            align-items: center;
-            height: 100vh;
+        flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+            height: 90vh;
     }
 </style>
 </head>
-<body id="dcontain">
+<body>
+    <div class="dcontain">
     <div class="flexbox" id="fbox">
 <script>
+
+
+
+
+function toColor(num) {
+  num >>>= 0;
+var b = num & 0xFF,
+g = (num & 0xFF00) >>> 8,
+r = (num & 0xFF0000) >>> 16,
+a = ( ((num & 0xFF000000) >>> 24 ) / 255) + 0.027451;
+return "rgba(" + [r, g, b, a].join(",") + ")"
+}
+function fgColor(num, mult) {
+  num >>>= 0;
+var b = num & 0xFF,
+g = (num & 0xFF00) >>> 8,
+r = (num & 0xFF0000) >>> 16,
+a = ( ((num & 0xFF000000) >>> 24 ) / 200) + 0.027451;
+return "rgba(" + [255 - (r * mult), 255 - (g * mult), 255 - (b * mult), 255 - (a * mult)].join(",") + ")"}
+
 seconds = [
 "9690",
 "1992",
@@ -41,44 +80,40 @@ seconds = [
 "2365"
 ];
 
-let divcount = 1;
-document.addEventListener('DOMContentLoaded', seconds.forEach(myFunction));
-function myFunction(item) {
-const bode = document.getElementById("dcontain");
+let divcount = 0;
+
+document.addEventListener('DOMContentLoaded', seconds.forEach(main));
+function main(item) {
+    const bode = document.getElementById("dcontain");
 const flbx = document.getElementById("fbox");
 var timeNow = Math.round(Date.now() / 1000);
 divcount++;
 var div = document.createElement('div');
 var color = (item / 20671) * 255
 var borderR = (item / 15671) * 100
-div.innerHTML = item;
+
 div.id = divcount;
 div.className = "textColor";
-div.style.height = (item * 0.01) + 'px';
-div.style.width = (100 * 0.25) + 'vw';
+div.style.width = '7vw';
+div.style.height = (item / 16000) * 40 + 'vh';
 var gsFactor = color / 255;
-console.log(gsFactor)
-div.style.borderRadius = borderR + 'px';
-function toColor(num) {
-  num >>>= 0;
-var b = num & 0xFF,
-g = (num & 0xFF00) >>> 8,
-r = (num & 0xFF0000) >>> 16,
-a = ( ((num & 0xFF000000) >>> 24 ) / 255) + 0.027451;
-return "rgba(" + [r, g, b, a].join(",") + ")"
+// Click to color:
+hello = (e) => {
+    console.log(e.target.id);
+    var newTime = Math.round(Date.now() / 1000);
+    console.log(newTime);
+    document.getElementById(e.target.id).style.backgroundColor = fgColor(newTime * 209, 0.5);
 }
-function fgColor(num) {
-  num >>>= 0;
-var b = num & 0xFF,
-g = (num & 0xFF00) >>> 8,
-r = (num & 0xFF0000) >>> 16,
-a = ( ((num & 0xFF000000) >>> 24 ) / 200) + 0.027451;
-return "rgba(" + [255 - (r * gsFactor), 255 - (g * gsFactor), 255 - (b * gsFactor), 255 - (a * gsFactor)].join(",") + ")"}
 
 
- 
-rgba = toColor(timeNow * 20009);
-hex = fgColor(timeNow * 20009);
+// A button object calls the function:
+
+div.addEventListener("click", hello, false);
+
+console.log(gsFactor);
+div.style.borderRadius = borderR + 'px';
+rgba = toColor(timeNow * 209);
+hex = fgColor(timeNow * 209, gsFactor);
 bode.style.backgroundColor = rgba;
 bode.style.color = hex;
 div.style.backgroundColor = hex;
@@ -88,22 +123,8 @@ flbx.appendChild(div);
 };
 
 
-function Count() {
-
-
-setTimeout(Count, 3000);
-
-
-//rr = (255 - r).toString(16);
-//gg = (255 - g).toString(16);
-//bb = (255 - b).toString(16);
-// pad each with zeros and return
-// return "#" + padZero(r) + padZero(g) + padZero(b);
-}
-
-Count();
-
 </script>
+</div>
 </div>
 </body>
 </html>
