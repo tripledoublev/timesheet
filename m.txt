@@ -14,3 +14,5 @@
 1649289222,  
 1649289573, 200 years of media art
 1649360504,  
+1650400735, You'll find me at the studio tweeting from the command-line interface
+1650400785,
