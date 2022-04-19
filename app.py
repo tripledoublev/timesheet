@@ -9,7 +9,7 @@
 import time
 import datetime
 import argparse
-#import twitter.post_tweet as tweetMachine
+import twitter.post_tweet as tweetMachine
 
 # parsing arguments
 parser = argparse.ArgumentParser()
@@ -40,7 +40,7 @@ if status is None:
         msg_file.seek(0) 
         msg_file.write("\n")
         # and write to file
-        msg_file.write(str(timeNow) + ', ' + str(textEntry))
+        #msg_file.write(str(timeNow) + ', ' + str(textEntry))
         # write to console
         print('')    
         print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
@@ -50,10 +50,10 @@ if status is None:
         # if --tweet is present
         if args.tweet:
             # tweet it
-            #tweetMachine.main(textEntry)
+            tweetMachine.main(textEntry)
             print('')
             print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░') 
-            print('Tweeted: "' + textEntry + '"')
+            print('░░░   Your message was sent to twitter.   ░░░')
             print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░') 
             print('')
 
