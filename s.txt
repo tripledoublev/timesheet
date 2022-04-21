@@ -1,1 +1,13 @@
-seconds per day
+seconds per day, consecutive days at the studio
+9690 seconds today -> 1 consecutives day
+1992 seconds today -> 2 consecutives days
+4943 seconds today -> 3 consecutives days
+15671 seconds today -> 4 consecutives days
+12570 seconds today -> 5 consecutives days
+6820 seconds today -> 6 consecutives days
+5451 seconds today -> 7 consecutives days
+2365 seconds today -> 8 consecutives days
+unconsecutive
+11605 seconds today -> 1 consecutives day
+9281 seconds today -> 2 consecutives days
+12545 seconds today -> 3 consecutives days
