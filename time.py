@@ -14,7 +14,7 @@
 # line in the 'seconds per day' file (s.txt)
 #
 # The 'unconsecutive' mention is added 
-# between lines when the seconds at the studio
+# between entries when the seconds at the studio
 # were not logged on consecutive days.
 #
 # open timesheet
