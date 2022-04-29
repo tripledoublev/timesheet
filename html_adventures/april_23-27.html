@@ -1,0 +1,112 @@
+
+<html>
+    <!-- using javascript to generate abstract timesheet visualization -->
+    <!-- version 0 -->
+    <head>
+    <style>
+        /* defines margin for the main content */
+        body {
+            margin-top: 2%;
+            margin-left:2%;
+        }
+        /* defines styles for div */
+        div.textColor {
+            
+            font-size:1vh;
+            word-wrap: break-word;
+            border-radius: 0px;
+            margin:calc(0.5vw + 1vh);
+            padding:10px;
+            text-align: center;
+        }
+        .textColor:active {
+            opacity:0.333;
+            cursor:pointer;
+        }
+        div.flexbox {
+            display: flex;
+            flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+                height: 90vh;
+        }
+    </style>
+    </head>
+    <body id="dcontain">
+        <div class="flexbox" id="fbox">
+    <script>
+    
+    
+    
+    
+    function toColor(num) {
+      num >>>= 0;
+    var b = num & 0xFF,
+    g = (num & 0xFF00) >>> 8,
+    r = (num & 0xFF0000) >>> 16,
+    a = ( ((num & 0xFF000000) >>> 24 ) / 255) + 0.027451;
+    return "rgba(" + [r, g, b, a].join(",") + ")"
+    }
+    function fgColor(num, mult) {
+      num >>>= 0;
+    var b = num & 0xFF,
+    g = (num & 0xFF00) >>> 8,
+    r = (num & 0xFF0000) >>> 16,
+    a = ( ((num & 0xFF000000) >>> 24 ) / 200) + 0.027451;
+    return "rgba(" + [255 - (r * mult), 255 - (g * mult), 255 - (b * mult), 255 - (a * mult)].join(",") + ")"}
+    
+    seconds = [
+    "4514",
+"6751",
+"18450",
+"14710",
+"6119"
+    ];
+    
+    let divcount = 0;
+    document.addEventListener('DOMContentLoaded', seconds.forEach(main));
+    function main(item) {
+    const bode = document.getElementById("dcontain");
+    const flbx = document.getElementById("fbox");
+    var timeNow = Math.round(Date.now() / 1000);
+    divcount++;
+    var div = document.createElement('div');
+    var color = (item / 20671) * 255
+    var borderR = 100 - ((item / 20000) * 100) 
+    
+    div.id = divcount;
+    div.className = "textColor";
+    div.style.height = 45 - ((item / 19000) * 45) + 'vw';
+    div.style.width = (item / 19000) * 40 + 'vh';
+    var gsFactor = color / 255;
+    // Arrow Function:
+    hello = (e) => {
+        console.log(e.target.id);
+        var newTime = Math.round(Date.now() / 1000);
+        console.log(newTime);
+        document.getElementById(e.target.id).style.backgroundColor = fgColor(newTime * 20009, 0.5);
+    }
+    
+    
+    // A button object calls the function:
+    
+    div.addEventListener("click", hello, false);
+    console.log(gsFactor);
+    div.style.borderRadius = borderR + 'px';
+     
+    rgba = toColor(timeNow * 20009);
+    hex = fgColor(timeNow * 20009, gsFactor);
+    bode.style.backgroundColor = rgba;
+    bode.style.color = hex;
+    div.style.backgroundColor = hex;
+    div.style.color = hex;
+    flbx.appendChild(div);
+    
+    };
+    
+    
+    </script>
+    </div>
+    </body>
+    </html>
