@@ -24,3 +24,5 @@
 1650917710, 
 1651097908, I don't have kids but if I did I would teach them how to tweet from the command-line interface so they can formulate their own thoughts away from sponsored content and algorithmic hell.
 1651097932, 
+1651252738, So distracted by the fact that wifi is down that I forgot to checkin with app.py
+1651252802, I must have been here for over 240 seconds before I realized this delayed --time IN
