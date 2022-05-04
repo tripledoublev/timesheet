@@ -17,3 +17,10 @@ unconsecutive
 18450 seconds today, 3 consecutives days, 25
 14710 seconds today, 4 consecutives days, 26
 6119 seconds today, 5 consecutives days, 27
+unconsecutive
+17820 seconds today, 1 consecutives day, 29
+9196 seconds today, 2 consecutives days, 30
+12420 seconds today, 3 consecutives days, 1
+16370 seconds today, 4 consecutives days, 2
+33131 seconds today, 5 consecutives days, 3
+26217 seconds today, 6 consecutives days, 4
