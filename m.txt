@@ -30,3 +30,6 @@
 1651529978, The studio is only one of many places where art gets made.
 1651584484, 
 1651607542, the moment you realize your fingerprints are all over those SD cards.
+1652106834, 
+1652106844, I found inner peace by tweeting from the CLI
+1652129765, 
