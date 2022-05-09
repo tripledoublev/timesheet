@@ -24,3 +24,5 @@ unconsecutive
 16370 seconds today, 4 consecutives days, 2
 33131 seconds today, 5 consecutives days, 3
 26217 seconds today, 6 consecutives days, 4
+3329 seconds today, 7 consecutives days, 5
+850 seconds today, 8 consecutives days, 6
