@@ -1,3 +1,7 @@
+# Note: Possibility for new text file generated each time
+# VS
+# Removing previous second count and overwriting the same file
+#
 # Counting consecutive days at the studio
 # and the seconds spent per day
 #
