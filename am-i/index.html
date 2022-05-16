@@ -43,7 +43,7 @@
         <script type="text/javascript">
         let myDiv = document.getElementById('textcontainer');
         function CheckIf() {
-            var myRequest = new Request('presence.txt');
+            var myRequest = new Request('present.txt');
             fetch(myRequest).then(function(response) {
             return response.text().then(function(text) {
             myDiv.innerHTML = text;
