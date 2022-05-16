@@ -14,3 +14,18 @@ jobs:
         server: ftp.koumbit.net
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
+        server-dir: vncnt/www/charlebois.info/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          app.py
+          m.txt
+          s.txt
+          README.MD
+          time.py
+          .gitignore
+          ../twitter/**
+          ../html_adventures/**
+
+          
