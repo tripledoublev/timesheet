@@ -83,8 +83,14 @@ else:
                 print(hav)
                 print(som)
                 print(fun)
+                with open('IN-OR-OUT/presence.txt','w') as f:
+                    f.write("IN")    
             if status == 'OUT' :
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 print('░░░  A studio is only one of many places  ░░░')
                 print('░░░  where art gets made. Au revoir       ░░░')
-                print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')     
+                print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
+                print('')
+                print('')
+                with open('IN-OR-OUT/presence.txt','w') as f:
+                    f.write("OUT")      
