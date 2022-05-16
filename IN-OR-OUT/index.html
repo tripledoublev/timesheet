@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <div id="textcontainer"></div>
+        <script type="text/javascript">
+        let myDiv = document.getElementById('textcontainer');
+        function CheckIf() {
+            var myRequest = new Request('presence.txt');
+            fetch(myRequest).then(function(response) {
+            return response.text().then(function(text) {
+            myDiv.innerHTML = text;
+        });
+            });
+        }
+        window.onload = CheckIf;
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
