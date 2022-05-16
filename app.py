@@ -84,7 +84,7 @@ else:
                 print(som)
                 print(fun)
                 with open('IN-OR-OUT/presence.txt','w') as f:
-                    f.write("IN")    
+                    f.write("I am at the studio.")    
             if status == 'OUT' :
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 print('░░░  A studio is only one of many places  ░░░')
@@ -93,4 +93,4 @@ else:
                 print('')
                 print('')
                 with open('IN-OR-OUT/presence.txt','w') as f:
-                    f.write("OUT")      
+                    f.write("I am not at the studio.")      
