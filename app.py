@@ -83,7 +83,7 @@ else:
                 print(hav)
                 print(som)
                 print(fun)
-                with open('IN-OR-OUT/presence.txt','w') as f:
+                with open('am-i/present.txt','w') as f:
                     f.write("I am at the studio.")    
             if status == 'OUT' :
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
@@ -92,5 +92,8 @@ else:
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 print('')
                 print('')
-                with open('IN-OR-OUT/presence.txt','w') as f:
+                print('*********************************************')
+                print('You can now commit and push to update website')
+                print('*********************************************')
+                with open('am-i/present.txt','w') as f:
                     f.write("I am not at the studio.")      
