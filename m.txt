@@ -34,3 +34,5 @@
 1652106844, I found inner peace by tweeting from the CLI
 1652129765, 
 1652817644, I created this web page to facilitate impromptu studio visits. https://vincent.charlebois.info/am-i/
+1653177095,  
+1653177328, I often need to physically go somewhere but it's impossible to leave because the internet is shouting at me.
