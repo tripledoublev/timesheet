@@ -41,14 +41,24 @@
                 width: auto;
                 height: auto;
             }
+
             .flex-item {
                 padding: 5px;
                 width: 60vw;
                 margin: 10px;
                 color: white;
                 font-family: Impact, fantasy;
+                text-align: center
+            }
+            #textcontainer {
+                
                 font-size: calc(7vw + 7vh);
-                text-align: center;
+;
+            }
+            #datecontainer {
+                font-size: calc(2.5vw + 2.5vh);
+                font-style: italic;
+                color: #4caf50;
             }
         </style>
     </head>
@@ -56,13 +66,23 @@
         <div class="flex-container">
             <div class="row"> 
                 <div class="flex-item" id="textcontainer"></div>
+                <div class="flex-item" id="datecontainer"></div>
         <script type="text/javascript">
         let myDiv = document.getElementById('textcontainer');
+        let otherDiv = document.getElementById('datecontainer');
         function CheckIf() {
             var myRequest = new Request('present.txt');
             fetch(myRequest).then(function(response) {
             return response.text().then(function(text) {
             myDiv.innerHTML = text;
+            if (text === "I am not at the studio.") {
+                var otherRequest = new Request('counting.txt');
+                fetch(otherRequest).then(function(response) {
+                return response.text().then(function(text) {
+                otherDiv.innerHTML = text;
+        });
+            });
+            }
         });
             });
         }

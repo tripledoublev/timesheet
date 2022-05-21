@@ -96,4 +96,6 @@ else:
                 print('You can now commit and push to update website')
                 print('*********************************************')
                 with open('am-i/present.txt','w') as f:
-                    f.write("I am not at the studio.")      
+                    f.write("I am not at the studio.")
+                with open('am-i/counting.txt','w') as c:
+                    c.write('Last seen: ' + str(dateNow))      
