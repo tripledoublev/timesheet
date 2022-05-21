@@ -1,0 +1,28 @@
+    /* defines margin for the main content */
+    body {
+        margin-top: 2%;
+        margin-left:2%;
+    }
+    /* defines styles for div */
+    div.textColor {
+        
+        font-size:1vh;
+        word-wrap: break-word;
+        border-radius: 0px;
+        margin:calc(0.5vw + 1vh);
+        padding:10px;
+        text-align: center;
+    }
+    .textColor:active {
+        opacity:0.333;
+        cursor:pointer;
+    }
+    div.flexbox {
+        display: flex;
+        flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+            height: 90vh;
+            padding:3rem;
+    }
