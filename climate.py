@@ -238,9 +238,6 @@ def main():
             with open('am-i/HOT.txt','w') as f:
                 timeNow = round(time.time())
                 dateNow = datetime.datetime.fromtimestamp(timeNow)
-                data_archive.seek(0)
-                data_archive.write("\n")
-                data_archive.write(str(timeNow) + " " + str(round(temp, 2)) + str(degree_sign) + "C " + str(round(humi, 2)) + "% " + str(round(lux, 2)) + "Lux " + str(round(press,2)) + "hPa " + str(dateNow))
                 print(str(dateNow) + " " + str(timeNow) + " " +str(round(temp, 2)) + str(degree_sign) + "C" + " " + str(round(humi, 2)) + "%" + " " + str(round(lux, 2)) + "Lux" + " " + str(round(press,2)) + "hPa")
                 f.write("when the temperature was" + " " +str(round(temp, 2)) + str(degree_sign) + "C")
             break
