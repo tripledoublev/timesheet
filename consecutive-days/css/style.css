@@ -3,6 +3,10 @@
         margin-top: 2%;
         margin-left:2%;
     }
+
+    .grey-bg {
+        background-color: lightgrey;
+    }
     /* defines styles for div */
     div.textColor {
         
@@ -12,6 +16,15 @@
         margin:calc(0.5vw + 1vh);
         padding:10px;
         text-align: center;
+    }
+
+    .textColor a{
+        padding: 1rem 2rem 1rem 2rem;
+        border-radius: 3rem;
+        text-decoration:none;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:calc(2vw + 1.5vh);
     }
     .textColor:active {
         opacity:0.333;
@@ -23,6 +36,18 @@
     align-items: center;
     justify-content: center;
     align-content: center;
-            height: 90vh;
             padding:3rem;
+    }
+
+    .textColor:hover{
+
+        filter: invert(0%);
+    }
+
+    .page-link {
+        border-radius:30px;
+    }
+
+    h1 {
+        font-size: calc(5vw + 5vh);
     }
