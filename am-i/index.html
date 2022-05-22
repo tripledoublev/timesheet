@@ -51,13 +51,19 @@
             }
             #textcontainer {
                 font-family: Impact, fantasy;
-                font-size: calc(7vw + 7vh);
+                font-size: calc(5vw + 5vh);
 ;
             }
             #datecontainer {
                 font-size: calc(2.5vw + 2.5vh);
                 font-style: italic;
                 color: #4caf50;
+                font-family: monospace;
+            }
+            #tempcontainer {
+                font-size: calc(2.5vw + 2.5vh);
+                font-style: italic;
+                color: #5757bd;
                 font-family: monospace;
             }
         </style>
@@ -67,9 +73,11 @@
             <div class="row"> 
                 <div class="flex-item" id="textcontainer"></div>
                 <div class="flex-item" id="datecontainer"></div>
+                <div class="flex-item" id="tempcontainer"></div>
         <script type="text/javascript">
         let myDiv = document.getElementById('textcontainer');
         let otherDiv = document.getElementById('datecontainer');
+        let tempDiv = document.getElementById('tempcontainer');
         function CheckIf() {
             var myRequest = new Request('present.txt');
             fetch(myRequest).then(function(response) {
@@ -77,9 +85,15 @@
             myDiv.innerHTML = text;
             if (text === "I am not at the studio.") {
                 var otherRequest = new Request('counting.txt');
+                var tempRequet = new Request('HOT.txt');
                 fetch(otherRequest).then(function(response) {
                 return response.text().then(function(text) {
                 otherDiv.innerHTML = text;
+        });
+            });
+            fetch(tempRequest).then(function(response) {
+                return response.text().then(function(text) {
+                tempDiv.innerHTML = text;
         });
             });
             }
