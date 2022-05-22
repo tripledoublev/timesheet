@@ -38,33 +38,36 @@
                 justify-content: center;
             }
             .row {
-                width: auto;
+                width: 90%;
                 height: auto;
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .flex-item {
                 padding: 5px;
-                width: 60vw;
-                margin: 10px;
                 color: white;
                 text-align: center
             }
             #textcontainer {
                 font-family: Impact, fantasy;
                 font-size: calc(5vw + 5vh);
-;
+                flex-basis: max-content;
             }
             #datecontainer {
                 font-size: calc(2.5vw + 2.5vh);
                 font-style: italic;
                 color: #4caf50;
                 font-family: monospace;
+                width: 100%;
             }
             #tempcontainer {
                 font-size: calc(2.5vw + 2.5vh);
                 font-style: italic;
                 color: #5757bd;
                 font-family: monospace;
+                width: 100%;
             }
         </style>
     </head>
