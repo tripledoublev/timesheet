@@ -195,7 +195,7 @@ def main():
     count = 0
     # Tuning factor for compensation. Decrease this number to adjust the
     # temperature down, and increase to adjust up
-    factor = 2
+    factor = 2.25
 
     cpu_temps = [get_cpu_temperature()] * 5
 
