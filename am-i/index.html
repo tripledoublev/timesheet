@@ -38,7 +38,7 @@
                 justify-content: center;
             }
             .row {
-                width: 90%;
+                width: 100%;
                 height: auto;
                 display:flex;
                 flex-wrap: wrap;
@@ -54,6 +54,7 @@
                 font-family: Impact, fantasy;
                 font-size: calc(5vw + 5vh);
                 flex-basis: max-content;
+                margin-top:3rem;
             }
             #datecontainer {
                 font-size: calc(2.5vw + 2.5vh);
@@ -61,6 +62,7 @@
                 color: #4caf50;
                 font-family: monospace;
                 width: 100%;
+                margin-top:3rem;
             }
             #tempcontainer {
                 font-size: calc(2.5vw + 2.5vh);
@@ -109,11 +111,11 @@
                 let past = temperature[0];
                 let change = temperature[1];
                 if (Math.sign(change) === -1) {
-                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C.';
+                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C';
                     tempChange.innerHTML = (change * -1) + '\u00B0C warmer than when I arrived.';
                 }
                 else if (Math.sign(change) === 1) {
-                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C.';
+                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C';
                     tempChange.innetHTML = (change * 1) + '\u00B0C cooler than when I arrived. '
                 }
         });
