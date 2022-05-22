@@ -209,6 +209,7 @@ def main():
     # The main loop
     try:
         while True:
+            time.sleep(1)
             # Everything on one screen
             cpu_temp = get_cpu_temperature()
             # Smooth out with some averaging to decrease jitter
@@ -235,7 +236,7 @@ def main():
             degree_sign = u"\N{DEGREE SIGN}"
             count += 1
             time.sleep(3)
-            if count % 10 == 1:
+            if count % 10 == 5:
                 with open('am-i/HOT.txt','w') as f:
                     timeNow = round(time.time())
                     dateNow = datetime.datetime.fromtimestamp(timeNow)
