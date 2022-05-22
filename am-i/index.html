@@ -96,7 +96,15 @@
             });
             fetch(tempRequest).then(function(response) {
                 return response.text().then(function(text) {
-                tempDiv.innerHTML = 'when the indoor temperature was ' + text + '\u00B0C';
+                const temperature = text.split(" ");
+                let past = temperature[0];
+                let change = temperature[1];
+                if (Math.sign(change) === -1) {
+                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C. ' + (change * -1) + '\u00B0C warmer than when I arrived. ';
+                }
+                elif (Math.sign(change) === 1) {
+                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C. ' + (change * 1) + '\u00B0C cooler than when I arrived. ';
+                }
         });
             });
             }
