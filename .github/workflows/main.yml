@@ -25,6 +25,5 @@ jobs:
           time.py
           .gitignore
           **/twitter/**
-          **/html_adventures/**
 
           
