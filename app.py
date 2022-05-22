@@ -101,4 +101,4 @@ else:
                 with open('am-i/present.txt','w') as f:
                     f.write("I am not at the studio.")
                 with open('am-i/counting.txt','w') as c:
-                    c.write('Last seen: ' + str(dateNow))    
+                    c.write('Last seen on ' + str(dateNow))    

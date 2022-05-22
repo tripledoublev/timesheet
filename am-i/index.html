@@ -96,7 +96,7 @@
             });
             fetch(tempRequest).then(function(response) {
                 return response.text().then(function(text) {
-                tempDiv.innerHTML = text;
+                tempDiv.innerHTML = 'when the temperature was ' + text + '\u00B0C';
         });
             });
             }

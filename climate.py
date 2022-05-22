@@ -241,7 +241,7 @@ def main():
                     timeNow = round(time.time())
                     dateNow = datetime.datetime.fromtimestamp(timeNow)
                     print(str(dateNow) + " " + str(timeNow) + " " +str(round(temp, 2)) + str(degree_sign) + "C" + " " + str(round(humi, 2)) + "%" + " " + str(round(lux, 2)) + "Lux" + " " + str(round(press,2)) + "hPa")
-                    f.write("when the temperature was" + " " +str(round(temp, 2)) + str(degree_sign) + "C")
+                    f.write(str(round(temp, 2)))
                     break
                 
     # Exit cleanly
