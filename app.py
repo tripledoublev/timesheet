@@ -87,6 +87,8 @@ else:
                 with open('am-i/present.txt','w') as f:
                     f.write("I am at the studio.")    
             if status == 'OUT' :
+                if args.climate:
+                    exec(open("climate.py").read())
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 print('░░░  A studio is only one of many places  ░░░')
                 print('░░░  where art gets made. Au revoir       ░░░')
@@ -100,5 +102,3 @@ else:
                     f.write("I am not at the studio.")
                 with open('am-i/counting.txt','w') as c:
                     c.write('Last seen: ' + str(dateNow))    
-                if args.climate:
-                    exec(open("climate.py").read())
