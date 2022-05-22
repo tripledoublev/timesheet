@@ -101,4 +101,4 @@ else:
                 with open('am-i/counting.txt','w') as c:
                     c.write('Last seen: ' + str(dateNow))    
                 if args.climate:
-                    execfile('climate.py')
+                    exec(open("climate.py").read())
