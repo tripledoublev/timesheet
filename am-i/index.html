@@ -69,6 +69,13 @@
                 font-family: monospace;
                 width: 100%;
             }
+            #tempchange {
+                font-size: calc(2.25vw + 2.25vh);
+                font-style: italic;
+                color: #4caf50;
+                font-family: monospace;
+                width: 100%;
+            }
         </style>
     </head>
     <body>
@@ -77,10 +84,12 @@
                 <div class="flex-item" id="textcontainer"></div>
                 <div class="flex-item" id="datecontainer"></div>
                 <div class="flex-item" id="tempcontainer"></div>
+                <div class="flex-item" id="tempchange"></div>
         <script type="text/javascript">
         let myDiv = document.getElementById('textcontainer');
         let otherDiv = document.getElementById('datecontainer');
         let tempDiv = document.getElementById('tempcontainer');
+        let tempChange = document.getElementById('tempchange');
         function CheckIf() {
             var myRequest = new Request('present.txt');
             fetch(myRequest).then(function(response) {
@@ -100,10 +109,12 @@
                 let past = temperature[0];
                 let change = temperature[1];
                 if (Math.sign(change) === -1) {
-                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C. ' + (change * -1) + '\u00B0C warmer than when I arrived. '
+                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C.';
+                    tempChange.innerHTML = (change * -1) + '\u00B0C warmer than when I arrived.';
                 }
                 else if (Math.sign(change) === 1) {
-                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C. ' + (change * 1) + '\u00B0C cooler than when I arrived. '
+                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C.';
+                    tempChange.innetHTML = (change * 1) + '\u00B0C cooler than when I arrived. '
                 }
         });
             });
