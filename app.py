@@ -16,6 +16,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--time', type=str, help='IN or OUT', required=False)
 parser.add_argument('--text', type=str, help='text entry', required=False)
 parser.add_argument("--tweet", help="Send tweet as @vncntxyz", action="store_true")
+parser.add_argument("--climate", help="Add temp to file (if enviro sensors are present)", action="store_true")
 args = parser.parse_args()
 
 # in or out and time and time again
@@ -98,4 +99,6 @@ else:
                 with open('am-i/present.txt','w') as f:
                     f.write("I am not at the studio.")
                 with open('am-i/counting.txt','w') as c:
-                    c.write('Last seen: ' + str(dateNow))      
+                    c.write('Last seen: ' + str(dateNow))    
+                if args.climate:
+                    execfile('climate.py')

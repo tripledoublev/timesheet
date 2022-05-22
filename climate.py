@@ -195,7 +195,7 @@ def main():
     count = 0
     # Tuning factor for compensation. Decrease this number to adjust the
     # temperature down, and increase to adjust up
-    factor = 1.25
+    factor = 2
 
     cpu_temps = [get_cpu_temperature()] * 5
 
@@ -235,15 +235,14 @@ def main():
             degree_sign = u"\N{DEGREE SIGN}"
             count += 1
             time.sleep(3)
-            if count % 100 == 1: 
-               with open("data.txt", "a+") as data_archive:
-                  timeNow = round(time.time())
-                  dateNow = datetime.datetime.fromtimestamp(timeNow)
-                  data_archive.seek(0)
-                  data_archive.write("\n")
-                  data_archive.write(str(timeNow) + " " + str(round(temp, 2)) + str(degree_sign) + "C " + str(round(humi, 2)) + "% " + str(round(lux, 2)) + "Lux " + str(round(press,2)) + "hPa " + str(dateNow))
-                  print(str(dateNow) + " " + str(timeNow) + " " +str(round(temp, 2)) + str(degree_sign) + "C" + " " + str(round(humi, 2)) + "%" + " " + str(round(lux, 2)) + "Lux" + " " + str(round(press,2)) + "hPa")
-
+            with open('am-i/HOT.txt','w') as f:
+                timeNow = round(time.time())
+                dateNow = datetime.datetime.fromtimestamp(timeNow)
+                data_archive.seek(0)
+                data_archive.write("\n")
+                data_archive.write(str(timeNow) + " " + str(round(temp, 2)) + str(degree_sign) + "C " + str(round(humi, 2)) + "% " + str(round(lux, 2)) + "Lux " + str(round(press,2)) + "hPa " + str(dateNow))
+                print(str(dateNow) + " " + str(timeNow) + " " +str(round(temp, 2)) + str(degree_sign) + "C" + " " + str(round(humi, 2)) + "%" + " " + str(round(lux, 2)) + "Lux" + " " + str(round(press,2)) + "hPa")
+                f.write("when the temperature was" + " " +str(round(temp, 2)) + str(degree_sign) + "C")
             
     # Exit cleanly
     except KeyboardInterrupt:
