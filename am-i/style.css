@@ -1,0 +1,74 @@
+::selection {
+    background-color: transparent;
+    color:#7c7cfe;
+}
+    html, body {
+height: 100%;
+}
+body {
+margin: 0;
+}
+.flex-container {
+height: 100%;
+width: 100%;
+padding: 0;
+margin: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #111111;
+}
+.row {
+width: 100%;
+height: auto;
+display:flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.flex-item {
+padding: 5px;
+color: white;
+text-align: center
+}
+#textcontainer {
+font-family: Impact, fantasy;
+font-size: calc(5vw + 5vh);
+flex-basis: max-content;
+margin-top:3rem;
+}
+#datecontainer {
+font-size: calc(2.5vw + 2.5vh);
+font-style: italic;
+color: #4caf50;
+font-family: monospace;
+width: 100%;
+margin-top:3rem;
+}
+#tempcontainer {
+font-size: calc(2.5vw + 2.5vh);
+font-style: italic;
+color: #5757bd;
+font-family: monospace;
+width: 100%;
+}
+#tempchange {
+font-size: calc(2.25vw + 2.25vh);
+font-style: italic;
+color: #4caf50;
+font-family: monospace;
+width: 100%;
+}
+.teleprompt {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:10vh;
+    background-color: white;
+}
+.teleprompt .flex-item{
+    width: 100%;
+    height: auto;
+    float:left;
+}

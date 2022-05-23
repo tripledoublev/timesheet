@@ -15,78 +15,19 @@
         <meta property="og:title" content="Where is Vincent Charlebois?" />
         <meta property="og:description" content="An exercise in online presence and time keeping as part of the project CONSECUTIVES DAYS AT THE STUDIO" />
         <meta property="og:image" content="https://vincent.charlebois.info/am-i/image.png" />
-                <style>
-
-                    ::selection {
-                        background-color: transparent;
-                        color:#7c7cfe;
-                    }
-                        html, body {
-                height: 100%;
-            }
-            body {
-                margin: 0;
-                background-color: #111111;
-            }
-            .flex-container {
-                height: 100%;
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .row {
-                width: 100%;
-                height: auto;
-                display:flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .flex-item {
-                padding: 5px;
-                color: white;
-                text-align: center
-            }
-            #textcontainer {
-                font-family: Impact, fantasy;
-                font-size: calc(5vw + 5vh);
-                flex-basis: max-content;
-                margin-top:3rem;
-            }
-            #datecontainer {
-                font-size: calc(2.5vw + 2.5vh);
-                font-style: italic;
-                color: #4caf50;
-                font-family: monospace;
-                width: 100%;
-                margin-top:3rem;
-            }
-            #tempcontainer {
-                font-size: calc(2.5vw + 2.5vh);
-                font-style: italic;
-                color: #5757bd;
-                font-family: monospace;
-                width: 100%;
-            }
-            #tempchange {
-                font-size: calc(2.25vw + 2.25vh);
-                font-style: italic;
-                color: #4caf50;
-                font-family: monospace;
-                width: 100%;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="flex-container">
             <div class="row"> 
                 <div class="flex-item" id="textcontainer"></div>
+            </div>
+        </div>
+        <div class="teleprompt">
                 <div class="flex-item" id="datecontainer"></div>
                 <div class="flex-item" id="tempcontainer"></div>
                 <div class="flex-item" id="tempchange"></div>
+        </div>
         <script type="text/javascript">
         let myDiv = document.getElementById('textcontainer');
         let otherDiv = document.getElementById('datecontainer');
