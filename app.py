@@ -87,7 +87,9 @@ else:
                 print(som)
                 print(fun)
                 with open('am-i/present.txt','w') as f:
-                    f.write("I am at the studio.")    
+                    f.write("I am at the studio.")
+                with open('am-i/counting.txt','w') as c:
+                    c.write('Came in on ' + str(dateNow))
             if status == 'OUT' :
                 if args.climate:
                     exec(open("climate.py").read())
