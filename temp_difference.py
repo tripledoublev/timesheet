@@ -14,4 +14,4 @@ def main(temp):
     # reopens file to rewrite
     with open('am-i/HOT.txt','w') as f:
         temp_diff = float(past_temp) - float(round(temp,2))
-        f.write(str(round(temp,2)) + str(round(temp_diff,2)))
+        f.write(str(round(temp,2)) + ' ' + str(round(temp_diff,2)))
