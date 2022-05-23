@@ -55,7 +55,8 @@
         transform-origin: top left;
         position: fixed;
         top: 0vh;
-        left: 7vw;
+        left: 7.5vw;
         font-size: calc(2.5vw + 2.5vh);
         transform: rotate(90deg);
+        width:100%;
     }

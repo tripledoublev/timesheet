@@ -4,7 +4,7 @@
       var b = num & 0xFF,
       g = (num & 0xFF00) >>> 8,
       r = (num & 0xFF0000) >>> 16,
-      a = ( ((num & 0xFF000000) >>> 24 ) / 255) + 0.027451;
+      a = ( ((num & 0xFF000000) >>> 24 ) / 255);
       return "rgba(" + [r, g, b, a].join(",") + ")"
       }
       function fgColor(num) {
@@ -12,13 +12,14 @@
       var b = num & 0xFF,
       g = (num & 0xFF00) >>> 8,
       r = (num & 0xFF0000) >>> 16,
-      a = ( ((num & 0xFF000000) >>> 24 ) / 200) + 0.027451;
+      a = ( ((num & 0xFF000000) >>> 24 ) / 255);
       return "rgba(" + [255 - (r), 255 - (g), 255 - (b), 255 - (a)].join(",") + ")"}
       
       document.addEventListener('DOMContentLoaded', main());
       function main(item) {
       const bode = document.getElementById("dcontain");
       const flbx = document.getElementsByClassName("textColor");
+      const title = document.getElementById("page-title");
       var timeNow = Math.round(Date.now() / 1000);
       
       // Arrow Function:
@@ -35,11 +36,11 @@
       rgba = toColor(timeNow * 20009);
       hex = fgColor(timeNow * 20009);
       bode.style.backgroundColor = rgba;
-      bode.style.color = hex;
+      title.style.color = hex;
       for(var i=0, len=flbx.length; i<len; i++)
     {
-        flbx[i].style["background-color"] = hex;
-        flbx[i].firstChild.style["color"] = rgba;
+        flbx[i].firstChild.style["background-color"] = hex;
+        flbx[i].firstChild.style["color"] = 'white';
 
     }
 
