@@ -37,38 +37,62 @@ font-size: calc(5vw + 5vh);
 flex-basis: max-content;
 margin-top:3rem;
 }
+#datecontainer, 
+#tempcontainer, 
+#tempchange {
+    font-size: calc(1vw + 1vh);
+    font-style: italic;
+    font-family: monospace;
+}
 #datecontainer {
-font-size: calc(2.5vw + 2.5vh);
-font-style: italic;
-color: #4caf50;
-font-family: monospace;
-width: 100%;
-margin-top:3rem;
+    color: #4caf50;
 }
 #tempcontainer {
-font-size: calc(2.5vw + 2.5vh);
-font-style: italic;
-color: #5757bd;
-font-family: monospace;
-width: 100%;
+    color: #5757bd;
 }
 #tempchange {
-font-size: calc(2.25vw + 2.25vh);
-font-style: italic;
-color: #4caf50;
-font-family: monospace;
-width: 100%;
+    color: #4caf50;
 }
 .teleprompt {
     position:absolute;
     bottom:0;
     left:0;
     width:100%;
-    height:10vh;
+    height:auto;
     background-color: white;
 }
 .teleprompt .flex-item{
-    width: 100%;
     height: auto;
     float:left;
+    white-space: nowrap;
+}
+
+.scroll-left {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+ background: blue;
+}
+.scroll-left .flex-item {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ font-family: monospace;
+ color:white;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(100%); 		
+ }
+ 100% {
+ transform: translateX(-100%); 
+ }
 }

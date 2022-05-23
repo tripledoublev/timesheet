@@ -20,19 +20,22 @@
     <body>
         <div class="flex-container">
             <div class="row"> 
-                <div class="flex-item" id="textcontainer"></div>
+                <div class="flex-item" id="textcontainer">I am not at the studio.
+                </div>
             </div>
         </div>
         <div class="teleprompt">
-                <div class="flex-item" id="datecontainer"></div>
-                <div class="flex-item" id="tempcontainer"></div>
-                <div class="flex-item" id="tempchange"></div>
+            <div class="scroll-left">
+                <div class="flex-item" id="datacontainer">
+                    Last seen on 2022-05-22 17:40:04
+                    when the indoor temperature was 27.35°C 
+                    1.85°C warmer than when I arrived.
+                </div>
+            </div>
         </div>
         <script type="text/javascript">
         let myDiv = document.getElementById('textcontainer');
-        let otherDiv = document.getElementById('datecontainer');
-        let tempDiv = document.getElementById('tempcontainer');
-        let tempChange = document.getElementById('tempchange');
+        let otherDiv = document.getElementById('datacontainer');
         function CheckIf() {
             var myRequest = new Request('present.txt');
             fetch(myRequest).then(function(response) {
@@ -52,12 +55,14 @@
                 let past = temperature[0];
                 let change = temperature[1];
                 if (Math.sign(change) === -1) {
-                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C';
-                    tempChange.innerHTML = (change * -1) + '\u00B0C warmer than when I arrived.';
+                    otherDiv.innerHTML += ' \u2014 Indoor temperature was ' + past + '\u00B0C';
+                    otherDiv.innerHTML += '\u2014 '(change * -1) + '\u00B0C warmer than last recorded temperature.';
+                    otherDiv.innetHTML += '                                                  ';
                 }
                 else if (Math.sign(change) === 1) {
-                    tempDiv.innerHTML = 'when the indoor temperature was ' + past + '\u00B0C';
-                    tempChange.innetHTML = (change * 1) + '\u00B0C cooler than when I arrived. '
+                    otherDiv.innerHTML += ' \u2014 Indoor temperature was ' + past + '\u00B0C';
+                    otherDiv.innetHTML += ' \u2014 '(change * 1) + '\u00B0C cooler than last recorded temperature. '
+                    otherDiv.innetHTML += '                                                  ';
                 }
         });
             });
