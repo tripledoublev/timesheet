@@ -39,8 +39,8 @@
         height: calc(90vh - 6rem);
         align-content: center;
         padding: 3rem;
-        width: calc(90vw - 6rem);
-        margin: 5vh 5vw 5vh 5vw;
+        width: calc(80vw - 6rem);
+        margin: 5vh 0vw 5vh 9vw;
     }
 
     .textColor:hover{
@@ -52,7 +52,7 @@
         transform-origin: top left;
         position: fixed;
         top: -10vh;
-        left: 7.5vw;
+        left: 9.5vw;
         font-size: calc(2.5vw + 2.5vh);
         transform: rotate(90deg);
         width:100vh;
