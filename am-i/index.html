@@ -45,6 +45,7 @@
             presence = text;
             return presence
             });
+        });
             var tempRequest = new Request('HOT.txt');
                 
             fetch(tempRequest).then(function(response) {
@@ -66,8 +67,7 @@
                 }
         });
             });
-            }
-            );
+        
             if (presence === "I am not at the studio.") {
                 var otherRequest = new Request('counting.txt');
                 fetch(otherRequest).then(function(response) {
