@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import temp_difference
 import time
 import datetime
 import colorsys
@@ -236,13 +236,12 @@ def main():
             degree_sign = u"\N{DEGREE SIGN}"
             count += 1
             time.sleep(3)
-            if count % 10 == 5:
-                with open('am-i/HOT.txt','w') as f:
-                    timeNow = round(time.time())
-                    dateNow = datetime.datetime.fromtimestamp(timeNow)
-                    print(str(dateNow) + " " + str(timeNow) + " " +str(round(temp, 2)) + str(degree_sign) + "C" + " " + str(round(humi, 2)) + "%" + " " + str(round(lux, 2)) + "Lux" + " " + str(round(press,2)) + "hPa")
-                    f.write(str(round(temp, 2)))
-                    break
+            if count % 5 == 2:
+                timeNow = round(time.time())
+                dateNow = datetime.datetime.fromtimestamp(timeNow)
+                print(str(dateNow) + " " + str(timeNow) + " " +str(round(temp, 2)) + str(degree_sign) + "C" + " " + str(round(humi, 2)) + "%" + " " + str(round(lux, 2)) + "Lux" + " " + str(round(press,2)) + "hPa")
+                temp_difference.main(temp)
+                break
                 
     # Exit cleanly
     except KeyboardInterrupt:
