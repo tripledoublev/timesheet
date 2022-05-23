@@ -26,11 +26,7 @@ logging.basicConfig(
     level=logging.INFO,
     datefmt='%Y-%m-%d %H:%M:%S')
 
-logging.info("""combined.py - Displays readings from all of Enviro plus' sensors
-
-Press Ctrl+C to exit!
-
-""")
+logging.info("""Reading sensors""")
 
 # BME280 temperature/pressure/humidity sensor
 bme280 = BME280()
@@ -239,8 +235,12 @@ def main():
             if count % 5 == 2:
                 timeNow = round(time.time())
                 dateNow = datetime.datetime.fromtimestamp(timeNow)
-                print(str(dateNow) + " " + str(timeNow) + " " +str(round(temp, 2)) + str(degree_sign) + "C" + " " + str(round(humi, 2)) + "%" + " " + str(round(lux, 2)) + "Lux" + " " + str(round(press,2)) + "hPa")
-                temp_difference.main(temp)
+                print(str(dateNow) + " " + str(timeNow)) 
+                print(str(round(temp, 2)) + str(degree_sign) + "C") 
+                print(str(round(humi, 2)) + "%")
+                print(str(round(lux, 2)) + "Lux")
+                print(str(round(press,2)) + "hPa")
+                temp_difference.main(round(temp,2))
                 break
                 
     # Exit cleanly

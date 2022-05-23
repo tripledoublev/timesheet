@@ -36,7 +36,6 @@ text-align: center
 font-family: Impact, fantasy;
 font-size: calc(5vw + 5vh);
 flex-basis: max-content;
-margin-top:3rem;
 }
 #datacontainer {
     font-size: calc(1.25vw + 1.25vh);
