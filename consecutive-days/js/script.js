@@ -5,7 +5,7 @@
       g = (num & 0xFF00) >>> 8,
       r = (num & 0xFF0000) >>> 16,
       a = ( ((num & 0xFF000000) >>> 24 ) / 255);
-      return "rgba(" + [r, g, b, a].join(",") + ")"
+      return "rgb(" + [r, g, b, a].join(",") + ")"
       }
       function fgColor(num) {
         num >>>= 0;
@@ -13,7 +13,7 @@
       g = (num & 0xFF00) >>> 8,
       r = (num & 0xFF0000) >>> 16,
       a = ( ((num & 0xFF000000) >>> 24 ) / 255);
-      return "rgba(" + [255 - (r), 255 - (g), 255 - (b), 255 - (a)].join(",") + ")"}
+      return "rgba(" + [255 - (r), 255 - (g), 255 - (b), 255].join(",") + ")"}
       
       document.addEventListener('DOMContentLoaded', main());
       function main(item) {
@@ -33,15 +33,15 @@
       
       // A button object calls the function:
       
-      rgba = toColor(timeNow * 20009);
-      hex = fgColor(timeNow * 20009);
+      rgba = toColor(timeNow * 2009);
+      hex = fgColor(timeNow * 2009);
       bode.style.backgroundColor = rgba;
-      title.style.color = hex;
+      title.style.color = 'white';
+      title.style.backgroundColor = hex;
       for(var i=0, len=flbx.length; i<len; i++)
     {
-        flbx[i].firstChild.style["background-color"] = hex;
         flbx[i].firstChild.style["color"] = 'white';
-
+        flbx[i].firstChild.style["background-color"] = hex;
     }
 
       

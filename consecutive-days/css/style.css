@@ -18,12 +18,13 @@
         text-align: center;
     }
 
-    .textColor a{
+    .textColor a,
+    #page-title a{
         padding: 1rem 2rem 1rem 2rem;
         border-radius: 3rem;
         text-decoration:none;
         font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Helvetica, sans-serif;
         font-size:calc(2vw + 1.5vh);
     }
     .textColor:active {
@@ -47,16 +48,15 @@
         filter: invert(0%);
     }
 
-    .page-link {
-        border-radius:30px;
-    }
-
     h1 {
         transform-origin: top left;
         position: fixed;
-        top: 0vh;
+        top: -10vh;
         left: 7.5vw;
         font-size: calc(2.5vw + 2.5vh);
         transform: rotate(90deg);
-        width:100%;
+        width:100vh;
+        padding-left: 10vh;
+        padding-right:10vh;
+        padding-bottom:10vw;
     }
