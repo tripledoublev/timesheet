@@ -81,6 +81,8 @@ else:
             txt_file.write(status + ', ' + str(timeNow) + ', ' + str(dateNow))
             # and notify user
             if status == 'IN' :
+                if args.climate:
+                    exec(open("climate.py").read())
                 print(hav)
                 print(som)
                 print(fun)
