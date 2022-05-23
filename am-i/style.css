@@ -7,6 +7,7 @@ height: 100%;
 }
 body {
 margin: 0;
+background-color:#111111
 }
 .flex-container {
 height: 100%;
@@ -37,21 +38,10 @@ font-size: calc(5vw + 5vh);
 flex-basis: max-content;
 margin-top:3rem;
 }
-#datecontainer, 
-#tempcontainer, 
-#tempchange {
+#datacontainer {
     font-size: calc(1vw + 1vh);
     font-style: italic;
     font-family: monospace;
-}
-#datecontainer {
-    color: #4caf50;
-}
-#tempcontainer {
-    color: #5757bd;
-}
-#tempchange {
-    color: #4caf50;
 }
 .teleprompt {
     position:absolute;
@@ -59,7 +49,6 @@ margin-top:3rem;
     left:0;
     width:100%;
     height:auto;
-    background-color: white;
 }
 .teleprompt .flex-item{
     height: auto;
@@ -71,7 +60,6 @@ margin-top:3rem;
  height: 50px;	
  overflow: hidden;
  position: relative;
- background: blue;
 }
 .scroll-left .flex-item {
  position: absolute;
@@ -80,12 +68,11 @@ margin-top:3rem;
  margin: 0;
  line-height: 50px;
  text-align: center;
- font-family: monospace;
  color:white;
  /* Starting position */
  transform:translateX(100%);
  /* Apply animation to this element */
- animation: scroll-left 15s linear infinite;
+ animation: scroll-left 20s linear infinite;
 }
 /* Move it (define the animation) */
 @keyframes scroll-left {
