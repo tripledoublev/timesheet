@@ -81,3 +81,14 @@ flex-basis: max-content;
  transform: translateX(-250%); 
  }
 }
+
+@media (max-width:420px) {
+    @keyframes scroll-left {
+        0%   {
+        transform: translateX(100%); 		
+        }
+        100% {
+        transform: translateX(-400%); 
+        }
+       }
+}
