@@ -17,6 +17,7 @@ parser.add_argument('--time', type=str, help='IN or OUT', required=False)
 parser.add_argument('--text', type=str, help='text entry', required=False)
 parser.add_argument("--tweet", help="Send tweet as @vncntxyz", action="store_true")
 parser.add_argument("--climate", help="Add temp to file (if enviro sensors are present)", action="store_true")
+parser.add_argument("--swimming", help="Go swimming", action="store_true")
 args = parser.parse_args()
 
 # in or out and time and time again
@@ -102,7 +103,13 @@ else:
                 print('*********************************************')
                 print('You can now commit and push to update website')
                 print('*********************************************')
-                with open('am-i/present.txt','w') as f:
-                    f.write("I am not at the studio.")
-                with open('am-i/counting.txt','w') as c:
-                    c.write('Last seen on ' + str(dateNow))    
+                if args.swimming:
+                    with open('am-i/present.txt','w') as f:
+                        f.write("I went swimming.")
+                    with open('am-i/counting.txt','w') as c:
+                        c.write('Last seen on ' + str(dateNow)) 
+                else:
+                    with open('am-i/present.txt','w') as f:
+                        f.write("I am not at the studio.")
+                    with open('am-i/counting.txt','w') as c:
+                        c.write('Last seen on ' + str(dateNow))   
