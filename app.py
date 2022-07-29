@@ -9,7 +9,7 @@
 import time
 import datetime
 import argparse
-import modules/climate as climate
+import modules.climate as climate
 
 #import twitter.post_tweet as tweetMachine
 
