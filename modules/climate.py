@@ -2,7 +2,6 @@
 import sys, os
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/temp")
 import difference
-import archive
 import time
 import datetime
 import colorsys
