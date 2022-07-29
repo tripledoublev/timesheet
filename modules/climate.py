@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-from .difference import difference
+from weather import archive
+from temp import difference
 import archive
 import time
 import datetime
