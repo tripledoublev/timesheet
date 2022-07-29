@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import temp_difference
+import difference
 import archive
 import time
 import datetime
@@ -241,7 +241,7 @@ def main(x):
                 print(str(round(humi, 2)) + "%")
                 print(str(round(lux, 2)) + "Lux")
                 print(str(round(press,2)) + "hPa")
-                temp_difference.main(round(temp,2))
+                difference.main(round(temp,2))
                 archive.main(round(temp, 2), round(humi, 2), round(lux, 2), round(press, 2), timeNow, x)
                 break
                 
