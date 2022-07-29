@@ -246,7 +246,7 @@ def main(x):
                 with open("climate.txt", "a+") as a:
                     a.seek(0) 
                     a.write("\n")
-                    a.write(str(x) + " Temp: " + str(round(temp, 2)) + " Humi: " + str(round(humi, 2)) + " Lux: " + str(round(lux, 2)) + " Pressure: " + str(round(press, 2)) + str(' ' + timeNow))
+                    a.write(str(x) + " Temp: " + str(round(temp, 2)) + " Humi: " + str(round(humi, 2)) + " Lux: " + str(round(lux, 2)) + " Pressure: " + str(round(press, 2)) + ' ' + str(timeNow))
                 break
                 
     # Exit cleanly
