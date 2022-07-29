@@ -10,8 +10,6 @@ import time
 import datetime
 import argparse
 from modules import climate
-from modules.temp.difference import difference
-from modules.weather.archive import archive
 
 #import twitter.post_tweet as tweetMachine
 
