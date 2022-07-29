@@ -246,7 +246,10 @@ def main(x):
                 print(str(round(lux, 2)) + "Lux")
                 print(str(round(press,2)) + "hPa")
                 difference.main(round(temp,2))
-                archive.main(round(temp, 2), round(humi, 2), round(lux, 2), round(press, 2), timeNow, x)
+                with open("climate.txt", "a+") as a:
+                    a.seek(0) 
+                    a.write("\n")
+                    a.write(str(x) + "Temp: " + str(round(temp, 2)) + " Humi: " + str(round(humi, 2)) + " Lux: " + str(round(lux, 2)) + " Pressure: " + str(round(press, 2)) + str(timeNow))
                 break
                 
     # Exit cleanly
