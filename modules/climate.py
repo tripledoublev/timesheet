@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import difference
+from .difference import difference
 import archive
 import time
 import datetime
