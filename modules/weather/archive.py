@@ -1,6 +1,7 @@
 # runs when --climate is used
 # takes temp, humi and lux + timestamp 
 # and appends the data to the archive
+import os
 def main(temp, humi, lux, press, time, x):
     current = os.path.dirname(__file__)
     parent = os.path.split(current)[0]
