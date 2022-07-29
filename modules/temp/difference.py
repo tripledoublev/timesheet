@@ -1,8 +1,14 @@
 # takes last temp, 
 # compares with new temp, 
 # writes new temp and temp difference
+import os
+
 def main(temp):
-    with open("../../am-i/HOT.txt", "a+") as txt_file:
+    current = os.path.dirname(__file__)
+    parent = os.path.split(current)[0]
+    another_parent = os.path.split(parent)[0]
+    file_path = os.path.join(another_parent, 'am-i', 'HOT.txt')
+    with open(file_path, "a+") as txt_file:
         # go to beginning of file
         txt_file.seek(0) 
         # look at the last line 
