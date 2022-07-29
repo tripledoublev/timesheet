@@ -18,6 +18,6 @@ def main(temp):
         # record past temp
         past_temp = historical[0]
     # reopens file to rewrite
-    with open('../../am-i/HOT.txt','w') as f:
+    with open(file_path,'w') as f:
         temp_diff = float(past_temp) - float(temp)
         f.write(str(temp) + ' ' + str(round(temp_diff,2)))
