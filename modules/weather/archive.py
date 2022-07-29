@@ -8,4 +8,4 @@ def main(temp, humi, lux, press, time, x):
     another_parent = os.path.split(parent)[0]
     file_path = os.path.join(another_parent, 'data', 'climate.txt')
     with open("file_path", "a") as a:
-        a.write(x + "Temp: " + temp + " Humi: " + humi + " Lux: " + lux + " Pressure: " + press + time)
+        a.write(str(x) + "Temp: " + str(temp) + " Humi: " + str(humi) + " Lux: " + str(lux) + " Pressure: " + str(press) + str(time))
