@@ -18,9 +18,9 @@ jobs:
           **/.git*/**
           **/node_modules/**
           app.py
-          m.txt
-          s.txt
-          t.txt
+          **/data/m.txt
+          **/data/s.txt
+          */data/t.txt
           README.MD
           time.py
           .gitignore

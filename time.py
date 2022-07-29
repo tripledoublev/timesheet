@@ -22,7 +22,7 @@
 # were not logged on consecutive days.
 #
 # open timesheet
-with open("t.txt", "r") as txt_file:
+with open("data/t.txt", "r") as txt_file:
         # count the number of lines
         linecount = len(txt_file.readlines())
         #print the total number of lines
@@ -79,7 +79,7 @@ with open("t.txt", "r") as txt_file:
             # write timespent in separate file
             # if it's a doubleshift
             if dayOf == previousDay : 
-                with open("s.txt", "r+") as s_txt:
+                with open("data/s.txt", "r+") as s_txt:
                     # add new timespent with previous entry
                     total = int(doubleshift) + int(timespent)
                     # read lines
@@ -103,7 +103,7 @@ with open("t.txt", "r") as txt_file:
                     doubleshift = total
             # For unconsecutive entries
             elif dayOf - previousDay > 1:
-                with open("s.txt", "a+") as s_txt:
+                with open("data/s.txt", "a+") as s_txt:
                     # reset consecutive days
                     countingDays = 0
                     # add 1 to consecutive days
@@ -126,7 +126,7 @@ with open("t.txt", "r") as txt_file:
             # just another day at the studio
             else:
                 # open file
-                with open("s.txt", "a+") as s_txt:
+                with open("data/s.txt", "a+") as s_txt:
                     # add 1 to consecutive days
                     countingDays += 1
                     # go to beginning of file

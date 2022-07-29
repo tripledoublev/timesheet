@@ -37,7 +37,7 @@ fun = '░░░░░░░░░░░░░░░░░░░░░░░░�
 
 # only write text entry if --time is not present
 if status is None:
-     with open("m.txt", "a+") as msg_file:
+     with open("data/m.txt", "a+") as msg_file:
         # go to beginning of file
         msg_file.seek(0) 
         msg_file.write("\n")
@@ -62,7 +62,7 @@ if status is None:
 
 else:
     # open the studio timecard text file
-    with open("t.txt", "a+") as txt_file:
+    with open("data/t.txt", "a+") as txt_file:
         # go to beginning of file
         txt_file.seek(0) 
         # look at the last line 
@@ -83,7 +83,7 @@ else:
             # and notify user
             if status == 'IN' :
                 if args.climate:
-                    exec(open("climate.py").read())
+                    exec(open("modules/climate.py").read())
                 print(hav)
                 print(som)
                 print(fun)
@@ -93,7 +93,7 @@ else:
                     c.write('In: ' + str(dateNow))
             if status == 'OUT' :
                 if args.climate:
-                    exec(open("climate.py").read())
+                    exec(open("modules/climate.py").read())
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 print('░░░  A studio is only one of many places  ░░░')
                 print('░░░  where art gets made. Au revoir       ░░░')
