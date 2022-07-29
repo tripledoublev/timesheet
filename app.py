@@ -87,7 +87,7 @@ else:
             # and notify user
             if status == 'IN' :
                 if args.climate:
-                    dedabs = 'IN'
+                    dedans = 'IN'
                     climate.main(dedans)
                 print(hav)
                 print(som)
