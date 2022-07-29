@@ -9,6 +9,8 @@
 import time
 import datetime
 import argparse
+import modules/climate as climate
+
 #import twitter.post_tweet as tweetMachine
 
 # parsing arguments
@@ -83,7 +85,8 @@ else:
             # and notify user
             if status == 'IN' :
                 if args.climate:
-                    exec(open("modules/climate.py").read())
+                    dedabs = 'IN'
+                    climate.main(dedans)
                 print(hav)
                 print(som)
                 print(fun)
@@ -93,7 +96,8 @@ else:
                     c.write('In: ' + str(dateNow))
             if status == 'OUT' :
                 if args.climate:
-                    exec(open("modules/climate.py").read())
+                    dehors = 'OUT'
+                    climate.main(dehors)
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 print('░░░  A studio is only one of many places  ░░░')
                 print('░░░  where art gets made. Au revoir       ░░░')

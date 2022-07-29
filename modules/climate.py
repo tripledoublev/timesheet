@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import temp_difference
+import archive
 import time
 import datetime
 import colorsys
@@ -187,7 +188,7 @@ def get_cpu_temperature():
     return float(output[output.index('=') + 1:output.rindex("'")])
 
 
-def main():
+def main(x):
     count = 0
     # Tuning factor for compensation. Decrease this number to adjust the
     # temperature down, and increase to adjust up
@@ -241,6 +242,7 @@ def main():
                 print(str(round(lux, 2)) + "Lux")
                 print(str(round(press,2)) + "hPa")
                 temp_difference.main(round(temp,2))
+                archive.main(round(temp, 2), round(humi, 2), round(lux, 2), round(press, 2), timeNow, x)
                 break
                 
     # Exit cleanly
