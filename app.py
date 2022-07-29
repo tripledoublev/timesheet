@@ -9,7 +9,9 @@
 import time
 import datetime
 import argparse
-from modules import climate
+import sys, os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/modules")
+import climate
 
 #import twitter.post_tweet as tweetMachine
 
