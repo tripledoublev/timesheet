@@ -22,6 +22,9 @@
 # were not logged on consecutive days.
 #
 # open timesheet
+import datetime
+import calendar
+
 with open("t.txt", "r") as txt_file:
         # count the number of lines
         linecount = len(txt_file.readlines())
@@ -62,11 +65,14 @@ with open("t.txt", "r") as txt_file:
             archive = INlist[2]
             # filter date / time format
             filtered = archive.split('-')
+            # look at month
+            month = int(filtered[1])
+            # from [1-12] to [Jan-Dec]
+            monthOf = calendar.month_abbr[month] 
             # look at day & time
             dayTime = filtered[2]
             # only keep day
             day = dayTime.split(' ')
-            print(day)
             # This is the day of
             dayOf = int(day[0])
             # split line OUT
@@ -96,10 +102,10 @@ with open("t.txt", "r") as txt_file:
                     # add total timespent for the day
                     # if day singular
                     if countingDays == 1:
-                        s_txt.write(str(total) + ' seconds today, ' + str(countingDays) + ' consecutives day, ' + str(dayOf))
+                        s_txt.write(str(total) + ' seconds today, ' + str(countingDays) + ' consecutive day, ' + str(monthOf) + ' ' + str(dayOf))
                     # else plural
                     else:
-                        s_txt.write(str(total) + ' seconds today, ' + str(countingDays) + ' consecutives days, ' + str(dayOf))    
+                        s_txt.write(str(total) + ' seconds today, ' + str(countingDays) + ' consecutive days, ' + str(monthOf) + ' ' + str(dayOf))    
                     # write this total as the new doubleshift timespent
                     doubleshift = total
             # For unconsecutive entries
@@ -120,10 +126,10 @@ with open("t.txt", "r") as txt_file:
                     # write timespent
                     # if day singular
                     if countingDays == 1:
-                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutives day, ' + str(dayOf))
+                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutives day, ' + str(monthOf) + ' ' + str(dayOf))
                     # else plural
                     else: 
-                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutives days, ' + str(dayOf))
+                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutives days, ' + str(monthOf) + ' ' + str(dayOf))
             # just another day at the studio
             else:
                 # open file
@@ -137,10 +143,10 @@ with open("t.txt", "r") as txt_file:
                     # write timespent
                     # if day singular
                     if countingDays == 1:
-                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutives day, ' + str(dayOf))
+                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutives day, ' + str(monthOf) + ' ' + str(dayOf))
                     # else plural
                     else:
-                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutives days, ' + str(dayOf))
+                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutives days, ' + str(monthOf) + ' ' + str(dayOf))
                     # timespent to calculate the day's total in the case of a doubleshift
                     doubleshift = timespent
             # in the end the day Of becomes the previous day        
