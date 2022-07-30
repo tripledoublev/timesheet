@@ -9,6 +9,10 @@
 import time
 import datetime
 import argparse
+import sys, os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/modules")
+import climate
+
 #import twitter.post_tweet as tweetMachine
 
 # parsing arguments
@@ -17,6 +21,7 @@ parser.add_argument('--time', type=str, help='IN or OUT', required=False)
 parser.add_argument('--text', type=str, help='text entry', required=False)
 parser.add_argument("--tweet", help="Send tweet as @vncntxyz", action="store_true")
 parser.add_argument("--climate", help="Add temp to file (if enviro sensors are present)", action="store_true")
+parser.add_argument("--swimming", help="Go swimming", action="store_true")
 args = parser.parse_args()
 
 # in or out and time and time again
@@ -36,7 +41,7 @@ fun = '░░░░░░░░░░░░░░░░░░░░░░░░�
 
 # only write text entry if --time is not present
 if status is None:
-     with open("m.txt", "a+") as msg_file:
+     with open("data/m.txt", "a+") as msg_file:
         # go to beginning of file
         msg_file.seek(0) 
         msg_file.write("\n")
@@ -61,7 +66,7 @@ if status is None:
 
 else:
     # open the studio timecard text file
-    with open("t.txt", "a+") as txt_file:
+    with open("data/t.txt", "a+") as txt_file:
         # go to beginning of file
         txt_file.seek(0) 
         # look at the last line 
@@ -82,7 +87,8 @@ else:
             # and notify user
             if status == 'IN' :
                 if args.climate:
-                    exec(open("climate.py").read())
+                    dedans = 'IN'
+                    climate.main(dedans)
                 print(hav)
                 print(som)
                 print(fun)
@@ -92,7 +98,8 @@ else:
                     c.write('In: ' + str(dateNow))
             if status == 'OUT' :
                 if args.climate:
-                    exec(open("climate.py").read())
+                    dehors = 'OUT'
+                    climate.main(dehors)
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 print('░░░  A studio is only one of many places  ░░░')
                 print('░░░  where art gets made. Au revoir       ░░░')
@@ -102,7 +109,13 @@ else:
                 print('*********************************************')
                 print('You can now commit and push to update website')
                 print('*********************************************')
-                with open('am-i/present.txt','w') as f:
-                    f.write("I am not at the studio.")
-                with open('am-i/counting.txt','w') as c:
-                    c.write('Last seen on ' + str(dateNow))    
+                if args.swimming:
+                    with open('am-i/present.txt','w') as f:
+                        f.write("I went swimming.")
+                    with open('am-i/counting.txt','w') as c:
+                        c.write('Last seen on ' + str(dateNow)) 
+                else:
+                    with open('am-i/present.txt','w') as f:
+                        f.write("I am not at the studio.")
+                    with open('am-i/counting.txt','w') as c:
+                        c.write('Last seen on ' + str(dateNow))   

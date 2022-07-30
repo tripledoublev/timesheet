@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-import temp_difference
+import sys, os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/temp")
+import difference
 import time
 import datetime
 import colorsys
@@ -187,7 +189,7 @@ def get_cpu_temperature():
     return float(output[output.index('=') + 1:output.rindex("'")])
 
 
-def main():
+def main(x):
     count = 0
     # Tuning factor for compensation. Decrease this number to adjust the
     # temperature down, and increase to adjust up
@@ -240,7 +242,11 @@ def main():
                 print(str(round(humi, 2)) + "%")
                 print(str(round(lux, 2)) + "Lux")
                 print(str(round(press,2)) + "hPa")
-                temp_difference.main(round(temp,2))
+                difference.main(round(temp,2))
+                with open("climate.txt", "a+") as a:
+                    a.seek(0) 
+                    a.write("\n")
+                    a.write(str(x) + " Temp:" + str(round(temp, 2)) + " Humi:" + str(round(humi, 2)) + " Lux:" + str(round(lux, 2)) + " Pressure:" + str(round(press, 2)) + ' Time:' + str(timeNow))
                 break
                 
     # Exit cleanly
