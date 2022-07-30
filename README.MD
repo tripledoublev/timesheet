@@ -1,4 +1,4 @@
-# CONSECUTIVE DAYS AT THE STUDIO
+# [CONSECUTIVE DAYS AT THE STUDIO](https://vincent.charlebois.info/consecutive-days/)
 
 ## A Python experiment to create a timecard for logging my time spent at the studio
 
@@ -11,7 +11,7 @@ As we live in a connected world, I thought I might want to share some of those t
 
 I will fill this github repo with additional content as the project evolves.
 
-## Am I at the studio?
+## [Am I at the studio?](https://vincent.charlebois.info/am-i/)
 
 As an expanded exercise, I created a website that gets updated whenever I arrive or leave the studio. I also added a climate component to this app by using a Raspberry Pi Zero and the enviro board by Pimonori. By adding the **--climate** argument when logging in and out of the studio, I can fetch the temperature sensor's data and make it available online. 
 
