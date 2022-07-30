@@ -1,5 +1,6 @@
 seconds per day, consecutive days at the studio, day of the month
 
+
 9690 seconds today, 1 consecutives day, Apr 1
 1992 seconds today, 2 consecutives days, Apr 2
 4943 seconds today, 3 consecutives days, Apr 3
@@ -41,4 +42,29 @@ unconsecutive
 477 seconds today, 1 consecutives day, May 20
 14820 seconds today, 2 consecutive days, May 21
 6664 seconds today, 3 consecutives days, May 22
-4025 seconds today, 4 consecutives days, May 23
+5737 seconds today, 4 consecutive days, May 23
+5902 seconds today, 5 consecutives days, May 24
+5409 seconds today, 6 consecutives days, Jun 1
+1348 seconds today, 7 consecutives days, Jun 2
+2923 seconds today, 8 consecutives days, Jun 3
+unconsecutive
+4389 seconds today, 1 consecutives day, Jun 6
+5637 seconds today, 2 consecutives days, Jun 7
+unconsecutive
+11729 seconds today, 3 consecutive days, Jul 2
+2302 seconds today, 4 consecutives days, Jul 3
+19682 seconds today, 5 consecutive days, Jul 4
+10019 seconds today, 6 consecutive days, Jul 5
+11910 seconds today, 7 consecutive days, Jul 6
+6166 seconds today, 8 consecutives days, Jul 7
+unconsecutive
+13941 seconds today, 1 consecutive day, Jul 15
+22554 seconds today, 2 consecutive days, Jul 16
+unconsecutive
+1840 seconds today, 1 consecutives day, Jul 19
+14524 seconds today, 2 consecutive days, Jul 20
+unconsecutive
+25315 seconds today, 1 consecutive day, Jul 26
+23787 seconds today, 2 consecutive days, Jul 27
+unconsecutive
+15357 seconds today, 1 consecutives day, Jul 29
