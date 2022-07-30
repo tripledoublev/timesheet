@@ -66,6 +66,7 @@ with open("t.txt", "r") as txt_file:
             dayTime = filtered[2]
             # only keep day
             day = dayTime.split(' ')
+            print(day)
             # This is the day of
             dayOf = int(day[0])
             # split line OUT
