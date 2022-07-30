@@ -1,40 +1,44 @@
 seconds per day, consecutive days at the studio, day of the month
-9690 seconds today, 1 consecutives day, 1
-1992 seconds today, 2 consecutives days, 2
-4943 seconds today, 3 consecutives days, 3
-15671 seconds today, 4 consecutives days, 4
-12570 seconds today, 5 consecutives days, 5
-6820 seconds today, 6 consecutives days, 6
-5451 seconds today, 7 consecutives days, 7
-2365 seconds today, 8 consecutives days, 8
+
+9690 seconds today, 1 consecutives day, Apr 1
+1992 seconds today, 2 consecutives days, Apr 2
+4943 seconds today, 3 consecutives days, Apr 3
+15671 seconds today, 4 consecutives days, Apr 4
+12570 seconds today, 5 consecutives days, Apr 5
+6820 seconds today, 6 consecutives days, Apr 6
+5451 seconds today, 7 consecutives days, Apr 7
+2365 seconds today, 8 consecutives days, Apr 8
 unconsecutive
-11605 seconds today, 1 consecutives day, 18
-9281 seconds today, 2 consecutives days, 19
-12545 seconds today, 3 consecutives days, 20
+11605 seconds today, 1 consecutives day, Apr 18
+9281 seconds today, 2 consecutives days, Apr 19
+12545 seconds today, 3 consecutive days, Apr 20
 unconsecutive
-4514 seconds today, 1 consecutives day, 23
-6751 seconds today, 2 consecutives days, 24
-18450 seconds today, 3 consecutives days, 25
-14710 seconds today, 4 consecutives days, 26
-6119 seconds today, 5 consecutives days, 27
+4514 seconds today, 1 consecutives day, Apr 23
+6751 seconds today, 2 consecutives days, Apr 24
+18450 seconds today, 3 consecutives days, Apr 25
+14710 seconds today, 4 consecutives days, Apr 26
+6119 seconds today, 5 consecutives days, Apr 27
 unconsecutive
-17820 seconds today, 1 consecutives day, 29
-9196 seconds today, 2 consecutives days, 30
-12420 seconds today, 3 consecutives days, 1
-16370 seconds today, 4 consecutives days, 2
-33131 seconds today, 5 consecutives days, 3
-26217 seconds today, 6 consecutives days, 4
-3329 seconds today, 7 consecutives days, 5
-850 seconds today, 8 consecutives days, 6
+17820 seconds today, 1 consecutives day, Apr 29
+9196 seconds today, 2 consecutives days, Apr 30
+12420 seconds today, 3 consecutives days, May 1
+16370 seconds today, 4 consecutive days, May 2
+33131 seconds today, 5 consecutive days, May 3
+26217 seconds today, 6 consecutives days, May 4
+3329 seconds today, 7 consecutives days, May 5
+850 seconds today, 8 consecutives days, May 6
 unconsecutive
-29952 seconds today, 1 consecutives day, 9
-36188 seconds today, 2 consecutives days, 10
-1401 seconds today, 3 consecutives days, 11
-1198 seconds today, 4 consecutives days, 12
-23242 seconds today, 5 consecutives days, 13
+29952 seconds today, 1 consecutives day, May 9
+36188 seconds today, 2 consecutive days, May 10
+1401 seconds today, 3 consecutives days, May 11
+1198 seconds today, 4 consecutives days, May 12
+23242 seconds today, 5 consecutive days, May 13
 unconsecutive
-1127 seconds today, 1 consecutives day, 16
-13089 seconds today, 2 consecutives days, 17
-12555 seconds today, 3 consecutives days, 18
+1127 seconds today, 1 consecutives day, May 16
+13089 seconds today, 2 consecutive days, May 17
+12555 seconds today, 3 consecutive days, May 18
 unconsecutive
-477 seconds today, 1 consecutives day, 20
+477 seconds today, 1 consecutives day, May 20
+14820 seconds today, 2 consecutive days, May 21
+6664 seconds today, 3 consecutives days, May 22
+4025 seconds today, 4 consecutives days, May 23
