@@ -22,4 +22,6 @@ with open('consecutive-days/index.html','w') as f:
             f.write(fileless[0])
             f.write('</a>')
             f.write('</div>')
-    f.write('<script type="text/javascript" src="js/script.js"></script></body></html>')
+    f.write('<script type="text/javascript" src="js/index.js"></script>')
+    f.write('</body>')
+    f.write('</html>')
