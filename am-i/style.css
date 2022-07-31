@@ -92,3 +92,16 @@ flex-basis: max-content;
         }
        }
 }
+
+.github-link {
+    position:absolute;
+    left:10px;
+    top:5px;
+}
+
+.github-link a {
+    color: white;
+    text-decoration: none;
+    font-size:calc(2vw + 2vh);
+    font-family: monospace;
+}
