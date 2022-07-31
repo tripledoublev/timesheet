@@ -60,12 +60,13 @@ with open("s.txt", "r") as txt_file:
                 
                 print('unconsecutive')
                 dateRange = []
-                secondsRange = []
-                with open(os.path.join('../consecutive-days/data', tempPath), "w") as new_file:
+                with open(os.path.join('..', 'consecutive-days', 'data', tempPath), "w") as new_file:
                     for y in range(0, len(secondsRange)):
+                        if y != 0:
+                            # add new line except for first line
+                            new_file.write("\n")
+                        # add seconds
                         new_file.write(secondsRange[y])
-                        # add new line
-                        new_file.write("\n")
                     print('file-written')
-        
+                secondsRange = []
                 print('reset')
