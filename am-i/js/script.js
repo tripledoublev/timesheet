@@ -1,13 +1,13 @@
 let myDiv = document.getElementById('textcontainer');
         let otherDiv = document.getElementById('datacontainer');
         function CheckIf() {
-            var myRequest = new Request('../present.txt');
+            var myRequest = new Request('present.txt');
             fetch(myRequest).then(function(response) {
             return response.text().then(function(text) {
             myDiv.innerHTML = text;
             var presence = text;
             if (presence === "I am not at the studio.") {
-                var otherRequest = new Request('../counting.txt');
+                var otherRequest = new Request('counting.txt');
                 fetch(otherRequest).then(function(response) {
                 return response.text().then(function(text) {
                 otherDiv.innerHTML = text;
@@ -15,7 +15,7 @@ let myDiv = document.getElementById('textcontainer');
             });
             
             
-            var tempRequest = new Request('../HOT.txt');
+            var tempRequest = new Request('HOT.txt');
                 
             fetch(tempRequest).then(function(response) {
                 return response.text().then(function(text) {
@@ -38,7 +38,7 @@ let myDiv = document.getElementById('textcontainer');
             });
         }
         else if (presence === "I went swimming.") {
-                var otherRequest = new Request('../counting.txt');
+                var otherRequest = new Request('counting.txt');
                 fetch(otherRequest).then(function(response) {
                 return response.text().then(function(text) {
                 otherDiv.innerHTML = text;
@@ -46,7 +46,7 @@ let myDiv = document.getElementById('textcontainer');
             });
             
             
-            var tempRequest = new Request('../HOT.txt');
+            var tempRequest = new Request('HOT.txt');
                 
             fetch(tempRequest).then(function(response) {
                 return response.text().then(function(text) {
@@ -71,7 +71,7 @@ let myDiv = document.getElementById('textcontainer');
             else {
 
                 
-                var otherRequest = new Request('../counting.txt');
+                var otherRequest = new Request('counting.txt');
                 fetch(otherRequest).then(function(response) {
                 return response.text().then(function(text) {
                 const date_time = text.split(" ");
@@ -79,7 +79,7 @@ let myDiv = document.getElementById('textcontainer');
                 
         
             
-                var tempRequest = new Request('../HOT.txt');
+                var tempRequest = new Request('HOT.txt');
                 
                 fetch(tempRequest).then(function(response) {
                     return response.text().then(function(text) {
