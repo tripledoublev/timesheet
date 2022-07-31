@@ -14,8 +14,9 @@ with open('consecutive-days/index.html','w') as f:
     f.write('</a></h1><div class="flexbox" id="fbox">')
     for file in onlyfiles:
         # add new line except for first line
-        f.write("\n")
+        
         if file != 'index.html':
+            f.write("\n")
             fileless = file.split('.')
             f.write('<div class="textColor">')
             f.write('<a href="' + file + '">')
