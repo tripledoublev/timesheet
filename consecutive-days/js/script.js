@@ -40,7 +40,7 @@ function syncReadFile(filename) {
     
     
     let divcount = 0;
-    document.addEventListener('DOMContentLoaded', syncReadFile('data/Apr1-Apr8.txt'));
+    
     function main(item) {
     const bode = document.getElementById("dcontain");
     const flbx = document.getElementById("fbox");
