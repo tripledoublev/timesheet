@@ -32,19 +32,26 @@
     
 
     // here i input the seconds spent a the studio per day
-    seconds = [
-    "9690",
-    "1992",
-    "4943",
-    "15671",
-    "12570",
-    "6820",
-    "5451",
-    "2365"
-    ];
+    
+    
+// ✅ read file SYNCHRONOUSLY
+function syncReadFile(filename) {
+  var myRequest = new Request(filename);
+    fetch(myRequest).then(function(response) {
+    return response.text().then(function(text) {
+      const contents = text;
+      const arr = contents.split(/\r?\n/);
+      console.log(arr); // 👉️ ['One', 'Two', 'Three', 'Four']
+      arr.forEach(main);
+      return arr; 
+      });
+    })
+  };  
+ 
+    
     
     let divcount = 0;
-    document.addEventListener('DOMContentLoaded', seconds.forEach(main));
+    document.addEventListener('DOMContentLoaded', syncReadFile('data/Apr1-Apr8.txt'));
     function main(item) {
     const bode = document.getElementById("dcontain");
     const flbx = document.getElementById("fbox");
