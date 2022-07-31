@@ -30,17 +30,18 @@ function toColor(num) {
   }
   
   
-  // A button object calls the function:
-  
   rgba = toColor(timeNow * 2009);
   hex = fgColor(timeNow * 2009);
+
   bode.style.backgroundColor = rgba;
-  title.style.color = 'white';
+  title.style.color = "#FFFFFF";
   title.style.backgroundColor = hex;
-  for(var i=0, len=flbx.length; i<len; i++)
+  for(const element of flbx)
 {
-    flbx[i].firstChild.style["color"] = 'white';
-    flbx[i].firstChild.style["background-color"] = hex;
+    
+    element.style.backgroundColor = hex;
+    element.style.color = '#FFFFFF';
+    
 }
 
   

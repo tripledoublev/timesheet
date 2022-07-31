@@ -26,6 +26,7 @@
         font-weight: bold;
         font-family: Helvetica, sans-serif;
         font-size:calc(1.5vw + 1.5vh);
+        color:white;
     }
     .textColor:active {
         opacity:0.333;
