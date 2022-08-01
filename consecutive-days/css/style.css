@@ -12,7 +12,7 @@
         
         font-size:1vh;
         word-wrap: break-word;
-        border-radius: 0px;
+        border-radius: calc(0.5vw + 0.5vh);
         margin:calc(0.5vw + 1vh);
         padding:10px;
         text-align: center;
