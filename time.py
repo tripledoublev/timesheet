@@ -23,12 +23,21 @@
 #
 import datetime
 import calendar
+import os
 
+# remove old seconds data set
+os.remove("data/s.txt")
+# create new file and insert header
+with open("data/s.txt", "w") as new_file:
+    new_file.write("seconds per day,consecutive days at the studio, date")
+    new_file.write("\n")
+    new_file.write("\n")
+    new_file.close()
 # open timesheet
 with open("data/t.txt", "r") as txt_file:
         # count the number of lines
         linecount = len(txt_file.readlines())
-        #print the total number of lines
+        # print the total number of lines
         print('total lines:' + str(linecount))
         # remove header and reduce in half
         # this is because a session at the studio 
@@ -39,6 +48,8 @@ with open("data/t.txt", "r") as txt_file:
         dayOf = 0
         # another day for comparison
         previousDay = 0
+        # another month for comparison
+        previousMonth = 0
         # previous timespent if > 1 per day
         doubleshift = 0
         # counting consecutive days
@@ -82,8 +93,8 @@ with open("data/t.txt", "r") as txt_file:
             # substract seconds to get timespent at studio
             timespent = int(OUTstamp) - int(INstamp)
             # print timespent per entry
-            print(timespent)
-            # write timespent in separate file
+            print(str(timespent) + ' on ' + str(dayOf))
+            # write timespent in separate var
             # if it's a doubleshift
             if dayOf == previousDay : 
                 with open("data/s.txt", "r+") as s_txt:
@@ -108,8 +119,10 @@ with open("data/t.txt", "r") as txt_file:
                         s_txt.write(str(total) + ' seconds today, ' + str(countingDays) + ' consecutive days, ' + str(monthOf) + ' ' + str(dayOf))    
                     # write this total as the new doubleshift timespent
                     doubleshift = total
+                    print('doubleshift detected')
+                    print('total for the day: ' + str(total) + '  on ' + str(monthOf) + ' ' + str(dayOf))
             # For unconsecutive entries
-            elif dayOf - previousDay > 1:
+            elif monthOf != previousMonth or dayOf - previousDay >= 2:
                 with open("data/s.txt", "a+") as s_txt:
                     # reset consecutive days
                     countingDays = 0
@@ -126,10 +139,10 @@ with open("data/t.txt", "r") as txt_file:
                     # write timespent
                     # if day singular
                     if countingDays == 1:
-                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutives day, ' + str(monthOf) + ' ' + str(dayOf))
+                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutive day, ' + str(monthOf) + ' ' + str(dayOf))
                     # else plural
                     else: 
-                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutives days, ' + str(monthOf) + ' ' + str(dayOf))
+                        s_txt.write(str(timespent) + ' seconds today, ' + str(countingDays) + ' consecutive days, ' + str(monthOf) + ' ' + str(dayOf))
             # just another day at the studio
             else:
                 # open file
@@ -151,3 +164,11 @@ with open("data/t.txt", "r") as txt_file:
                     doubleshift = timespent
             # in the end the day Of becomes the previous day        
             previousDay = int(dayOf)
+            previousMonth = monthOf
+with open("data/s.txt", "a+") as old_file:
+    # go to beginning of file
+    old_file.seek(0) 
+    # add new line
+    old_file.write("\n")
+    old_file.write(str("unconsecutive"))
+    old_file.close()
