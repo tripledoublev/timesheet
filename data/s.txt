@@ -1,7 +1,7 @@
-seconds per day, consecutive days at the studio, day of the month
+seconds per day,consecutive days at the studio, date
 
 
-9690 seconds today, 1 consecutives day, Apr 1
+9690 seconds today, 1 consecutive day, Apr 1
 1992 seconds today, 2 consecutives days, Apr 2
 4943 seconds today, 3 consecutives days, Apr 3
 15671 seconds today, 4 consecutives days, Apr 4
@@ -10,61 +10,66 @@ seconds per day, consecutive days at the studio, day of the month
 5451 seconds today, 7 consecutives days, Apr 7
 2365 seconds today, 8 consecutives days, Apr 8
 unconsecutive
-11605 seconds today, 1 consecutives day, Apr 18
+11605 seconds today, 1 consecutive day, Apr 18
 9281 seconds today, 2 consecutives days, Apr 19
 12545 seconds today, 3 consecutive days, Apr 20
 unconsecutive
-4514 seconds today, 1 consecutives day, Apr 23
+4514 seconds today, 1 consecutive day, Apr 23
 6751 seconds today, 2 consecutives days, Apr 24
 18450 seconds today, 3 consecutives days, Apr 25
 14710 seconds today, 4 consecutives days, Apr 26
 6119 seconds today, 5 consecutives days, Apr 27
 unconsecutive
-17820 seconds today, 1 consecutives day, Apr 29
+17820 seconds today, 1 consecutive day, Apr 29
 9196 seconds today, 2 consecutives days, Apr 30
-12420 seconds today, 3 consecutives days, May 1
-16370 seconds today, 4 consecutive days, May 2
-33131 seconds today, 5 consecutive days, May 3
-26217 seconds today, 6 consecutives days, May 4
-3329 seconds today, 7 consecutives days, May 5
-850 seconds today, 8 consecutives days, May 6
 unconsecutive
-29952 seconds today, 1 consecutives day, May 9
+12420 seconds today, 1 consecutive day, May 1
+16370 seconds today, 2 consecutive days, May 2
+33131 seconds today, 3 consecutive days, May 3
+26217 seconds today, 4 consecutives days, May 4
+3329 seconds today, 5 consecutives days, May 5
+850 seconds today, 6 consecutives days, May 6
+unconsecutive
+29952 seconds today, 1 consecutive day, May 9
 36188 seconds today, 2 consecutive days, May 10
 1401 seconds today, 3 consecutives days, May 11
 1198 seconds today, 4 consecutives days, May 12
 23242 seconds today, 5 consecutive days, May 13
 unconsecutive
-1127 seconds today, 1 consecutives day, May 16
+1127 seconds today, 1 consecutive day, May 16
 13089 seconds today, 2 consecutive days, May 17
 12555 seconds today, 3 consecutive days, May 18
 unconsecutive
-477 seconds today, 1 consecutives day, May 20
+477 seconds today, 1 consecutive day, May 20
 14820 seconds today, 2 consecutive days, May 21
 6664 seconds today, 3 consecutives days, May 22
 5737 seconds today, 4 consecutive days, May 23
 5902 seconds today, 5 consecutives days, May 24
-5409 seconds today, 6 consecutives days, Jun 1
-1348 seconds today, 7 consecutives days, Jun 2
-2923 seconds today, 8 consecutives days, Jun 3
 unconsecutive
-4389 seconds today, 1 consecutives day, Jun 6
+5409 seconds today, 1 consecutive day, Jun 1
+1348 seconds today, 2 consecutives days, Jun 2
+2923 seconds today, 3 consecutives days, Jun 3
+unconsecutive
+4389 seconds today, 1 consecutive day, Jun 6
 5637 seconds today, 2 consecutives days, Jun 7
 unconsecutive
-11729 seconds today, 3 consecutive days, Jul 2
-2302 seconds today, 4 consecutives days, Jul 3
-19682 seconds today, 5 consecutive days, Jul 4
-10019 seconds today, 6 consecutive days, Jul 5
-11910 seconds today, 7 consecutive days, Jul 6
-6166 seconds today, 8 consecutives days, Jul 7
+8993 seconds today, 1 consecutive day, Jul 2
+2302 seconds today, 2 consecutives days, Jul 3
+19682 seconds today, 3 consecutive days, Jul 4
+10019 seconds today, 4 consecutive days, Jul 5
+11910 seconds today, 5 consecutive days, Jul 6
+6166 seconds today, 6 consecutives days, Jul 7
 unconsecutive
 13941 seconds today, 1 consecutive day, Jul 15
 22554 seconds today, 2 consecutive days, Jul 16
 unconsecutive
-1840 seconds today, 1 consecutives day, Jul 19
+1840 seconds today, 1 consecutive day, Jul 19
 14524 seconds today, 2 consecutive days, Jul 20
 unconsecutive
 25315 seconds today, 1 consecutive day, Jul 26
 23787 seconds today, 2 consecutive days, Jul 27
 unconsecutive
-15357 seconds today, 1 consecutives day, Jul 29
+15357 seconds today, 1 consecutive day, Jul 29
+5870 seconds today, 2 consecutives days, Jul 30
+5116 seconds today, 3 consecutives days, Jul 31
+unconsecutive
