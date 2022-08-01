@@ -54,13 +54,13 @@ with open("s.txt", "r") as txt_file:
                     # add to file count
                     fileCount += 1
                     # take fileCount, first date and last date as filename
-                    tempPath = str(fileCount) + '_' + dateRange[0] + '-' + dateRange[-1] + '.txt'
+                    tempPath = str(fileCount).rjust(2, '0') + '_' + dateRange[0] + '-' + dateRange[-1] + '.txt'
                 # if daterange only contains 1 day
                 elif len(dateRange) == 1:
                     # add to file count
                     fileCount += 1
                     # take file count and date as filename
-                    tempPath = str(fileCount) + '_' + dateRange[0] + '.txt'
+                    tempPath = str(fileCount).rjust(2, '0') + '_' + dateRange[0] + '.txt'
                 # reset dateRange
                 dateRange = []
                 # create filename by joining relative path and tempPath
