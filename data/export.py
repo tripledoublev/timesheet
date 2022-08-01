@@ -1,10 +1,11 @@
 # Take number of seconds per day
-# Regroup in 1 file
+# Regroup consecutive days in 1 file
 # Name file according to dates
 #
 import os.path
 
 # open timesheet
+fileCount = 0
 with open("s.txt", "r") as txt_file:
         # count the number of lines
         linecount = len(txt_file.readlines())
@@ -25,48 +26,56 @@ with open("s.txt", "r") as txt_file:
             dataLine = txt_file.readlines()[realCount]
             # split data
             dataSplit = dataLine.split(' ')
-            
             # look at seconds
             dailySeconds = dataSplit[0]
-            print('sec:' + dailySeconds)
-            
-            
             # assemble date
-            if dailySeconds != 'unconsecutive\n':
+            if dailySeconds.isdigit() == True:
                 # add seconds to list
                 secondsRange.append(dailySeconds)
-                print(dataSplit)
-                month = dataSplit[-2]      
-                print(month)
-                
+                # take month
+                month = dataSplit[-2]     
+                # take day 
                 day = dataSplit[-1]
-                print(day)
+                # check size 
                 size = len(day)
-                print(size)
+                # to remove line break
                 digit = day[:size - 1]
-                print(digit)
+                # assemble month and day
                 currentDate = month + digit
-                print(currentDate)
                 # add date to list
                 dateRange.append(currentDate)
-                print(dateRange)
-            elif dailySeconds == 'unconsecutive\n':
+            # if data is not digits
+            # this means 'unconsecutive'
+            # then we save the collected data
+            # to a .txt file
+            else:
+                # if there is more than one date
                 if len(dateRange) > 1:
-                    tempPath = dateRange[0] + '-' + dateRange[-1] + '.txt'
-                    print('equal1')
+                    # add to file count
+                    fileCount += 1
+                    # take fileCount, first date and last date as filename
+                    tempPath = str(fileCount) + '_' + dateRange[0] + '-' + dateRange[-1] + '.txt'
+                # if daterange only contains 1 day
                 elif len(dateRange) == 1:
-                    tempPath = dateRange[0]
-                    print('equal0')
-                
-                print('unconsecutive')
+                    # add to file count
+                    fileCount += 1
+                    # take file count and date as filename
+                    tempPath = str(fileCount) + '_' + dateRange[0] + '.txt'
+                # reset dateRange
                 dateRange = []
+                # create filename by joining relative path and tempPath
                 with open(os.path.join('..', 'consecutive-days', 'data', tempPath), "w") as new_file:
+                    # add every daily total
                     for y in range(0, len(secondsRange)):
+                        # on first line
                         if y != 0:
-                            # add new line except for first line
+                            # add new line 
                             new_file.write("\n")
-                        # add seconds
+                        # then add seconds
                         new_file.write(secondsRange[y])
-                    print('file-written')
+                    # a file was created
+                    print(tempPath + ' file-written')
+                # reset consecutive list of daily totals
                 secondsRange = []
-                print('reset')
+# this is it. 
+print('/// export successful ///')
