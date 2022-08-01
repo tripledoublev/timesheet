@@ -27,7 +27,7 @@ for file in onlyfiles:
         f.write("\n")
         f.write("<a href='")
         f.write(fileless[0] + '.html')
-        f.write(">")
+        f.write("'>")
         f.write("\n")
         f.write('<div class="flexbox" id="fbox">')
         f.write("\n")
