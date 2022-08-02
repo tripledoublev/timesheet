@@ -18,9 +18,6 @@
     a = ( ((num & 0xFF000000) >>> 24 ) / 200) + 0.027451;
     return "rgba(" + [255 - (r * mult), 255 - (g * mult), 255 - (b * mult), 255 - (a * mult)].join(",") + ")"}
     
-
-    // here i input the seconds spent a the studio per day
-    
     
 // ✅ read file SYNCHRONOUSLY
 function syncReadFile(filename) {
@@ -32,35 +29,44 @@ function syncReadFile(filename) {
       const arr = contents.split(/\r?\n/);
       console.log(arr); // 👉️ ['One', 'Two', 'Three', 'Four']
       arr.forEach(main);
+      const maxis = arr.Math.max();
       return arr; 
+      return maxis;
       });
     })
   };  
  
     
-    
+    // set div count
     let divcount = 0;
     
+    // main function
     function main(item) {
+    // get elements
     const bode = document.getElementById("dcontain");
     const flbx = document.getElementById("fbox");
+    // take your time
     var timeNow = Math.round(Date.now() / 1000);
+    // keep count
     divcount++;
+    // create divs
     var div = document.createElement('div');
-    var color = (item / 20671) * 255
-    var borderR = (item / 15671) * 100
+    // generate color 
+    var color = (item / maxis) * 255
+    // 
+    var borderR = (item / maxis) * 100
     
     div.id = divcount;
     div.className = "textColor";
-    div.style.width = (item / 16000) * 30 + 100 + 'px';
-    div.style.height = (item / 16000) * 20 + 100 +'px';
+    div.style.width = (item / maxis) * 30 + 100 + 'px';
+    div.style.height = (item / maxis) * 20 + 100 +'px';
     var gsFactor = color / 255;
     // Arrow Function:
     hello = (e) => {
-        console.log(e.target.id);
-        var newTime = Math.round(Date.now() / 1000);
-        console.log(newTime);
-        document.getElementById(e.target.id).style.backgroundColor = fgColor(newTime * 20009, 0.5);
+      e.preventDefault();
+      var newTime = Math.round(Date.now() / 1000);
+      console.log(newTime);
+      document.getElementById(e.target.id).style.backgroundColor = fgColor(newTime * 20009, 0.5);
     }
     
     
