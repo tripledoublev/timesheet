@@ -65,7 +65,7 @@ function syncReadFile(filename) {
       div.className = "textColor";
       // create width and height based on data
       div.style.width = (item / maxis) * 500 + 'px';
-      div.style.height = (item / maxis) * 500 +'px';
+      div.style.height = '33vh';
       // 0-255 to 0-1
       var gsFactor = color / 255;
       // Arrow Function to change color on click:
