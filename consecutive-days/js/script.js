@@ -58,14 +58,14 @@ function syncReadFile(filename) {
       // generate color 
       var color = (item / maxis) * 255
       // generate border radius
-      var borderR = (item / maxis) * 100
+      var borderR = (item / maxis) * 50
       // div is assigned id  
       div.id = divcount;
       // with class textColor
       div.className = "textColor";
       // create width and height based on data
-      div.style.width = (item / maxis) * 100 + 'px';
-      div.style.height = (item / maxis) * 100 +'px';
+      div.style.width = (item / maxis) * 500 + 'px';
+      div.style.height = (item / maxis) * 500 +'px';
       // 0-255 to 0-1
       var gsFactor = color / 255;
       // Arrow Function to change color on click:
