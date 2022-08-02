@@ -12,7 +12,7 @@ function toColor(num) {
   g = (num & 0xFF00) >>> 8,
   r = (num & 0xFF0000) >>> 16,
   a = ( ((num & 0xFF000000) >>> 24 ) / 255);
-  return "rgba(" + [255 - (r), 255 - (g), 255 - (b), 255].join(",") + ")"}
+  return "rgba(" + [255 - (r), 255 - (g), 255 - (b), a].join(",") + ")"}
   
   document.addEventListener('DOMContentLoaded', main());
   function main(item) {
@@ -33,14 +33,14 @@ function toColor(num) {
   rgba = toColor(timeNow * 2009);
   hex = fgColor(timeNow * 2009);
 
-  bode.style.backgroundColor = rgba;
-  title.style.color = "#FFFFFF";
-  title.style.backgroundColor = hex;
+  bode.style.backgroundColor = hex;
+  title.style.color = "#000000";
+  title.style.backgroundColor = rgba;
   for(const element of flbx)
 {
     
-    element.style.backgroundColor = hex;
-    element.style.color = '#FFFFFF';
+    element.style.backgroundColor = rgba;
+    element.style.color = '#000000';
     
 }
 
