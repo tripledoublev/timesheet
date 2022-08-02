@@ -30,7 +30,7 @@ function syncReadFile(filename) {
       console.log(text);
       const arr = contents.split(/\r?\n/);
       console.log(arr); // 👉️ ['One', 'Two', 'Three', 'Four']
-      maxis = arr.Math.max()
+      maxis = Math.max(arr)
       arr.forEach(main);
       return arr; 
       });
