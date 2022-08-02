@@ -20,6 +20,8 @@
     
     // set maximum seconds
     var maxis;  
+    // set amount of days
+    var dayz
 
 // ✅ read file SYNCHRONOUSLY
 function syncReadFile(filename) {
@@ -32,6 +34,7 @@ function syncReadFile(filename) {
       const arr = contents.split(/\r?\n/);
       // get maximum seconds
       maxis = Math.max(...arr)
+      dayz = arr.length
       // for each day do main function
       arr.forEach(main);
       return arr; 
@@ -64,7 +67,7 @@ function syncReadFile(filename) {
       // with class textColor
       div.className = "textColor";
       // create width and height based on data
-      div.style.width = (item / maxis) * 100 + '%';
+      div.style.width = (item / maxis) * (100 / days) + '%';
       div.style.height = '20vh';
       // 0-255 to 0-1
       var gsFactor = color / 255;
