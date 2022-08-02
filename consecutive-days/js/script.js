@@ -26,11 +26,13 @@ function syncReadFile(filename) {
   var myRequest = new Request(filename);
     fetch(myRequest).then(function(response) {
     return response.text().then(function(text) {
+      // content of daily seconds
       const contents = text;
-      console.log(text);
+      // split daily totals
       const arr = contents.split(/\r?\n/);
-      console.log(arr); // 👉️ ['One', 'Two', 'Three', 'Four']
+      // get maximum seconds
       maxis = Math.max(...arr)
+      // for each day do main function
       arr.forEach(main);
       return arr; 
       });
@@ -55,19 +57,24 @@ function syncReadFile(filename) {
       var div = document.createElement('div');
       // generate color 
       var color = (item / maxis) * 255
-      // 
+      // generate border radius
       var borderR = (item / maxis) * 100
-      
+      // div is assigned id  
       div.id = divcount;
+      // with class textColor
       div.className = "textColor";
-      div.style.width = (item / maxis) * 30 + 100 + 'px';
-      div.style.height = (item / maxis) * 20 + 100 +'px';
+      // create width and height based on data
+      div.style.width = (item / maxis) + 'vw';
+      div.style.height = (item / maxis) +'vh';
+      // 0-255 to 0-1
       var gsFactor = color / 255;
-      // Arrow Function:
+      // Arrow Function to change color on click:
       hello = (e) => {
+        // prevent default to block the parent link element
+        // and set new color
         e.preventDefault();
         var newTime = Math.round(Date.now() / 1000);
-        console.log(newTime);
+        console.log('UNIX time: ' + newTime);
         document.getElementById(e.target.id).style.backgroundColor = fgColor(newTime * 20009, 0.5);
       }
       
@@ -75,15 +82,18 @@ function syncReadFile(filename) {
       // A button object calls the function:
       
       div.addEventListener("click", hello, false);
-      console.log(gsFactor);
-      div.style.borderRadius = borderR + 'px';
       
+      // set border radius
+      div.style.borderRadius = borderR + 'px';
+      // compute and set colors
       rgba = toColor(timeNow * 20009);
       hex = fgColor(timeNow * 20009, gsFactor);
       bode.style.backgroundColor = rgba;
       bode.style.color = hex;
       div.style.backgroundColor = hex;
       div.style.color = hex;
+      
+      // append this div to the flex box
       flbx.appendChild(div);
       
       };
