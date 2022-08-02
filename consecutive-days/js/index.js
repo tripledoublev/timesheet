@@ -34,13 +34,11 @@ function toColor(num) {
   hex = fgColor(timeNow * 2009);
 
   bode.style.backgroundColor = hex;
-  title.style.color = "#000000";
   title.style.backgroundColor = rgba;
   for(const element of flbx)
 {
     
     element.style.backgroundColor = rgba;
-    element.style.color = '#000000';
     
 }
 
