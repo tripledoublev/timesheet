@@ -21,7 +21,7 @@
     // set maximum seconds
     var maxis;  
     // set amount of days
-    var dayz
+    var dayz;
 
 // ✅ read file SYNCHRONOUSLY
 function syncReadFile(filename) {
@@ -33,8 +33,9 @@ function syncReadFile(filename) {
       // split daily totals
       const arr = contents.split(/\r?\n/);
       // get maximum seconds
-      maxis = Math.max(...arr)
-      dayz = arr.length
+      maxis = Math.max(...arr);
+      // get number of days
+      dayz = arr.length;
       // for each day do main function
       arr.forEach(main);
       return arr; 
