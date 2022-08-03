@@ -2,20 +2,28 @@
 
 ## A Python experiment to create a timecard for logging my time spent at the studio
 
-### A exercise exploring the creative potential of the quantification of labour
+### A creative exercise exploring the potential financialization of the quantification of location-based artistic labour
 
 I created a simple Python script that allows me to timestamp my presence in the workspace by using *--time IN* or *--time OUT*.
-The data is stored in t.txt and will be used as basic material to generate alternate visualizations.
+The data is stored in data/t.txt and will be used as basic material to generate alternate visualizations.
 
-I added the possibility to log thoughts as strings in another file named m.txt by using **--text**.
+I added the possibility to log thoughts as strings in another file in the same folder (data/m.txt) by using **--text**.
+
 As we live in a connected world, I thought I might want to share some of those thoughts.
  I added the option **--tweet** in order to send these text logs directly to Twitter. 
 
-I will fill this github repo with additional content as the project evolves.
+As I've been working with environmental sensors, I added the **--climate** argument to access the enviro board on my raspberry pi at the studio in order to include weather information on my timesheet.
+
+This is a work and progress. I will fill this github repository with additional content as the project evolves.
 
 ## [Am I at the studio?](https://vincent.charlebois.info/am-i/)
 
 As an expanded exercise, I created a website that gets updated whenever I arrive or leave the studio. I also added a climate component to this app by using a Raspberry Pi Zero and the enviro board by Pimonori. By adding the **--climate** argument when logging in and out of the studio, I can fetch the temperature sensor's data and make it available online. 
+
+## Series of consecutive days
+
+I wrote scripts that take the timesheet data and computes daily totals and regroups days when consecutive.
+ - time.py
 
 ### Instructions
 
