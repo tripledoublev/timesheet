@@ -47,10 +47,14 @@
         align-content: center;
         padding: 3rem;
         width: 90vw;
-        margin-left: 10vw;
         margin-top:5vh;
     }
-
+    div.indexbox {
+        margin-left: 10vw;
+    }
+    div.consecutivebox {
+        margin-left:5vw;
+    }
     .justify-left {
         justify-content: left;
     }
