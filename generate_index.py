@@ -25,7 +25,7 @@ with open('consecutive-days/index.html','w') as f:
     f.write("\n")
     f.write('           </h1>')
     f.write("\n")
-    f.write('           <div class="flexbox" id="fbox">')
+    f.write('           <div class="flexbox justify-left" id="fbox">')
     f.write("\n")
     # sort files in ascending order
     onlyfiles.sort()

@@ -43,13 +43,20 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: left;
         height: calc(90vh - 6rem);
         align-content: center;
         padding: 3rem;
         width: 90vw;
         margin-left: 10vw;
         margin-top:5vh;
+    }
+
+    .justify-left {
+        justify-content: left;
+    }
+
+    .justify-center {
+        justify-content: center;
     }
 
     .textColor:hover a,
