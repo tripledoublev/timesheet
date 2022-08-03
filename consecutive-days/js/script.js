@@ -80,7 +80,7 @@ function syncReadFile(filename) {
         var newTime = Math.round(Date.now() / 1000);
         console.log('UNIX time: ' + newTime);
         document.getElementById(e.target.id).style.backgroundColor = fgColor(newTime * 20009, 0.5);
-        document.getElementById(e.target.id).focus;
+        document.getElementById(e.target.id).focus();
       }
       
       
