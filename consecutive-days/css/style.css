@@ -9,13 +9,15 @@
     }
     /* defines styles for div */
     div.textColor {
-        
+        flex: 1 1 1;
         font-size:1vh;
         word-wrap: break-word;
         border-radius: calc(0.5vw + 0.5vh);
         margin:calc(0.5vw + 1vh);
-        padding:10px;
+        padding:20px 10px;
         text-align: center;
+        border: 3px solid transparent;
+
     }
 
     .textColor a,
@@ -26,8 +28,13 @@
         font-weight: bold;
         font-family: Helvetica, sans-serif;
         font-size:calc(1.5vw + 1.5vh);
-        color: black;
+        color: white;
+
     }
+    .textColor a {
+        color:transparent;
+    }
+
     .textColor:active {
         opacity:0.333;
         cursor:pointer;
@@ -36,17 +43,26 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
+        justify-content: left;
         height: calc(90vh - 6rem);
         align-content: center;
         padding: 3rem;
-        width: calc(80vw - 6rem);
-        margin: 5vh 0vw 5vh 9vw;
+        width: 90vw;
+        margin-left: 10vw;
+        margin-top:5vh;
     }
 
-    .textColor:hover{
-
-        filter: invert(0%);
+    .textColor:hover a,
+    #page-title a{
+        color:black;
+        filter: invert(100%);
+    }
+    #page-title:hover a{
+        color:black;
+        filter:invert(0);
+    }
+    .textColor:hover {
+        filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.1));
     }
 
     h1 {
@@ -61,4 +77,12 @@
         padding-right:10vh;
         padding-bottom:10vw;
         padding-top: 0.5rem;
+    }
+
+    #bgwrap1, #bgwrap2 {
+        position: fixed;
+        left: 0;
+        top:0;
+        width:100vw;
+        height:100vh;
     }
