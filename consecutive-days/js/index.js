@@ -20,7 +20,7 @@ function toColor(num) {
   const flbx = document.getElementsByClassName("textColor");
   const title = document.getElementById("page-title");
   var timeNow = Math.round(Date.now() / 1000);
-  
+  setTimeout(main, 2000);
   // Arrow Function:
   hello = (e) => {
       console.log(e.target.id);
