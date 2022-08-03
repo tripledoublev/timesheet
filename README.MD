@@ -2,6 +2,8 @@
 
 ## A Python experiment to create a timecard for logging my time spent at the studio
 
+### A exercise exploring the creative potential of the quantification of labour
+
 I created a simple Python script that allows me to timestamp my presence in the workspace by using *--time IN* or *--time OUT*.
 The data is stored in t.txt and will be used as basic material to generate alternate visualizations.
 
@@ -81,4 +83,4 @@ In the file 'app.py', the file is imported on line 12 and the main() function is
 
 
 
-VINCENT CHARLEBOIS, 2022
+[VINCENT CHARLEBOIS](https://vincentcharlebois.com), 2022
