@@ -17,30 +17,27 @@ function toColor(num) {
   document.addEventListener('DOMContentLoaded', main());
   function main(item) {
   const bode = document.getElementById("dcontain");
+  const bgdiv1 = document.getElementById("bgwrap1");
+  const bgdiv2 = document.getElementById("bgwrap2");
+
+
   const flbx = document.getElementsByClassName("textColor");
   const title = document.getElementById("page-title");
   var timeNow = Math.round(Date.now() / 1000);
-  setTimeout(main, 2000);
-  // Arrow Function:
-  hello = (e) => {
-      console.log(e.target.id);
-      var newTime = Math.round(Date.now() / 1000);
-      console.log(newTime);
-      document.getElementById(e.target.id).style.backgroundColor = fgColor(newTime * 20009, 0.5);
-  }
-  
+  setInterval(main, 250);
   
   rgba = toColor(timeNow * 2009);
   hex = fgColor(timeNow * 2009);
+  bgdiv1.style.backgroundColor = hex;
+  bgdiv2.style.backgroundColor = hex;
 
   bode.style.backgroundColor = hex;
-  title.style.backgroundColor = rgba;
+  title.style.backgroundColor = hex;
   for(const element of flbx)
 {
     
-    element.style.backgroundColor = rgba;
+    element.style.backgroundColor = hex;
     
 }
-
   
   };
