@@ -60,7 +60,7 @@ function syncReadFile(filename) {
       // create divs
       var div = document.createElement('div');
       // generate color 
-      var color = (item / maxis) * 255
+      var color = (item / maxis) * 222 + 28
       // generate border radius
       var borderR = (item / maxis) * 100
       // div is assigned id  
