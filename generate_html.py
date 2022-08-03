@@ -29,7 +29,7 @@ for file in onlyfiles:
         f.write(fileless[0] + '.html')
         f.write("'>")
         f.write("\n")
-        f.write('<div class="flexbox justify-center" id="fbox">')
+        f.write('<div class="flexbox justify-center consecutivebox" id="fbox">')
         f.write("\n")
         f.write(' <script type="text/javascript" src="js/script.js"></script>')
         f.write("\n")
