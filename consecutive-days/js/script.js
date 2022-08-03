@@ -68,7 +68,7 @@ function syncReadFile(filename) {
       // with class textColor
       div.className = "textColor";
       // create width and height based on data
-      div.style.width = (item / maxis) * (100 / days) + '%';
+      div.style.width = (item / maxis) * (100 / dayz) + '%';
       div.style.height = '20vh';
       // 0-255 to 0-1
       var gsFactor = color / 255;
