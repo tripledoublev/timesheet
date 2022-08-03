@@ -71,7 +71,7 @@ In the file 'app.py', the file is imported on line 12 and the main() function is
 
         pip install tweepy
 
-7. You can now uncomment line 12 and 53 in 'app.py' (remove '#' at the beginning of the line).
+7. You can now uncomment line 16 and 60 in 'app.py' (remove '#' at the beginning of the line).
 
 - You can now add --tweet to send your text log entry from the command line interface to twitter
 
