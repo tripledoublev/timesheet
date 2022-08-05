@@ -1,6 +1,7 @@
 seconds per day,consecutive days at the studio, date
 
 
+unconsecutive
 9690 seconds today, 1 consecutive day, Apr 1
 1992 seconds today, 2 consecutives days, Apr 2
 4943 seconds today, 3 consecutives days, Apr 3
@@ -72,5 +73,7 @@ unconsecutive
 15357 seconds today, 1 consecutive day, Jul 29
 5870 seconds today, 2 consecutives days, Jul 30
 5116 seconds today, 3 consecutives days, Jul 31
-18365 seconds today, 1 consecutive day, Aug 1
+18365 seconds today, 4 consecutives days, Aug 1
+unconsecutive
+9609 seconds today, 1 consecutive day, Aug 3
 unconsecutive

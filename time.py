@@ -78,6 +78,10 @@ with open("data/t.txt", "r") as txt_file:
             filtered = archive.split('-')
             # look at month
             month = int(filtered[1])
+            # look at year
+            year = int(filtered[0])
+            # Get the number of days in month
+            daysInMonth= calendar.monthrange(year, month)[1]
             # from [1-12] to [Jan-Dec]
             monthOf = calendar.month_abbr[month] 
             # look at day & time
@@ -122,7 +126,7 @@ with open("data/t.txt", "r") as txt_file:
                     print('doubleshift detected')
                     print('total for the day: ' + str(total) + '  on ' + str(monthOf) + ' ' + str(dayOf))
             # For unconsecutive entries
-            elif monthOf != previousMonth or dayOf - previousDay >= 2:
+            elif (monthOf == previousMonth and dayOf - previousDay >= 2) or (monthOf != previousMonth and dayOf + daysInMonth - previousDay >= 2) :
                 with open("data/s.txt", "a+") as s_txt:
                     # reset consecutive days
                     countingDays = 0
