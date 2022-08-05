@@ -1,4 +1,4 @@
-seconds per day,consecutive days at the studio, date
+seconds per day, # of consecutive days at the studio, date
 
 
 9690 seconds today, 1 consecutive day, Apr 1
