@@ -27,11 +27,16 @@ with open('consecutive-days/index.html','w') as f:
     f.write("\n")
     f.write('           <div class="flexbox justify-left indexbox" id="fbox">')
     f.write("\n")
+    
     # sort files in ascending order
     onlyfiles.sort()
     for file in onlyfiles:
         if file != 'index.html':
             # add new line
+            f.write("\n")
+            f.write('               <div class="textColor">')
+            f.write("\n")
+            f.write('                   <a href="' + file + '">')
             f.write("\n")
             # remove extension
             fileless = file.split('.')
@@ -39,16 +44,20 @@ with open('consecutive-days/index.html','w') as f:
             removePrefix = fileless[0].split('_')
             # split dates
             datesOnly = removePrefix[1].split('-')
+            # set first date
             firstDate = datesOnly[0]
-            secondDate = datesOnly[1]
             # split month and day
             splitDate1 = [firstDate[index : index + 3] for index in range(0, len(firstDate), 3)]
-            splitDate2 = [secondDate[index : index + 3] for index in range(0, len(secondDate), 3)]
-            f.write('               <div class="textColor">')
-            f.write("\n")
-            f.write('                   <a href="' + file + '">')
-            f.write("\n")
-            f.write('                       ' + splitDate1[0] + ' ' + splitDate1[1] + ' - ' + splitDate2[0] + ' ' + splitDate2[1])
+            # record second date only if present
+            if len(datesOnly) > 1:
+                # set second data
+                secondDate = datesOnly[1]
+                # split month and day
+                splitDate2 = [secondDate[index : index + 3] for index in range(0, len(secondDate), 3)]
+                # add text for link element
+                f.write('                       ' + splitDate1[0] + ' ' + splitDate1[1] + ' - ' + splitDate2[0] + ' ' + splitDate2[1])
+            else:
+                f.write('                       ' + splitDate1[0] + ' ' + splitDate1[1])
             f.write("\n")
             f.write('                   </a>')
             f.write("\n")
