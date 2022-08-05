@@ -1,7 +1,6 @@
 seconds per day,consecutive days at the studio, date
 
 
-unconsecutive
 9690 seconds today, 1 consecutive day, Apr 1
 1992 seconds today, 2 consecutives days, Apr 2
 4943 seconds today, 3 consecutives days, Apr 3

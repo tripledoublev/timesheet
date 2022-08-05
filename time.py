@@ -169,6 +169,10 @@ with open("data/t.txt", "r") as txt_file:
             # in the end the day Of becomes the previous day        
             previousDay = int(dayOf)
             previousMonth = monthOf
+# this last section contains formatting
+# such as adding 'unconsecutive' at the bottom
+# so the export.py can build the .txt file
+# that will be used to generate the .html
 with open("data/s.txt", "a+") as old_file:
     # go to beginning of file
     old_file.seek(0) 
@@ -176,3 +180,19 @@ with open("data/s.txt", "a+") as old_file:
     old_file.write("\n")
     old_file.write(str("unconsecutive"))
     old_file.close()
+# this removes an unnecessary line at the top of the file 
+# list that stores all the file lines
+lines = []
+# read file
+with open("data/s.txt", 'r') as fp:
+    # read an store all lines into list
+    lines = fp.readlines()
+
+# Write file
+with open("data/s.txt", 'w') as fp:
+    # iterate each line
+    for number, line in enumerate(lines):
+        # delete line 5 and 8. or pass any Nth line you want to remove
+        # note list index starts from 0
+        if number not in [3]:
+            fp.write(line)
