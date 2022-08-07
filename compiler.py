@@ -4,9 +4,13 @@ import generate_index
 from data import export
 
 timeMachine
+print('timeMachine created s.txt')
 export
+print('from s.txt to consecutive days')
 generate_html
+print('from txt to html')
 generate_index
-print('consecutive days at the studio have been compiled')
+print('index has been updated')
+print('compiled: consecutive days at the studio')
 print('update it with commit+push')
 
