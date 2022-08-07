@@ -6,7 +6,7 @@ import os.path
 
 # open timesheet
 fileCount = 0
-with open("s.txt", "r") as txt_file:
+with open("data/s.txt", "r") as txt_file:
         # count the number of lines
         linecount = len(txt_file.readlines())
         #print the total number of lines
@@ -16,7 +16,7 @@ with open("s.txt", "r") as txt_file:
         # create date and seconds list
         dateRange = []
         secondsRange = []
-        # go through each line in s.txt
+        # go through each line in data/s.txt
         for x in range(0, int(modCount)):
             # keep count 
             realCount = x + 3
@@ -64,7 +64,7 @@ with open("s.txt", "r") as txt_file:
                 # reset dateRange
                 dateRange = []
                 # create filename by joining relative path and tempPath
-                with open(os.path.join('..', 'consecutive-days', 'data', tempPath), "w") as new_file:
+                with open(os.path.join('consecutive-days', 'data', tempPath), "w") as new_file:
                     # add every daily total
                     for y in range(0, len(secondsRange)):
                         # on first line
