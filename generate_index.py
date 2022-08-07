@@ -73,3 +73,5 @@ with open('consecutive-days/index.html','w') as f:
     f.write("\n")
     f.write('</html>')
     f.write("\n")
+
+print('index.html updated')
