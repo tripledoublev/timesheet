@@ -51,4 +51,4 @@ for file in onlyfiles:
         f.write("           </body>")
         f.write("\n")
         f.write("   </html>")
-        print('created ' + file)
+        print('created ' + fileless[0] + '.html')

@@ -96,8 +96,8 @@ with open("data/t.txt", "r") as txt_file:
             OUTstamp = OUTlist[1]
             # substract seconds to get timespent at studio
             timespent = int(OUTstamp) - int(INstamp)
-            # print timespent per entry
-            print(str(timespent) + ' on ' + str(monthOf) + str(dayOf))
+            # this used to print timespent per entry
+            # print(str(timespent) + ' on ' + str(monthOf) + str(dayOf))
             # write timespent in separate var
             # if it's a doubleshift
             if dayOf == previousDay : 
@@ -123,8 +123,9 @@ with open("data/t.txt", "r") as txt_file:
                         s_txt.write(str(total) + ' seconds today, ' + str(countingDays) + ' consecutive days, ' + str(monthOf) + ' ' + str(dayOf))    
                     # write this total as the new doubleshift timespent
                     doubleshift = total
-                    print('doubleshift detected')
-                    print('total for the day: ' + str(total) + '  on ' + str(monthOf) + ' ' + str(dayOf))
+                    # This used to print the detectino of doubleshift and the total for the day
+                    # print('doubleshift detected')
+                    # print('total for the day: ' + str(total) + '  on ' + str(monthOf) + ' ' + str(dayOf))
             # For unconsecutive entries
             elif (monthOf == previousMonth and dayOf - previousDay >= 2) or (monthOf != previousMonth and dayOf + daysInMonth - previousDay >= 2) :
                 with open("data/s.txt", "a+") as s_txt:
