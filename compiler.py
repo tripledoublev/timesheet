@@ -1,3 +1,22 @@
+# This should compile the timesheet
+# into html for each series of consecutives days
+# spent at the studio
+# 
+# Each rectangular shape appears as the daily
+# total of seconds
+# 
+# This number of seconds is used to define
+# its shape, color and its size relative to 
+# the other days in the series
+# 
+# Important Note:
+# 
+# I noticed there is an issue with the script ordering
+# I need to fix this! 
+# It still works but I need to run it twice
+
+# In the meantime a bash script will do the trick
+
 import timeMachine
 import generate_html
 import generate_index
