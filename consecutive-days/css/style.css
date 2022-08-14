@@ -36,6 +36,10 @@ div.textColor {
     color:transparent;
 }
 
+.textColor a:visited {
+    color:white;
+}
+
 .textColor:active {
     opacity:0.333;
     cursor:pointer;
