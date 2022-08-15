@@ -31,6 +31,9 @@ div.textColor {
 .indexbox .textColor, h1 {
     border: 2px solid white;
 }
+.consecutivebox .textColor {
+    border: 2px solid grey;
+}
 
 .textColor a {
     color:transparent;
