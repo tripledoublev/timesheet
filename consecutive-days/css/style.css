@@ -37,7 +37,7 @@ div.textColor {
 }
 
 .textColor a:visited {
-    color:white;
+    color: white !important;
 }
 
 .textColor:active {
