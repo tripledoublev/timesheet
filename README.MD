@@ -16,6 +16,18 @@ As I've been working with environmental sensors, I added the **--climate** argum
 
 This is a work and progress. I will fill this github repository with additional content as the project evolves.
 
+## Consecutive series of days as moments archived online
+
+### compiler.sh takes the timesheet data and creates series of consecutive days as html-based visualization.
+
+1. It Compiles timesheet (data/t.txt) into daily seconds (data/s.txt)
+
+2.  From these daily totals, it regroups days as series of consecutive days' totals and compiles it as separate txt files (consecutive-days/data/...)
+
+3. These text files are used to generate and populate their HTML equivalent
+
+4. In the end, the html files contained in the folder are used to populate the index's html links
+
 ## [Am I at the studio?](https://vincent.charlebois.info/am-i/)
 
 As an expanded exercise, I created a website that gets updated whenever I arrive or leave the studio. I also added a climate component to this app by using a Raspberry Pi Zero and the enviro board by Pimonori. By adding the **--climate** argument when logging in and out of the studio, I can fetch the temperature sensor's data and make it available online. 
