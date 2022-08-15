@@ -125,4 +125,8 @@ h1 {
     .back-arrow img {
         width:75px;
     }
+    .back-arrow {
+    top:unset;
+    bottom:15px;
+    }
 }
