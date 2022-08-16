@@ -11,9 +11,9 @@ import datetime
 import argparse
 import sys, os
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/modules")
-# import climate
+import climate
 
-import twitter.post_tweet as tweetMachine
+#import twitter.post_tweet as tweetMachine
 
 # parsing arguments
 parser = argparse.ArgumentParser()
@@ -57,7 +57,7 @@ if status is None:
         # if --tweet is present
         if args.tweet:
             # tweet it
-            tweetMachine.main(textEntry)
+            # tweetMachine.main(textEntry)
             print('')
             print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░') 
             print('░░░   Your message was sent to twitter.   ░░░')
@@ -87,9 +87,9 @@ else:
             txt_file.write(status + ', ' + str(timeNow) + ', ' + str(dateNow))
             # and notify user
             if status == 'IN' :
-                # if args.climate:
-                #    dedans = 'IN'
-                #    climate.main(dedans)
+                if args.climate:
+                    dedans = 'IN'
+                    climate.main(dedans)
                 print(hav)
                 print(som)
                 print(fun)
@@ -98,9 +98,9 @@ else:
                 with open('am-i/counting.txt','w') as c:
                     c.write('In: ' + str(dateNow))
             if status == 'OUT' :
-                # if args.climate:
-                #    dehors = 'OUT'
-                #    climate.main(dehors)
+                if args.climate:
+                    dehors = 'OUT'
+                    climate.main(dehors)
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 print('░░░  A studio is only one of many places  ░░░')
                 print('░░░  where art gets made. Au revoir       ░░░')
