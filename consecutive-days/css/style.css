@@ -16,6 +16,8 @@ div.textColor {
     margin:calc(0.5vw + 0.5vh);
     padding:16px 8px;
     text-align: center;
+    transition: border-radius 2s ease-in-out 0.123s;
+    
 }
 
 .textColor a,
@@ -84,6 +86,7 @@ div.consecutivebox {
 }
 .textColor:hover {
     filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.1));
+    border-radius:5px !important;
 }
 
 h1 {
