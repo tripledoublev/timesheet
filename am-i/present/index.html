@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>At the studio</title>
+        <meta name="description" content="Logging my presence at the studio on the blockchain">
+        <meta name="keywords" content="Art, artist studio, presence, online, blockchain">
+        <meta name="author" content="Vincent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@vncntxyz" />
+        <meta name="twitter:creator" content="@vincencharleboi" />
+        <meta property="og:url" content="https://vincent.charlebois.info/am-i/" />
+        <meta property="og:title" content="Blockchain-based studio presence" />
+        <meta property="og:description" content="An exercise in online presence and time keeping on the blockchain as part of the project CONSECUTIVE DAYS AT THE STUDIO" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="row"> 
+                <div class="flex-item" id="textcontainer">I log my presence at the studio on the blockchain.
+                </div>
+            </div>
+        </div>
+        <div class="blockchain-link">
+            <a href="https://optimistic.etherscan.io/address/0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773#readContract">
+                ?
+            </a>
+        </div>
+        <script type="module">
+        import { ethers } from "/ether.js";
+        let myDiv = document.getElementById('textcontainer');
+        document.addEventListener("DOMContentLoaded", async function(){
+const AtTheStudioABI = [
+	{
+		"inputs": [],
+		"stateMutability": "payable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "bool",
+				"name": "status",
+				"type": "bool"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "message",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "time",
+				"type": "uint256"
+			}
+		],
+		"name": "Update",
+		"type": "event"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "presence",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "statement",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+  
+  const AtTheStudioADDRESS = "0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773" 
+
+// If you don't specify a //url//, Ethers connects to the default 
+// (i.e. ``http:/\/localhost:8545``)
+const provider = new ethers.providers.JsonRpcProvider('https://optimism-mainnet.infura.io/v3/9715c9bf2b9c47109c84cabf0fbcaae5');
+
+
+    var testing = provider.getBlockNumber()
+    const AtTheStudioContract = new ethers.Contract(AtTheStudioADDRESS, AtTheStudioABI, provider);
+    var statement = await AtTheStudioContract.statement()
+    console.log(statement)
+    myDiv.innerHTML = statement;
+});
+        </script>
+   
+    </body>
+</html>
