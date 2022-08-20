@@ -114,12 +114,12 @@ const AtTheStudioABI = [
 
 	function updateDiv() {
 		function temporaryDiv() {
-			myDiv.innerHTML = "Currently...";
+			myDiv.innerHTML = statement;
 		}
-		setTimeout(temporaryDiv, 2000);
-		myDiv.innerHTML = statement;
+		setTimeout(temporaryDiv, 2500);
+		myDiv.innerHTML = "At this moment...";
 	}
-	setTimeout(updateDiv, 3000);
+	setTimeout(updateDiv, 3300);
 	
     console.log(statement);
     
