@@ -17,7 +17,7 @@
     <body>
         <div class="flex-container">
             <div class="row"> 
-                <div class="flex-item" id="textcontainer">My presence at the studio on the blockchain.
+                <div class="flex-item" id="textcontainer">My presence at the studio is recorded on the blockchain.
                 </div>
             </div>
         </div>
@@ -113,11 +113,15 @@ const AtTheStudioABI = [
     var statement = await AtTheStudioContract.statement()
 
 	function updateDiv() {
+		function temporaryDiv() {
+			myDiv.innerHTML = "Currently...";
+		}
+		setTimeout(temporaryDiv, 2000);
 		myDiv.innerHTML = statement;
 	}
-	setTimeout(updateDiv, 3000)
+	setTimeout(updateDiv, 3000);
 	
-    console.log(statement)
+    console.log(statement);
     
 });
         </script>
