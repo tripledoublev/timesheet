@@ -36,7 +36,7 @@ text-align: center
 
 #textcontainer {
 font-family: sans-serif;
-font-size: calc(3vw + 3vh);
+font-size: calc(2.75vw + 2.75vh);
 flex-basis: max-content;
 }
 
