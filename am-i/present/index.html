@@ -17,7 +17,7 @@
     <body>
         <div class="flex-container">
             <div class="row"> 
-                <div class="flex-item" id="textcontainer">I log my presence at the studio on the blockchain.
+                <div class="flex-item" id="textcontainer">My presence at the studio on the blockchain.
                 </div>
             </div>
         </div>
@@ -111,6 +111,7 @@ const AtTheStudioABI = [
     const AtTheStudioContract = new ethers.Contract(AtTheStudioADDRESS, AtTheStudioABI, provider);
 
     var statement = await AtTheStudioContract.statement()
+
 	function updateDiv() {
 		myDiv.innerHTML = statement;
 	}
