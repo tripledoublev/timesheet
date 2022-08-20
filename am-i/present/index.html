@@ -106,18 +106,18 @@ const AtTheStudioABI = [
 	}
 ]
   
-  const AtTheStudioADDRESS = "0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773" 
-
-// If you don't specify a //url//, Ethers connects to the default 
-// (i.e. ``http:/\/localhost:8545``)
-const provider = new ethers.providers.JsonRpcProvider('https://optimism-mainnet.infura.io/v3/9715c9bf2b9c47109c84cabf0fbcaae5');
-
-
-    var testing = provider.getBlockNumber()
+  	const AtTheStudioADDRESS = "0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773" 
+	const provider = new ethers.providers.JsonRpcProvider('https://optimism-mainnet.infura.io/v3/9715c9bf2b9c47109c84cabf0fbcaae5');
     const AtTheStudioContract = new ethers.Contract(AtTheStudioADDRESS, AtTheStudioABI, provider);
+
     var statement = await AtTheStudioContract.statement()
+	function updateDiv() {
+		myDiv.innerHTML = statement;
+	}
+	setTimeout(updateDiv, 3000)
+	
     console.log(statement)
-    myDiv.innerHTML = statement;
+    
 });
         </script>
    
