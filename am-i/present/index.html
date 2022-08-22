@@ -115,6 +115,11 @@ const AtTheStudioABI = [
 	function updateDiv() {
 		function temporaryDiv() {
 			myDiv.innerHTML = statement;
+			if (statement == "I am at the studio") {
+			  myDiv.classList.add("present");
+			} else {
+			  myDiv.classList.add("present");	
+			}
 		}
 		setTimeout(temporaryDiv, 2500);
 		myDiv.innerHTML = "At this moment...";
