@@ -62,7 +62,7 @@ function syncReadFile(filename) {
       // generate color 
       var color = (item / maxis) * 222 + 28
       // generate border radius
-      var borderR = (item / maxis) * 100
+      var borderR = (100 - (item / maxis)) * 100
       // div is assigned id  
       div.id = divcount;
       // with class textColor
