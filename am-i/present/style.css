@@ -46,7 +46,7 @@ body {
 .blockchain-link {
   position: absolute;
   top: 30px;
-  right: 15px;
+  right: 20px;
 }
 
 .blockchain-link a {
@@ -71,8 +71,8 @@ body {
   }
   .blockchain-link {
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 30px;
+    right: 20px;
   }
 }
 
