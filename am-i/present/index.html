@@ -18,7 +18,7 @@
     <body>
         <div class="flex-container">
             <div class="row"> 
-                <div class="flex-item" id="textcontainer">My presence at the studio is recorded on the blockchain
+                <div class="bottom-left" id="textcontainer">My presence at the studio is recorded on the blockchain.
                 </div>
             </div>
         </div>
@@ -123,6 +123,8 @@ const AtTheStudioABI = [
 			}
 		}
 		setTimeout(temporaryDiv, 2500);
+		myDiv.classList.remove("bottom-left");
+		myDiv.classList.add("flex-item")
 		myDiv.innerHTML = "At this moment...";
 	}
 	setTimeout(updateDiv, 3300);
