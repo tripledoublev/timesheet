@@ -138,6 +138,8 @@ const AtTheStudioABI = [
 	function updateDiv() {
 		function finalDiv() {
 			myDiv.innerHTML = statement + '.';
+			tickerDiv.classList.remove("no-dis");
+			tickerDiv.classList.add("teleprompt");
 			if (statement == "I am at the studio") {
 			  myDiv.classList.add("present");
 			} else {
@@ -147,8 +149,6 @@ const AtTheStudioABI = [
 		setTimeout(finalDiv, 2222);
 		myDiv.classList.remove("bottom-left");
 		myDiv.classList.add("flex-item");
-		tickerDiv.classList.remove("no-dis");
-		tickerDiv.classList.add("teleprompt");
 		myDiv.innerHTML = "At this moment...";
 	}
 	setTimeout(updateDiv, 3333);
