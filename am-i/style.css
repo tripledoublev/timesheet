@@ -80,7 +80,8 @@ body {
   background-color: white;
 }
 .blockchain-link a,
-.consecutive-link a {
+.consecutive-link a,
+#datacontainer {
   font-family: sans-serif;
 }
 .my-link a {
@@ -91,7 +92,8 @@ body {
     font-size: calc(6vw + 7vh) !important;
   }
   .blockchain-link a,
-  .my-link a {
+  .my-link a,
+  .consecutive-link {
     border: 2px solid white;
     padding: 10px 18px;
   }
