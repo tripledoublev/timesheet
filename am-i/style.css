@@ -28,6 +28,9 @@ body {
   padding: 5px;
   color: white;
   text-align: center;
+  
+}
+.row .flex-item {
   font-size: calc(2.75vw + 2.75vh);
 }
 
@@ -116,7 +119,7 @@ body {
   height:auto;
 }
 .teleprompt .flex-item{
-  height: auto;
+  font-size: calc(2.5vw + 2.5vh);
   float:left;
   white-space: nowrap;
 }
