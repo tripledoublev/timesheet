@@ -1,4 +1,4 @@
-let otherDiv = document.getElementById('datacontainer');
+const otherDiv = document.getElementById('datacontainer');
 
 var otherRequest = new Request('counting.txt');
 function CheckIf() {
