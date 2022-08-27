@@ -2,7 +2,7 @@
 # my name is vincent
 # i am an artist
 # i want to visualize my time spent at the studio 
-# and use this data to make socialist images
+# and use this data to make art/ images
 # this will hopefully help me log my time in and out of the studio
 
 #import time and things 
