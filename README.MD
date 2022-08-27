@@ -4,7 +4,7 @@
 
 ### A creative exercise exploring the potential financialization of the quantification of location-based artistic labour
 
-It began when I created a simple Python script that allows me to timestamp my presence in the studio by logging *--time IN* or *--time OUT*.
+It began when I created a simple Python script (**app.py**) that allows me to timestamp my presence in the studio by logging *--time IN* or *--time OUT*.
 The data is stored in data/t.txt and became the basic material to generate a multitude of visualizations.
 
 ## [Am I at the studio?](https://vincent.charlebois.info/am-i/)
