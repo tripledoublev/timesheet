@@ -114,12 +114,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     myDiv.innerHTML = "At this moment...";
     if (statement == "I am at the studio") {
         myDiv.classList.add("present");
-        var otherRequest = new Request("../counting.txt");
+        var otherRequest = new Request("counting.txt");
         fetch(otherRequest).then(function (response) {
           return response.text().then(function (text) {
             const date_time = text.split(" ");
             let timeIn = date_time.slice(-1);
-            var tempRequest = new Request("../HOT.txt");
+            var tempRequest = new Request("HOT.txt");
             fetch(tempRequest).then(function (response) {
               return response.text().then(function (text) {
                 const temperature = text.split(" ");
@@ -162,14 +162,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         });
       } else {
         myDiv.classList.add("absent");
-        var otherRequest = new Request("../counting.txt");
+        var otherRequest = new Request("counting.txt");
         fetch(otherRequest).then(function (response) {
           return response.text().then(function (text) {
             otherDiv.innerHTML = text;
           });
         });
 
-        var tempRequest = new Request("../HOT.txt");
+        var tempRequest = new Request("HOT.txt");
 
         fetch(tempRequest).then(function (response) {
           return response.text().then(function (text) {
