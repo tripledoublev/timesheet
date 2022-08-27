@@ -121,7 +121,7 @@ body {
 
 .teleprompt {
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
   left: 0;
   width: 100%;
   height: auto;
@@ -133,7 +133,7 @@ body {
 }
 
 .scroll-left {
-  height: 50px;
+  height: 7vh;
   overflow: hidden;
   position: relative;
 }
