@@ -116,8 +116,7 @@ body {
   color: red;
 }
 .present::selection {
-  background-color: #016501;
-  color: white;
+  color: #4caf50;
 }
 
 .teleprompt {

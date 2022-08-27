@@ -13,7 +13,7 @@
         <meta property="og:url" content="https://vincent.charlebois.info/am-i/present/" />
         <meta property="og:title" content="Am I At The Studio? A Blockchain-based presence log" />
         <meta property="og:description" content="An exercise in online presence and time keeping on the blockchain as part of the project CONSECUTIVE DAYS AT THE STUDIO" />
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div class="flex-container">
@@ -47,126 +47,9 @@
                 </div>
             </div>
         </div>
-        <script type="module">
-        import { ethers } from "https://vincent.charlebois.info/am-i/present/ether.js";
-        const myDiv = document.getElementById('textcontainer');
-		const tickerDiv = document.getElementById('ticker')
-
-        document.addEventListener("DOMContentLoaded", async function(){
-const AtTheStudioABI = [
-	{
-		"inputs": [],
-		"stateMutability": "payable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "bool",
-				"name": "status",
-				"type": "bool"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "message",
-				"type": "string"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "time",
-				"type": "uint256"
-			}
-		],
-		"name": "Update",
-		"type": "event"
-	},
-	{
-		"stateMutability": "payable",
-		"type": "fallback"
-	},
-	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "presence",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "statement",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
-]
-	const linkDiv1 = document.getElementById('link1');
-	const linkDiv2 = document.getElementById('link2');
-	const linkDiv3 = document.getElementById('link3');
-  	const AtTheStudioADDRESS = "0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773" 
-	const provider = new ethers.providers.JsonRpcProvider('https://optimism-mainnet.infura.io/v3/9715c9bf2b9c47109c84cabf0fbcaae5');
-    const AtTheStudioContract = new ethers.Contract(AtTheStudioADDRESS, AtTheStudioABI, provider);
-
-    var statement = await AtTheStudioContract.statement()
-
-	function updateDiv() {
-		function finalDiv() {
-			myDiv.innerHTML = statement + '.';
-			// add&remove class to display buttons and ticker
-			tickerDiv.classList.remove("no-dis");
-			tickerDiv.classList.add("teleprompt");
-			linkDiv1.classList.remove("no-dis");
-			linkDiv1.classList.add("my-link");
-			linkDiv2.classList.remove("no-dis");
-			linkDiv2.classList.add("consecutive-link");
-			linkDiv3.classList.remove("no-dis");
-			linkDiv3.classList.add("blockchain-link");
-			if (statement == "I am at the studio") {
-			  myDiv.classList.add("present");
-			} else {
-			  myDiv.classList.add("absent");	
-			}
-		}
-		setTimeout(finalDiv, 2222);
-		myDiv.classList.remove("bottom-left");
-		myDiv.classList.add("flex-item");
-		myDiv.innerHTML = "At this moment...";
-	}
-	setTimeout(updateDiv, 3333);
-	
-    console.log(statement);
     
-});
         </script>
-           <script type="text/javascript" src="script.js"></script>
+           <script type="text/javascript" src="scripts/script.js"></script>
 
     </body>
 </html>
