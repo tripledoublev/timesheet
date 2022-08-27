@@ -22,17 +22,17 @@
                 </div>
             </div>
         </div>
-        <div class="blockchain-link">
+        <div id="link3" class="no-dis">
             <a  aria-label="Read the contract on Optimism" href="https://optimistic.etherscan.io/address/0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773#readContract">
                 ?
             </a>
         </div>
-		<div class="my-link">
+		<div id="link1" class="no-dis">
             <a href="https://vincentcharlebois.com" aria-label="Vincent Charlebois dot com">
                 V
             </a>
         </div>
-		<div class="consecutive-link">
+		<div id="link2" class="no-dis">
             <a href="https://vincent.charlebois.info/consecutive-days/" aria-label="Consecutive days at the studio">
                 +
             </a>
@@ -128,7 +128,9 @@ const AtTheStudioABI = [
 		"type": "function"
 	}
 ]
-  
+	const linkDiv1 = document.getElementById('link1');
+	const linkDiv2 = document.getElementById('link2');
+	const linkDiv3 = document.getElementById('link3');
   	const AtTheStudioADDRESS = "0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773" 
 	const provider = new ethers.providers.JsonRpcProvider('https://optimism-mainnet.infura.io/v3/9715c9bf2b9c47109c84cabf0fbcaae5');
     const AtTheStudioContract = new ethers.Contract(AtTheStudioADDRESS, AtTheStudioABI, provider);
@@ -138,8 +140,15 @@ const AtTheStudioABI = [
 	function updateDiv() {
 		function finalDiv() {
 			myDiv.innerHTML = statement + '.';
+			// add&remove class to display buttons and ticker
 			tickerDiv.classList.remove("no-dis");
 			tickerDiv.classList.add("teleprompt");
+			linkDiv1.classList.remove("no-dis");
+			linkDiv1.classList.add("my-link");
+			linkDiv2.classList.remove("no-dis");
+			linkDiv2.classList.add("consecutive-link");
+			linkDiv3.classList.remove("no-dis");
+			linkDiv3.classList.add("blockchain-link");
 			if (statement == "I am at the studio") {
 			  myDiv.classList.add("present");
 			} else {
