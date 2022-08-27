@@ -136,22 +136,22 @@ const AtTheStudioABI = [
     var statement = await AtTheStudioContract.statement()
 
 	function updateDiv() {
-		function temporaryDiv() {
-			myDiv.innerHTML = statement;
+		function finalDiv() {
+			myDiv.innerHTML = statement + '.';
 			if (statement == "I am at the studio") {
 			  myDiv.classList.add("present");
 			} else {
 			  myDiv.classList.add("absent");	
 			}
 		}
-		setTimeout(temporaryDiv, 2500);
+		setTimeout(finalDiv, 2222);
 		myDiv.classList.remove("bottom-left");
 		myDiv.classList.add("flex-item");
 		tickerDiv.classList.remove("no-dis");
 		tickerDiv.classList.add("teleprompt");
 		myDiv.innerHTML = "At this moment...";
 	}
-	setTimeout(updateDiv, 3300);
+	setTimeout(updateDiv, 3333);
 	
     console.log(statement);
     

@@ -32,26 +32,9 @@
                 V
             </a>
         </div>
-		<div class="consecutive-link">
-            <a href="https://vincent.charlebois.info/consecutive-days/">
-                +
-            </a>
-        </div>
-		<div id="ticker" class="no-dis">
-            <div class="scroll-left">
-                <div class="flex-item" id="datacontainer">
-                    There seems to be something wrong with this web page. 
-                    It should be displaying if I am at the studio. 
-                    This scrolling text would display the latest climate conditions from the studio.
-                    The studio is only one of many places where art gets made.
-                </div>
-            </div>
-        </div>
         <script type="module">
         import { ethers } from "https://vincent.charlebois.info/am-i/present/ether.js";
-        const myDiv = document.getElementById('textcontainer');
-		const tickerDiv = document.getElementById('ticker')
-
+        let myDiv = document.getElementById('textcontainer');
         document.addEventListener("DOMContentLoaded", async function(){
 const AtTheStudioABI = [
 	{
@@ -136,28 +119,25 @@ const AtTheStudioABI = [
     var statement = await AtTheStudioContract.statement()
 
 	function updateDiv() {
-		function finalDiv() {
-			myDiv.innerHTML = statement + '.';
+		function temporaryDiv() {
+			myDiv.innerHTML = statement;
 			if (statement == "I am at the studio") {
 			  myDiv.classList.add("present");
 			} else {
 			  myDiv.classList.add("absent");	
 			}
 		}
-		setTimeout(finalDiv, 2222);
+		setTimeout(temporaryDiv, 2500);
 		myDiv.classList.remove("bottom-left");
-		myDiv.classList.add("flex-item");
-		tickerDiv.classList.remove("no-dis");
-		tickerDiv.classList.add("teleprompt");
+		myDiv.classList.add("flex-item")
 		myDiv.innerHTML = "At this moment...";
 	}
-	setTimeout(updateDiv, 3333);
+	setTimeout(updateDiv, 3300);
 	
     console.log(statement);
     
 });
         </script>
-           <script type="text/javascript" src="script.js"></script>
-
+   
     </body>
 </html>

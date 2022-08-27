@@ -54,17 +54,9 @@ body {
   top: 30px;
   left: 20px;
 }
-.consecutive-link {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-
-}
 
 .blockchain-link a,
-.my-link a,
-.consecutive-link a {
+.my-link a {
   color: white;
   text-decoration: none;
   font-size: calc(2.75vw + 2.75vh);
@@ -74,13 +66,11 @@ body {
   font-weight: bolder;
 }
 .blockchain-link a:hover,
-.my-link a:hover,
-.consecutive-link a:hover {
+.my-link a:hover {
   color: black;
   background-color: white;
 }
-.blockchain-link a,
-.consecutive-link a {
+.blockchain-link a {
   font-family: sans-serif;
 }
 .my-link a {
@@ -104,69 +94,4 @@ body {
 .present::selection {
   background-color: #016501;
   color: white;
-}
-
-.teleprompt {
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  height:auto;
-}
-.teleprompt .flex-item{
-  height: auto;
-  float:left;
-  white-space: nowrap;
-}
-
-.scroll-left {
-height: 50px;	
-overflow: hidden;
-position: relative;
-}
-.scroll-left .flex-item {
-position: absolute;
-width: 100%;
-height: 100%;
-margin: 0;
-line-height: 50px;
-text-align: center;
-color:white;
-/* Starting position */
-transform:translateX(100%);
-/* Apply animation to this element */
-animation: scroll-left 30s linear infinite;
-}
-/* Move it (define the animation) */
-@keyframes scroll-left {
-0%   {
-transform: translateX(100%); 		
-}
-100% {
-transform: translateX(-250%); 
-}
-}
-
-@media (max-width:420px) {
-  @keyframes scroll-left {
-      0%   {
-      transform: translateX(100%); 		
-      }
-      100% {
-      transform: translateX(-400%); 
-      }
-     }
-}
-
-
-
-.consecutive-link a {
-  color: white;
-  text-decoration: none;
-  font-size:calc(2vw + 5vh);
-  font-family: monospace;
-}
-
-.no-dis {
-  display:none;
 }
