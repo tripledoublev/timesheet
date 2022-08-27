@@ -28,7 +28,6 @@ body {
   padding: 5px;
   color: white;
   text-align: center;
-  
 }
 .row .flex-item {
   font-size: calc(2.75vw + 2.75vh);
@@ -53,7 +52,7 @@ body {
 }
 
 .my-link {
-  position:absolute;
+  position: absolute;
   top: 30px;
   left: 20px;
 }
@@ -62,17 +61,24 @@ body {
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
+}
 
+.blockchain-link a,
+.consecutive-link a {
+  padding: 8px 20px;
+}
+
+.my-link a {
+  padding: 8px 18px;
 }
 
 .blockchain-link a,
 .my-link a,
 .consecutive-link a {
+  font-size: calc(2.75vw + 2.75vh);
   color: white;
   text-decoration: none;
-  font-size: calc(2.75vw + 2.75vh);
   border: 4px solid white;
-  padding: 8px 20px;
   border-radius: 14px;
   font-weight: bolder;
 }
@@ -95,10 +101,13 @@ body {
     font-size: calc(6vw + 7vh) !important;
   }
   .blockchain-link a,
-  .my-link a,
   .consecutive-link a {
     border: 2px solid white;
     padding: 10px 18px;
+  }
+  .my-link a {
+    border: 2px solid white;
+    padding: 10px 16px;
   }
 }
 
@@ -112,57 +121,57 @@ body {
 }
 
 .teleprompt {
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  height:auto;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
-.teleprompt .flex-item{
-  font-size: calc(2.5vw + 2.5vh);
-  float:left;
+.teleprompt .flex-item {
+  font-size: calc(2.45vw + 2.45vh);
+  float: left;
   white-space: nowrap;
 }
 
 .scroll-left {
-height: 50px;	
-overflow: hidden;
-position: relative;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
 }
 .scroll-left .flex-item {
-position: absolute;
-width: 100%;
-height: 100%;
-margin: 0;
-line-height: 50px;
-text-align: center;
-color:white;
-/* Starting position */
-transform:translateX(100%);
-/* Apply animation to this element */
-animation: scroll-left 30s linear infinite;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  /* Starting position */
+  transform: translateX(100%);
+  /* Apply animation to this element */
+  animation: scroll-left 30s linear infinite;
 }
 /* Move it (define the animation) */
 @keyframes scroll-left {
-0%   {
-transform: translateX(100%); 		
-}
-100% {
-transform: translateX(-250%); 
-}
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
 }
 
-@media (max-width:420px) {
+@media (max-width: 420px) {
   @keyframes scroll-left {
-      0%   {
-      transform: translateX(100%); 		
-      }
-      100% {
-      transform: translateX(-400%); 
-      }
-     }
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-400%);
+    }
+  }
 }
 
 .no-dis {
-  display:none;
+  display: none;
 }
