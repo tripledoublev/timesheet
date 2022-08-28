@@ -1,7 +1,20 @@
+        // Function for back button:
     function arrowButton() {
       window.location = "https://vincent.charlebois.info/consecutive-days/"
     }
-    
+          // Function to change color on click:
+          
+    hello = (e) => {
+      // prevent default to block the parent link element
+      // and set new color
+      e.preventDefault();
+      var newTime = Math.round(Date.now() / 1000);
+      console.log('UNIX time: ' + newTime);
+      document.getElementById(e.target.id).style.backgroundColor = fgColor(newTime * 20009, 0.5);
+      document.getElementById(e.target.id).focus();
+    }
+  
+
     // takes a number and turns it into a color
     
     function toColor(num) {
@@ -99,15 +112,4 @@ function syncReadFile(filename) {
       
       };
       
-      // Arrow Function to change color on click:
       bode.addEventListener("click", hello, false);
-      hello = (e) => {
-        // prevent default to block the parent link element
-        // and set new color
-        e.preventDefault();
-        var newTime = Math.round(Date.now() / 1000);
-        console.log('UNIX time: ' + newTime);
-        document.getElementById(e.target.id).style.backgroundColor = fgColor(newTime * 20009, 0.5);
-        document.getElementById(e.target.id).focus();
-      }
-    
