@@ -117,6 +117,12 @@ body {
 .present::selection {
   color: #4caf50;
 }
+.warmer {
+  color: #f31100;
+}
+.cooler {
+  color: #00bcd4;
+}
 
 .teleprompt {
   position: absolute;
