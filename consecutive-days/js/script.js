@@ -71,6 +71,8 @@ let divcount = 0;
 // get elements
 const bode = document.getElementById("dcontain");
 const flbx = document.getElementById("fbox");
+const arrow = document.getElementById("arrow");
+
 
 // main function
 function main(item) {
@@ -113,3 +115,4 @@ function main(item) {
 }
 
 bode.addEventListener("click", hello, false);
+arrow.addEventListener("click", hello, false);
