@@ -2,6 +2,10 @@
 body {
     margin:0
 }
+html,
+body {
+  height: 100vh;
+}
 
 .grey-bg {
     background-color: lightgrey;
@@ -55,7 +59,7 @@ div.flexbox {
     height: 100vh;
     align-content: center;
     padding: 3rem;
-    margin-top:5vh;
+    margin-top:0;
 }
 div.indexbox {
     margin-left: 10vw;
