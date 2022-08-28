@@ -56,7 +56,7 @@ for file in onlyfiles:
         #f.write("\n")
         #f.write("               </a>")
         f.write("\n")
-        f.write('               <div class="back-arrow">')
+        f.write('               <div id="arrow" class="back-arrow">')
         f.write("\n")
         f.write('                   <img')
         f.write("\n")
