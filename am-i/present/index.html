@@ -2,55 +2,57 @@
 <html>
   <head>
     <title>am i present?</title>
-    <meta
-      http-equiv="refresh"
-      content="2; url = https://vincent.charlebois.info/am-i/"
-    />
-	<style>
-		.flex-container {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #111111;
-}
-.row {
-  width: 90%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+	<meta http-equiv="refresh" content="3; url=https://vincent.charlebois.info/am-i/">
+    <style>
+      html,
+      body {
+        height: 100vh;
+      }
+      body {
+        margin: 0;
+        background-color: #111111;
+      }
+      .flex-container {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #111111;
+      }
+      .row {
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
-.flex-item {
-  padding: 5px;
-  color: white;
-  text-align: center;
-}
-.row .flex-item {
-  font-size: calc(2.75vw + 2.75vh);
-}
+      .flex-item {
+        padding: 5px;
+        color: white;
+        text-align: center;
+      }
 
-#textcontainer {
-  font-family: sans-serif;
-  flex-basis: max-content;
-}
-.bottom-left {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  font-size: calc(5vw + 5vh);
-}
-@media (max-width: 763px) {
-  .bottom-left {
-    font-size: calc(6vw + 6.5vh) !important;
-  }
-}
-	</style>
+      #textcontainer {
+        font-family: sans-serif;
+        flex-basis: max-content;
+      }
+      .bottom-left {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        font-size: calc(6.66vw + 6.66vh);
+      }
+      @media (max-width: 763px) {
+        .bottom-left {
+          font-size: calc(6vw + 6.5vh) !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="flex-container">
