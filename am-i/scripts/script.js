@@ -98,125 +98,119 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   function updateDiv() {
     function statementDiv() {
-        myDiv.innerHTML = statement + ".";
-        function buttonDiv() {
-          // add&remove class to display buttons and ticker
-          tickerDiv.classList.remove("no-dis");
-          tickerDiv.classList.add("teleprompt");
-          linkDiv1.classList.remove("no-dis");
-          linkDiv1.classList.add("my-link");
-          linkDiv2.classList.remove("no-dis");
-          linkDiv2.classList.add("consecutive-link");
-          linkDiv3.classList.remove("no-dis");
-          linkDiv3.classList.add("blockchain-link");
-          }
-        setTimeout(buttonDiv, 1111);
-        }
+      myDiv.innerHTML = statement + ".";
+      function buttonDiv() {
+        // add&remove class to display buttons and ticker
+        tickerDiv.classList.remove("no-dis");
+        tickerDiv.classList.add("teleprompt");
+        linkDiv1.classList.remove("no-dis");
+        linkDiv1.classList.add("my-link");
+        linkDiv2.classList.remove("no-dis");
+        linkDiv2.classList.add("consecutive-link");
+        linkDiv3.classList.remove("no-dis");
+        linkDiv3.classList.add("blockchain-link");
+      }
+      setTimeout(buttonDiv, 1111);
+    }
     setTimeout(statementDiv, 2222);
     myDiv.classList.remove("bottom-left");
     myDiv.classList.add("flex-item");
     myDiv.innerHTML = "At this moment...";
     if (statement == "I am at the studio") {
-        myDiv.classList.add("present");
-        var otherRequest = new Request("counting.txt");
-        fetch(otherRequest).then(function (response) {
-          return response.text().then(function (text) {
-            const date_time = text.split(" ");
-            let timeIn = date_time.slice(-1);
-            var tempRequest = new Request("HOT.txt");
-            fetch(tempRequest).then(function (response) {
-              return response.text().then(function (text) {
-                const temperature = text.split(" ");
-                let past = temperature[0];
-                let change = temperature[1];
-                if (Math.sign(change) === -1) {
-                  otherDiv.innerHTML =
-                    "Indoor temperature was " +
-                    past +
-                    "\u00B0C at " +
-                    timeIn +
-                    " when I arrived";
-                  otherDiv.innerHTML +=
-                    " \u2014 " +
-                    change * -1 +
-                    "\u00B0C";
-                  otherDiv.appendChild(tempChange);
-                  tempChange.classList.add("warmer");
-                  tempChange.innerHTML =
-                   "warmer";
-                  otherDiv.innerHTML += "than last recorded temperature";
-                  otherDiv.innerHTML +=
-                    " \u2014 Text +1(514)231-1278 for a live weather update.";
-                  otherDiv.innerHTML +=
-                    "                                                       ";
-                } else if (Math.sign(change) === 1) {
-                  otherDiv.innerHTML =
-                    " Indoor temperature was " +
-                    past +
-                    "\u00B0C at " +
-                    timeIn +
-                    " when I arrived";
-                  otherDiv.innerHTML +=
-                    " \u2014 " +
-                    change * 1 +
-                    "\u00B0C"
-                    otherDiv.appendChild(tempChange);
-                    tempChange.classList.add("cooler");
-                    tempChange.innerHTML =
-                     "cooler";
-                    otherDiv.innerHTML += "than last recorded temperature";
-                  otherDiv.innerHTML +=
-                    " \u2014 Text +1(514)231-1278 for a live weather update.";
-                  otherDiv.innerHTML +=
-                    "                                                       ";
-                }
-              });
+      myDiv.classList.add("present");
+      var otherRequest = new Request("counting.txt");
+      fetch(otherRequest).then(function (response) {
+        return response.text().then(function (text) {
+          const date_time = text.split(" ");
+          let timeIn = date_time.slice(-1);
+          var tempRequest = new Request("HOT.txt");
+          fetch(tempRequest).then(function (response) {
+            return response.text().then(function (text) {
+              const temperature = text.split(" ");
+              let past = temperature[0];
+              let change = temperature[1];
+              if (Math.sign(change) === -1) {
+                otherDiv.innerHTML =
+                  "Indoor temperature was " +
+                  past +
+                  "\u00B0C at " +
+                  timeIn +
+                  " when I arrived";
+                otherDiv.innerHTML += " \u2014 " + change * -1 + "\u00B0C ";
+                otherDiv.appendChild(tempChange);
+                tempChange.classList.add("warmer");
+                tempChange.innerHTML = "warmer";
+                otherDiv.innerHTML += " than last recorded temperature";
+                otherDiv.innerHTML +=
+                  " \u2014 Text +1(514)231-1278 for a live weather update.";
+                otherDiv.innerHTML +=
+                  "                                                       ";
+              } else if (Math.sign(change) === 1) {
+                otherDiv.innerHTML =
+                  " Indoor temperature was " +
+                  past +
+                  "\u00B0C at " +
+                  timeIn +
+                  " when I arrived";
+                otherDiv.innerHTML += " \u2014 " + change * 1 + "\u00B0C ";
+                otherDiv.appendChild(tempChange);
+                tempChange.classList.add("cooler");
+                tempChange.innerHTML = "cooler";
+                otherDiv.innerHTML += " than last recorded temperature";
+                otherDiv.innerHTML +=
+                  " \u2014 Text +1(514)231-1278 for a live weather update.";
+                otherDiv.innerHTML +=
+                  "                                                       ";
+              }
             });
           });
         });
-      } else {
-        myDiv.classList.add("absent");
-        var otherRequest = new Request("counting.txt");
-        fetch(otherRequest).then(function (response) {
-          return response.text().then(function (text) {
-            otherDiv.innerHTML = text;
-          });
+      });
+    } else {
+      myDiv.classList.add("absent");
+      var otherRequest = new Request("counting.txt");
+      fetch(otherRequest).then(function (response) {
+        return response.text().then(function (text) {
+          otherDiv.innerHTML = text;
         });
+      });
 
-        var tempRequest = new Request("HOT.txt");
+      var tempRequest = new Request("HOT.txt");
 
-        fetch(tempRequest).then(function (response) {
-          return response.text().then(function (text) {
-            const temperature = text.split(" ");
+      fetch(tempRequest).then(function (response) {
+        return response.text().then(function (text) {
+          const temperature = text.split(" ");
 
-            let past = temperature[0];
-            let change = temperature[1];
-            if (Math.sign(change) === -1) {
-              otherDiv.innerHTML +=
-                " \u2014 Indoor temperature was " +
-                past +
-                "\u00B0C when I left";
-              otherDiv.innerHTML +=
-                " \u2014 " + change * -1 + "\u00B0C warmer than when I arrived";
-              otherDiv.innerHTML +=
-                " \u2014 The studio is only one of many places where art gets made.";
-              otherDiv.innerHTML +=
-                "                                                       ";
-            } else if (Math.sign(change) === 1) {
-              otherDiv.innerHTML +=
-                " \u2014 Indoor temperature was " +
-                past +
-                "\u00B0C when I left";
-              otherDiv.innerHTML +=
-                " \u2014 " + change * 1 + "\u00B0C cooler than when I arrived";
-              otherDiv.innerHTML +=
-                " \u2014 The studio is only one of many places where art gets made.";
-              otherDiv.innerHTML +=
-                "                                                       ";
-            }
-          });
+          let past = temperature[0];
+          let change = temperature[1];
+          if (Math.sign(change) === -1) {
+            otherDiv.innerHTML +=
+              " \u2014 Indoor temperature was " + past + "\u00B0C when I left";
+            otherDiv.innerHTML += " \u2014 " + change * -1 + "\u00B0C ";
+            otherDiv.appendChild(tempChange);
+            tempChange.classList.add("warmer");
+            tempChange.innerHTML = "warmer";
+            otherDiv.innerHTML += " than when I arrived";
+            otherDiv.innerHTML +=
+              " \u2014 The studio is only one of many places where art gets made.";
+            otherDiv.innerHTML +=
+              "                                                       ";
+          } else if (Math.sign(change) === 1) {
+            otherDiv.innerHTML +=
+              " \u2014 Indoor temperature was " + past + "\u00B0C when I left";
+            otherDiv.innerHTML += " \u2014 " + change * 1 + "\u00B0C ";
+            otherDiv.appendChild(tempChange);
+            tempChange.classList.add("cooler");
+            tempChange.innerHTML = "cooler";
+            otherDiv.innerHTML += " than when I arrived";
+            otherDiv.innerHTML +=
+              " \u2014 The studio is only one of many places where art gets made.";
+            otherDiv.innerHTML +=
+              "                                                       ";
+          }
         });
-      };
+      });
+    }
   }
   setTimeout(updateDiv, 3333);
 
