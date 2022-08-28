@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const linkDiv1 = document.getElementById("link1");
   const linkDiv2 = document.getElementById("link2");
   const linkDiv3 = document.getElementById("link3");
+  const tempChange = document.createElement("span");
 
   const AtTheStudioADDRESS = "0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773";
   const provider = new ethers.providers.JsonRpcProvider(
@@ -138,7 +139,12 @@ document.addEventListener("DOMContentLoaded", async function () {
                   otherDiv.innerHTML +=
                     " \u2014 " +
                     change * -1 +
-                    "\u00B0C warmer than last recorded temperature";
+                    "\u00B0C";
+                  otherDiv.appendChild(tempChange);
+                  tempChange.classList.add("warmer");
+                  tempChange.innerHTML =
+                   "warmer";
+                  otherDiv.innerHTML += "than last recorded temperature";
                   otherDiv.innerHTML +=
                     " \u2014 Text +1(514)231-1278 for a live weather update.";
                   otherDiv.innerHTML +=
@@ -153,7 +159,12 @@ document.addEventListener("DOMContentLoaded", async function () {
                   otherDiv.innerHTML +=
                     " \u2014 " +
                     change * 1 +
-                    "\u00B0C cooler than last recorded temperature";
+                    "\u00B0C"
+                    otherDiv.appendChild(tempChange);
+                    tempChange.classList.add("cooler");
+                    tempChange.innerHTML =
+                     "cooler";
+                    otherDiv.innerHTML += "than last recorded temperature";
                   otherDiv.innerHTML +=
                     " \u2014 Text +1(514)231-1278 for a live weather update.";
                   otherDiv.innerHTML +=
