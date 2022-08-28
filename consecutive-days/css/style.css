@@ -58,12 +58,14 @@ div.flexbox {
     align-items: center;
     height: 100vh;
     align-content: center;
-    padding: 3rem;
+
     margin-top:0;
 }
 div.indexbox {
     margin-left: 10vw;
     width: 80vw;
+    padding: 3rem;
+    margin-top:2.5vh;
 }
 div.consecutivebox {
     margin-left:0vw;
