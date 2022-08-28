@@ -64,7 +64,7 @@ for file in onlyfiles:
         f.write("\n")
         f.write('                       alt="back arrow"')
         f.write("\n")
-        f.write('                       onClick="history.back()"')
+        f.write('                       onClick="arrowButton()"')
         f.write("\n")
         f.write('                       role="button"')
         f.write("\n")
