@@ -115,4 +115,3 @@ function main(item) {
 }
 
 bode.addEventListener("click", hello, false);
-arrow.addEventListener("click", hello, false);
