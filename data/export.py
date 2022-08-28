@@ -78,4 +78,4 @@ with open("data/s.txt", "r") as txt_file:
                 # reset consecutive list of daily totals
                 secondsRange = []
 # this is it. 
-print('/// export successful ///')
+print('/// txt export successful ///')
