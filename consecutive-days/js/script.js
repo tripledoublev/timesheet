@@ -1,3 +1,7 @@
+    function arrowButton() {
+      window.location = "https://vincent.charlebois.info/consecutive-days/"
+    }
+    
     // takes a number and turns it into a color
     
     function toColor(num) {
