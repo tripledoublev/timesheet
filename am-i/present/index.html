@@ -1,143 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>At the studio</title>
-        <meta name="description" content="Logging my presence at the studio on the blockchain">
-        <meta name="keywords" content="Art, artist studio, presence, online, blockchain">
-        <meta name="author" content="Vincent">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@vncntxyz" />
-        <meta name="twitter:creator" content="@vincencharleboi" />
-		<meta name="twitter:image" content="https://vincent.charlebois.info/am-i/present/blockchain-based.png">
-        <meta property="og:url" content="https://vincent.charlebois.info/am-i/present/" />
-        <meta property="og:title" content="Am I At The Studio? A Blockchain-based presence log" />
-        <meta property="og:description" content="An exercise in online presence and time keeping on the blockchain as part of the project CONSECUTIVE DAYS AT THE STUDIO" />
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="flex-container">
-            <div class="row"> 
-                <div class="bottom-left" id="textcontainer">My presence at the studio is recorded on the blockchain.
-                </div>
-            </div>
-        </div>
-        <div class="blockchain-link">
-            <a href="https://optimistic.etherscan.io/address/0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773#readContract">
-                ?
-            </a>
-        </div>
-		<div class="my-link">
-            <a href="https://vincentcharlebois.com">
-                V
-            </a>
-        </div>
-        <script type="module">
-        import { ethers } from "https://vincent.charlebois.info/am-i/present/ether.js";
-        let myDiv = document.getElementById('textcontainer');
-        document.addEventListener("DOMContentLoaded", async function(){
-const AtTheStudioABI = [
-	{
-		"inputs": [],
-		"stateMutability": "payable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "bool",
-				"name": "status",
-				"type": "bool"
-			},
-			{
-				"indexed": false,
-				"internalType": "string",
-				"name": "message",
-				"type": "string"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "time",
-				"type": "uint256"
-			}
-		],
-		"name": "Update",
-		"type": "event"
-	},
-	{
-		"stateMutability": "payable",
-		"type": "fallback"
-	},
-	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "presence",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "statement",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
-]
-  
-  	const AtTheStudioADDRESS = "0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773" 
-	const provider = new ethers.providers.JsonRpcProvider('https://optimism-mainnet.infura.io/v3/9715c9bf2b9c47109c84cabf0fbcaae5');
-    const AtTheStudioContract = new ethers.Contract(AtTheStudioADDRESS, AtTheStudioABI, provider);
+  <head>
+    <title>am i present?</title>
+    <meta
+      http-equiv="refresh"
+      content="2; url = https://vincent.charlebois.info/am-i/"
+    />
+	<style>
+		.flex-container {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111111;
+}
+.row {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    var statement = await AtTheStudioContract.statement()
+.flex-item {
+  padding: 5px;
+  color: white;
+  text-align: center;
+}
+.row .flex-item {
+  font-size: calc(2.75vw + 2.75vh);
+}
 
-	function updateDiv() {
-		function temporaryDiv() {
-			myDiv.innerHTML = statement;
-			if (statement == "I am at the studio") {
-			  myDiv.classList.add("present");
-			} else {
-			  myDiv.classList.add("absent");	
-			}
-		}
-		setTimeout(temporaryDiv, 2500);
-		myDiv.classList.remove("bottom-left");
-		myDiv.classList.add("flex-item")
-		myDiv.innerHTML = "At this moment...";
-	}
-	setTimeout(updateDiv, 3300);
-	
-    console.log(statement);
-    
-});
-        </script>
-   
-    </body>
+#textcontainer {
+  font-family: sans-serif;
+  flex-basis: max-content;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: calc(5vw + 5vh);
+}
+@media (max-width: 763px) {
+  .bottom-left {
+    font-size: calc(6vw + 6.5vh) !important;
+  }
+}
+	</style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="row">
+        <div class="bottom-left" id="textcontainer">
+          The studio is only one of many places where art gets made.
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
