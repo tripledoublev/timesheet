@@ -98,7 +98,7 @@ body {
 }
 @media (max-width: 763px) {
   .bottom-left {
-    font-size: calc(6vw + 7vh) !important;
+    font-size: calc(6vw + 6.5vh) !important;
   }
   .blockchain-link a,
   .consecutive-link a {
@@ -112,7 +112,6 @@ body {
 }
 
 .absent::selection {
-  background-color: white;
   color: red;
 }
 .present::selection {
