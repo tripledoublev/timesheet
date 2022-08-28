@@ -76,16 +76,8 @@ function syncReadFile(filename) {
       div.style.height = '20vh';
       // 0-255 to 0-1
       var gsFactor = color / 255;
-      // Arrow Function to change color on click:
-      hello = (e) => {
-        // prevent default to block the parent link element
-        // and set new color
-        e.preventDefault();
-        var newTime = Math.round(Date.now() / 1000);
-        console.log('UNIX time: ' + newTime);
-        document.getElementById(e.target.id).style.backgroundColor = fgColor(newTime * 20009, 0.5);
-        document.getElementById(e.target.id).focus();
-      }
+ 
+     
       
       
       // A button object calls the function:
@@ -106,4 +98,16 @@ function syncReadFile(filename) {
       flbx.appendChild(div);
       
       };
+      
+      // Arrow Function to change color on click:
+      bode.addEventListener("click", hello, false);
+      hello = (e) => {
+        // prevent default to block the parent link element
+        // and set new color
+        e.preventDefault();
+        var newTime = Math.round(Date.now() / 1000);
+        console.log('UNIX time: ' + newTime);
+        document.getElementById(e.target.id).style.backgroundColor = fgColor(newTime * 20009, 0.5);
+        document.getElementById(e.target.id).focus();
+      }
     
