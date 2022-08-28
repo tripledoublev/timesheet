@@ -15,7 +15,7 @@ As an expanded exercise, I created a website that gets updated whenever I arrive
 
 ### On-chain activity
 
-On Aug-17-2022 03:24:05 PM +UTC, I deployed [a smart contract](https://optimistic.etherscan.io/address/0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773) on Optimism, an Ethereum L2 blockchain. Whenever I leave or arrive at the studio, I call the togglePresence() function to align the on-chain boolean called presence and the string named statement to my physical presence at the studio. Additionnal functions include a withdrawing option if this address was ever sent funds (by mistake or as donation) and setOwner if I ever needed to transfer the ownership to another address than the current one (for security reasons or after selling it).
+On Aug-17-2022 03:24:05 PM +UTC, I deployed [a smart contract](https://optimistic.etherscan.io/address/0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773) on Optimism, an Ethereum L2 blockchain. Whenever I leave or arrive at the studio, I call the togglePresence() function to align the on-chain boolean called presence and the string named statement to my physical presence at the studio. Additionnal functions include a withdrawing option if this address was ever sent funds (by mistake or as donation) and setOwner if I ever needed to transfer the ownership to another address than the current one (for security reasons or after selling it). Eth donations can be sent directly to the contract address 0xAf6C153972fBC7d67feaA9f9d1d08F3c13f79773 as a way to fund and support further creative blockchain explorations.
 
 ## Series of [consecutive days at the studio](https://vincent.charlebois.info/consecutive-days/)
 
