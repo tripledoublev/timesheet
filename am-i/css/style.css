@@ -126,7 +126,7 @@ body {
 
 .teleprompt {
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
   left: 0;
   width: 100%;
   height: auto;
