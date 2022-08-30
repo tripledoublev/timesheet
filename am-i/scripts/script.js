@@ -98,19 +98,29 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   function updateDiv() {
     function statementDiv() {
+      // statement from blockchain
       myDiv.innerHTML = statement + ".";
-      function buttonDiv() {
+      function tickerDiv() {
         // add&remove class to display buttons and ticker
         tickerDiv.classList.remove("no-dis");
         tickerDiv.classList.add("teleprompt");
-        linkDiv1.classList.remove("no-dis");
-        linkDiv1.classList.add("my-link");
-        linkDiv2.classList.remove("no-dis");
-        linkDiv2.classList.add("consecutive-link");
-        linkDiv3.classList.remove("no-dis");
-        linkDiv3.classList.add("blockchain-link");
+        function buttonDiv1() {
+          linkDiv1.classList.remove("no-dis");
+          linkDiv1.classList.add("my-link");
+          function buttonDiv2() {
+            linkDiv2.classList.remove("no-dis");
+            linkDiv2.classList.add("consecutive-link");
+            function buttonDiv3() {
+              linkDiv3.classList.remove("no-dis");
+              linkDiv3.classList.add("blockchain-link");
+            }
+            setTimeout(buttonDiv3, 1111);
+          }
+          setTimeout(buttonDiv2, 1111);
+        }
+        setTimeout(buttonDiv1, 1111);
       }
-      setTimeout(buttonDiv, 1111);
+      setTimeout(tickerDiv, 1111);
     }
     setTimeout(statementDiv, 2222);
     myDiv.classList.remove("bottom-left");
