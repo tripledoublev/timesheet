@@ -1,7 +1,7 @@
 import { ethers } from "https://vincent.charlebois.info/am-i/scripts/ether.js";
 
 const myDiv = document.getElementById("textcontainer");
-const tickerDiv = document.getElementById("ticker");
+const promptDiv = document.getElementById("ticker");
 document.addEventListener("DOMContentLoaded", async function () {
   const AtTheStudioABI = [
     {
@@ -102,8 +102,8 @@ document.addEventListener("DOMContentLoaded", async function () {
       myDiv.innerHTML = statement + ".";
       function tickerDiv() {
         // add&remove class to display buttons and ticker
-        tickerDiv.classList.remove("no-dis");
-        tickerDiv.classList.add("teleprompt");
+        promptDiv.classList.remove("no-dis");
+        promptDiv.classList.add("teleprompt");
         function buttonDiv1() {
           linkDiv1.classList.remove("no-dis");
           linkDiv1.classList.add("my-link");
