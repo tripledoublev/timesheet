@@ -12,7 +12,7 @@ import argparse
 import sys, os
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/modules")
 import climate
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/web3")
+sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/w3py")
 import toggle
 
 #import twitter.post_tweet as tweetMachine
