@@ -17,7 +17,7 @@ with open('consecutive-days/index.html','w') as f:
     f.write("\n")
     f.write('           <h1 id="page-title" class="textColor">')
     f.write("\n")
-    f.write('               <a href="https://github.com/tripledoublev/timesheet/">')
+    f.write('               <a href="https://github.com/tripledoublev/timesheet/#readme">')
     f.write("\n")
     f.write('                   Consecutive days at the studio')
     f.write("\n")
