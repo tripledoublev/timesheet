@@ -4,6 +4,7 @@ from web3.middleware import construct_sign_and_send_raw_middleware
 from eth_account import Account
 import os
 import sys
+import time
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -57,6 +58,7 @@ def main():
     print(f'Tx successful with hash: { txn_receipt.transactionHash.hex() }')
     print('////')
     #read state AGAIN
+    time.sleep(2.5)
     presence = contract.functions.presence().call()
     statement = contract.functions.statement().call()
     print('Presence: ' + str(presence))
