@@ -12,8 +12,6 @@ import argparse
 import sys, os
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/modules")
 import climate
-sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/w3py")
-import toggle
 
 #import twitter.post_tweet as tweetMachine
 
@@ -89,7 +87,6 @@ else:
             txt_file.write(status + ', ' + str(timeNow) + ', ' + str(dateNow))
             # and notify user
             if status == 'IN' :
-                toggle.main
                 if args.climate:
                     dedans = 'IN'
                     climate.main(dedans)
@@ -101,7 +98,6 @@ else:
                 with open('am-i/counting.txt','w') as c:
                     c.write('In: ' + str(dateNow))
             if status == 'OUT' :
-                toggle.main
                 if args.climate:
                     dehors = 'OUT'
                     climate.main(dehors)
