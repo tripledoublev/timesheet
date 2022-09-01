@@ -30,10 +30,10 @@
 
 # 4. In the end, the html files are used to populate the index.html
 
-if [ $1 == 'IN' ]
+if [ $1 = 'IN' ]
 then 
     python3 app.py --time IN --climate && cd w3py && python3 toggle.py main
-elif [ $1 == 'OUT' ]
+elif [ $1 = 'OUT' ]
 then
     python3 app.py --time OUT --climate && cd w3py && python3 toggle.py main && cd .. && python3 timeMachine.py && sudo rm consecutive-days/* || true && sudo rm consecutive-days/data/* || true && python3 data/export.py && python3 generate_html.py && python3 generate_index.py
 else
