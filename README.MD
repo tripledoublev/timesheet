@@ -19,15 +19,17 @@ On Aug-17-2022 03:24:05 PM +UTC, I deployed [a smart contract](https://optimisti
 
 ## Series of [consecutive days at the studio](https://vincent.charlebois.info/consecutive-days/)
 
-### compiler.sh takes the timesheet data and creates series of consecutive days as html-based visualization.
+### log.sh has become my all-in-one script
+#### it takes IN, OUT or no argument
+#### OUT and no arguments takes the timesheet data and creates series of consecutive days as html-based visualization.
 
-I wrote scripts that take the timesheet data and computes daily totals and regroups days when consecutive.
+1. I wrote scripts that take the timesheet data and computes daily totals and regroups days when consecutive.
  - timeMachine.py
-From these daily totals, series of consecutive days' totals are compiled as separate txt files (consecutive-days/data/...)
+2. From these daily totals, series of consecutive days' totals are compiled as separate txt files (consecutive-days/data/...)
  - data/export.py
-These text files are used to generate corresponding HTML
+3. These text files are used to generate corresponding HTML
  - generate/html.py
-In the end, the html files are used to populate the index.html
+4. In the end, the html files are used to populate the index.html
  - generate/index.py
 
 ## EXTRAS
