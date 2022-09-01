@@ -35,7 +35,7 @@ def main():
     print('Presence: ' + str(presence))
     print(statement)
     print('////')
-    gas_estimate = contract.functions.togglePresence().estimate_gas() * 30
+    gas_estimate = contract.functions.togglePresence().estimate_gas() * 20
     print(f'Gas estimate to transact with togglePresence: {gas_estimate}')
     # transaction
     print('////')
