@@ -117,5 +117,5 @@ else:
                         f.writelines(str(myLines))
                 else:
                     with open('am-i/present.txt','w') as f:
-                        lines = 'Out: ' + str(dateNow) + "\n I am not at the studio\n" + temps
+                        lines = 'Out: ' + str(dateNow) + "\n I am not at the studio\n" + temps[0] + temps[1]
                         f.writelines(lines) 
