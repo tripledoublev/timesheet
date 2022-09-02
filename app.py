@@ -97,7 +97,7 @@ else:
                     l1 = 'In: ' + str(dateNow) + "\n"
                     l2 = "I am at the studio" + "\n"
                     myList = [l1, l2, temps]
-                    myLines = "\n".join(myLines)
+                    myLines = "\n".join(myList)
                     f.writelines(myLines)
 
             if status == 'OUT' :
@@ -113,12 +113,12 @@ else:
                         l1 = 'Out: ' + str(dateNow) + "\n"
                         l2 = "I went swimming" + "\n"
                         myList = [l1, l2, temps]
-                        myLines = "\n".join(myLines)
+                        myLines = "\n".join(myList)
                         f.writelines(myLines)
                 else:
                     with open('am-i/present.txt','w') as f:
                         l1 = 'Out: ' + str(dateNow) + "\n"
                         l2 = "I am not at the studio" + "\n"
                         myList = [l1, l2, temps]
-                        myLines = "\n".join(myLines)
+                        myLines = "\n".join(myList)
                         f.writelines(myLines) 
