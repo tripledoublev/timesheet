@@ -39,7 +39,7 @@ ror = '░░░░░░░░░░░░░░░░░░░░░░░░�
 hav = '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
 som = '░░░   Welcome to the studio. Have fun.    ░░░'
 fun = '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
-
+print('Initializing app.py')
 # only write text entry if --time is not present
 if status is None:
      with open("data/m.txt", "a+") as msg_file:
@@ -66,6 +66,7 @@ if status is None:
 
 
 else:
+    print('Accessing data')
     # open the studio timecard text file
     with open("data/t.txt", "a+") as txt_file:
         # go to beginning of file
@@ -88,6 +89,7 @@ else:
             # and notify user
             if status == 'IN' :
                 if args.climate:
+                    print('Accessing environmental sensors')
                     dedans = 'IN'
                     temps = climate.main(dedans)
                 print(hav)
@@ -99,6 +101,7 @@ else:
 
             if status == 'OUT' :
                 if args.climate:
+                    print('Accessing environmental sensors')
                     dehors = 'OUT'
                     temps = climate.main(dehors)
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
