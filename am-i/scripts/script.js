@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         myDiv.classList.add("absent");
         if (Math.sign(change) === -1) {
           otherDiv.innerHTML =
-            " \u2014 Indoor temperature was " + past + "\u00B0C when I left at " + timestmp;
+            "Indoor temperature was " + past + "\u00B0C when I left at " + timestmp;
           otherDiv.innerHTML += " \u2014 " + change * -1 + "\u00B0C ";
           otherDiv.appendChild(tempChange);
           tempChange.classList.add("warmer");
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             "                                                       ";
         } else if (Math.sign(change) === 1) {
           otherDiv.innerHTML =
-            " \u2014 Indoor temperature was " + past + "\u00B0C when I left at " + timestmp;
+            "Indoor temperature was " + past + "\u00B0C when I left at " + timestmp;
           otherDiv.innerHTML += " \u2014 " + change * 1 + "\u00B0C ";
           otherDiv.appendChild(tempChange);
           tempChange.classList.add("cooler");
