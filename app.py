@@ -116,3 +116,5 @@ else:
                     with open('am-i/present.txt','w') as f:
                         lines = 'Out: ' + str(dateNow) + "\nI am not at the studio\n" + str(temps[0]) + ' ' + str(temps[1])
                         f.writelines(lines) 
+
+print('Web presence updated')

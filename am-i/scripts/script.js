@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             "                                                       ";
         } else if (Math.sign(change) === 1) {
           otherDiv.innerHTML =
-            " Indoor temperature was " +
+            "Indoor temperature was " +
             past +
             "\u00B0C at " +
             timestmp +
@@ -175,9 +175,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
       } else {
         myDiv.classList.add("absent");
-        myDiv.classList.add("absent");
         if (Math.sign(change) === -1) {
-          otherDiv.innerHTML +=
+          otherDiv.innerHTML =
             " \u2014 Indoor temperature was " + past + "\u00B0C when I left at " + timestmp;
           otherDiv.innerHTML += " \u2014 " + change * -1 + "\u00B0C ";
           otherDiv.appendChild(tempChange);
@@ -189,7 +188,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           otherDiv.innerHTML +=
             "                                                       ";
         } else if (Math.sign(change) === 1) {
-          otherDiv.innerHTML +=
+          otherDiv.innerHTML =
             " \u2014 Indoor temperature was " + past + "\u00B0C when I left at " + timestmp;
           otherDiv.innerHTML += " \u2014 " + change * 1 + "\u00B0C ";
           otherDiv.appendChild(tempChange);

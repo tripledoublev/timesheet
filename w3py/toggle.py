@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def main():
+    print("Bringing my presence on the blockchain")
     key = os.getenv('PRIVATE_KEY')
     rpc = os.getenv('RPC')
    
@@ -32,6 +33,7 @@ def main():
     #read state
     presence = contract.functions.presence().call()
     statement = contract.functions.statement().call()
+    print("Before transaction with the blockchain")
     print('Presence: ' + str(presence))
     print(statement)
     print('////')
@@ -61,6 +63,7 @@ def main():
     time.sleep(2.5)
     presence = contract.functions.presence().call()
     statement = contract.functions.statement().call()
+    print("After transaction with the blockchain")
     print('Presence: ' + str(presence))
     print(statement)
     print('////')
