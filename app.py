@@ -89,34 +89,30 @@ else:
             if status == 'IN' :
                 if args.climate:
                     dedans = 'IN'
-                    climate.main(dedans)
+                    temps = climate.main(dedans)
                 print(hav)
                 print(som)
                 print(fun)
                 with open('am-i/present.txt','w') as f:
-                    f.write("I am at the studio.")
-                with open('am-i/counting.txt','w') as c:
-                    c.write('In: ' + str(dateNow))
+                    l1 = 'In: ' + str(dateNow)
+                    l2 = "I am at the studio"
+                    f.writelines(l1, l2, temps)
+
             if status == 'OUT' :
                 if args.climate:
                     dehors = 'OUT'
-                    climate.main(dehors)
+                    temps = climate.main(dehors)
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 print('░░░  A studio is only one of many places  ░░░')
                 print('░░░  where art gets made. Au revoir       ░░░')
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
-                print('')
-                print('')
-                print('*********************************************')
-                print('You can now commit and push to update website')
-                print('*********************************************')
                 if args.swimming:
                     with open('am-i/present.txt','w') as f:
-                        f.write("I went swimming.")
-                    with open('am-i/counting.txt','w') as c:
-                        c.write('Last seen on ' + str(dateNow)) 
+                        l1 = 'Out: ' + str(dateNow)
+                        l2 = "I went swimming"
+                        f.writelines(l1, l2, temps)   
                 else:
                     with open('am-i/present.txt','w') as f:
-                        f.write("I am not at the studio.")
-                    with open('am-i/counting.txt','w') as c:
-                        c.write('Last seen on ' + str(dateNow))   
+                        l1 = 'Out: ' + str(dateNow)
+                        l2 = "I am not at the studio"
+                        f.writelines(l1, l2, temps)   
