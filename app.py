@@ -94,9 +94,10 @@ else:
                 print(som)
                 print(fun)
                 with open('am-i/present.txt','w') as f:
-                    l1 = 'In: ' + str(dateNow)
-                    l2 = "I am at the studio"
-                    f.writelines(l1, l2, temps)
+                    l1 = 'In: ' + str(dateNow) + "\n"
+                    l2 = "I am at the studio" + "\n"
+                    myLines = [l1, l2, temps]
+                    f.writelines(myLines)
 
             if status == 'OUT' :
                 if args.climate:
@@ -108,11 +109,13 @@ else:
                 print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 if args.swimming:
                     with open('am-i/present.txt','w') as f:
-                        l1 = 'Out: ' + str(dateNow)
-                        l2 = "I went swimming"
-                        f.writelines(l1, l2, temps)   
+                        l1 = 'Out: ' + str(dateNow) + "\n"
+                        l2 = "I went swimming" + "\n"
+                        myLines = [l1, l2, temps]
+                        f.writelines(myLines)   
                 else:
                     with open('am-i/present.txt','w') as f:
-                        l1 = 'Out: ' + str(dateNow)
-                        l2 = "I am not at the studio"
-                        f.writelines(l1, l2, temps)   
+                        l1 = 'Out: ' + str(dateNow) + "\n"
+                        l2 = "I am not at the studio" + "\n"
+                        myLines = [l1, l2, temps]
+                        f.writelines(myLines)   
