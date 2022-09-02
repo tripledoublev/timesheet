@@ -96,8 +96,9 @@ else:
                 with open('am-i/present.txt','w') as f:
                     l1 = 'In: ' + str(dateNow) + "\n"
                     l2 = "I am at the studio" + "\n"
-                    myLines = [l1, l2, temps]
-                    f.writelines("\n".join(myLines))
+                    myList = [l1, l2, temps]
+                    myLines = "\n".join(myLines)
+                    f.writelines(myLines)
 
             if status == 'OUT' :
                 if args.climate:
@@ -111,11 +112,13 @@ else:
                     with open('am-i/present.txt','w') as f:
                         l1 = 'Out: ' + str(dateNow) + "\n"
                         l2 = "I went swimming" + "\n"
-                        myLines = [l1, l2, temps]
-                        f.writelines("\n".join(myLines))
+                        myList = [l1, l2, temps]
+                        myLines = "\n".join(myLines)
+                        f.writelines(myLines)
                 else:
                     with open('am-i/present.txt','w') as f:
                         l1 = 'Out: ' + str(dateNow) + "\n"
                         l2 = "I am not at the studio" + "\n"
-                        myLines = [l1, l2, temps]
-                        f.writelines("\n".join(myLines))   
+                        myList = [l1, l2, temps]
+                        myLines = "\n".join(myLines)
+                        f.writelines(myLines) 
