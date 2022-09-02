@@ -17,12 +17,7 @@ def main(temp):
         historical = last_Line.split(' ')
         # record past temp
         past_temp = historical[0]
-        # substract temp from past temp
-        temp_diff = float(past_temp) - float(temp) 
-        temps = [temp]
-        temps.append(temp_diff)
-        return temps
     # reopens file to rewrite
-    # with open(file_path,'w') as f:
-    #    temp_diff = float(past_temp) - float(temp)
-    #    f.write(str(temp) + ' ' + str(round(temp_diff,2)))
+    with open(file_path,'w') as f:
+        temp_diff = float(past_temp) - float(temp)
+        f.write(str(temp) + ' ' + str(round(temp_diff,2)))
