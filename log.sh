@@ -29,13 +29,13 @@
 # 3. These text files are used as data for their HTML equivalent
 
 # 4. In the end, the html files are used to populate the index.html
-now=$(date + '%m-%d-%Y_%r')
+now=$(date "+%c")
 if [ $1 = 'IN' ]
 then 
-    python3 app.py --time IN --climate && cd w3py && python3 toggle.py main && cd .. && git commit -am 'A_${now}_VC' && git push
+    python3 app.py --time IN --climate && cd w3py && python3 toggle.py main && cd .. && git commit -am \"IN: ${now}\" && git push
 elif [ $1 = 'OUT' ]
 then
-    python3 app.py --time OUT --climate && cd w3py && python3 toggle.py main && cd .. && python3 timeMachine.py && sudo rm consecutive-days/* || true && sudo rm consecutive-days/data/* || true && python3 data/export.py && python3 generate_html.py && python3 generate_index.py && git add consecutive-days/* && git commit -am 'A_${now}_VC' && git push
+    python3 app.py --time OUT --climate && cd w3py && python3 toggle.py main && cd .. && python3 timeMachine.py && sudo rm consecutive-days/* || true && sudo rm consecutive-days/data/* || true && python3 data/export.py && python3 generate_html.py && python3 generate_index.py && git add consecutive-days/* && git commit -am \"OUT: ${now}\" && git push
 else
-    python3 timeMachine.py && sudo rm consecutive-days/* || true && sudo rm consecutive-days/data/* || true && python3 data/export.py && python3 generate_html.py && python3 generate_index.py && git add consecutive-days/* && git commit -am 'A_${now}_VC' && git push
+    python3 timeMachine.py && sudo rm consecutive-days/* || true && sudo rm consecutive-days/data/* || true && python3 data/export.py && python3 generate_html.py && python3 generate_index.py && git add consecutive-days/* && git commit -am \"COMPILED: ${now}\" && git push
 fi
