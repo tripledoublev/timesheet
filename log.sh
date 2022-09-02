@@ -29,7 +29,7 @@
 # 3. These text files are used as data for their HTML equivalent
 
 # 4. In the end, the html files are used to populate the index.html
-now=$(date + '%m-%d-%Y_%r)
+now=$(date + '%m-%d-%Y_%r')
 if [ $1 = 'IN' ]
 then 
     python3 app.py --time IN --climate && cd w3py && python3 toggle.py main && cd .. && git commit -am 'A_${now}_VC' && git push
