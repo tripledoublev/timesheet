@@ -132,13 +132,13 @@ body {
   height: auto;
 }
 .teleprompt .flex-item {
-  font-size: calc(2.45vw + 2.45vh);
+  font-size: calc(2.05vw + 2.15vh);
   float: left;
   white-space: nowrap;
 }
 
 .scroll-left {
-  height: 7vh;
+  height: 8vh;
   overflow: hidden;
   position: relative;
 }
