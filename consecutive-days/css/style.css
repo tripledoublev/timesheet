@@ -13,7 +13,7 @@ body {
 /* defines styles for div */
 div.textColor {
     flex: 1 1 1;
-    font-size:calc(0.4vw + 0.4vh);mmit 
+    font-size:calc(0.4vw + 0.4vh);
     word-wrap: break-word;
     border-radius: 1rem;
     margin:calc(0.5vw + 0.5vh);
@@ -135,7 +135,7 @@ h1 {
     top:unset;
     bottom:15px;
     }
-    .consecutivebox {
-        flex-direction: column;
+    div.consecutivebox {
+    flex-direction: column;
     }
 }
