@@ -81,6 +81,9 @@ else:
             print(err)
             print(rrr)
             print(ror)
+            def endIt():
+                return 1
+            endIt()
         # if present matches history then append '\n'
         else:    
             txt_file.write("\n")
