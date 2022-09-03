@@ -242,7 +242,7 @@ def main(x):
                 print(str(round(humi, 2)) + "%")
                 print(str(round(lux, 2)) + "Lux")
                 print(str(round(press,2)) + "hPa")
-                temps = difference.main(round(temp,2))
+                temps = round(difference.main(round(temp,2)),2)
                 with open("climate.txt", "a+") as a:
                     a.seek(0) 
                     a.write("\n")
