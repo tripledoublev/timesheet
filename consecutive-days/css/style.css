@@ -1,6 +1,6 @@
 /* defines margin for the main content */
 body {
-    margin:0
+  margin: 0;
 }
 html,
 body {
@@ -8,134 +8,132 @@ body {
 }
 
 .grey-bg {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }
 /* defines styles for div */
 div.textColor {
-    flex: 1 1 1;
-    font-size:calc(0.4vw + 0.4vh);
-    word-wrap: break-word;
-    border-radius: 1rem;
-    margin:calc(0.5vw + 0.5vh);
-    padding:16px 8px;
-    text-align: center;
-    transition: border-radius 2s ease-in-out 0.123s;
-    
+  flex: 1 1 1;
+  font-size: calc(0.4vw + 0.4vh);
+  word-wrap: break-word;
+  border-radius: 1rem;
+  margin: calc(0.5vw + 0.5vh);
+  padding: 16px 8px;
+  text-align: center;
+  transition: border-radius 2s ease-in-out 0.123s;
 }
 
 .textColor a,
-#page-title a{
-    padding: 1rem 2rem 1rem 2rem;
-    text-decoration:none;
-    font-weight: bold;
-    font-family: Helvetica, sans-serif;
-    font-size:calc(1.2vw + 1.2vh);
+#page-title a {
+  padding: 1rem 2rem 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: calc(1.2vw + 1.2vh);
 }
 
-.indexbox .textColor, h1 {
-    border: 2px solid white;
+.indexbox .textColor,
+h1 {
+  border: 2px solid white;
 }
 .consecutivebox .textColor {
-    border: 1px solid grey;
+  border: 1px solid grey;
 }
 
 .textColor a {
-    color:transparent;
+  color: transparent;
 }
 
 .textColor a:visited {
-    color:unset;
-    color: rgba(255,255,255,1) !important;
+  color: unset;
+  color: rgba(255, 255, 255, 1) !important;
 }
 
 .textColor:active {
-    opacity:0.333;
-    cursor:pointer;
+  opacity: 0.333;
+  cursor: pointer;
 }
 div.flexbox {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 100vh;
-    align-content: center;
-    margin-top:0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100vh;
+  align-content: center;
+  margin-top: 0;
 }
 div.indexbox {
-    margin-left: 10vw;
-    width: 80vw;
-    padding-left: 2rem;
+  margin-left: 10vw;
+  width: 80vw;
+  padding-left: 2rem;
 }
 div.consecutivebox {
-    margin-left:0vw;
-    width: 100vw;
-
+  margin-left: 0vw;
+  width: 100vw;
 }
 .justify-left {
-    justify-content: left;
+  justify-content: left;
 }
 
 .justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .textColor:hover a,
-#page-title a{
-    color:black;
-    filter: invert(100%);
+#page-title a {
+  color: black;
+  filter: invert(100%);
 }
-#page-title:hover a{
-    color:black;
-    filter:invert(0);
+#page-title:hover a {
+  color: black;
+  filter: invert(0);
 }
 .textColor:hover {
-    filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.1));
-    border-radius:5px !important;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.1));
+  border-radius: 5px !important;
 }
 
 h1 {
-    transform-origin: top left;
-    position: fixed;
-    top: -10vh;
-    left: 9.5vw;
-    font-size: calc(2.5vw + 2.5vh);
-    transform: rotate(90deg);
-    width:100vh;
-    padding-left: 10vh;
-    padding-right:10vh;
-    padding-bottom:10vw;
-    padding-top: 0.5rem;
+  transform-origin: top left;
+  position: fixed;
+  top: -10vh;
+  left: 9.5vw;
+  font-size: calc(2.5vw + 2.5vh);
+  transform: rotate(90deg);
+  width: 100vh;
+  padding-left: 10vh;
+  padding-right: 10vh;
+  padding-bottom: 10vw;
+  padding-top: 0.5rem;
 }
 
-#bgwrap1, #bgwrap2 {
-    position: fixed;
-    left: 0;
-    top:0;
-    width:100vw;
-    height:100vh;
+#bgwrap1,
+#bgwrap2 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 .back-arrow {
-    position:absolute;
-    top:15px;
-    left:20px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
 }
-
-
 
 .back-arrow img {
-    width:100px;
-    opacity:0.9;
+  width: 100px;
+  opacity: 0.9;
 }
 
-@media (max-width: 700px) {
-    .back-arrow img {
-        width:75px;
-    }
-    .back-arrow {
-    top:unset;
-    bottom:15px;
-    }
-    div.consecutivebox {
-    flex-direction: column;
-    }
+@media (max-width: 750px) {
+  .back-arrow img {
+    width: 75px;
+  }
+  .back-arrow {
+    top: unset;
+    bottom: 15px;
+  }
+  div.consecutivebox {
+    transform: rotate(90deg);
+  }
 }
