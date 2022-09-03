@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       const txt_lines = text.split(/\r?\n/);
       const date_time = txt_lines[0].split(" ");
       const timestmp = date_time.splice(-1);
+      const datestmp = date_time.splice(-2);
       const temperature = txt_lines[2].split(" ");
       const past = temperature[0];
       const change = temperature[1];
@@ -177,7 +178,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         myDiv.classList.add("absent");
         if (Math.sign(change) === -1) {
           otherDiv.innerHTML =
-            "Indoor temperature was " + past + "\u00B0C when I left at " + timestmp;
+            "Indoor temperature was " + past + "\u00B0C when I left at " + timestmp + " on " + datestmp;
           otherDiv.innerHTML += " \u2014 " + change * -1 + "\u00B0C ";
           otherDiv.appendChild(tempChange);
           tempChange.classList.add("warmer");
@@ -189,7 +190,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             "                                                       ";
         } else if (Math.sign(change) === 1) {
           otherDiv.innerHTML =
-            "Indoor temperature was " + past + "\u00B0C when I left at " + timestmp;
+            "Indoor temperature was " + past + "\u00B0C when I left at " + timestmp + " on " + datestmp;
           otherDiv.innerHTML += " \u2014 " + change * 1 + "\u00B0C ";
           otherDiv.appendChild(tempChange);
           tempChange.classList.add("cooler");
