@@ -20,5 +20,5 @@ def main(temp):
         # substract temp from past temp
         temp_diff = float(past_temp) - float(temp) 
         temps = [temp]
-        temps.append(round(temp_diff),2)
+        temps.append(round(temp_diff,2))
         return temps
