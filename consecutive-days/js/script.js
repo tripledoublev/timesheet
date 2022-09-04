@@ -1,6 +1,6 @@
 // Function for back button:
 function arrowButton() {
-  window.location = "/";
+  window.location = "../";
 }
 // Function to change color on click:
 hello = (e) => {
