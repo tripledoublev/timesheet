@@ -75,6 +75,11 @@ else:
         last_Line = txt_file.readlines()[-1]
         historical = last_Line.split(',')
         past_Status = historical[0]
+        print("Last event:")
+        print(past_Status)
+        print("////")
+        print("Current event:")
+        print(status)
             # check if the present contradicts history
         if status == past_Status:
             # if so, send error message
@@ -86,6 +91,8 @@ else:
             endIt()
         # if present matches history then append '\n'
         else:    
+            print("////")
+            print("Logging " + status)
             txt_file.write("\n")
             # and write to file
             txt_file.write(status + ', ' + str(timeNow) + ', ' + str(dateNow))
@@ -120,4 +127,5 @@ else:
                         lines = 'Out: ' + str(dateNow) + "\nI am not at the studio\n" + str(temps[0]) + ' ' + str(temps[1])
                         f.writelines(lines) 
 
-print('Web presence updated')
+print('Local Datalog Updated')
+print("////")
