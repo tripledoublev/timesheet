@@ -138,6 +138,7 @@ h1 {
   }
   div.flexbox.consecutivebox {
     flex-wrap: nowrap;
+    position: fixed;
   }
   .hide-ovflo {
     overflow: hidden;
