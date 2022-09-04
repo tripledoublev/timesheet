@@ -3,3 +3,4 @@ twitter/
 w3py/.env
 am-i/.env
 .git-credentials
+.git/*
