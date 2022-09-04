@@ -135,8 +135,11 @@ h1 {
   }
   div.consecutivebox {
     transform: rotate(90deg);
-    width: 90vh;
-    left: -50%;
-    position: absolute;
+  }
+  div.flexbox.consecutivebox {
+    flex-wrap: nowrap;
+  }
+  .hide-ovflo {
+    overflow: hidden;
   }
 }
