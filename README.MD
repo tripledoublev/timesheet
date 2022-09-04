@@ -1,6 +1,6 @@
 # CONSECUTIVE DAYS AT THE STUDIO
 
-## A Python experiment to create a timecard for logging my time spent at the studio
+## A timekeeping experiment for the digital manifestation of my physical presence at the studio
 
 ### A creative exercise exploring the visualization potential of quantified location-based artistic labour
 
