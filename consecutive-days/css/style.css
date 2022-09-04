@@ -135,5 +135,8 @@ h1 {
   }
   div.consecutivebox {
     transform: rotate(90deg);
+    width: 90vh;
+    left: -50%;
+    position: absolute;
   }
 }
