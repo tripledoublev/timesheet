@@ -16,6 +16,8 @@ for file in onlyfiles:
         f.write("\n")
         f.write('       <head>')
         f.write("\n")
+        f.write('           <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">')
+        f.write("\n")
         f.write('           <title>')
         f.write("\n")
         f.write('               ' + title)

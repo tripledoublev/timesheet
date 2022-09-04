@@ -33,7 +33,7 @@ div.textColor {
 
 .indexbox .textColor,
 h1 {
-  border: 2px solid white;
+  border: 2px solid #111111;
 }
 .consecutivebox .textColor {
   border: 1px solid grey;
