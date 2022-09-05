@@ -22,9 +22,12 @@ jobs:
           **/data/s.txt
           */data/t.txt
           README.MD
-          time.py
+          timeMachine.py
+          log.sh
           .gitignore
           **/twitter/**
           **/draw/**
           generate_index.py
+          generate_html.py
+          *.py
           
