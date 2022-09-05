@@ -3,10 +3,11 @@
 # LOG IN AND OUT OF THE STUDIO
 
 # by using IN or OUT as argument
-# ie. sh compiler.sh IN
+# ie. >>> sh compiler.sh IN
 
 # if no arguments are given it will compiled latest data
-# and generate html
+# and generate html based on data
+# then, updated html get deployed to the server
 
 # OUT arguments also compiles latest data
 
@@ -18,17 +19,26 @@
 # total of seconds
 # 
 # This daily total of seconds spent at the studio is used to define
-# its shape, color and its size relative to 
+# its shape, color and size relative to 
 # the other days in the series
 
-# 1. Compiles timesheet (data/t.txt) into daily seconds (data/s.txt)
+# the longest days spent at the studio appear as the biggest rectangles
 
-# 2. From these daily totals, series of consecutive days' totals
-#    are compiled as separate txt files (consecutive-days/data/...)
-#
-# 3. These text files are used as data for their HTML equivalent
+# 1. Fetches latest changes and pulls from GIT
+#   If IN or OUT:
+#       * Logs IN or OUT in timesheet (data/t.txt) with app.py
+#       * Fetches climate data and logs environmental conditions on IN & OUT (--climate)
+#       * toggle Presence on the blockchain with Web3.py (w3py/toggle.pt)
 
-# 4. In the end, the html files are used to populate the index.html
+#   If OUT or {none}
+#       * Compiles timesheet (data/t.txt) into daily seconds (data/s.txt) with timeMachine.py
+#       * From these daily totals, series of consecutive days' totals
+#         are compiled as separate txt files (consecutive-days/data/...) with data/export.py
+#       * These text files are used as data for their HTML equivalent with generate_html.py
+#       * In the end, the html files are used to populate the index.html with generate_index.py
+
+# Concludes with by Committing (and pushing) changes with named based on operation (in, out, compiled + timestamp)
+
 now=$(date "+%c")
 if [ $1 = 'IN' ]
 then 
