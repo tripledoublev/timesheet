@@ -37,7 +37,7 @@ function unix2time(unixtime) {
     var month = months[date.getMonth()];
     var day = date.getDate;
     var year = date.getFullYear;
-    var formattedDate = month + day + year
+    var formattedDate = month + day + year;
 
     // Will display time in 10:30:23 format
     var obj = {
