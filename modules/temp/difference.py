@@ -7,7 +7,7 @@ def main(temp):
     current = os.path.dirname(__file__)
     parent = os.path.split(current)[0]
     another_parent = os.path.split(parent)[0]
-    file_path = os.path.join(another_parent, 'am-i', 'HOT.txt')
+    file_path = os.path.join(another_parent, 'am-i', 'present.txt')
     with open(file_path, "a+") as txt_file:
         # go to beginning of file
         txt_file.seek(0) 
