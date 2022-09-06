@@ -25,6 +25,11 @@ body {
   justify-content: center;
 }
 
+a:focus-visible {
+  border: 4px double white !important;
+  outline: dotted;
+  outline-width: medium;
+}
 .flex-item {
   padding: 5px;
   color: white;
@@ -114,13 +119,6 @@ body {
     width:90vw;
     padding-left:5vw;
   }
-}
-
-.absent::selection {
-  color: red;
-}
-.present::selection {
-  color: #4caf50;
 }
 .warmer {
   color: #f31100;
