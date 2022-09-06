@@ -7,14 +7,16 @@ body {
   background-color: #111111;
 }
 .flex-container {
-  height: 100%;
-  width: 100%;
+  height: 92vh;
+  width: 75vw;
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   background-color: #111111;
+  padding-left: 10vw;
+  padding-bottom:5vh;
 }
 .row {
   width: 90%;
@@ -30,7 +32,7 @@ body {
   text-align: left;
 }
 .row .flex-item {
-  font-size: calc(2.25vw + 2.25vh);
+  font-size: calc(1.5vw + 1.5vh);
 }
 
 #textcontainer {
@@ -38,12 +40,12 @@ body {
   flex-basis: max-content;
 }
 
-.bottom-left {
+.top-left {
   position: absolute;
-  bottom: 20px;
+  top: 20px;
   left: 20px;
   color: white;
-  font-size: calc(7vw + 7vh);
+  font-size: calc(5vw + 5vh);
 }
 .blockchain-link {
   position: absolute;
@@ -97,8 +99,8 @@ body {
   font-family: Times;
 }
 @media (max-width: 763px) {
-  .bottom-left {
-    font-size: calc(6vw + 6.5vh) !important;
+  .top-left {
+    font-size: calc(6vw + 8.5vh) !important;
   }
   .blockchain-link a,
   .consecutive-link a {
@@ -108,6 +110,10 @@ body {
   .my-link a {
     border: 2px solid white;
     padding: 10px 16px;
+  }
+  .flex-container {
+    width:90vw;
+    padding-left:5vw;
   }
 }
 
