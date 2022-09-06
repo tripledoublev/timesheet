@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
         function intermediary() {
           setTimeout(statementDiv, 3333);
-          myDiv.classList.add("present");
           myDiv.innerHTML +=
             "<br />Indoor temperature was " +
             dataObject.temp +
