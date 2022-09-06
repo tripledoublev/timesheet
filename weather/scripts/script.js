@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         Math.floor(hoursDiff) +
         " hours and " +
         minutesRemaining +
-        " minutes before.";
+        " minutes ";
       var datetime = new unix2time(dataObject.time);
       const change = dataObject.temp - prevDataObject.temp;
       function updateDiv() {
@@ -60,19 +60,25 @@ document.addEventListener("DOMContentLoaded", async function () {
                   tempChange.classList.add("warmer");
                   tempChange.innerHTML = "warmer";
                 } else if (Math.sign(change) === -1) {
-                  myDiv.innerHTML += change.toPrecision(3) * 1 + "\u00B0C ";
+                  myDiv.innerHTML += change.toPrecision(3) * -1 + "\u00B0C ";
                   myDiv.appendChild(tempChange);
                   tempChange.classList.add("cooler");
                   tempChange.innerHTML = "cooler";
                 }
-                  if ((dataObject.myStatus = "OUT")) {
+                  if (dataObject.myStatus = "IN") {
                     myDiv.innerHTML +=
-                    " than when I arrived " + timeString + " <br /> ";
+                    " than the last recorded temperature," + timeString + "earlier.<br /> ";
                     } else {
                     myDiv.innerHTML +=
-                    " than last recorded temperature " + timeString + "<br /> ";
+                    " than when I arrived" + timeString + "earlier.<br /> ";
                 }
                 function lastSentence() {
+                  if (dataObject.myStatus == "IN") {
+                    myDiv.innerHTML += "<br /> I am <strong>currently</strong> at the studio.";
+                  } else {
+                    myDiv.innerHTML +=
+                      "<br /> I am <strong>not</strong> at the studio at this moment.";
+                  }
                   function firstButton() {
                     linkDiv1.classList.remove("no-dis");
                     linkDiv1.classList.add("my-link");
@@ -81,26 +87,27 @@ document.addEventListener("DOMContentLoaded", async function () {
                       linkDiv3.classList.add("blockchain-link");
                     }
                     setTimeout(secondButton, 2222);
+  
                   }
                   setTimeout(firstButton, 2222);
-                  if (dataObject.myStatus == "IN") {
-                    myDiv.innerHTML += "<br /> I am currently at the studio.";
-                  } else {
-                    myDiv.innerHTML +=
-                      "<br /> I am <strong>not</strong> at the studio at this moment.";
-                  }
+
                 }
                 setTimeout(lastSentence, 3333);
+               
               }
               setTimeout(buttonDiv3, 3333);
+             
             }
             setTimeout(buttonDiv1, 3333);
+           
           }
           setTimeout(tickerDiv, 3333);
+         
         }
         setTimeout(intermediary, 3333);
       }
       setTimeout(updateDiv, 3333);
+     
     });
   });
 });
