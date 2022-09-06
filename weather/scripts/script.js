@@ -12,13 +12,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       var dataObject = new makeDataObject(text, 1);
       var prevDataObject = new makeDataObject(text, 2);
       var timeDiff = dataObject.time - prevDataObject.time;
-      var hoursDiff = timeDiff / 3600;
-      var minutesRemaining = timeDiff % 60;
-      var timeString =
-        Math.floor(hoursDiff) +
-        " hours and " +
-        minutesRemaining +
-        " minutes ";
+      var timeString = makeTimeString(timeDiff);
       var datetime = new unix2time(dataObject.time);
       const change = dataObject.temp - prevDataObject.temp;
       function updateDiv() {
@@ -67,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 }
                   if (dataObject.myStatus = "IN") {
                     myDiv.innerHTML +=
-                    " than the last recorded temperature," + timeString + "earlier.<br /> ";
+                    " than the last recorded temperature, " + timeString + "earlier.<br /> ";
                     } else {
                     myDiv.innerHTML +=
                     " than when I arrived" + timeString + "earlier.<br /> ";
