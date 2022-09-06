@@ -1,15 +1,14 @@
+// takes raw.txt data + x for a specific line (starting at the end:: lines' lenght - x)
 function makeDataObject(rawData, x) {
     const txt_lines = rawData.split(/\r?\n/);
-    const last_line = txt_lines[txt_lines.length - x];
-    const all_data = last_line.split(" ");
+    const select_line = txt_lines[txt_lines.length - x];
+    const all_data = select_line.split(" ");
     const tempData = all_data[1].split(":");
     const humiData = all_data[2].split(":");
     const luxData = all_data[3].split(":");
     const pressureData = all_data[4].split(":");
     const timeData = all_data[5].split(":");
-
     const myStatus = all_data[0];
-    console.log(myStatus)
     var obj = {
         myStatus: myStatus,
         temp: tempData[1],
@@ -42,4 +41,25 @@ function unix2time(unixtime) {
         date: formattedDate
     }
     return obj
+}
+
+function makeTimeString(seconds) {
+    var numHours = seconds / 3600;
+    var minutesRemaining = seconds % 60;
+    console.log(minutesRemaining + typeof(minutesRemaining));
+    var timeString = Math.floor(numHours);
+    if (timeString > 1) {
+        timeString += " hours "
+    } else if (timeString == 1) {
+        timeString += " hour "
+    };
+    if (minutesRemaining == 1) {
+        timeString += "and " + minutesRemaining +
+        " minute "
+    } else if (minutesRemaining >= 1) {
+        timeString += "and " + minutesRemaining +
+        " minutes "
+    };  
+        console.log(timeString)
+        return timeString
 }
