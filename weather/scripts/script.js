@@ -12,15 +12,35 @@ document.addEventListener("DOMContentLoaded", async function () {
       var dataObject = new makeDataObject(text, 1);
       var prevDataObject = new makeDataObject(text, 2);
       var timeDiff = dataObject.time - prevDataObject.time;
-      var hoursDiff = timeDiff / (3600);
+      var hoursDiff = timeDiff / 3600;
       var minutesRemaining = timeDiff % 60;
-      var timeString = Math.floor(hoursDiff) + ' hours and ' + minutesRemaining + ' minutes before.';
+      var timeString =
+        Math.floor(hoursDiff) +
+        " hours and " +
+        minutesRemaining +
+        " minutes before.";
       var datetime = new unix2time(dataObject.time);
       const change = dataObject.temp - prevDataObject.temp;
       function updateDiv() {
+        myDiv.classList.remove("top-left");
+        myDiv.classList.add("flex-item");
+        if (dataObject.myStatus == "IN") {
+          myDiv.innerHTML = "When I arrived at " + datetime.time + ",<br />";
+        } else {
+          myDiv.innerHTML = "When I left at " + datetime.time + " on " + datetime.date + ",<br />";
+        }
+        function intermediary() {
+          setTimeout(statementDiv, 3333);
+          myDiv.classList.add("present");
+          myDiv.innerHTML +=
+            "<br />Indoor temperature was " +
+            dataObject.temp +
+            "\u00B0C <br /> ";
+        }
         function statementDiv() {
           // insert if last record is IN or OUT
-          myDiv.innerHTML += "<br /> Humidity was " + dataObject.humi + "&percnt; <br />";
+          myDiv.innerHTML +=
+            "<br /> Humidity was " + dataObject.humi + "&percnt; <br />";
           function tickerDiv() {
             // add&remove class to display buttons and ticker
             // ticker currently remains hidden
@@ -34,22 +54,44 @@ document.addEventListener("DOMContentLoaded", async function () {
                 dataObject.pressure +
                 " hPa <br />";
               function buttonDiv3() {
-                function firstButton() {
-                  linkDiv1.classList.remove("no-dis");
-                  linkDiv1.classList.add("my-link");
-                  function secondButton() {
-                    linkDiv3.classList.remove("no-dis");
-                    linkDiv3.classList.add("blockchain-link");
+                myDiv.innerHTML += "<br />It was ";
+                if (Math.sign(change) === 1) {
+                  myDiv.innerHTML += change.toPrecision(3) * 1 + "\u00B0C ";
+                  myDiv.appendChild(tempChange);
+                  tempChange.classList.add("warmer");
+                  tempChange.innerHTML = "warmer";
+                } else if (Math.sign(change) === -1) {
+                  myDiv.innerHTML += change.toPrecision(3) * 1 + "\u00B0C ";
+                  myDiv.appendChild(tempChange);
+                  tempChange.classList.add("cooler");
+                  tempChange.innerHTML = "cooler";
+                }
+                  if ((dataObject.myStatus = "OUT")) {
+                    myDiv.innerHTML +=
+                    " than when I arrived " + timeString + " <br /> ";
+                    } else {
+                    myDiv.innerHTML +=
+                    " than last recorded temperature " + timeString + "<br /> ";
+                }
+                function lastSentence() {
+                  function firstButton() {
+                    linkDiv1.classList.remove("no-dis");
+                    linkDiv1.classList.add("my-link");
+                    function secondButton() {
+                      linkDiv3.classList.remove("no-dis");
+                      linkDiv3.classList.add("blockchain-link");
+                    }
+                    setTimeout(secondButton, 2222);
                   }
-                  setTimeout(secondButton, 2222);
+                  setTimeout(firstButton, 2222);
+                  if (dataObject.myStatus == "IN") {
+                    myDiv.innerHTML += "<br /> I am currently at the studio.";
+                  } else {
+                    myDiv.innerHTML +=
+                      "<br /> I am <strong>not</strong> at the studio at this moment.";
+                  }
                 }
-                setTimeout(firstButton, 2222)
-                if (dataObject.myStatus == "IN") {
-                  myDiv.innerHTML += "<br /> I am currently at the studio.";
-                } else {
-                  myDiv.innerHTML +=
-                    "<br /> I am not at the studio at this moment.";
-                }
+                setTimeout(lastSentence, 3333);
               }
               setTimeout(buttonDiv3, 3333);
             }
@@ -57,61 +99,8 @@ document.addEventListener("DOMContentLoaded", async function () {
           }
           setTimeout(tickerDiv, 3333);
         }
-        
-        myDiv.classList.remove("top-left");
-        myDiv.classList.add("flex-item");
-        if (dataObject.myStatus == "IN") {
-          myDiv.innerHTML = "When I arrived at " + datetime.time + ", it was ";
-          if (Math.sign(change) === 1) {
-            myDiv.innerHTML += change.toPrecision(3) * 1 + "\u00B0C ";
-            myDiv.appendChild(tempChange);
-            tempChange.classList.add("warmer");
-            tempChange.innerHTML = "warmer";
-          } else if (Math.sign(change) === -1) {
-            myDiv.innerHTML += change.toPrecision(3) * 1 + " \u00B0C ";
-            myDiv.appendChild(tempChange);
-            tempChange.classList.add("cooler");
-            tempChange.innerHTML = "cooler" + lux;
-          }
-          myDiv.innerHTML += " than last recorded temperature " + timeString + "<br /> ";
-        } else {
-          myDiv.innerHTML = "When I left at " + datetime.time + ", it was ";
-          if (Math.sign(change) === 1) {
-            myDiv.innerHTML += change.toPrecision(3) * 1 + "\u00B0C ";
-            myDiv.appendChild(tempChange);
-            tempChange.classList.add("warmer");
-            tempChange.innerHTML = "warmer";
-          } else if (Math.sign(change) === -1) {
-            myDiv.innerHTML += change.toPrecision(3) * 1 + "\u00B0C ";
-            myDiv.appendChild(tempChange);
-            tempChange.classList.add("cooler");
-            tempChange.innerHTML = "cooler";
-          }
-          myDiv.innerHTML += " than when I arrived "  + timeString + " <br /> ";
-        };
-        
-        function intermediary() {
-          setTimeout(statementDiv, 3333);
-          
-
-          
-            myDiv.classList.add("present");
-            myDiv.innerHTML +=
-              "<br />Indoor temperature was " +
-              dataObject.temp +
-              "\u00B0C <br /> ";
-          
-
-
-
-
-
-
-
-        };
         setTimeout(intermediary, 3333);
       }
-
       setTimeout(updateDiv, 3333);
     });
   });
