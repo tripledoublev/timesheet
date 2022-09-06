@@ -34,11 +34,12 @@ function unix2time(unixtime) {
     // Seconds part from the timestamp
     var seconds = date.getSeconds();
     var formattedTime = hours + ':' + minutes + ':' + seconds;
-    var month = months[date.getMonth()];
-    var day = date.getDate;
-    var year = date.getFullYear;
-    var formattedDate = month + day + year;
-
+    console.log(date.getMonth());
+    var amonth = months[date.getMonth()];
+    var aday = date.getDate();
+    var ayear = date.getFullYear();
+    var formattedDate = amonth + ' ' + aday + ' ' + ayear;
+    console.log(formattedDate)
     // Will display time in 10:30:23 format
     var obj = {
         time: formattedTime,
