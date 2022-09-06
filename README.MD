@@ -36,7 +36,7 @@ On Aug-17-2022 03:24:05 PM +UTC, I deployed [a smart contract](https://optimisti
 
 ### Text log, tweeting for the command line terminal and integrated environmental conditions
 
-As I've been working with environmental sensors, I added the **--climate** argument to access the enviro board on my raspberry pi at the studio in order to include weather information on my timesheet.
+As I've been working with environmental sensors, I added the **--climate** argument to access the enviro board on my raspberry pi at the studio in order to include weather information on my timesheet. [Follow this link to view the latest weather report](https://vincent.charlebois.info/weather/)
 
 I also added the possibility to log thoughts as strings in another file in the same folder (data/m.txt) by using **--text**.
 
