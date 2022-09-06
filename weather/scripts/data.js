@@ -2,24 +2,21 @@ function makeDataObject(rawData, x) {
     const txt_lines = rawData.split(/\r?\n/);
     const last_line = txt_lines[txt_lines.length - x];
     const all_data = last_line.split(" ");
-    const temp = all_data[1];
-    const temp_data = temp.split(":");
-    const humi = all_data[2];
-    const humi_data = humi.split(":");
-    const lux = all_data[3]
-    const lux_data = lux.split(":");
-    const pressure = all_data[4];
-    const pressure_data = pressure.split(":");
-    const timestmp = all_data[5];
-    const time_data = timestmp.split(":");
+    const tempData = all_data[1].split(":");
+    const humiData = all_data[2].split(":");
+    const luxData = all_data[3].split(":");
+    const pressureData = all_data[4].split(":");
+    const timeData = all_data[5].split(":");
+
     const myStatus = all_data[0];
+    console.log(myStatus)
     var obj = {
         myStatus: myStatus,
-        temp: temp_data[1],
-        humi: humi_data[1],
-        lux: lux_data[1],
-        pressure: pressure_data[1],
-        time: time_data[1]
+        temp: tempData[1],
+        humi: humiData[1],
+        lux: luxData[1],
+        pressure: pressureData[1],
+        time: timeData[1]
     };
     console.log(obj)
     return obj;
