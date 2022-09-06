@@ -21,6 +21,7 @@ function makeDataObject(rawData, x) {
         pressure: pressure_data[1],
         time: time_data[1]
     };
+    console.log(obj)
     return obj;
 }
 
@@ -34,12 +35,10 @@ function unix2time(unixtime) {
     // Seconds part from the timestamp
     var seconds = date.getSeconds();
     var formattedTime = hours + ':' + minutes + ':' + seconds;
-    console.log(date.getMonth());
     var amonth = months[date.getMonth()];
     var aday = date.getDate();
     var ayear = date.getFullYear();
     var formattedDate = amonth + ' ' + aday;
-    console.log(formattedDate)
     // Will display time in 10:30:23 format
     var obj = {
         time: formattedTime,
