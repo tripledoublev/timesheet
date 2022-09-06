@@ -50,6 +50,8 @@ a:focus-visible {
   left: 20px;
   color: white;
   font-size: calc(5vw + 5vh);
+  padding-left:10vw;
+  width:80vw;
 }
 .blockchain-link {
   position: absolute;
@@ -105,6 +107,8 @@ a:focus-visible {
 @media (max-width: 763px) {
   .top-left {
     font-size: calc(6vw + 8.5vh) !important;
+    padding-left:2vw;
+    width:96vw;
   }
   .blockchain-link a,
   .consecutive-link a {
