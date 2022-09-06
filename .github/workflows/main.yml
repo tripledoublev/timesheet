@@ -20,7 +20,7 @@ jobs:
           app.py
           **/data/m.txt
           **/data/s.txt
-          */data/t.txt
+          **/data/t.txt
           README.MD
           timeMachine.py
           log.sh
@@ -30,4 +30,10 @@ jobs:
           generate_index.py
           generate_html.py
           *.py
-          
+          w3py/*
+          modules/*
+          draw/*
+          __init__.py
+          contract/*
+          **/data/export.py
+          **/data/__init__.py
