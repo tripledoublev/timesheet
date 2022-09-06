@@ -5,7 +5,7 @@
 ### A creative exercise exploring the visualization potential of quantified location-based artistic labour
 
 It began when I created a simple Python script (**app.py**) that allows me to timestamp my presence in the studio by logging *--time IN* or *--time OUT*.
-The data is stored in data/t.txt and became the basic material to generate a multitude of visualizations. Experimentation through this project brought me to write my own smart contract in Solidity and log my time at the studio on Optimism, a layer 2 ethereum scaling solution.
+The data is stored in data/t.txt and became the basic material to generate a multitude of visualizations. Experimentation through this project brought me to write my own smart contract in Solidity and log my time at the studio on-chain on Optimism, a layer 2 ethereum scaling solution.
 
 ## [Am I at the studio?](https://vincent.charlebois.info/am-i/)
 
