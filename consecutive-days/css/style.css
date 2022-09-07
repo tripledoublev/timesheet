@@ -16,10 +16,14 @@ div.textColor {
   font-size: calc(0.4vw + 0.4vh);
   word-wrap: break-word;
   border-radius: 1rem;
-  margin: calc(0.5vw + 0.5vh);
+  margin: 0vh 0.5vw 0vh 0.5vw;
   padding: 16px 8px;
   text-align: center;
   transition: border-radius 2s ease-in-out 0.123s;
+}
+
+.indexbox > .textColor {
+  margin:0.5vh 0.5vw 0.5vh 0.5vw;
 }
 
 .textColor a,
@@ -66,8 +70,8 @@ div.indexbox {
   padding-left: 2rem;
 }
 div.consecutivebox {
-  margin-left: 0vw;
-  width: 100vw;
+  margin-left: 10vw;
+  width: 80vw;
 }
 .justify-left {
   justify-content: left;
@@ -143,4 +147,11 @@ h1 {
   .hide-ovflo {
     overflow: hidden;
   }
+}
+
+@media (max-width: 1024px) {
+  div.consecutivebox {
+    margin-left: 0vw;
+    width: 100vw;
+}
 }
