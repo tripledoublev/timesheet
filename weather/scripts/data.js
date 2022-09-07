@@ -15,9 +15,12 @@ function makeDataObject(rawData, x) {
         humi: humiData[1],
         lux: luxData[1],
         pressure: pressureData[1],
-        time: timeData[1]
+        time: timeData[1],
+        get status() {
+            return this.myStatus;
+          }
     };
-    console.log(obj)
+    
     return obj;
 }
 
@@ -46,7 +49,6 @@ function unix2time(unixtime) {
 function makeTimeString(seconds) {
     var numHours = seconds / 3600;
     var minutesRemaining = seconds % 60;
-    console.log(minutesRemaining + typeof(minutesRemaining));
     var timeString = Math.floor(numHours);
     if (timeString > 1) {
         timeString += " hours "
@@ -60,6 +62,5 @@ function makeTimeString(seconds) {
         timeString += "and " + minutesRemaining +
         " minutes "
     };  
-        console.log(timeString)
-        return timeString
+    return timeString
 }
