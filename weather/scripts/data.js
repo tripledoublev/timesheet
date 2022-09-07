@@ -28,17 +28,19 @@ function unix2time(unixtime) {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var date = new Date(unixtime * 1000);
     // Hours part from the timestamp
-    var hours = date.getHours();
+    var hours = date.getHours().toString().padStart(2, '0');
     // Minutes part from the timestamp
-    var minutes = date.getMinutes();
+    var minutes = date.getMinutes().toString().padStart(2, '0');
     // Seconds part from the timestamp
-    var seconds = date.getSeconds();
+    var seconds = date.getSeconds().toString().padStart(2, '0');
+    // format string for time
     var formattedTime = hours + ':' + minutes + ':' + seconds;
+    // now with the date
     var amonth = months[date.getMonth()];
     var aday = date.getDate();
+    // year isnt used at the moment
     var ayear = date.getFullYear();
     var formattedDate = amonth + ' ' + aday;
-    // Will display time in 10:30:23 format
     var obj = {
         time: formattedTime,
         date: formattedDate
