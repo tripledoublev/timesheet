@@ -121,13 +121,13 @@ h1 {
 }
 
 .back-arrow img {
-  width: 100px;
+  width: 65px;
   opacity: 0.9;
 }
 
 @media (max-width: 750px) {
   .back-arrow img {
-    width: 75px;
+    width: 55px;
   }
   .back-arrow {
     top: unset;
