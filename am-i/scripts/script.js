@@ -1,4 +1,4 @@
-import { ethers } from "https://vincent.charlebois.info/am-i/scripts/ether.js";
+import { ethers } from "./ether.js";
 
 const myDiv = document.getElementById("textcontainer");
 const promptDiv = document.getElementById("ticker");
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           tempChange.innerHTML = "warmer";
           otherDiv.innerHTML += " than last recorded temperature";
           otherDiv.innerHTML +=
-            " \u2014 Text +1(514)231-1278 for a live weather update.";
+            " \u2014 Get the <a href='https://vincent.charlebois.info/weather'>full weather report</a>.";
           otherDiv.innerHTML +=
             "                                                       ";
         } else if (Math.sign(change) === 1) {
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           tempChange.innerHTML = "cooler";
           otherDiv.innerHTML += " than last recorded temperature";
           otherDiv.innerHTML +=
-            " \u2014 Text +1(514)231-1278 for a live weather update.";
+            " \u2014 Get the <a href='https://vincent.charlebois.info/weather'>full weather report</a>.";
           otherDiv.innerHTML +=
             "                                                       ";
         }
