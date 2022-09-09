@@ -68,10 +68,10 @@ document.addEventListener("DOMContentLoaded", async function () {
                   if (dataObject.status == "IN") {
                     
                     myDiv.innerHTML +=
-                    " than the last recorded temperature, " + timeString + "earlier.<br /> ";
+                    " than the last recorded temperature, " + timeString + " earlier.<br /> ";
                     } else {
                     myDiv.innerHTML +=
-                    " than when I arrived " + timeString + "earlier.<br /> ";
+                    " than when I arrived " + timeString + " earlier.<br /> ";
                     }
                     
                   function lastSentence() {
