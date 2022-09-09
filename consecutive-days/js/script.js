@@ -20,8 +20,8 @@ hello = (e) => {
     bode.focus();
     const oscillator = audioCtx.createOscillator();
     const gainNode = audioCtx.createGain();
-    gainNode.gain.value = (0.75) * maxVol;
-    var thisFrequency = newTime % 440;
+    gainNode.gain.value = 0.75 * maxVol;
+    var thisFrequency = newTime % 540;
     oscillator.type = 'sine';
     oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
     oscillator.connect(gainNode);
@@ -34,7 +34,6 @@ hello = (e) => {
     var item = e.target.dataset.item;
     var maxiS = e.target.dataset.maxi;
     var newTime = Math.round(Date.now() / 1000);
-    console.log("UNIX time: " + newTime);
     document.getElementById(e.target.id).style.backgroundColor = fgColor(
       newTime * 20009,
       0.5
@@ -43,7 +42,7 @@ hello = (e) => {
     const oscillator = audioCtx.createOscillator();
     const gainNode = audioCtx.createGain();
     gainNode.gain.value = (item/maxiS) * maxVol;
-    var thisFrequency = newTime % 440;
+    var thisFrequency = newTime % 400 + 100;
     oscillator.type = 'sine';
     oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
     oscillator.connect(gainNode);
