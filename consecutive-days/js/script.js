@@ -104,13 +104,13 @@ function main(item) {
   // with class textColor
   div.className = "textColor";
   // create width and height based on data
-  div.style.width = (item / maxis) * (100 / dayz) + "%";
+  div.style.width = (item / (maxis + 2000)) * (100 / dayz) + "%";
   div.style.height = "20vh";
   // 0-255 to 0-1
   var gsFactor = color / 255;
 
-  // A button object calls the function:
 
+  // set the eventlistener for on-click change function 
   div.addEventListener("click", hello, false);
 
   // set border radius
