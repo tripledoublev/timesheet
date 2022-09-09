@@ -48,21 +48,27 @@ function unix2time(unixtime) {
     return obj
 }
 
+function sIfPlural(num, string) {
+    if (num == 1) {
+        return string;
+    } else if (num > 1) {
+        plural = string.concat('s');
+        return plural
+    }
+}
+
 function makeTimeString(seconds) {
     var numHours = seconds / 3600;
     var minutesRemaining = seconds % 60;
     var timeString = Math.floor(numHours);
-    if (timeString > 1) {
-        timeString += " hours "
-    } else if (timeString == 1) {
-        timeString += " hour "
+    if (timeString == 0) {
+        var totalMinutes = seconds / 60;
+        timeString = totalMinutes + sIfPlural(totalMinutes, "minute");
+    } else if (timeString >= 1) {
+        timeString += " " + sIfPlural(timeString, "hour");
+        if (minutesRemaining > 0) {
+            timeString += " and " + minutesRemaining + sIfPlural(minutesRemaining, " minute");
+        }
     };
-    if (minutesRemaining == 1) {
-        timeString += "and " + minutesRemaining +
-        " minute "
-    } else if (minutesRemaining >= 1) {
-        timeString += "and " + minutesRemaining +
-        " minutes "
-    };  
     return timeString
 }
