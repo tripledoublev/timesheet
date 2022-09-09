@@ -1,3 +1,7 @@
+// sound const
+const maxVol = 0.02;
+
+
 // Function for back button:
 function arrowButton() {
   window.location = "../consecutive-days/";
@@ -9,16 +13,26 @@ hello = (e) => {
     // and set new color
     e.preventDefault();
     var newTime = Math.round(Date.now() / 1000);
-    console.log("UNIX time: " + newTime);
     bode.style.backgroundColor = fgColor(
       newTime * 20009,
       0.5
     );
     bode.focus();
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    gainNode.gain.value = (0.75) * maxVol;
+    var thisFrequency = newTime % 440;
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    oscillator.start();
   } else  {
     // prevent default to block the parent link element
     // and set new color
     e.preventDefault();
+    var item = e.target.dataset.item;
+    var maxiS = e.target.dataset.maxi;
     var newTime = Math.round(Date.now() / 1000);
     console.log("UNIX time: " + newTime);
     document.getElementById(e.target.id).style.backgroundColor = fgColor(
@@ -26,6 +40,15 @@ hello = (e) => {
       0.5
     );
     document.getElementById(e.target.id).focus();
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    gainNode.gain.value = (item/maxiS) * maxVol;
+    var thisFrequency = newTime % 440;
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    oscillator.start();
   }
 };
 
@@ -58,6 +81,8 @@ function fgColor(num, mult) {
 var maxis;
 // set amount of days
 var dayz;
+// create web ausdio api context
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // ✅ read file SYNCHRONOUSLY
 function syncReadFile(filename) {
@@ -89,12 +114,16 @@ const arrow = document.getElementById("arrow");
 
 // main function
 function main(item) {
+
   // take your time
   var timeNow = Math.round(Date.now() / 1000);
   // keep count
   divcount++;
   // create divs
   var div = document.createElement("div");
+  // populate datafield
+  div.dataset.item = item;
+  div.dataset.maxi = maxis;
   // generate color
   var color = (item / maxis) * 222 + 28;
   // generate border radius
@@ -125,6 +154,17 @@ function main(item) {
 
   // append this div to the flex box
   flbx.appendChild(div);
+
+  // create sound
+  const oscillator = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+  gainNode.gain.value = (item/maxis) * maxVol;
+  var thisFrequency = timeNow % 440;
+  oscillator.type = 'sine';
+  oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
+  oscillator.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+  oscillator.start();
 }
 
 bode.addEventListener("click", hello, false);
