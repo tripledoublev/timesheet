@@ -1,6 +1,9 @@
 // sound const
-const maxVol = 0.02;
-
+const maxVol = 0.015;
+// get elements
+const bode = document.getElementById("dcontain");
+const flbx = document.getElementById("fbox");
+const arrow = document.getElementById("arrow");
 
 // Function for back button:
 function arrowButton() {
@@ -8,7 +11,7 @@ function arrowButton() {
 }
 // Function to change color on click:
 hello = (e) => {
-  if (e.target.id == "fbox") {
+  if (e.target.id == "fbox" || e.target.id == "dcontain") {
     // prevent default to block the parent link element
     // and set new color
     e.preventDefault();
@@ -21,29 +24,32 @@ hello = (e) => {
     const oscillator = audioCtx.createOscillator();
     const gainNode = audioCtx.createGain();
     gainNode.gain.value = (0.75) * maxVol;
-    var thisFrequency = newTime % 440;
+    var thisFrequency = newTime % 640;
     oscillator.type = 'sine';
     oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
     oscillator.connect(gainNode);
     gainNode.connect(audioCtx.destination);
     oscillator.start();
-  } else  {
+  } else {
     // prevent default to block the parent link element
     // and set new color
     e.preventDefault();
     var item = e.target.dataset.item;
-    var maxiS = e.target.dataset.maxi;
+    var maxiS = flbx.dataset.maxi;
+    var mult = item / maxiS;
     var newTime = Math.round(Date.now() / 1000);
-    console.log("UNIX time: " + newTime);
     document.getElementById(e.target.id).style.backgroundColor = fgColor(
       newTime * 20009,
-      0.5
+      mult,
     );
     document.getElementById(e.target.id).focus();
     const oscillator = audioCtx.createOscillator();
     const gainNode = audioCtx.createGain();
-    gainNode.gain.value = (item/maxiS) * maxVol;
-    var thisFrequency = newTime % 440;
+    var preGainValue =  ( item / maxiS ) * (maxVol + 0.05);
+    gainNode.gain.value = preGainValue.toPrecision(4) * maxVol;
+    var multi = e.target.id * 100
+    var thisFrequency = newTime % 240 + multi;
+    console.log(thisFrequency);
     oscillator.type = 'sine';
     oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
     oscillator.connect(gainNode);
@@ -97,6 +103,9 @@ function syncReadFile(filename) {
       maxis = Math.max(...arr);
       // get number of days
       dayz = arr.length;
+      // write maximum second to data maxi
+      flbx.dataset.maxi = maxis;
+      flbx.dataset.item = maxis;
       // for each day do main function
       arr.forEach(main);
       return arr;
@@ -106,10 +115,7 @@ function syncReadFile(filename) {
 
 // set div count
 let divcount = 0;
-// get elements
-const bode = document.getElementById("dcontain");
-const flbx = document.getElementById("fbox");
-const arrow = document.getElementById("arrow");
+
 
 
 // main function
@@ -123,7 +129,6 @@ function main(item) {
   var div = document.createElement("div");
   // populate datafield
   div.dataset.item = item;
-  div.dataset.maxi = maxis;
   // generate color
   var color = (item / maxis) * 222 + 28;
   // generate border radius
@@ -158,10 +163,11 @@ function main(item) {
   // create sound
   const oscillator = audioCtx.createOscillator();
   const gainNode = audioCtx.createGain();
-  gainNode.gain.value = (item/maxis) * maxVol;
+  gainNode.gain.value = (item/maxis) * 0.005;
   var thisFrequency = timeNow % 440;
   oscillator.type = 'sine';
-  oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
+  var giveTime = divcount * 1000;
+  oscillator.frequency.setValueAtTime(thisFrequency, giveTime); // value in hertz
   oscillator.connect(gainNode);
   gainNode.connect(audioCtx.destination);
   oscillator.start();
