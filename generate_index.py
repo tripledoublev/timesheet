@@ -31,7 +31,25 @@ with open('consecutive-days/index.html','w') as f:
     # sort files in ascending order
     onlyfiles.sort()
     for file in onlyfiles:
-        if file != 'index.html':
+        print(file)
+        if file == '00_All_Days.html':
+            # add new line
+            f.write("\n")
+            f.write('               <div class="textColor">')
+            f.write("\n")
+            f.write('                   <a href="' + file + '">')
+            f.write("\n")
+            # remove extension
+            fileless = file.split('.')
+            # remove prefix
+            removePrefix = fileless[0].split('_')
+            f.write('                       ' + removePrefix[1])
+            f.write("\n")
+            f.write('                   </a>')
+            f.write("\n")
+            f.write('               </div>')
+            f.write("\n")
+        elif file != 'index.html':
             # add new line
             f.write("\n")
             f.write('               <div class="textColor">')

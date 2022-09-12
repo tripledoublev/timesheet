@@ -38,11 +38,10 @@ for file in onlyfiles:
         f.write("\n")
         f.write('           <body id="dcontain" class="hide-ovflo">')
         f.write("\n")
-        #f.write("               <a href='")
-        #f.write(fileless[0] + '.html')
-        #f.write("'>")
-        #f.write("\n")
-        f.write('                   <div class="flexbox justify-center consecutivebox" id="fbox">')
+        if fileless[0] == "00_all_days":
+            f.write('                   <div class="flexbox consecutivebox alldays" id="fbox">')
+        else:
+            f.write('                   <div class="flexbox justify-center consecutivebox" id="fbox">')
         f.write("\n")
         f.write('                       <script type="text/javascript" src="js/script.js"></script>')
         f.write("\n")
