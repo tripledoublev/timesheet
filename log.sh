@@ -47,5 +47,5 @@ elif [ $1 = 'OUT' ]
 then
     git fetch && git pull && python3 app.py --time OUT --climate && cd w3py && python3 toggle.py main && cd .. && python3 timeMachine.py && sudo rm consecutive-days/* || true && sudo rm consecutive-days/data/* || true && python3 data/export.py && python3 generate_html.py && python3 generate_index.py && git add consecutive-days/* && git commit -am "OUT: ${now}" && git push
 else
-    git fetch && git pull && python3 timeMachine.py && sudo rm consecutive-days/* || true && sudo rm consecutive-days/data/* || true && python3 data/export.py && python3 generate_html.py && python3 generate_index.py && git add consecutive-days/* && git commit -am "COMPILED: ${now}" && git push
+    git fetch && git pull && python3 timeMachine.py && sudo rm consecutive-days/* || true && sudo rm consecutive-days/data/* || true && python3 data/export.py && python3 data/total.py && python3 generate_html.py && python3 generate_index.py && git add consecutive-days/* && git commit -am "COMPILED: ${now}" && git push
 fi
