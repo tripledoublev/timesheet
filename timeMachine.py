@@ -193,8 +193,7 @@ with open("data/s.txt", 'r') as fp:
 with open("data/s.txt", 'w') as fp:
     # iterate each line
     for number, line in enumerate(lines):
-        # delete line 5 and 8. or pass any Nth line you want to remove
-        # note list index starts from 0
+        # remove initial 'unconsecutive' on line 4
         if number not in [3]:
             fp.write(line)
 print('!!!!!!!!!!!!!!!!!!!!!!')
