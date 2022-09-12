@@ -31,7 +31,6 @@ with open('consecutive-days/index.html','w') as f:
     # sort files in ascending order
     onlyfiles.sort()
     for file in onlyfiles:
-        print(file)
         if file == '00_All_Days.html':
             # add new line
             f.write("\n")
