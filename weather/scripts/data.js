@@ -63,7 +63,11 @@ function makeTimeString(seconds) {
     var timeString = Math.floor(numHours);
     if (timeString == 0) {
         var totalMinutes = seconds / 60;
-        timeString = totalMinutes + sIfPlural(totalMinutes, "minute");
+        var secondsRemaining =  ((totalMinutes.toFixed(2) - totalMinutes.toFixed(0)) * 60) / 100;
+        timeString = totalMinutes.toFixed(0) + sIfPlural(totalMinutes, " minute");
+        if (secondsRemaining > 0) {
+            timeString += "and " + secondsRemaining + sIfPlural(secondsRemaining, " second");
+        }
     } else if (timeString >= 1) {
         timeString += " " + sIfPlural(timeString, "hour");
         if (minutesRemaining > 0) {
