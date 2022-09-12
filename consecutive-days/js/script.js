@@ -47,8 +47,8 @@ hello = (e) => {
     const gainNode = audioCtx.createGain();
     var preGainValue =  ( item / maxiS ) * (maxVol + 0.05);
     gainNode.gain.value = preGainValue.toPrecision(4) * maxVol;
-    var multi = e.target.id * 100
-    var thisFrequency = newTime % 240 + multi;
+    var multi = e.target.id * 10
+    var thisFrequency = newTime % 440 + multi;
     console.log(thisFrequency);
     oscillator.type = 'sine';
     oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
@@ -136,10 +136,9 @@ function main(item) {
   // div is assigned id
   div.id = divcount;
   // with class textColor
-  div.className = "textColor";
+  div.classList.add('textColor', 'divHeight');
   // create width and height based on data
   div.style.width = (item / (maxis + 2000)) * (100 / dayz) + "%";
-  div.style.height = "20vh";
   // 0-255 to 0-1
   var gsFactor = color / 255;
 
