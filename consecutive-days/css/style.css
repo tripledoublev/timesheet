@@ -5,6 +5,7 @@ body {
 html,
 body {
   height: 100vh;
+  width: 100vw;
 }
 
 .grey-bg {
@@ -135,6 +136,12 @@ h1 {
   width: 65px;
   opacity: 0.9;
 }
+@media (max-width: 1024px) {
+  div.consecutivebox {
+    margin-left: 5vw;
+    width: 90vw;
+}
+}
 
 @media (max-width: 750px) {
   .back-arrow img {
@@ -146,23 +153,22 @@ h1 {
   }
   div.consecutivebox {
     transform: rotate(90deg);
-  }
-  div.flexbox.consecutivebox {
     flex-wrap: nowrap;
     position: fixed;
   }
   .hide-ovflo {
     overflow: hidden;
   }
+  .alldays {
+    flex-wrap: wrap !important;
+  }
+  .alldays div {
+    height: 1vh;
+  }
 }
 
-@media (max-width: 1024px) {
-  div.consecutivebox {
-    margin-left: 0vw;
-    width: 100vw;
-}
-}
 
 .alldays {
   justify-content: space-between;
 }
+
