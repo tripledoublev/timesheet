@@ -38,7 +38,7 @@ for file in onlyfiles:
         f.write("\n")
         f.write('           <body id="dcontain" class="hide-ovflo">')
         f.write("\n")
-        if fileless[0] == "00_all_days":
+        if fileless[0] == "00_All_Days":
             f.write('                   <div class="flexbox consecutivebox alldays" id="fbox">')
         else:
             f.write('                   <div class="flexbox justify-center consecutivebox" id="fbox">')
