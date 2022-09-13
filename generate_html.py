@@ -43,6 +43,8 @@ for file in onlyfiles:
         else:
             f.write('                   <div class="flexbox justify-center consecutivebox" id="fbox">')
         f.write("\n")
+        f.write('                       <script type="text/javascript" src="js/bonjourhi.js"></script>')
+        f.write("\n")
         f.write('                       <script type="text/javascript" src="js/script.js"></script>')
         f.write("\n")
         f.write('                       <script>')
