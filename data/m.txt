@@ -38,3 +38,5 @@
 1653177328, I often need to physically go somewhere but it's impossible to leave because the internet is shouting at me.
 1660397982,  
 1660397999, Bring Your Own Interface
+1663085638,  
+1663085757, reallocating attentional resources
