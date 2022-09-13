@@ -4,59 +4,12 @@ const maxVol = 0.015;
 const bode = document.getElementById("dcontain");
 const flbx = document.getElementById("fbox");
 const arrow = document.getElementById("arrow");
+var clickDetune = 0;
 
 // Function for back button:
 function arrowButton() {
   window.location = "../consecutive-days/";
 }
-// Function to change color on click:
-hello = (e) => {
-  if (e.target.id == "fbox" || e.target.id == "dcontain") {
-    // prevent default to block the parent link element
-    // and set new color
-    e.preventDefault();
-    var newTime = Math.round(Date.now() / 1000);
-    bode.style.backgroundColor = fgColor(
-      newTime * 20009,
-      0.5
-    );
-    bode.focus();
-    const oscillator = audioCtx.createOscillator();
-    const gainNode = audioCtx.createGain();
-    gainNode.gain.value = (0.75) * maxVol;
-    var thisFrequency = newTime % 640;
-    oscillator.type = 'sine';
-    oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
-    oscillator.connect(gainNode);
-    gainNode.connect(audioCtx.destination);
-    oscillator.start();
-  } else {
-    // prevent default to block the parent link element
-    // and set new color
-    e.preventDefault();
-    var item = e.target.dataset.item;
-    var maxiS = flbx.dataset.maxi;
-    var mult = item / maxiS;
-    var newTime = Math.round(Date.now() / 1000);
-    document.getElementById(e.target.id).style.backgroundColor = fgColor(
-      newTime * 20009,
-      mult,
-    );
-    document.getElementById(e.target.id).focus();
-    const oscillator = audioCtx.createOscillator();
-    const gainNode = audioCtx.createGain();
-    var preGainValue =  ( item / maxiS ) * (maxVol + 0.05);
-    gainNode.gain.value = preGainValue.toPrecision(4) * maxVol;
-    var multi = e.target.id * 10
-    var thisFrequency = newTime % 440 + multi;
-    console.log(thisFrequency);
-    oscillator.type = 'sine';
-    oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
-    oscillator.connect(gainNode);
-    gainNode.connect(audioCtx.destination);
-    oscillator.start();
-  }
-};
 
 // takes a number and turns it into a color
 
@@ -116,11 +69,8 @@ function syncReadFile(filename) {
 // set div count
 let divcount = 0;
 
-
-
 // main function
 function main(item) {
-
   // take your time
   var timeNow = Math.round(Date.now() / 1000);
   // keep count
@@ -136,15 +86,14 @@ function main(item) {
   // div is assigned id
   div.id = divcount;
   // with class textColor
-  div.classList.add('textColor', 'divHeight');
+  div.classList.add("textColor", "divHeight");
   // create width and height based on data
   div.style.width = (item / (maxis + 2000)) * (100 / dayz) + "%";
   // 0-255 to 0-1
   var gsFactor = color / 255;
 
-
-  // set the eventlistener for on-click change function 
-  div.addEventListener("click", hello, false);
+  // set the eventlistener for on-click change function
+  div.addEventListener("click", bonjour, false);
 
   // set border radius
   div.style.borderRadius = borderR + "px";
@@ -162,11 +111,16 @@ function main(item) {
   // create sound
   const oscillator = audioCtx.createOscillator();
   const gainNode = audioCtx.createGain();
-  gainNode.gain.value = (item/maxis) * 0.005;
-  var thisFrequency = timeNow % 440;
-  oscillator.type = 'sine';
-  var giveTime = divcount * 1000;
-  oscillator.frequency.setValueAtTime(thisFrequency, giveTime); // value in hertz
+  if (flbx.classList.contains("alldays") == true) {
+    gainNode.gain.value = (item / maxis) * 0.0025;
+  } else {
+    gainNode.gain.value = (item / maxis) * 0.025;
+  }
+  var thisFrequency = (timeNow % 444) + divcount * 0.25;
+  var thisDetune = (1 - item / maxis) * 0.5;
+  oscillator.type = "sine";
+  oscillator.detune.value = thisDetune;
+  oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
   oscillator.connect(gainNode);
   gainNode.connect(audioCtx.destination);
   oscillator.start();
