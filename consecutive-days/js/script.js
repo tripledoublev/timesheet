@@ -116,14 +116,24 @@ function main(item) {
   } else {
     gainNode.gain.value = (item / maxis) * 0.025;
   }
-  var thisFrequency = (timeNow % 444) + divcount * 0.25;
+  var thisFrequency = (444 - (timeNow % 444)) + (divcount * (item / maxis) * 2.5);
+  console.log(thisFrequency);
+
+  if (thisFrequency <= 150 == true) {
+    thisFrequency += 200 * (item / maxis);
+  } else if (thisFrequency >= 550) {
+    thisFrequency -= 200 * (item / maxis);
+  }
   var thisDetune = (1 - item / maxis) * 0.5;
+  console.log('detune: ' + thisDetune);
   oscillator.type = "sine";
   oscillator.detune.value = thisDetune;
   oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
   oscillator.connect(gainNode);
   gainNode.connect(audioCtx.destination);
   oscillator.start();
+  console.log(thisFrequency);
+
 }
 
 bode.addEventListener("click", hello, false);
