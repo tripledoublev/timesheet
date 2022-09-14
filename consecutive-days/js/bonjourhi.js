@@ -10,7 +10,7 @@ hello = (e) => {
       const oscillator = audioCtx.createOscillator();
       const gainNode = audioCtx.createGain();
       gainNode.gain.value = 0.75 * maxVol;
-      var thisFrequency = (newTime % 444) + 100;
+      var thisFrequency = (444 - (newTime % 444)) + 100;
       oscillator.type = "sine";
   
       oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
@@ -44,7 +44,7 @@ bonjour = (e) => {
     var preGainValue = (item / maxiS) * (maxVol + 1);
     gainNode.gain.value = preGainValue.toPrecision(4) * maxVol;
     var multi = e.target.id * 10;
-    var thisFrequency = (newTime % 500) + multi;
+    var thisFrequency = (500 - (newTime % 500)) + multi;
     clickDetune += 0.5;
     oscillator.detune.value = clickDetune;
     oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
