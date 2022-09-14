@@ -18,7 +18,7 @@ hello = (e) => {
         thisFrequency -= 200 * multi;
       }
       oscillator.type = "sine";
-      console.log(thisFrequency)
+
       oscillator.frequency.setValueAtTime(thisFrequency, audioCtx.currentTime); // value in hertz
   
       clickDetune += 0.5;
@@ -64,7 +64,6 @@ bonjour = (e) => {
     gainNode.connect(audioCtx.destination);
     oscillator.start();
   
-    console.log(thisFrequency)
 
   };
   
