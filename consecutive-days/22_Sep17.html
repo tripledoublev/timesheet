@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+   <html>
+       <head>
+           <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+           <title>
+               Sep17
+           </title>
+           <meta
+               name="description"
+               content="Vincent Charlebois' timesheet for consecutive days at the studio. Sep17 2022 in Verdun (Montreal, QC Canada)"
+           >
+           <link rel="stylesheet" href="css/style.css">
+       </head>
+           <body id="dcontain" class="hide-ovflo">
+                   <div class="flexbox justify-center consecutivebox" id="fbox">
+                       <script type="text/javascript" src="js/bonjourhi.js"></script>
+                       <script type="text/javascript" src="js/script.js"></script>
+                       <script>
+                           document.addEventListener('DOMContentLoaded', syncReadFile('data/22_Sep17.txt'));
+                       </script>
+                   </div>
+               <div id="arrow" class="back-arrow">
+                   <img
+                       src="png/back-arrow.png"
+                       alt="back arrow"
+                       onClick="arrowButton()"
+                       role="button"
+                       tabIndex="0">
+               </div>
+           </body>
+   </html>
