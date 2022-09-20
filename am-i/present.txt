@@ -1,3 +1,3 @@
-In: 2022-09-20 17:01:05
-I am at the studio
-24.01 -1.33
+Out: 2022-09-20 17:14:44
+I am not at the studio
+25.46 -1.45
