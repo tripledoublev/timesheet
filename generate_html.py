@@ -36,7 +36,7 @@ for file in onlyfiles:
         f.write("\n")
         f.write('           <meta property="og:title" content="Consecutive days at the studio - Vincent Charlebois 2022" />')
         f.write("\n")
-        f.write('           <meta property="og:description" content="Vincent Charlebois\' timesheet for consecutive days at the studio. ' + title + ' 2022 in Verdun (Montreal, QC Canada)"')
+        f.write('           <meta property="og:description" content="Vincent Charlebois\' timesheet for consecutive days at the studio. ' + title + ' 2022 in Verdun (Montreal, QC Canada)" />')
         f.write("\n")
         f.write('           <meta property="og:image" content="https://vincent.charlebois.info/consecutive-days/png/all_days.png" />')
         f.write("\n")
