@@ -164,9 +164,19 @@ h1 {
   }
   .alldays div {
     height: 1vh;
+    padding:16px 16px;
   }
 }
 
+.alldays div:nth-child(2n) {
+  transform: rotate(45deg);
+}
+.alldays div:nth-child(5n) {
+  transform: rotate(135deg);
+}
+.alldays div:nth-child(7n) {
+  transform: rotate(135deg);
+}
 
 .alldays {
   justify-content: space-between;
