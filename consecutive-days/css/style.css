@@ -143,7 +143,7 @@ h1 {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 950px) and (min-height:700px) {
   .back-arrow img {
     width: 55px;
   }
@@ -165,26 +165,49 @@ h1 {
   .alldays div {
     height: 1vh;
     padding: 16px 16px;
+    margin:1vw 1.25vh
   }
 }
 
-.alldays div:nth-child(2n) {
+.alldays div:nth-child(even) {
   transform: rotate(45deg);
 }
-.alldays div:nth-child(5n) {
+.alldays div:nth-child(odd) {
   transform: rotate(135deg);
 }
-.alldays div:nth-child(7n) {
-  transform: rotate(135deg);
-}
-
 .alldays {
   justify-content: space-between;
 }
 
+.alldays div:nth-child(even):hover, 
+.alldays div:nth-child(even):focus {
+  transform: rotate(180deg);
+}
+.alldays div:nth-child(odd):hover,
+.alldays div:nth-child(odd):focus {
+  transform: rotate(0deg);
+}
+.alldays div {
+  transition: transform 1s, border-width 1s;
+  transition-timing-function: ease-in-out;
+}
+
 @media (max-width: 524px) {
   div.consecutivebox.alldays {
-    margin-left: -10vw;
-    width: 120vw;
+    margin-left: -40vw;
+    width: 180vw;
+  }
+  .alldays div {
+    margin:1.2vw 1.2vh
+  }
+}
+
+@media (max-width: 324px) {
+  div.consecutivebox.alldays {
+    margin-left: -55vw;
+    width: 210vw;
+  }
+  .alldays div {
+    margin:0.82vw 0.82vh
   }
 }
