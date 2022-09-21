@@ -31,7 +31,7 @@ div.textColor {
 }
 
 .indexbox > .textColor {
-  margin:0.5vh 0.5vw 0.5vh 0.5vw;
+  margin: 0.5vh 0.5vw 0.5vh 0.5vw;
 }
 
 .textColor a,
@@ -140,7 +140,7 @@ h1 {
   div.consecutivebox {
     margin-left: 5vw;
     width: 90vw;
-}
+  }
 }
 
 @media (max-width: 750px) {
@@ -164,7 +164,7 @@ h1 {
   }
   .alldays div {
     height: 1vh;
-    padding:16px 16px;
+    padding: 16px 16px;
   }
 }
 
@@ -182,3 +182,9 @@ h1 {
   justify-content: space-between;
 }
 
+@media (max-width: 524px) {
+  div.consecutivebox.alldays {
+    margin-left: -10vw;
+    width: 120vw;
+  }
+}
