@@ -104,6 +104,7 @@ function main(item) {
   bode.style.color = hex;
   div.style.backgroundColor = hex;
   div.style.color = hex;
+  div.setAttribute("tabindex", "0");
 
   // append this div to the flex box
   flbx.appendChild(div);
