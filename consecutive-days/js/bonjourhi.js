@@ -13,9 +13,9 @@ hello = (e) => {
       var thisFrequency = (444 - (newTime % 444)) + 100;
 
       if (thisFrequency <= 150 == true) {
-        thisFrequency += 200 * multi;
+        thisFrequency += 200;
       } else if (thisFrequency >= 550) {
-        thisFrequency -= 200 * multi;
+        thisFrequency -= 200;
       }
       oscillator.type = "sine";
 
