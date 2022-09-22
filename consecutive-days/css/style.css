@@ -26,8 +26,8 @@ div.textColor {
   height: 20vh;
 }
 .alldays div {
-  height: 10vh;
-  margin: 0.5vh 1vw 0.5vh 1vw;
+  height: 2vh;
+  margin: 2vh 2vw;
 }
 
 .indexbox > .textColor {
