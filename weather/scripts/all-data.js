@@ -129,20 +129,20 @@ document.addEventListener("DOMContentLoaded", async function () {
                                         }
                                     setTimeout(secondButton, 1111);
                                     }
-                                    setTimeout(firstButton, 2222);
+                                    setTimeout(firstButton, 1111);
                                 }
-                                setTimeout(buttonDiv3, 2222);
+                                setTimeout(buttonDiv3, 1111);
                                 }
-                                setTimeout(buttonDiv1, 2222);
+                                setTimeout(buttonDiv1, 1111);
                             }
-                            setTimeout(tickerDiv, 2222);
+                            setTimeout(tickerDiv, 1111);
                             }
-                            setTimeout(statementDiv, 2222);
+                            setTimeout(statementDiv, 1111);
                         }
-                        setTimeout(intermediary, 2222);
+                        setTimeout(intermediary, 1111);
                     }
-                    setTimeout(updateDiv, 2222); 
-                    await wait(15888);
+                    setTimeout(updateDiv, 1111); 
+                    await wait(6666);
                 }
             }
                 
