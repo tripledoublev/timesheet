@@ -26,6 +26,7 @@ function makeDataObject(rawData, x) {
 
 function unix2time(unixtime) {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     var date = new Date(unixtime * 1000);
     // Hours part from the timestamp
     var hours = date.getHours().toString().padStart(2, '0');
@@ -38,9 +39,10 @@ function unix2time(unixtime) {
     // now with the date
     var amonth = months[date.getMonth()];
     var aday = date.getDate();
+    var numDay = date.getDay();
     // year isnt used at the moment
-    var ayear = date.getFullYear();
-    var formattedDate = amonth + ' ' + aday;
+    // var ayear = date.getFullYear();
+    var formattedDate = weekday[numDay] + ', ' + amonth + ' ' + aday;
     var obj = {
         time: formattedTime,
         date: formattedDate
@@ -66,12 +68,12 @@ function makeTimeString(seconds) {
         var secondsRemaining =  ((totalMinutes.toFixed(2) - totalMinutes.toFixed(0)) * 60) / 100;
         timeString = totalMinutes.toFixed(0) + sIfPlural(totalMinutes, " minute");
         if (secondsRemaining > 0) {
-            timeString += "and " + secondsRemaining + sIfPlural(secondsRemaining, " second");
+            timeString += "and " + secondsRemaining.toFixed(0) + sIfPlural(secondsRemaining, " second");
         }
     } else if (timeString >= 1) {
         timeString += " " + sIfPlural(timeString, "hour");
         if (minutesRemaining > 0) {
-            timeString += " and " + minutesRemaining + sIfPlural(minutesRemaining, " minute");
+            timeString += " and " + minutesRemaining.toFixed(0) + sIfPlural(minutesRemaining, " minute");
         }
     };
     return timeString
