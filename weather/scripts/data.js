@@ -65,10 +65,10 @@ function makeTimeString(seconds) {
     var timeString = Math.floor(numHours);
     if (timeString == 0) {
         var totalMinutes = seconds / 60;
-        var secondsRemaining =  ((totalMinutes.toFixed(2) - totalMinutes.toFixed(0)) * 60) / 100;
+        var secondsRemaining =  (totalMinutes.toFixed(2) - totalMinutes.toFixed(0)) * 60;
         timeString = totalMinutes.toFixed(0) + sIfPlural(totalMinutes, " minute");
         if (secondsRemaining > 0) {
-            timeString += "and " + secondsRemaining.toFixed(0) + sIfPlural(secondsRemaining, " second");
+            timeString += " and " + secondsRemaining.toFixed(0) + sIfPlural(secondsRemaining, " second");
         }
     } else if (timeString >= 1) {
         timeString += " " + sIfPlural(timeString, "hour");
