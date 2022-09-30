@@ -185,3 +185,12 @@ a:focus-visible {
 .no-dis {
   display: none;
 }
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 86;
+  left: 0;
+  top: 0;
+  position: absolute;
+}

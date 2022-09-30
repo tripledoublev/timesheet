@@ -9,6 +9,8 @@ if(parseInt(window.location.search.substring(1))) {
     msDelay = isNumber;
 }
 
+
+var x = 0;
 const myDiv = document.getElementById("textcontainer");
 const promptDiv = document.getElementById("ticker");
 document.addEventListener("DOMContentLoaded", async function () {
@@ -17,6 +19,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const linkDiv3 = document.getElementById("link3");
   const tempChangePos = document.createElement("span");
   const tempChangeNeg = document.createElement("span");
+  const canvas = document.querySelector('#weatherDraw');
 
 
   function newDataObject(rawData) {
@@ -50,7 +53,8 @@ document.addEventListener("DOMContentLoaded", async function () {
       for (var i = splitLines.length - 1; i > 1; i--) {
         dataCollection[i] = new newDataObject(splitLines[i]);
       }
-
+      var xMultiplier = 100 / dataCollection.length;
+      console.log(xMultiplier);
       // insert here if I am or not at the studio
       function firstChange() {
         myDiv.classList.remove("top-left");
@@ -66,6 +70,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
         const loop = async () => {
           for (var j = dataCollection.length - 1; j > 2; j--) {
+            xInterval = ((j - dataCollection.length) * -1) * xMultiplier;
             if (j!=dataCollection.length -1) {var tempDiff = dataCollection[j].temp - dataCollection[j + 1].temp;} else {var tempDiff = dataCollection[j].temp - dataCollection[j - 1].temp;}
             var timeString = makeTimeString(timeDiff);
             var datetime = new unix2time(dataCollection[j].time);
@@ -116,6 +121,27 @@ document.addEventListener("DOMContentLoaded", async function () {
                         dataCollection[j].pressure +
                         " hPa, <br />";
                       function buttonDiv3() {
+                        if (canvas.getContext) {
+                            const ctx = canvas.getContext('2d');
+                            if(j!=dataCollection.length -1) {
+                                var xStart = [x, dataCollection[j + 1].temp * 2];}
+                                else {
+                                    var xStart = [x, dataCollection[j].temp * 2];
+                                } 
+
+                                if (Math.sign(tempDiff) === -1) {
+                                    drawColor = 'red';
+                                    } else if (Math.sign(tempDiff) === 1) {
+                                        drawColor = "#00bcd4";
+                                    }
+                        console.log(xStart);
+                        drawLine(ctx, xStart, [xInterval * 2, dataCollection[j].temp * 2], drawColor, 2);
+                        x = xInterval * 2;
+                        console.log("x");
+                        console.log(x);
+                        console.log("y");
+                        console.log(dataCollection[j].temp)
+                        }
                           if(j!=1){
                             myDiv.innerHTML += "<br />It was ";
                             if (Math.sign(tempDiff) === -1) {
@@ -166,6 +192,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         };
 
         loop();
+        
         
       }
       setTimeout(firstChange, 2222);
