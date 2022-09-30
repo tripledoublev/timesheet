@@ -130,9 +130,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                                 } 
 
                                 if (Math.sign(tempDiff) === -1) {
-                                    drawColor = 'red';
+                                    drawColor = 'white';
                                     } else if (Math.sign(tempDiff) === 1) {
-                                        drawColor = "#00bcd4";
+                                        drawColor = "grey";
                                     }
                         console.log(xStart);
                         drawLine(ctx, xStart, [xInterval * 2, dataCollection[j].temp * 2], drawColor, 2);
