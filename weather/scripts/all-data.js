@@ -63,11 +63,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
         const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
         const loop = async () => {
-          for (var j = dataCollection.length - 1; j > 2; j--) {
+          for (var j = dataCollection.length - 1; j > 3; j--) {
             var timeDiff = dataCollection[j].time - dataCollection[j - 1].time;
             var timeString = makeTimeString(timeDiff);
             var datetime = new unix2time(dataCollection[j].time);
-            var tempChange = dataCollection[j].temp - dataCollection[j - 1].temp;
+            var tempDiff = dataCollection[j].temp - dataCollection[j - 1].temp;
             function updateDiv() {
               if (j == dataCollection.length - 1) {
                 myDiv.innerHTML += "<br />W";
@@ -115,15 +115,15 @@ document.addEventListener("DOMContentLoaded", async function () {
                         " hPa, <br />";
                       function buttonDiv3() {
                         myDiv.innerHTML += "<br />It was ";
-                        if (Math.sign(tempChange) === 1) {
+                        if (Math.sign(tempDiff) === 1) {
                           myDiv.innerHTML +=
-                            tempChange.toPrecision(3) * 1 + "\u00B0C ";
+                            tempDiff.toPrecision(3) * 1 + "\u00B0C ";
                           myDiv.appendChild(tempChange);
                           tempChange.classList.add("warmer");
                           tempChange.innerHTML = "warmer";
-                        } else if (Math.sign(tempChange) === -1) {
+                        } else if (Math.sign(tempDiff) === -1) {
                           myDiv.innerHTML +=
-                            tempChange.toPrecision(3) * -1 + "\u00B0C ";
+                            tempDiff.toPrecision(3) * -1 + "\u00B0C ";
                           myDiv.appendChild(tempChange);
                           tempChange.classList.add("cooler");
                           tempChange.innerHTML = "cooler";
