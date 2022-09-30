@@ -151,16 +151,16 @@ document.addEventListener("DOMContentLoaded", async function () {
                         if (canvas.getContext) {
                             const ctx = canvas.getContext('2d');
                             if(j!=dataCollection.length -1) {
-                                var xStart = [x + (xInterval / 2), dataCollection[j + 1].humi * 9];
+                                var xStart = [x + (xInterval / 2), dataCollection[j + 1].humi * 7];
                                 var yStart = [x + (xInterval / 2), dataCollection[j + 1].lux * 0.005 + 50];
-                                var zStart = [x + (xInterval / 2), dataCollection[j + 1].pressure * 0.45];
+                                var zStart = [x + (xInterval / 2), dataCollection[j + 1].pressure * 0.45 + 50];
 
                                 var aStart = [x + (xInterval / 2), dataCollection[j + 1].temp * 6 + 300];}
 
                                 else {
-                                    var xStart = [x + (xInterval / 2), dataCollection[j].humi * 9];
+                                    var xStart = [x + (xInterval / 2), dataCollection[j].humi * 7];
                                     var yStart = [x + (xInterval / 2), dataCollection[j].lux * 0.005 + 50];
-                                    var zStart = [x + (xInterval / 2), dataCollection[j].pressure * 0.45];
+                                    var zStart = [x + (xInterval / 2), dataCollection[j].pressure * 0.45 + 50];
                                     var aStart = [x + (xInterval / 2), dataCollection[j].temp * 6 + 300];
                                 } 
 
@@ -170,9 +170,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                                         drawColor = "grey";
                                     }
                         console.log(xStart);
-                        drawLine(ctx, xStart, [xMultiplier + (xInterval / 2), dataCollection[j].humi * 9], 'lightblue', 4);
-                        drawLine(ctx, yStart, [xMultiplier + (xInterval / 2), dataCollection[j].lux * 0.005 +60], 'orange', 3);
-                        drawLine(ctx, zStart, [xMultiplier + (xInterval / 2), dataCollection[j].pressure * 0.5], 'lightgreen', 2);
+                        drawLine(ctx, xStart, [xMultiplier + (xInterval / 2), dataCollection[j].humi * 7], 'lightblue', 7);
+                        drawLine(ctx, yStart, [xMultiplier + (xInterval / 2), dataCollection[j].lux * 0.005 +60], 'orange', 1);
+                        drawLine(ctx, zStart, [xMultiplier + (xInterval / 2), dataCollection[j].pressure * 0.5+ 50], 'lightgreen', 2);
                         drawLine(ctx, aStart, [xMultiplier + (xInterval / 2), dataCollection[j].temp * 6 + 300], drawColor, 15);
 
                         x = xMultiplier ;
