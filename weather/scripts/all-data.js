@@ -66,10 +66,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
         const loop = async () => {
           for (var j = dataCollection.length - 1; j > 2; j--) {
-            var timeDiff = dataCollection[j].time - dataCollection[j - 1].time;
+            if (j!=dataCollection.length -1) {var tempDiff = dataCollection[j].temp - dataCollection[j + 1].temp;} else {var tempDiff = dataCollection[j].temp - dataCollection[j - 1].temp;}
             var timeString = makeTimeString(timeDiff);
             var datetime = new unix2time(dataCollection[j].time);
-            var tempDiff = dataCollection[j].temp - dataCollection[j - 1].temp;
+            var timeDiff = dataCollection[j].time - dataCollection[j - 1].time;
             function updateDiv() {
               if (j == dataCollection.length - 1) {
                 myDiv.innerHTML += "<br />W";
@@ -116,26 +116,28 @@ document.addEventListener("DOMContentLoaded", async function () {
                         dataCollection[j].pressure +
                         " hPa, <br />";
                       function buttonDiv3() {
-                        myDiv.innerHTML += "<br />It was ";
-                        if (Math.sign(tempDiff) === 1) {
-                          myDiv.innerHTML +=
-                            tempDiff.toPrecision(3) * 1 + "\u00B0C ";
-                          myDiv.appendChild(tempChangePos);
-                          tempChangePos.classList.add("warmer");
-                          tempChangePos.innerHTML = "warmer";
-                        } else if (Math.sign(tempDiff) === -1) {
-                          myDiv.innerHTML +=
-                            tempDiff.toPrecision(3) * -1 + "\u00B0C ";
-                          myDiv.appendChild(tempChangeNeg);
-                          tempChangeNeg.classList.add("cooler");
-                          tempChangeNeg.innerHTML = "cooler";
-                        }
+                          if(j!=1){
+                            myDiv.innerHTML += "<br />It was ";
+                            if (Math.sign(tempDiff) === -1) {
+                            myDiv.innerHTML +=
+                                tempDiff.toPrecision(3) * 1 + "\u00B0C ";
+                            myDiv.appendChild(tempChangePos);
+                            tempChangePos.classList.add("warmer");
+                            tempChangePos.innerHTML = "warmer";
+                            } else if (Math.sign(tempDiff) === 1) {
+                            myDiv.innerHTML +=
+                                tempDiff.toPrecision(3) * -1 + "\u00B0C ";
+                            myDiv.appendChild(tempChangeNeg);
+                            tempChangeNeg.classList.add("cooler");
+                            tempChangeNeg.innerHTML = "cooler";
+                            }
 
-                        myDiv.innerHTML +=
-                          " than the last recorded temperature, " +
-                          timeString +
-                          " earlier ";
+                            myDiv.innerHTML +=
+                            " than the last recorded temperature, " +
+                            timeString +
+                            " earlier ";
                       }
+                    }
                       setTimeout(buttonDiv3, msDelay);
                     }
                     setTimeout(buttonDiv1, msDelay);
