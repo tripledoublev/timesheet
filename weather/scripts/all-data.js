@@ -85,6 +85,31 @@ document.addEventListener("DOMContentLoaded", async function () {
             var timeString = makeTimeString(timeDiff);
             var datetime = new unix2time(dataCollection[j].time);
             var timeDiff = dataCollection[j].time - dataCollection[j - 1].time;
+
+
+            
+                const ctx = canvas.getContext('2d');
+                if(j!=dataCollection.length -1) {
+                    var xStart = [x + (xInterval / 2), dataCollection[j + 1].humi * 7];
+                    var yStart = [x + (xInterval / 2), dataCollection[j + 1].lux * 0.005 + 50];
+                    var zStart = [x + (xInterval / 2), dataCollection[j + 1].pressure * 0.45 + 50];
+
+                    var aStart = [x + (xInterval / 2), dataCollection[j + 1].temp * 6 + 300];}
+
+                    else {
+                        var xStart = [x + (xInterval / 2), dataCollection[j].humi * 7];
+                        var yStart = [x + (xInterval / 2), dataCollection[j].lux * 0.005 + 50];
+                        var zStart = [x + (xInterval / 2), dataCollection[j].pressure * 0.45 + 50];
+                        var aStart = [x + (xInterval / 2), dataCollection[j].temp * 6 + 300];
+                    } 
+
+                    if (Math.sign(tempDiff) === -1) {
+                        drawColor = 'white';
+                        } else if (Math.sign(tempDiff) === 1) {
+                            drawColor = "grey";
+                        }
+
+
             function updateDiv() {
               if (j == dataCollection.length - 1) {
                 myDiv.innerHTML += "<br />W";
@@ -117,7 +142,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                 myDiv.innerHTML += " was " +
                   dataCollection[j].temp +
                   "\u00B0C, <br /> ";
-
+                  drawLine(ctx, aStart, [xMultiplier + (xInterval / 2), dataCollection[j].temp * 6 + 300], drawColor, 15);
+                  
                 function statementDiv() {
                   // insert if last record is IN or OUT
                   myDiv.innerHTML +=
@@ -128,6 +154,10 @@ document.addEventListener("DOMContentLoaded", async function () {
                 myDiv.innerHTML += " was " +
                     dataCollection[j].humi +
                     "&percnt;, <br />";
+
+
+                  drawLine(ctx, xStart, [xMultiplier + (xInterval / 2), dataCollection[j].humi * 7], 'lightblue', 7);
+                
                   function tickerDiv() {
                     myDiv.innerHTML +=
                       "<br /> ";
@@ -137,6 +167,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                 myDiv.innerHTML += " was at " +
                       dataCollection[j].lux +
                       " lux, <br />";
+                      drawLine(ctx, yStart, [xMultiplier + (xInterval / 2), dataCollection[j].lux * 0.005 +60], 'orange', 1);
+                     
                     function buttonDiv1() {
                       myDiv.innerHTML +=
                         "<br /> "
@@ -146,37 +178,11 @@ document.addEventListener("DOMContentLoaded", async function () {
                 myDiv.innerHTML += "was at " +
                         dataCollection[j].pressure +
                         " hPa, <br />";
+                        drawLine(ctx, zStart, [xMultiplier + (xInterval / 2), dataCollection[j].pressure * 0.5+ 50], 'lightgreen', 2);
+          
+                        x = xMultiplier ;
                       function buttonDiv3() {
                         
-                        if (canvas.getContext) {
-                            const ctx = canvas.getContext('2d');
-                            if(j!=dataCollection.length -1) {
-                                var xStart = [x + (xInterval / 2), dataCollection[j + 1].humi * 7];
-                                var yStart = [x + (xInterval / 2), dataCollection[j + 1].lux * 0.005 + 50];
-                                var zStart = [x + (xInterval / 2), dataCollection[j + 1].pressure * 0.45 + 50];
-
-                                var aStart = [x + (xInterval / 2), dataCollection[j + 1].temp * 6 + 300];}
-
-                                else {
-                                    var xStart = [x + (xInterval / 2), dataCollection[j].humi * 7];
-                                    var yStart = [x + (xInterval / 2), dataCollection[j].lux * 0.005 + 50];
-                                    var zStart = [x + (xInterval / 2), dataCollection[j].pressure * 0.45 + 50];
-                                    var aStart = [x + (xInterval / 2), dataCollection[j].temp * 6 + 300];
-                                } 
-
-                                if (Math.sign(tempDiff) === -1) {
-                                    drawColor = 'white';
-                                    } else if (Math.sign(tempDiff) === 1) {
-                                        drawColor = "grey";
-                                    }
-                        console.log(xStart);
-                        drawLine(ctx, xStart, [xMultiplier + (xInterval / 2), dataCollection[j].humi * 7], 'lightblue', 7);
-                        drawLine(ctx, yStart, [xMultiplier + (xInterval / 2), dataCollection[j].lux * 0.005 +60], 'orange', 1);
-                        drawLine(ctx, zStart, [xMultiplier + (xInterval / 2), dataCollection[j].pressure * 0.5+ 50], 'lightgreen', 2);
-                        drawLine(ctx, aStart, [xMultiplier + (xInterval / 2), dataCollection[j].temp * 6 + 300], drawColor, 15);
-
-                        x = xMultiplier ;
-                        }
 
                           if(j!=1){
                             myDiv.innerHTML += "<br />It was ";
