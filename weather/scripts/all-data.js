@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   const otherDiv = document.getElementById("datacontainer");
   const linkDiv1 = document.getElementById("link1");
   const linkDiv3 = document.getElementById("link3");
-  const tempChange = document.createElement("span");
+  const tempChangePos = document.createElement("span");
+  const tempChangeNeg = document.createElement("span");
+
 
   function newDataObject(rawData) {
     const all_data = rawData.split(" ");
@@ -45,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     return response.text().then(function (text) {
       splitLines = text.split(/\r?\n/);
       var dataCollection = [];
-      for (var i = splitLines.length - 1; i > 2; i--) {
+      for (var i = splitLines.length - 1; i > 1; i--) {
         dataCollection[i] = new newDataObject(splitLines[i]);
       }
 
@@ -63,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
         const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
         const loop = async () => {
-          for (var j = dataCollection.length - 1; j > 3; j--) {
+          for (var j = dataCollection.length - 1; j > 2; j--) {
             var timeDiff = dataCollection[j].time - dataCollection[j - 1].time;
             var timeString = makeTimeString(timeDiff);
             var datetime = new unix2time(dataCollection[j].time);
@@ -118,15 +120,15 @@ document.addEventListener("DOMContentLoaded", async function () {
                         if (Math.sign(tempDiff) === 1) {
                           myDiv.innerHTML +=
                             tempDiff.toPrecision(3) * 1 + "\u00B0C ";
-                          myDiv.appendChild(tempChange);
-                          tempChange.classList.add("warmer");
-                          tempChange.innerHTML = "warmer";
+                          myDiv.appendChild(tempChangePos);
+                          tempChangePos.classList.add("warmer");
+                          tempChangePos.innerHTML = "warmer";
                         } else if (Math.sign(tempDiff) === -1) {
                           myDiv.innerHTML +=
                             tempDiff.toPrecision(3) * -1 + "\u00B0C ";
-                          myDiv.appendChild(tempChange);
-                          tempChange.classList.add("cooler");
-                          tempChange.innerHTML = "cooler";
+                          myDiv.appendChild(tempChangeNeg);
+                          tempChangeNeg.classList.add("cooler");
+                          tempChangeNeg.innerHTML = "cooler";
                         }
 
                         myDiv.innerHTML +=
