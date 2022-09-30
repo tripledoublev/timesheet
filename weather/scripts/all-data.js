@@ -120,13 +120,13 @@ document.addEventListener("DOMContentLoaded", async function () {
                             myDiv.innerHTML += "<br />It was ";
                             if (Math.sign(tempDiff) === -1) {
                             myDiv.innerHTML +=
-                                tempDiff.toPrecision(3) * 1 + "\u00B0C ";
+                                tempDiff.toPrecision(3) * -1 + "\u00B0C ";
                             myDiv.appendChild(tempChangePos);
                             tempChangePos.classList.add("warmer");
                             tempChangePos.innerHTML = "warmer";
                             } else if (Math.sign(tempDiff) === 1) {
                             myDiv.innerHTML +=
-                                tempDiff.toPrecision(3) * -1 + "\u00B0C ";
+                                tempDiff.toPrecision(3) * 1 + "\u00B0C ";
                             myDiv.appendChild(tempChangeNeg);
                             tempChangeNeg.classList.add("cooler");
                             tempChangeNeg.innerHTML = "cooler";
