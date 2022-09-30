@@ -10,17 +10,26 @@ if(parseInt(window.location.search.substring(1))) {
 }
 
 
-var x = 0;
 const myDiv = document.getElementById("textcontainer");
 const promptDiv = document.getElementById("ticker");
 document.addEventListener("DOMContentLoaded", async function () {
-  const otherDiv = document.getElementById("datacontainer");
   const linkDiv1 = document.getElementById("link1");
   const linkDiv3 = document.getElementById("link3");
   const tempChangePos = document.createElement("span");
   const tempChangeNeg = document.createElement("span");
-  const canvas = document.querySelector('#weatherDraw');
+  const humiS = document.createElement("span");
+  const tempS = document.createElement("span");
+  const luxS = document.createElement("span");
+  const pressS = document.createElement("span");
 
+  const canvas = document.querySelector('#weatherDraw');
+  var sizeWidth = 80 * window.innerWidth / 100;
+  var sizeHeight = 100 * window.innerHeight / 100;
+  canvas.width = sizeWidth;
+  canvas.height = sizeHeight;
+  canvas.style.width = sizeWidth;
+  canvas.style.height = sizeHeight;
+  
 
   function newDataObject(rawData) {
     const all_data = rawData.split(" ");
@@ -53,8 +62,9 @@ document.addEventListener("DOMContentLoaded", async function () {
       for (var i = splitLines.length - 1; i > 1; i--) {
         dataCollection[i] = new newDataObject(splitLines[i]);
       }
-      var xMultiplier = 100 / dataCollection.length;
-      console.log(xMultiplier);
+      var xInterval = sizeWidth / dataCollection.length;
+      var x = (xInterval / 2);
+
       // insert here if I am or not at the studio
       function firstChange() {
         myDiv.classList.remove("top-left");
@@ -70,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
         const loop = async () => {
           for (var j = dataCollection.length - 1; j > 2; j--) {
-            xInterval = ((j - dataCollection.length) * -1) * xMultiplier;
+            xMultiplier = ((j - dataCollection.length) * -1) * xInterval;
             if (j!=dataCollection.length -1) {var tempDiff = dataCollection[j].temp - dataCollection[j + 1].temp;} else {var tempDiff = dataCollection[j].temp - dataCollection[j - 1].temp;}
             var timeString = makeTimeString(timeDiff);
             var datetime = new unix2time(dataCollection[j].time);
@@ -100,33 +110,58 @@ document.addEventListener("DOMContentLoaded", async function () {
                   myDiv.innerHTML += "<br />At that moment, i";
                 }
                 myDiv.innerHTML +=
-                  "ndoor temperature was " +
+                  "ndoor ";
+                myDiv.appendChild(tempS);
+                tempS.classList.add("LightGray");
+                tempS.innerHTML = "temperature";
+                myDiv.innerHTML += " was " +
                   dataCollection[j].temp +
                   "\u00B0C, <br /> ";
 
                 function statementDiv() {
                   // insert if last record is IN or OUT
                   myDiv.innerHTML +=
-                    "<br /> Humidity was " +
+                    "<br /> ";
+                myDiv.appendChild(humiS);
+                humiS.classList.add("blue");
+                humiS.innerHTML = "Humidity";
+                myDiv.innerHTML += " was " +
                     dataCollection[j].humi +
                     "&percnt;, <br />";
                   function tickerDiv() {
                     myDiv.innerHTML +=
-                      "<br /> Luminosity was at " +
+                      "<br /> ";
+                      myDiv.appendChild(luxS);
+                luxS.classList.add("orange");
+                luxS.innerHTML = "Luminosity"
+                myDiv.innerHTML += " was at " +
                       dataCollection[j].lux +
                       " lux, <br />";
                     function buttonDiv1() {
                       myDiv.innerHTML +=
-                        "<br /> Barometric Pressure was at " +
+                        "<br /> "
+                        myDiv.appendChild(pressS);
+                pressS.classList.add("green");
+                pressS.innerHTML = "Barometric Pressure ";
+                myDiv.innerHTML += "was at " +
                         dataCollection[j].pressure +
                         " hPa, <br />";
                       function buttonDiv3() {
+                        
                         if (canvas.getContext) {
                             const ctx = canvas.getContext('2d');
                             if(j!=dataCollection.length -1) {
-                                var xStart = [x, dataCollection[j + 1].temp * 2];}
+                                var xStart = [x + (xInterval / 2), dataCollection[j + 1].humi * 9];
+                                var yStart = [x + (xInterval / 2), dataCollection[j + 1].lux * 0.005 + 50];
+                                var zStart = [x + (xInterval / 2), dataCollection[j + 1].pressure * 0.45];
+
+                                var aStart = [x + (xInterval / 2), dataCollection[j + 1].temp * 6 + 300];}
+
                                 else {
-                                    var xStart = [x, dataCollection[j].temp * 2];
+                                    var xStart = [x + (xInterval / 2), dataCollection[j].humi * 9];
+                                    var yStart = [x + (xInterval / 2), dataCollection[j].lux * 0.005 + 50];
+                                    var zStart = [x + (xInterval / 2), dataCollection[j].pressure * 0.45];
+                                    var aStart = [x + (xInterval / 2), dataCollection[j].temp * 6 + 300];
                                 } 
 
                                 if (Math.sign(tempDiff) === -1) {
@@ -135,13 +170,14 @@ document.addEventListener("DOMContentLoaded", async function () {
                                         drawColor = "grey";
                                     }
                         console.log(xStart);
-                        drawLine(ctx, xStart, [xInterval * 2, dataCollection[j].temp * 2], drawColor, 2);
-                        x = xInterval * 2;
-                        console.log("x");
-                        console.log(x);
-                        console.log("y");
-                        console.log(dataCollection[j].temp)
+                        drawLine(ctx, xStart, [xMultiplier + (xInterval / 2), dataCollection[j].humi * 9], 'lightblue', 4);
+                        drawLine(ctx, yStart, [xMultiplier + (xInterval / 2), dataCollection[j].lux * 0.005 +60], 'orange', 3);
+                        drawLine(ctx, zStart, [xMultiplier + (xInterval / 2), dataCollection[j].pressure * 0.5], 'lightgreen', 2);
+                        drawLine(ctx, aStart, [xMultiplier + (xInterval / 2), dataCollection[j].temp * 6 + 300], drawColor, 15);
+
+                        x = xMultiplier ;
                         }
+
                           if(j!=1){
                             myDiv.innerHTML += "<br />It was ";
                             if (Math.sign(tempDiff) === -1) {
