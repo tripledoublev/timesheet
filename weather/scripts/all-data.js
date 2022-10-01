@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
         const loop = async () => {
           for (var j = dataCollection.length - 1; j > 2; j--) {
-            xMultiplier = ((j - dataCollection.length) * -1) * xInterval;
+            xMultiplier = ((j - dataCollection.length - 1) * -1) * xInterval;
             if (j!=dataCollection.length -1) {var tempDiff = dataCollection[j].temp - dataCollection[j + 1].temp;} else {var tempDiff = dataCollection[j].temp - dataCollection[j - 1].temp;}
             var timeString = makeTimeString(timeDiff);
             var datetime = new unix2time(dataCollection[j].time);
@@ -91,22 +91,22 @@ document.addEventListener("DOMContentLoaded", async function () {
                 const ctx = canvas.getContext('2d');
                 if(j!=dataCollection.length -1) {
                     var xStart = [x + (xInterval / 2), dataCollection[j + 1].humi * 7];
-                    var yStart = [x + (xInterval / 2), dataCollection[j + 1].lux * 0.005 + 50];
-                    var zStart = [x + (xInterval / 2), dataCollection[j + 1].pressure * 0.45 + 50];
+                    var yStart = [x + (xInterval / 2), dataCollection[j + 1].lux * 0.005 + 48];
+                    var zStart = [x + (xInterval / 2), dataCollection[j + 1].pressure * 0.5 + 55];
 
                     var aStart = [x + (xInterval / 2), dataCollection[j + 1].temp * 6 + 300];}
 
                     else {
                         var xStart = [x + (xInterval / 2), dataCollection[j].humi * 7];
-                        var yStart = [x + (xInterval / 2), dataCollection[j].lux * 0.005 + 50];
-                        var zStart = [x + (xInterval / 2), dataCollection[j].pressure * 0.45 + 50];
+                        var yStart = [x + (xInterval / 2), dataCollection[j].lux * 0.005 + 48];
+                        var zStart = [x + (xInterval / 2), dataCollection[j].pressure * 0.5 + 55];
                         var aStart = [x + (xInterval / 2), dataCollection[j].temp * 6 + 300];
                     } 
 
                     if (Math.sign(tempDiff) === -1) {
-                        drawColor = 'white';
+                        drawColor = 'lightgray';
                         } else if (Math.sign(tempDiff) === 1) {
-                            drawColor = "grey";
+                            drawColor = "darkgray";
                         }
 
 
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 myDiv.innerHTML += " was " +
                   dataCollection[j].temp +
                   "\u00B0C, <br /> ";
-                  drawLine(ctx, aStart, [xMultiplier + (xInterval / 2), dataCollection[j].temp * 6 + 300], drawColor, 15);
+                  drawLine(ctx, aStart, [xMultiplier + (xInterval / 2), dataCollection[j].temp * 6 + 300], drawColor, 15, 1, "white",3);
                   
                 function statementDiv() {
                   // insert if last record is IN or OUT
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                     "&percnt;, <br />";
 
 
-                  drawLine(ctx, xStart, [xMultiplier + (xInterval / 2), dataCollection[j].humi * 7], 'lightblue', 7);
+                  drawLine(ctx, xStart, [xMultiplier + (xInterval / 2), dataCollection[j].humi * 7], 'lightblue', 6, 1, "darkgrey",0.01);
                 
                   function tickerDiv() {
                     myDiv.innerHTML +=
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 myDiv.innerHTML += " was at " +
                       dataCollection[j].lux +
                       " lux, <br />";
-                      drawLine(ctx, yStart, [xMultiplier + (xInterval / 2), dataCollection[j].lux * 0.005 +60], 'orange', 1);
+                      drawLine(ctx, yStart, [xMultiplier + (xInterval / 2), dataCollection[j].lux * 0.005 + 60], 'orange', 1, 1, "lightgrey",0.5);
                      
                     function buttonDiv1() {
                       myDiv.innerHTML +=
@@ -178,9 +178,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                 myDiv.innerHTML += "was at " +
                         dataCollection[j].pressure +
                         " hPa, <br />";
-                        drawLine(ctx, zStart, [xMultiplier + (xInterval / 2), dataCollection[j].pressure * 0.5+ 50], 'lightgreen', 2);
+                        drawLine(ctx, zStart, [xMultiplier + (xInterval / 2), dataCollection[j].pressure * 0.5 + 55], 'lightgreen', 2, 1, "white", 0.1);
           
-                        x = xMultiplier ;
+                        
                       function buttonDiv3() {
                         
 
@@ -192,14 +192,16 @@ document.addEventListener("DOMContentLoaded", async function () {
                             myDiv.appendChild(tempChangePos);
                             tempChangePos.classList.add("warmer");
                             tempChangePos.innerHTML = "warmer";
+                            drawLine(ctx, aStart, [xMultiplier + (xInterval / 3) - 3, dataCollection[j].temp * 6 + 305], "#f31100", 9, 5, "white", 1);
                             } else if (Math.sign(tempDiff) === 1) {
                             myDiv.innerHTML +=
                                 tempDiff.toPrecision(3) * 1 + "\u00B0C ";
                             myDiv.appendChild(tempChangeNeg);
                             tempChangeNeg.classList.add("cooler");
                             tempChangeNeg.innerHTML = "cooler";
+                            drawLine(ctx, aStart, [xMultiplier + (xInterval / 2) - 3, dataCollection[j].temp * 6 + 305], "#00bcd4", 9, 5, "black", 1);
                             }
-
+                            x = xMultiplier;
                             myDiv.innerHTML +=
                             " than the last recorded temperature, " +
                             timeString +

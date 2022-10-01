@@ -1,5 +1,5 @@
 
-function drawLine(ctx, begin, end, stroke = 'black', width = 1) {
+function drawLine(ctx, begin, end, stroke = 'black', width = 1, shadowB, shadowC, offSetX) {
     if (stroke) {
         ctx.strokeStyle = stroke;
     }
@@ -12,6 +12,9 @@ function drawLine(ctx, begin, end, stroke = 'black', width = 1) {
     ctx.moveTo(...begin);
     ctx.lineTo(...end);
     ctx.stroke();
+    ctx.shadowBlur = shadowB;
+    ctx.shadowColor = shadowC;
+    ctx.shadowOffsetX = offSetX;
 }
 
 
