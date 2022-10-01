@@ -40,3 +40,5 @@
 1660397999, Bring Your Own Interface
 1663085638,  
 1663085757, reallocating attentional resources
+1664660121, becoming machine
+1664662811, I just left the studio. https://optimistic.etherscan.io/tx/0x669823164af99dd6700fa7fff68d409d6353df73a91bbc7263437e76e510a18d
