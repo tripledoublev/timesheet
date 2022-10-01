@@ -67,6 +67,8 @@ def main():
     print('Presence: ' + str(presence))
     print(statement)
     print('////')
+    myReturn = 'https://optimistic.etherscan.io/tx/' + txn_receipt.transactionHash.hex() 
+    return myReturn
 
 if __name__ == '__main__':
     globals()[sys.argv[1]]()
