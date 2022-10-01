@@ -13,7 +13,7 @@ import sys, os
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/modules")
 import climate
 
-#import twitter.post_tweet as tweetMachine
+import twitter.post_tweet as tweetMachine
 
 # parsing arguments
 parser = argparse.ArgumentParser()
@@ -57,7 +57,7 @@ if status is None:
         # if --tweet is present
         if args.tweet:
             # tweet it
-            # tweetMachine.main(textEntry)
+            tweetMachine.main(textEntry)
             print('')
             print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░') 
             print('░░░   Your message was sent to twitter.   ░░░')
