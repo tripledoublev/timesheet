@@ -22,13 +22,12 @@ unconsecutive
 unconsecutive
 17820 seconds today, 1 consecutive day, Apr 29
 9196 seconds today, 2 consecutives days, Apr 30
-unconsecutive
-12420 seconds today, 1 consecutive day, May 1
-16370 seconds today, 2 consecutive days, May 2
-33131 seconds today, 3 consecutive days, May 3
-26217 seconds today, 4 consecutives days, May 4
-3329 seconds today, 5 consecutives days, May 5
-850 seconds today, 6 consecutives days, May 6
+12420 seconds today, 3 consecutives days, May 1
+16370 seconds today, 4 consecutive days, May 2
+33131 seconds today, 5 consecutive days, May 3
+26217 seconds today, 6 consecutives days, May 4
+3329 seconds today, 7 consecutives days, May 5
+850 seconds today, 8 consecutives days, May 6
 unconsecutive
 29952 seconds today, 1 consecutive day, May 9
 36188 seconds today, 2 consecutive days, May 10
@@ -130,6 +129,5 @@ unconsecutive
 19501 seconds today, 3 consecutives days, Sep 28
 unconsecutive
 13549 seconds today, 1 consecutive day, Sep 30
-unconsecutive
-16128 seconds today, 1 consecutive day, Oct 1
+16128 seconds today, 2 consecutives days, Oct 1
 unconsecutive
