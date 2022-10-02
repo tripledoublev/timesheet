@@ -67,7 +67,7 @@ def main():
     #print('Presence: ' + str(presence))
     #print(statement)
     #print('////')
-    print('https://optimistic.etherscan.io/tx/' + txn_receipt.transactionHash.hex()) 
+    print('https://optimistic.etherscan.io/tx/' + txn_receipt.transactionHash.hex() + '#eventlog') 
     
 
 if __name__ == '__main__':
