@@ -42,3 +42,4 @@
 1663085757, reallocating attentional resources
 1664660121, becoming machine
 1664662811, I just left the studio. https://optimistic.etherscan.io/tx/0x669823164af99dd6700fa7fff68d409d6353df73a91bbc7263437e76e510a18d
+1664803651, I just arrived at the studio. https://optimistic.etherscan.io/tx/0x20b1584417a6f70a222fee7f2812e1c8ac09626af1395f8c8c3e8713e8ef0716#eventlog
