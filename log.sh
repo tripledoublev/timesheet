@@ -42,7 +42,7 @@
 now=$(date "+%c")
 if [ $1 = 'IN' ]
 then 
-    echo '\t Logging IN...' && git fetch && git pull && tmp=$(python3 app.py --time IN --climate 2>&1) &&
+    git fetch && git pull && echo '\t Logging IN...' && tmp=$(python3 app.py --time IN --climate 2>&1) &&
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
     echo '\t░░░     Data collected and log updated    ░░░'
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd w3py && txn=$(python3 toggle.py main 2>&1) &&
@@ -54,7 +54,7 @@ then
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' &&git commit -am "IN: ${now}" && git push
 elif [ $1 = 'OUT' ]
 then
-    echo '\t Logging IN..' && git fetch && git pull && tmp=$(python3 app.py --time OUT --climate 2>&1) && 
+    git fetch && git pull && echo '\t Logging OUT...' && tmp=$(python3 app.py --time OUT --climate 2>&1) && 
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
     echo '\t░░░     Data collected and log updated    ░░░'
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd w3py && txn=$(python3 toggle.py main 2>&1) &&

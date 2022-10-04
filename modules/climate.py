@@ -21,14 +21,7 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 from fonts.ttf import RobotoMedium as UserFont
-import logging
 
-logging.basicConfig(
-    format='%(asctime)s.%(msecs)03d %(levelname)-8s %(message)s',
-    level=logging.INFO,
-    datefmt='%Y-%m-%d %H:%M:%S')
-
-logging.info("""Reading sensors""")
 
 # BME280 temperature/pressure/humidity sensor
 bme280 = BME280()
@@ -117,7 +110,6 @@ def display_text(variable, data, unit):
     colours = [(v - vmin + 1) / (vmax - vmin + 1) for v in values[variable]]
     # Format the variable name and value
     message = "{}: {:.1f} {}".format(variable, data, unit)
-    logging.info(message)
     draw.rectangle((0, 0, WIDTH, HEIGHT), (255, 255, 255))
     for i in range(len(colours)):
         # Convert the values to colours from red to blue
@@ -140,7 +132,7 @@ def save_data(idx, data):
     values[variable] = values[variable][1:] + [data]
     unit = units[idx]
     message = "{}: {:.1f} {}".format(variable[:4], data, unit)
-    logging.info(message)
+
 
 
 # Displays all the text on the 0.96" LCD
