@@ -39,7 +39,7 @@ ror = '░░░░░░░░░░░░░░░░░░░░░░░░�
 hav = '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
 som = '░░░   Welcome to the studio. Have fun.    ░░░'
 fun = '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
-print('Initializing app.py')
+#print('Initializing app.py')
 # only write text entry if --time is not present
 if status is None:
      with open("data/m.txt", "a+") as msg_file:
@@ -49,24 +49,24 @@ if status is None:
         # and write to file
         msg_file.write(str(timeNow) + ', ' + str(textEntry))
         # write to console
-        print('')    
-        print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
-        print('░░░    Your message was logged in m.txt   ░░░')
-        print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')    
-        print('')
+        #print('')    
+        #print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
+        #print('░░░    Your message was logged in m.txt   ░░░')
+        #print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')    
+        #print('')
         # if --tweet is present
         if args.tweet:
             # tweet it
             tweetMachine.main(textEntry)
-            print('')
-            print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░') 
-            print('░░░   Your message was sent to twitter.   ░░░')
-            print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░') 
-            print('')
+            #print('')
+            #print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░') 
+            #print('░░░   Your message was sent to twitter.   ░░░')
+            #print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░') 
+            #print('')
 
 
 else:
-    print('Accessing data')
+    #print('Accessing data')
     # open the studio timecard text file
     with open("data/t.txt", "a+") as txt_file:
         # go to beginning of file
@@ -75,11 +75,11 @@ else:
         last_Line = txt_file.readlines()[-1]
         historical = last_Line.split(',')
         past_Status = historical[0]
-        print("Last event:")
-        print(past_Status)
-        print("////")
-        print("Current event:")
-        print(status)
+        #print("Last event:")
+        #print(past_Status)
+        #print("////")
+        #print("Current event:")
+        #print(status)
             # check if the present contradicts history
         if status == past_Status:
             # if so, send error message
@@ -91,33 +91,33 @@ else:
             endIt()
         # if present matches history then append '\n'
         else:    
-            print("////")
-            print("Logging " + status)
+            #print("////")
+            #print("Logging " + status)
             txt_file.write("\n")
             # and write to file
             txt_file.write(status + ', ' + str(timeNow) + ', ' + str(dateNow))
             # and notify user
             if status == 'IN' :
                 if args.climate:
-                    print('Accessing environmental sensors')
+                    #print('Accessing environmental sensors')
                     dedans = 'IN'
                     temps = climate.main(dedans)
-                print(hav)
-                print(som)
-                print(fun)
+                #print(hav)
+                #print(som)
+                #print(fun)
                 with open('am-i/present.txt','w') as f:
                         lines = 'In: ' + str(dateNow) + "\nI am at the studio\n" + str(temps[0]) + ' ' + str(temps[1])
                         f.writelines(lines) 
 
             if status == 'OUT' :
                 if args.climate:
-                    print('Accessing environmental sensors')
+                    #print('Accessing environmental sensors')
                     dehors = 'OUT'
                     temps = climate.main(dehors)
-                print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
-                print('░░░  A studio is only one of many places  ░░░')
-                print('░░░  where art gets made. Au revoir       ░░░')
-                print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
+                #print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
+                #print('░░░  A studio is only one of many places  ░░░')
+                #print('░░░  where art gets made. Au revoir       ░░░')
+                #print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 if args.swimming:
                     with open('am-i/present.txt','w') as f:
                         lines = 'Out: ' + str(dateNow) + "\nI went swimming\n" + str(temps[0]) + ' ' + str(temps[1])
@@ -127,5 +127,5 @@ else:
                         lines = 'Out: ' + str(dateNow) + "\nI am not at the studio\n" + str(temps[0]) + ' ' + str(temps[1])
                         f.writelines(lines) 
 
-print('Local Datalog Updated')
-print("////")
+#print('Local Datalog Updated')
+#print("////")

@@ -237,12 +237,13 @@ def main(x):
             if count % 5 == 2:
                 timeNow = round(time.time())
                 dateNow = datetime.datetime.fromtimestamp(timeNow)
-                print(str(dateNow) + " " + str(timeNow)) 
-                print(str(round(temp, 2)) + str(degree_sign) + "C") 
-                print(str(round(humi, 2)) + "%")
-                print(str(round(lux, 2)) + "Lux")
-                print(str(round(press,2)) + "hPa")
+                #print(str(dateNow) + " " + str(timeNow)) 
+                #print(str(round(temp, 2)) + str(degree_sign) + "C") 
+                #print(str(round(humi, 2)) + "%")
+                #print(str(round(lux, 2)) + "Lux")
+                #print(str(round(press,2)) + "hPa")
                 temps = difference.main(round(temp,2))
+                print("and the indoor temperature was" + (round(temp, 2)) + str(degree_sign) + "C")
                 with open("climate.txt", "a+") as a:
                     a.seek(0) 
                     a.write("\n")
