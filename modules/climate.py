@@ -235,7 +235,6 @@ def main(x):
                 #print(str(round(lux, 2)) + "Lux")
                 #print(str(round(press,2)) + "hPa")
                 temps = difference.main(round(temp,2))
-                print("and the indoor temperature was" + (round(temp, 2)) + str(degree_sign) + "C")
                 with open("climate.txt", "a+") as a:
                     a.seek(0) 
                     a.write("\n")
