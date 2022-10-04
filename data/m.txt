@@ -45,3 +45,18 @@
 1664803651, I just arrived at the studio. https://optimistic.etherscan.io/tx/0x20b1584417a6f70a222fee7f2812e1c8ac09626af1395f8c8c3e8713e8ef0716#eventlog
 1664815678, I just left the studio. https://optimistic.etherscan.io/tx/0x2da4490b97d9bfe8aa6c3c21e6dea6721821f1beee2573f4b6e6feb9a0620c43#eventlog
 1664900209, I just arrived at the studio. https://optimistic.etherscan.io/tx/0x65500d62ec73d1b7f077635dd9bb4acf329a8916436ac09ba77e5f1fb1dd26c8#eventlog
+1664921002, I just left the studio 2022-10-04 18:02:24.641 INFO     Reading sensors
+2022-10-04 18:02:29.095 INFO     temp: 14.5 C
+2022-10-04 18:02:29.200 INFO     pres: 1018.4 hPa
+2022-10-04 18:02:29.298 INFO     humi: 20.4 %
+2022-10-04 18:02:29.406 INFO     ligh: 660.8 Lux
+2022-10-04 18:02:33.560 INFO     temp: 24.9 C
+2022-10-04 18:02:33.675 INFO     pres: 1018.4 hPa
+2022-10-04 18:02:33.776 INFO     humi: 20.5 %
+2022-10-04 18:02:33.884 INFO     ligh: 646.6 Lux
+Traceback (most recent call last):
+  File "app.py", line 116, in <module>
+    temps = climate.main(dehors)
+  File "/home/pi/timesheet/modules/climate.py", line 246, in main
+    print("and the indoor temperature was" + (round(temp, 2)) + str(degree_sign) + "C")
+TypeError: can only concatenate str (not "float") to str. https://optimistic.etherscan.io/tx/0x722ba0f7bed9dd2d14255897e87966221aca7bcaeaf274b0eaed4ab7c4b697d2#eventlog
