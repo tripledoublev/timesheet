@@ -60,3 +60,4 @@ Traceback (most recent call last):
   File "/home/pi/timesheet/modules/climate.py", line 246, in main
     print("and the indoor temperature was" + (round(temp, 2)) + str(degree_sign) + "C")
 TypeError: can only concatenate str (not "float") to str. https://optimistic.etherscan.io/tx/0x722ba0f7bed9dd2d14255897e87966221aca7bcaeaf274b0eaed4ab7c4b697d2#eventlog
+1664978015, I just arrived at the studio and the indoor temperature was22.21°C. https://optimistic.etherscan.io/tx/0xf53ee9b068b27e441f45910cbcbdf88ce292479eddd5014716eb01a3ca044e44#eventlog
