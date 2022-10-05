@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           tempChange.innerHTML = "cooler";
           otherDiv.innerHTML += " than last recorded temperature";
           otherDiv.innerHTML +=
-            " \u2014 Get the <a href='https://vincent.charlebois.info/weather'>full weather report</a>.";
+            " \u2014 Get the <a href='https://vincent.charlebois.info/weather/report.html?1000'>full weather report</a>.";
           otherDiv.innerHTML +=
             "                                                       ";
         }
