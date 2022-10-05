@@ -111,8 +111,9 @@ a:focus-visible {
 }
 @media (max-width: 763px) {
   .top-left {
-    font-size: calc(6vw + 8.5vh) !important;
+    font-size: calc(6vw + 6.5vh) !important;
     padding-left:2vw;
+    padding-top:9vh;
     width:96vw;
   }
   .blockchain-link a,
