@@ -82,6 +82,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   const linkDiv1 = document.getElementById("link1");
   const linkDiv2 = document.getElementById("link2");
   const linkDiv3 = document.getElementById("link3");
+  const linkDiv4 = document.getElementById("link4");
+
   const tempChange = document.createElement("span");
 
   const AtTheStudioADDRESS = "0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773";
@@ -110,6 +112,8 @@ document.addEventListener("DOMContentLoaded", async function () {
           function buttonDiv2() {
             linkDiv2.classList.remove("no-dis");
             linkDiv2.classList.add("consecutive-link");
+            linkDiv4.classList.remove("no-dis");
+            linkDiv4.classList.add("weather-link");
             function buttonDiv3() {
               linkDiv3.classList.remove("no-dis");
               linkDiv3.classList.add("blockchain-link");

@@ -62,7 +62,14 @@ a {
 .consecutive-link {
   position: absolute;
   top: 30px;
-  left: 50%;
+  left: 33%;
+  transform: translateX(-50%);
+}
+
+.weather-link {
+  position: absolute;
+  top: 30px;
+  left: 66%;
   transform: translateX(-50%);
 }
 
@@ -71,13 +78,15 @@ a {
   padding: 8px 20px;
 }
 
-.my-link a {
+.my-link a,
+.weather-link a {
   padding: 8px 18px;
 }
 
 .blockchain-link a,
 .my-link a,
-.consecutive-link a {
+.consecutive-link a,
+.weather-link a {
   font-size: calc(2.75vw + 2.75vh);
   color: white;
   text-decoration: none;
@@ -87,12 +96,14 @@ a {
 }
 .blockchain-link a:hover,
 .my-link a:hover,
-.consecutive-link a:hover {
+.consecutive-link a:hover,
+.weather-link a:hover {
   color: black;
   background-color: white;
 }
 .blockchain-link a,
 .consecutive-link a,
+.weather-link a,
 #datacontainer {
   font-family: sans-serif;
 }
@@ -108,7 +119,8 @@ a {
     border: 2px solid white;
     padding: 10px 18px;
   }
-  .my-link a {
+  .my-link a,
+  .weather-link a {
     border: 2px solid white;
     padding: 10px 16px;
   }
