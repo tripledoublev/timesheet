@@ -63,3 +63,4 @@ TypeError: can only concatenate str (not "float") to str. https://optimistic.eth
 1664978015, I just arrived at the studio and the indoor temperature was22.21°C. https://optimistic.etherscan.io/tx/0xf53ee9b068b27e441f45910cbcbdf88ce292479eddd5014716eb01a3ca044e44#eventlog
 1664987574, I just left the studio and barometric pressure was at 1015.68hPa. https://optimistic.etherscan.io/tx/0x03dbd9d4913158a20167afe40eac226f0fbb3d0f557e725604ae72784b70a816#eventlog
 1665002372, I just arrived at the studio and the humidity levels were at 15.94%. https://optimistic.etherscan.io/tx/0xafcf4c7e979dd303f3cf03c0c5816c432a80aabe010135c6eb4512da7ecc5c6c#eventlog
+1665012984, I just left the studio and the humidity levels were at 21.24%. https://optimistic.etherscan.io/tx/0xe81c10a1a801e8465917095b51e2d67b23764c34853385b97cbef25bd311d9ac#eventlog
