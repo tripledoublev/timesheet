@@ -213,3 +213,10 @@ canvas {
 .green {
   color: lightgreen;
 }
+
+@media (min-width: 1250px) {
+  .flex-container {
+    width:45vw !important;
+    margin-left:42vw !important;
+  }
+}
