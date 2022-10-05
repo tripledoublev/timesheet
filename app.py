@@ -48,18 +48,18 @@ i = random.randint(1,4)
 degree_sign = u"\N{DEGREE SIGN}"
 
 # generate string for the statement
-match i:
-    case "1":
-        enviroStatement = "and the indoor temperature was "
-    
-    case "2":
-        enviroStatement = "and the humidity levels were at "
 
-    case "3":
-        enviroStatement = "and the light sensor measured "
+if i == 1:
+    enviroStatement = "and the indoor temperature was "
 
-    case "4":
-        enviroStatement = "and barometric pressure was at "
+elif i == 2:
+    enviroStatement = "and the humidity levels were at "
+
+elif i == 3:
+    enviroStatement = "and the light sensor measured "
+
+elif i == 4:
+    enviroStatement = "and barometric pressure was at "
 
 #print('Initializing app.py')
 # only write text entry if --time is not present
