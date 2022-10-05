@@ -103,7 +103,7 @@ else:
                     dedans = 'IN'
                     temps = climate.main(dedans)
                     degree_sign = u"\N{DEGREE SIGN}"
-                    print("and the indoor temperature was" + (str(round(temps[0], 2))) + str(degree_sign) + "C")
+                    print("and the indoor temperature was " + (str(round(temps[0], 2))) + str(degree_sign) + "C")
                 #print(hav)
                 #print(som)
                 #print(fun)
@@ -116,7 +116,7 @@ else:
                     #print('Accessing environmental sensors')
                     dehors = 'OUT'
                     temps = climate.main(dehors)
-                    print("and the indoor temperature was" + (str(round(temps[0], 2))) + str(degree_sign) + "C")
+                    print("and the indoor temperature was " + (str(round(temps[0], 2))) + str(degree_sign) + "C")
                 #print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 #print('░░░  A studio is only one of many places  ░░░')
                 #print('░░░  where art gets made. Au revoir       ░░░')
