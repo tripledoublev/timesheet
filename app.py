@@ -102,6 +102,7 @@ else:
                     #print('Accessing environmental sensors')
                     dedans = 'IN'
                     temps = climate.main(dedans)
+                    degree_sign = u"\N{DEGREE SIGN}"
                     print("and the indoor temperature was" + (str(round(temps[0], 2))) + str(degree_sign) + "C")
                 #print(hav)
                 #print(som)

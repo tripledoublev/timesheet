@@ -223,7 +223,6 @@ def main(x):
             lux = raw_data
             display_everything()
             timeNow = round(time.time())
-            degree_sign = u"\N{DEGREE SIGN}"
             count += 1
             time.sleep(3)
             if count % 5 == 2:
