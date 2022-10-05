@@ -234,6 +234,9 @@ def main(x):
                 #print(str(round(lux, 2)) + "Lux")
                 #print(str(round(press,2)) + "hPa")
                 temps = difference.main(round(temp,2))
+                temps.append(round(humi,2))
+                temps.append(round(lux,2))
+                temps.append(round(press,2))
                 with open("climate.txt", "a+") as a:
                     a.seek(0) 
                     a.write("\n")

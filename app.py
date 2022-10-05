@@ -8,6 +8,7 @@
 #import time and things 
 import time
 import datetime
+import random
 import argparse
 import sys, os
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/modules")
@@ -39,6 +40,27 @@ ror = '░░░░░░░░░░░░░░░░░░░░░░░░�
 hav = '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
 som = '░░░   Welcome to the studio. Have fun.    ░░░'
 fun = '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
+
+# generate random number to select which information will be tweeted
+i = random.randint(1,4)
+
+# degree sign for tweet
+degree_sign = u"\N{DEGREE SIGN}"
+
+# generate string for the statement
+match i:
+    case "1":
+        enviroStatement = "and the indoor temperature was "
+    
+    case "2":
+        enviroStatement = "and the humidity levels were at "
+
+    case "3":
+        enviroStatement = "and the light sensor measured "
+
+    case "4":
+        enviroStatement = "and barometric pressure was at "
+
 #print('Initializing app.py')
 # only write text entry if --time is not present
 if status is None:
@@ -102,8 +124,15 @@ else:
                     #print('Accessing environmental sensors')
                     dedans = 'IN'
                     temps = climate.main(dedans)
-                    degree_sign = u"\N{DEGREE SIGN}"
-                    print("and the indoor temperature was " + (str(round(temps[0], 2))) + str(degree_sign) + "C")
+                    if i == 1:
+                        print(enviroStatement + (str(round(temps[0], 2))) + str(degree_sign) + "C")
+                    elif i == 2:
+                        print(enviroStatement + str(round(temps[2], 2)) + "%")
+                    elif i == 3:
+                        print(enviroStatement + str(round(temps[3], 2)) + "Lux")
+                    elif i == 4:
+                        print(enviroStatement + str(round(temps[4], 2)) + "hPa")
+                    
                 #print(hav)
                 #print(som)
                 #print(fun)
@@ -113,10 +142,20 @@ else:
 
             if status == 'OUT' :
                 if args.climate:
+                    
                     #print('Accessing environmental sensors')
                     dehors = 'OUT'
                     temps = climate.main(dehors)
-                    print("and the indoor temperature was " + (str(round(temps[0], 2))) + str(degree_sign) + "C")
+                    if i == 1:
+                        print(enviroStatement + (str(round(temps[0], 2))) + str(degree_sign) + "C")
+                    elif i == 2:
+                        print(enviroStatement + str(round(temps[2], 2)) + "%")
+                    elif i == 3:
+                        print(enviroStatement + str(round(temps[3], 2)) + "Lux")
+                    elif i == 4:
+                        print(enviroStatement + str(round(temps[4], 2)) + "hPa")
+
+
                 #print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
                 #print('░░░  A studio is only one of many places  ░░░')
                 #print('░░░  where art gets made. Au revoir       ░░░')
