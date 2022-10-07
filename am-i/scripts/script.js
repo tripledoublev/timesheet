@@ -112,11 +112,14 @@ document.addEventListener("DOMContentLoaded", async function () {
           function buttonDiv2() {
             linkDiv2.classList.remove("no-dis");
             linkDiv2.classList.add("consecutive-link");
-            linkDiv4.classList.remove("no-dis");
-            linkDiv4.classList.add("weather-link");
             function buttonDiv3() {
-              linkDiv3.classList.remove("no-dis");
-              linkDiv3.classList.add("blockchain-link");
+              linkDiv4.classList.remove("no-dis");
+              linkDiv4.classList.add("weather-link");
+              function buttonDiv4() {
+                linkDiv3.classList.remove("no-dis");
+                linkDiv3.classList.add("blockchain-link");
+              }
+              setTimeout(buttonDiv4, 1111);
             }
             setTimeout(buttonDiv3, 1111);
           }
