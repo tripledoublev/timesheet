@@ -45,29 +45,3 @@
 1664803651, I just arrived at the studio. https://optimistic.etherscan.io/tx/0x20b1584417a6f70a222fee7f2812e1c8ac09626af1395f8c8c3e8713e8ef0716#eventlog
 1664815678, I just left the studio. https://optimistic.etherscan.io/tx/0x2da4490b97d9bfe8aa6c3c21e6dea6721821f1beee2573f4b6e6feb9a0620c43#eventlog
 1664900209, I just arrived at the studio. https://optimistic.etherscan.io/tx/0x65500d62ec73d1b7f077635dd9bb4acf329a8916436ac09ba77e5f1fb1dd26c8#eventlog
-1664921002, I just left the studio 2022-10-04 18:02:24.641 INFO     Reading sensors
-2022-10-04 18:02:29.095 INFO     temp: 14.5 C
-2022-10-04 18:02:29.200 INFO     pres: 1018.4 hPa
-2022-10-04 18:02:29.298 INFO     humi: 20.4 %
-2022-10-04 18:02:29.406 INFO     ligh: 660.8 Lux
-2022-10-04 18:02:33.560 INFO     temp: 24.9 C
-2022-10-04 18:02:33.675 INFO     pres: 1018.4 hPa
-2022-10-04 18:02:33.776 INFO     humi: 20.5 %
-2022-10-04 18:02:33.884 INFO     ligh: 646.6 Lux
-Traceback (most recent call last):
-  File "app.py", line 116, in <module>
-    temps = climate.main(dehors)
-  File "/home/pi/timesheet/modules/climate.py", line 246, in main
-    print("and the indoor temperature was" + (round(temp, 2)) + str(degree_sign) + "C")
-TypeError: can only concatenate str (not "float") to str. https://optimistic.etherscan.io/tx/0x722ba0f7bed9dd2d14255897e87966221aca7bcaeaf274b0eaed4ab7c4b697d2#eventlog
-1664978015, I just arrived at the studio and the indoor temperature was22.21°C. https://optimistic.etherscan.io/tx/0xf53ee9b068b27e441f45910cbcbdf88ce292479eddd5014716eb01a3ca044e44#eventlog
-1664987574, I just left the studio and barometric pressure was at 1015.68hPa. https://optimistic.etherscan.io/tx/0x03dbd9d4913158a20167afe40eac226f0fbb3d0f557e725604ae72784b70a816#eventlog
-1665002372, I just arrived at the studio and the humidity levels were at 15.94%. https://optimistic.etherscan.io/tx/0xafcf4c7e979dd303f3cf03c0c5816c432a80aabe010135c6eb4512da7ecc5c6c#eventlog
-1665012984, I just left the studio and the humidity levels were at 21.24%. https://optimistic.etherscan.io/tx/0xe81c10a1a801e8465917095b51e2d67b23764c34853385b97cbef25bd311d9ac#eventlog
-1665150476, I just arrived at the studio and the light sensor measured 510.38Lux. https://optimistic.etherscan.io/tx/0x77681e831f14278c8e576663fa338980c0b72b021ae1a6a835b8e2ae12d59dfb#eventlog
-1665160895, I just left the studio and the light sensor measured 556.16Lux. https://optimistic.etherscan.io/tx/0x0626ad7ebd3cfe72cb70ba1aebe28e028cc8b8ac9efdb814d18506c71de039df#eventlog
-1665239285, I just arrived at the studio and the humidity levels were at 21.15%. https://optimistic.etherscan.io/tx/0x75b5aa7f79cc05eae1a6a4f50539a164fc0d9632c6b80e66c96b9378f8a5d46f#eventlog
-1665252878, I just left the studio Traceback (most recent call last):
-  File "update.py", line 1, in <module>
-    from winreg import SetValueEx
-ModuleNotFoundError: No module named 'winreg'. https://optimistic.etherscan.io/tx/0x0a8135062e6007f4caef5e588d0eaac652fd3eae68bace4a4667ac865978fbcc#eventlog
