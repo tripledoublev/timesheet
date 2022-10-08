@@ -34,6 +34,6 @@ jobs:
           modules/*
           draw/*
           __init__.py
-          contract/*
+          contracts/*
           **/data/export.py
           **/data/__init__.py
