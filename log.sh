@@ -45,10 +45,10 @@ then
     git fetch && git pull && echo '\t Logging IN...' && tmp=$(python3 app.py --time IN --climate 2>&1) &&
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
     echo '\t░░░     Data collected and log updated    ░░░'
-    echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd w3py && txn=$(python3 toggle.py main 2>&1) &&
+    echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd w3py && txn=$(python3 toggle.py main 2>&1) && dataout=$(python3 update.py ${tmp} 2>&1) &&
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
     echo '\t░░░     Transacted with the blockchain    ░░░'
-    echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd .. && python3 app.py --text "I just arrived at the studio ${tmp}. ${txn}" --tweet && 
+    echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd .. && python3 app.py --text "I just arrived at the studio ${dataout}. ${txn}" --tweet && 
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
     echo '\t░░░      Tweeted the transaction hash     ░░░'
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' &&git commit -am "IN: ${now}" && git push
@@ -57,10 +57,10 @@ then
     git fetch && git pull && echo '\t Logging OUT...' && tmp=$(python3 app.py --time OUT --climate 2>&1) && 
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
     echo '\t░░░     Data collected and log updated    ░░░'
-    echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd w3py && txn=$(python3 toggle.py main 2>&1) &&
+    echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd w3py && txn=$(python3 toggle.py main 2>&1) && dataout=$(python3 update.py ${tmp} 2>&1) &&
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
     echo '\t░░░     Transacted with the blockchain    ░░░'
-    echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd .. && python3 timeMachine.py && sudo rm consecutive-days/* || true && sudo rm consecutive-days/data/* || true && python3 data/export.py && python3 data/total.py && python3 generate_html.py && python3 generate_index.py && git add consecutive-days/* && python3 app.py --text "I just left the studio ${tmp}. ${txn}" --tweet && git commit -am "OUT: ${now}" && 
+    echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd .. && python3 timeMachine.py && sudo rm consecutive-days/* || true && sudo rm consecutive-days/data/* || true && python3 data/export.py && python3 data/total.py && python3 generate_html.py && python3 generate_index.py && git add consecutive-days/* && python3 app.py --text "I just left the studio ${dataout}. ${txn}" --tweet && git commit -am "OUT: ${now}" && 
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
     echo '\t░░░      Tweeted the transaction hash     ░░░'
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && git push

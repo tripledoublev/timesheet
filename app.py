@@ -8,7 +8,6 @@
 #import time and things 
 import time
 import datetime
-import random
 import argparse
 import sys, os
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/modules")
@@ -41,25 +40,7 @@ hav = '░░░░░░░░░░░░░░░░░░░░░░░░�
 som = '░░░   Welcome to the studio. Have fun.    ░░░'
 fun = '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
 
-# generate random number to select which information will be tweeted
-i = random.randint(1,4)
 
-# degree sign for tweet
-degree_sign = u"\N{DEGREE SIGN}"
-
-# generate string for the statement
-
-if i == 1:
-    enviroStatement = "and the indoor temperature was "
-
-elif i == 2:
-    enviroStatement = "and the humidity levels were at "
-
-elif i == 3:
-    enviroStatement = "and the light sensor measured "
-
-elif i == 4:
-    enviroStatement = "and barometric pressure was at "
 
 #print('Initializing app.py')
 # only write text entry if --time is not present
@@ -124,14 +105,7 @@ else:
                     #print('Accessing environmental sensors')
                     dedans = 'IN'
                     temps = climate.main(dedans)
-                    if i == 1:
-                        print(enviroStatement + (str(round(temps[0], 2))) + str(degree_sign) + "C")
-                    elif i == 2:
-                        print(enviroStatement + str(round(temps[2], 2)) + "%")
-                    elif i == 3:
-                        print(enviroStatement + str(round(temps[3], 2)) + "Lux")
-                    elif i == 4:
-                        print(enviroStatement + str(round(temps[4], 2)) + "hPa")
+                    print(temps[0], temps[2], temps[3], temps[4])
                     
                 #print(hav)
                 #print(som)
@@ -146,14 +120,8 @@ else:
                     #print('Accessing environmental sensors')
                     dehors = 'OUT'
                     temps = climate.main(dehors)
-                    if i == 1:
-                        print(enviroStatement + (str(round(temps[0], 2))) + str(degree_sign) + "C")
-                    elif i == 2:
-                        print(enviroStatement + str(round(temps[2], 2)) + "%")
-                    elif i == 3:
-                        print(enviroStatement + str(round(temps[3], 2)) + "Lux")
-                    elif i == 4:
-                        print(enviroStatement + str(round(temps[4], 2)) + "hPa")
+                    print(temps[0], temps[2], temps[3], temps[4])
+
 
 
                 #print('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░')
