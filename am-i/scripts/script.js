@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       type: "function",
     },
   ];
+  const weatherDataABI = [{"inputs":[],"stateMutability":"payable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256[]","name":"dataArray","type":"uint256[]"}],"name":"Update","type":"event"},{"stateMutability":"payable","type":"fallback"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"setOwner","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"temperature","type":"uint256"},{"internalType":"uint256","name":"humidity","type":"uint256"},{"internalType":"uint256","name":"luminosity","type":"uint256"},{"internalType":"uint256","name":"pressure","type":"uint256"}],"name":"updateData","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"weatherData","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"},{"stateMutability":"payable","type":"receive"}];
   const otherDiv = document.getElementById("datacontainer");
   const linkDiv1 = document.getElementById("link1");
   const linkDiv2 = document.getElementById("link2");
@@ -87,6 +88,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const tempChange = document.createElement("span");
 
   const AtTheStudioADDRESS = "0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773";
+  const weatherDataADDRESS = "0x673aCB29765fAB093dDd522850f16F0b2e3D3C39"
   const provider = new ethers.providers.JsonRpcProvider(
     "https://optimism-mainnet.infura.io/v3/9715c9bf2b9c47109c84cabf0fbcaae5"
   );
@@ -95,10 +97,16 @@ document.addEventListener("DOMContentLoaded", async function () {
     AtTheStudioABI,
     provider
   );
-
-  var statement = await AtTheStudioContract.statement();
-
+  const weatherDataContract = new ethers.Contract(
+    weatherDataADDRESS,
+    weatherDataABI,
+    provider
+  );
+  
+  const [statement, temp, humi, lux, press] = await Promise.all([AtTheStudioContract.statement(), weatherDataContract.weatherData(0), weatherDataContract.weatherData(1), weatherDataContract.weatherData(2), weatherDataContract.weatherData(3)]);
+console.log(temp + ' ' + humi + ' ' + lux + ' ' + press)
   function updateDiv() {
+    
     function statementDiv() {
       // statement from blockchain
       myDiv.innerHTML = statement + ".";
