@@ -47,3 +47,4 @@
 1664900209, I just arrived at the studio. https://optimistic.etherscan.io/tx/0x65500d62ec73d1b7f077635dd9bb4acf329a8916436ac09ba77e5f1fb1dd26c8#eventlog
 1665254049, I just left the studio and the light sensor measured 1261.51Lux. https://optimistic.etherscan.io/tx/0xad11afb5ebe67becc3f7823fbaf33b43702efaf6baa70fe940d38f4297d1d9d7#eventlog
 1665509594, I just arrived at the studio and the indoor temperature was 21.27°C. https://optimistic.etherscan.io/tx/0xc1ead1be7c824b2b7edf4558aec3f18045ce2be53d87a5b08b0fcf18d69bb48c#eventlog
+1665525903, I just left the studio and barometric pressure was at 1019.39hPa. https://optimistic.etherscan.io/tx/0x653cca4ff5831a2abee3ed4c8070e5f1405faaf9a9edf9120a47ea8d9d124cd4#eventlog
