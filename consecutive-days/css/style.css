@@ -16,7 +16,7 @@ div.textColor {
   flex: 1 1 1;
   font-size: calc(0.4vw + 0.4vh);
   word-wrap: break-word;
-  border-radius: 1rem;
+  border-radius: 2rem;
   margin: 0vh 0.5vw 0vh 0.5vw;
   padding: 16px 8px;
   text-align: center;
@@ -52,17 +52,18 @@ h1 {
 }
 
 .textColor a {
-  color: transparent;
+  color: black;
 }
 
 .textColor a:visited {
-  color: unset;
-  color: rgba(255, 255, 255, 1) !important;
+  text-decoration: line-through wavy black 2px !important;
 }
 
-.textColor:active {
+.textColor:active:not(#page-title) {
   opacity: 0.333;
   cursor: pointer;
+  transform:scale(0.9);
+  transition: all 300ms ease-in-out;
 }
 div.flexbox {
   display: flex;
@@ -89,18 +90,22 @@ div.consecutivebox {
   justify-content: center;
 }
 
-.textColor:hover a,
+,
 #page-title a {
   color: black;
-  filter: invert(100%);
 }
-#page-title:hover a {
-  color: black;
-  filter: invert(0);
+#page-title:hover a,
+.indexbox .textColor:hover a {
+  text-decoration:underline overline;
+
 }
-.textColor:hover {
-  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.1));
-  border-radius: 5px !important;
+.indexbox .textColor:hover {
+  border-color: transparent !important;
+  border-radius: 2px !important;
+}
+.consecutivebox .textColor:hover {
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 1));
+  border-radius: 2px !important;
 }
 
 h1 {
