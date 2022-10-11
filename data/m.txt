@@ -46,3 +46,4 @@
 1664815678, I just left the studio. https://optimistic.etherscan.io/tx/0x2da4490b97d9bfe8aa6c3c21e6dea6721821f1beee2573f4b6e6feb9a0620c43#eventlog
 1664900209, I just arrived at the studio. https://optimistic.etherscan.io/tx/0x65500d62ec73d1b7f077635dd9bb4acf329a8916436ac09ba77e5f1fb1dd26c8#eventlog
 1665254049, I just left the studio and the light sensor measured 1261.51Lux. https://optimistic.etherscan.io/tx/0xad11afb5ebe67becc3f7823fbaf33b43702efaf6baa70fe940d38f4297d1d9d7#eventlog
+1665509594, I just arrived at the studio and the indoor temperature was 21.27°C. https://optimistic.etherscan.io/tx/0xc1ead1be7c824b2b7edf4558aec3f18045ce2be53d87a5b08b0fcf18d69bb48c#eventlog
