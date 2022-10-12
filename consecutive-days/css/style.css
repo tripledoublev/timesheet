@@ -99,7 +99,8 @@ div.consecutivebox {
   text-decoration:underline overline;
 
 }
-.indexbox .textColor:hover {
+.indexbox .textColor:hover,
+h1:hover {
   border-color: transparent !important;
   border-radius: 2px !important;
 }
