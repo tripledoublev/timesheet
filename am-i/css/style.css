@@ -18,6 +18,18 @@ a {
   align-items: center;
   justify-content: center;
   background-color: #111111;
+  position: absolute;
+    top: 0;
+}
+.flex-menu {
+  height: auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111111;
 }
 .row {
   width: 90%;
@@ -25,6 +37,15 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.row2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .flex-item {
@@ -48,29 +69,13 @@ a {
   color: white;
   font-size: calc(5vw + 5vh);
 }
-.blockchain-link {
-  position: absolute;
-  top: 30px;
-  right: 20px;
-}
-
-.my-link {
-  position: absolute;
-  top: 30px;
-  left: 20px;
-}
-.consecutive-link {
-  position: absolute;
-  top: 30px;
-  left: 33%;
-  transform: translateX(-50%);
-}
-
+.blockchain-link,
+.my-link,
+.consecutive-link,
 .weather-link {
-  position: absolute;
-  top: 30px;
-  left: 66%;
-  transform: translateX(-50%);
+ display:inherit;
+ margin: 10px 5px;
+ z-index: 99;
 }
 
 .blockchain-link a,
@@ -87,11 +92,11 @@ a {
 .my-link a,
 .consecutive-link a,
 .weather-link a {
-  font-size: calc(2.75vw + 2.75vh);
+  font-size: calc(1.75vw + 1.05vh);
   color: white;
   text-decoration: none;
-  border: 4px solid white;
-  border-radius: 14px;
+  border: 3px solid white;
+  border-radius: 0px;
   font-weight: bolder;
 }
 .blockchain-link a:hover,
@@ -100,6 +105,8 @@ a {
 .weather-link a:hover {
   color: black;
   background-color: white;
+  border-radius: 28px;
+  transition: all 0.5s ease-in-out;
 }
 .blockchain-link a,
 .consecutive-link a,
