@@ -49,3 +49,4 @@
 1665509594, I just arrived at the studio and the indoor temperature was 21.27°C. https://optimistic.etherscan.io/tx/0xc1ead1be7c824b2b7edf4558aec3f18045ce2be53d87a5b08b0fcf18d69bb48c#eventlog
 1665525903, I just left the studio and barometric pressure was at 1019.39hPa. https://optimistic.etherscan.io/tx/0x653cca4ff5831a2abee3ed4c8070e5f1405faaf9a9edf9120a47ea8d9d124cd4#eventlog
 1665600170, I just arrived at the studio and the light sensor measured 1440.95Lux. https://optimistic.etherscan.io/tx/0x9c5aa242b08751979b33abed38d9579a186d8c63ff752b71f1febfe7c9c73566#eventlog
+1665614705, I just left the studio and the humidity levels were at 22.71%. https://optimistic.etherscan.io/tx/0x5c6a19e7eba2fa28b50a90dc8dec3bb7fca3a903bb32f8aaa30c9fa08a258f5f#eventlog
