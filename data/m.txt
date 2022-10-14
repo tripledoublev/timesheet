@@ -51,3 +51,4 @@
 1665600170, I just arrived at the studio and the light sensor measured 1440.95Lux. https://optimistic.etherscan.io/tx/0x9c5aa242b08751979b33abed38d9579a186d8c63ff752b71f1febfe7c9c73566#eventlog
 1665614705, I just left the studio and the humidity levels were at 22.71%. https://optimistic.etherscan.io/tx/0x5c6a19e7eba2fa28b50a90dc8dec3bb7fca3a903bb32f8aaa30c9fa08a258f5f#eventlog
 1665753257, Good morning! I just arrived at the studio and the humidity levels were at 29.16%. https://optimistic.etherscan.io/tx/0xf01adf69559c1d7ef00dda64623387d96ebb2c803545a9912bc75f0ec729d6c6#eventlog
+1665765676, After a productive morning,  I just left the studio. https://optimistic.etherscan.io/tx/0xb4c5f01ce216e97895a1f208259463eca6240984d967ae045cf7b748e123fdad#eventlog !_ [...] and the light sensor measured 1277.1Lux https://optimistic.etherscan.io/tx/0xf6926678bca4002e9b8d9c0e4913c2fd7a33d5f289cd263e3eee0b349bb8b8ac
