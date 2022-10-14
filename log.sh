@@ -51,12 +51,12 @@ then
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd .. &&
     if [ ! -z "$3" ]
     then
-        python3 app.py --text "$2 I just arrived at the studio ${dataout}. $3 ${txn}" --tweet && 
+        python3 app.py --text "$2 I just arrived at the studio ${dataout}. $3 ${txn}" --tweet 
     elif [ ! -z "$2" ]
     then
-        python3 app.py --text "$2 I just arrived at the studio ${dataout}. ${txn}" --tweet && 
+        python3 app.py --text "$2 I just arrived at the studio ${dataout}. ${txn}" --tweet 
     else
-        python3 app.py --text "I just arrived at the studio ${dataout}. ${txn}" --tweet && 
+        python3 app.py --text "I just arrived at the studio ${dataout}. ${txn}" --tweet
     fi
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
     echo '\t░░░      Tweeted the transaction hash     ░░░'
@@ -72,12 +72,12 @@ then
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd .. &&
     if [ ! -z "$3" ]
         then
-        python3 app.py --text "$2 I just left the studio ${dataout}. $3 ${txn}" --tweet && 
+        python3 app.py --text "$2 I just left the studio ${dataout}. $3 ${txn}" --tweet 
     elif [ ! -z "$2" ]
         then
-        python3 app.py --text "$2 I just left the studio ${dataout}. ${txn}" --tweet && 
+        python3 app.py --text "$2 I just left the studio ${dataout}. ${txn}" --tweet  
     else
-        python3 app.py --text "I just left the studio ${dataout}. ${txn}" --tweet &&
+        python3 app.py --text "I just left the studio ${dataout}. ${txn}" --tweet 
     fi 
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
     echo '\t░░░      Tweeted the transaction hash     ░░░'
