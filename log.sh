@@ -49,9 +49,11 @@ then
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
     echo '\t░░░     Transacted with the blockchain    ░░░'
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd .. &&
-    if [ ! -z "$3" ]; then
+    if [ ! -z "$3" ]
+    then
         python3 app.py --text "$2 I just arrived at the studio ${dataout}. $3 ${txn}" --tweet && 
-    elif [ ! -z "$2" ]; then
+    elif [ ! -z "$2" ]
+    then
         python3 app.py --text "$2 I just arrived at the studio ${dataout}. ${txn}" --tweet && 
     else
         python3 app.py --text "I just arrived at the studio ${dataout}. ${txn}" --tweet && 
