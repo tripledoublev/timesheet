@@ -1,4 +1,4 @@
-# CONSECUTIVE DAYS AT THE STUDIO
+# [CONSECUTIVE DAYS AT THE STUDIO](https://vincent.charlebois.info/consecutive-days/
 
 ## A timekeeping experiment for the digital manifestation of my physical presence at the studio
 
