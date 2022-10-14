@@ -62,18 +62,18 @@ degree_sign = u"\N{DEGREE SIGN}"
 # generate string for the statement
 
 if i == 1:
-    enviroStatement = "and the indoor temperature was "
-    print(enviroStatement + (str(round(sTemp * 0.01, 2))) + str(degree_sign) + "C")
+    enviroStatement = "[...] and the indoor temperature was "
+    print(enviroStatement + (str(round(sTemp * 0.01, 2))) + str(degree_sign) + 'C https://optimistic.etherscan.io/tx/' + txn_receipt.transactionHash.hex())
 
 elif i == 2:
-    enviroStatement = "and the humidity levels were at "
-    print(enviroStatement + str(round(sHumi * 0.01, 2)) + "%")
+    enviroStatement = "[...] and the humidity levels were at "
+    print(enviroStatement + str(round(sHumi * 0.01, 2)) + '% https://optimistic.etherscan.io/tx/' + txn_receipt.transactionHash.hex())
 
 elif i == 3:
-    enviroStatement = "and the light sensor measured "
-    print(enviroStatement + str(round(sLux * 0.01, 2)) + "Lux")
+    enviroStatement = "[...] and the light sensor measured "
+    print(enviroStatement + str(round(sLux * 0.01, 2)) + 'Lux https://optimistic.etherscan.io/tx/' + txn_receipt.transactionHash.hex())
 
 elif i == 4:
-    enviroStatement = "and barometric pressure was at "
-    print(enviroStatement + str(round(sPress * 0.01, 2)) + "hPa")
+    enviroStatement = "[...] and barometric pressure was at "
+    print(enviroStatement + str(round(sPress * 0.01, 2)) + 'hPa https://optimistic.etherscan.io/tx/' + txn_receipt.transactionHash.hex())
 
