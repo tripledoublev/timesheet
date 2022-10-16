@@ -76,6 +76,33 @@
       </div>
     </div>
    
+    <div id="svg-container" class="no-dis">
+      <div class="rotate">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+        <title>Latest Weather Data</title>
+        <defs>
+          <path d="M 0, 300
+        a 250,250 0 1,1 500,0
+        a 250,250 0 1,1 -500,0" id="textcircle"></path>
+          <style>
+            text { 
+                  font-size: calc(0.75vw + 0.75vh);; 
+                  fill:white;
+                  font-family: sans-serif;
+                  font-weight: 400; 
+                  letter-spacing: calc(2vw + 2vh);
+              }
+          </style>
+        </defs>
+        <text dy="20" textLength="192%">
+              <textPath xlink:href="#textcircle" id="changeText">
+                  Temperature Humidity, Luminosity, Barometric Pressure
+              </textPath>
+          </text>
+      </svg>
+    </div>
+    </div>
+
     <div id="ticker" class="no-dis">
       <div class="scroll-left">
         <div class="flex-item" id="datacontainer">

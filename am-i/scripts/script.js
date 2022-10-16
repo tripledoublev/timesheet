@@ -84,9 +84,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   const linkDiv2 = document.getElementById("link2");
   const linkDiv3 = document.getElementById("link3");
   const linkDiv4 = document.getElementById("link4");
-
+  const svgTxt = document.getElementById("changeText")
+  const weatherDiv = document.getElementById("svg-container");
   const tempChange = document.createElement("span");
-
   const AtTheStudioADDRESS = "0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773";
   const weatherDataADDRESS = "0x673aCB29765fAB093dDd522850f16F0b2e3D3C39"
   const provider = new ethers.providers.JsonRpcProvider(
@@ -104,9 +104,13 @@ document.addEventListener("DOMContentLoaded", async function () {
   );
   
   const [statement, temp, humi, lux, press] = await Promise.all([AtTheStudioContract.statement(), weatherDataContract.weatherData(0), weatherDataContract.weatherData(1), weatherDataContract.weatherData(2), weatherDataContract.weatherData(3)]);
-console.log(temp + ' ' + humi + ' ' + lux + ' ' + press)
+  const sTemp = temp * 0.01;
+  const sHumi = humi * 0.01;
+  const sLux = lux * 0.01;
+  const sPress = press * 0.01;
+  console.log(sTemp + ' ' + sHumi + ' ' + sLux + ' ' + sPress)
   function updateDiv() {
-    
+  
     function statementDiv() {
       // statement from blockchain
       myDiv.innerHTML = statement + ".";
@@ -126,6 +130,13 @@ console.log(temp + ' ' + humi + ' ' + lux + ' ' + press)
               function buttonDiv4() {
                 linkDiv3.classList.remove("no-dis");
                 linkDiv3.classList.add("blockchain-link");
+                function svgData() {
+                  weatherDiv.classList.remove("no-dis");
+                  weatherDiv.classList.add("flex-container");
+                  svgTxt['innerText' in svgTxt ? "innerText" : "textContent"] = "Temperature " + sTemp.toFixed(1) + "\u00B0C, Humidity " + sHumi.toFixed(2) + "%, Luminosity " + sLux.toFixed(1) + "lux, Barometric Pressure " + sPress.toFixed(1) + "hPa";
+        
+                }
+                setTimeout(svgData, 1111);
               }
               setTimeout(buttonDiv4, 1111);
             }
@@ -185,7 +196,7 @@ console.log(temp + ' ' + humi + ' ' + lux + ' ' + press)
           tempChange.innerHTML = "cooler";
           otherDiv.innerHTML += " than last recorded temperature";
           otherDiv.innerHTML +=
-            " \u2014 Get the <a href='https://vincent.charlebois.info/weather/report.html?1000'>full weather report</a>.";
+            " \u2014 Get updates on <a href='https://twitter.com/vncntxyz'>twitter [@vncntxyz]</a>";
           otherDiv.innerHTML +=
             "                                                       ";
         }

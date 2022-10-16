@@ -17,10 +17,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #111111;
+  align-content: center;
   position: absolute;
-    top: 0;
+  top: 0;
+  overflow: hidden;
 }
+
 .flex-menu {
   height: auto;
   width: 100%;
@@ -29,7 +31,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #111111;
 }
 .row {
   width: 90%;
@@ -98,6 +99,7 @@ a {
   border: 3px solid white;
   border-radius: 0px;
   font-weight: bolder;
+  background-color:#111111;
 }
 .blockchain-link a:hover,
 .my-link a:hover,
@@ -140,15 +142,15 @@ a {
   color: #4caf50;
 }
 .warmer {
-  color: #fd7167;
+  color: #ffcccc;
 }
 .cooler {
-  color: #00bcd4;
+  color: #b3fffb;
 }
 
 .teleprompt {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: auto;
@@ -163,6 +165,7 @@ a {
   height: 8vh;
   overflow: hidden;
   position: relative;
+  background-color: darkviolet;
 }
 .scroll-left .flex-item {
   position: absolute;
@@ -199,4 +202,16 @@ a {
 
 .no-dis {
   display: none;
+}
+
+.rotate {
+animation: spin 24s infinite linear;
+width: 50vw;
+height:50vw;
+max-width:100vh;
+max-height:100vw;
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }
