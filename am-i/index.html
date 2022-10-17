@@ -33,24 +33,17 @@
   <body>
     <div class="flex-menu">
       <div class="row2">
-        
         <div id="link1" class="no-dis">
-          <a
-            href="https://vincentcharlebois.com"
-            aria-label="Vincent Charlebois dot com"
-          >
-            vincentcharlebois.com
-          </a>
-        </div>
-        <div id="link2" class="no-dis">
           <a
             href="https://vincent.charlebois.info/consecutive-days/"
             aria-label="Consecutive days at the studio"
           >
-            consecutive days
+            consecutive days at the studio
           </a>
         </div>
-        <div id="link4" class="no-dis">
+        <div class="no-dis" id="link1b">a</div>
+        
+        <div id="link2" class="no-dis">
           <a
             href="https://vincent.charlebois.info/weather/report.html?654"
             aria-label="Get the full weather report"
@@ -58,12 +51,24 @@
             weather report
           </a>
         </div>
-        <div id="link3" class="no-dis">
+      <div class="no-dis" id="link2b">a</div>
+
+      <div id="link3" class="no-dis">
+        <a
+          aria-label="A short text that describes what are the smart contracts involved"
+          href="https://github.com/tripledoublev/timesheet/#smart-contracts"
+        >
+          distributed archive
+        </a>
+      </div>
+        <div class="no-dis" id="link3b">a performance by</div>
+
+        <div id="link4" class="no-dis">
           <a
-            aria-label="A short text that describes what are the smart contracts involved"
-            href="https://github.com/tripledoublev/timesheet/#smart-contracts"
+            href="https://vincentcharlebois.com"
+            aria-label="Vincent Charlebois dot com"
           >
-            smart contract?
+            vincent charlebois
           </a>
         </div>
       </div>
@@ -75,34 +80,40 @@
         </div>
       </div>
     </div>
-   
+
     <div id="svg-container" class="no-dis">
       <div class="rotate">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-        <title>Latest Weather Data</title>
-        <defs>
-          <path d="M 0, 300
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 500 500"
+        >
+          <title>Latest Weather Data</title>
+          <defs>
+            <path
+              d="M 0, 250
         a 250,250 0 1,1 500,0
-        a 250,250 0 1,1 -500,0" id="textcircle"></path>
-          <style>
-            text { 
-                  font-size: calc(0.75vw + 0.75vh);; 
-                  fill:white;
-                  font-family: sans-serif;
-                  font-weight: 400; 
-                  letter-spacing: calc(2vw + 2vh);
-                  width: 50vw;
-                  height: 50vw;
+        a 250,250 0 1,1 -500,0"
+              id="textcircle"
+            ></path>
+            <style>
+              text {
+                font-size: calc(1.75vw + 1.75vh);
+                fill: white;
+                font-family: sans-serif;
+                font-weight: 400;
+                letter-spacing: calc(2vw + 2vh);
+                text-transform: uppercase;
               }
-          </style>
-        </defs>
-        <text dy="20" textLength="192%">
-              <textPath xlink:href="#textcircle" id="changeText">
-                  Temperature Humidity, Luminosity, Barometric Pressure
-              </textPath>
+            </style>
+          </defs>
+          <text dy="20" textLength="312%">
+            <textPath xlink:href="#textcircle" id="changeText">
+              Temperature Humidity, Luminosity, Barometric Pressure
+            </textPath>
           </text>
-      </svg>
-    </div>
+        </svg>
+      </div>
     </div>
 
     <div id="ticker" class="no-dis">

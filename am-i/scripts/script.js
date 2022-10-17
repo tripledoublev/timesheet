@@ -84,6 +84,11 @@ document.addEventListener("DOMContentLoaded", async function () {
   const linkDiv2 = document.getElementById("link2");
   const linkDiv3 = document.getElementById("link3");
   const linkDiv4 = document.getElementById("link4");
+
+  const linkDiv1b = document.getElementById("link1b");
+  const linkDiv2b = document.getElementById("link2b");
+  const linkDiv3b = document.getElementById("link3b");
+  
   const svgTxt = document.getElementById("changeText")
   const weatherDiv = document.getElementById("svg-container");
   const tempChange = document.createElement("span");
@@ -120,21 +125,30 @@ document.addEventListener("DOMContentLoaded", async function () {
         promptDiv.classList.add("teleprompt");
         function buttonDiv1() {
           linkDiv1.classList.remove("no-dis");
-          linkDiv1.classList.add("my-link");
+          linkDiv1.classList.add("consecutive-link");
+
           function buttonDiv2() {
+            linkDiv1b.classList.remove("no-dis");
+            linkDiv1b.classList.add("silentNav");
+
             linkDiv2.classList.remove("no-dis");
-            linkDiv2.classList.add("consecutive-link");
+            linkDiv2.classList.add("weather-link");
+
             function buttonDiv3() {
-              linkDiv4.classList.remove("no-dis");
-              linkDiv4.classList.add("weather-link");
+              linkDiv2b.classList.remove("no-dis");
+              linkDiv2b.classList.add("silentNav");
+
+              linkDiv3.classList.remove("no-dis");
+              linkDiv3.classList.add("blockchain-link");
+
               function buttonDiv4() {
-                linkDiv3.classList.remove("no-dis");
-                linkDiv3.classList.add("blockchain-link");
+                 linkDiv3b.classList.remove("no-dis");
+              linkDiv3b.classList.add("silentNav");
+                linkDiv4.classList.remove("no-dis");
+                linkDiv4.classList.add("my-link");
                 function svgData() {
                   weatherDiv.classList.remove("no-dis");
-                  weatherDiv.classList.add("flex-container");
-                  svgTxt['innerText' in svgTxt ? "innerText" : "textContent"] = "Temperature " + sTemp.toFixed(1) + "\u00B0C, Humidity " + sHumi.toFixed(2) + "%, Luminosity " + sLux.toFixed(1) + "lux, Barometric Pressure " + sPress.toFixed(1) + "hPa";
-        
+                  weatherDiv.classList.add("svgcontainer");        
                 }
                 setTimeout(svgData, 1111);
               }
@@ -165,6 +179,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       const temperature = txt_lines[2].split(" ");
       const past = temperature[0];
       const change = temperature[1];
+      svgTxt['innerText' in svgTxt ? "innerText" : "textContent"] = "Indoor Temperature " + sTemp.toFixed(1) + "\u00B0C, Humidity " + sHumi.toFixed(2) + "%, Luminosity " + sLux.toFixed(1) + "lux, Barometric Pressure " + sPress.toFixed(1) + "hPa at " + timestmp + " on " + datestmp[1];
       if (statement == "I am at the studio") {
         myDiv.classList.add("present");
         if (Math.sign(change) === -1) {
