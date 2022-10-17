@@ -50,12 +50,12 @@ bonjour = (e) => {
     var preGainValue = (item / maxiS) * (maxVol + 1);
     gainNode.gain.value = preGainValue.toPrecision(4) * maxVol;
     var multi = e.target.id * 10;
-    var thisFrequency = (500 - (newTime % 500)) + multi;
+    var thisFrequency = (444 - (newTime % 444)) + multi;
 
   if (thisFrequency <= 150 == true) {
     thisFrequency += 200 * multi;
   } else if (thisFrequency >= 550) {
-    thisFrequency -= 200 * multi;
+    thisFrequency -= 250 * multi;
   }
     clickDetune += 0.5;
     oscillator.detune.value = clickDetune;
