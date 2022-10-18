@@ -51,7 +51,7 @@ then
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd .. &&
     if [ ! -z "$3" ]
     then
-        python3 app.py --text "$2 I just arrived at the studio $3 ${txn} !_ ${dataout}" --tweet 
+        python3 app.py --text "$2 I just arrived at the studio$3 ${txn} !_ ${dataout}" --tweet 
     elif [ ! -z "$2" ]
     then
         python3 app.py --text "$2 I just arrived at the studio ${txn} !_ ${dataout}" --tweet 
@@ -72,7 +72,7 @@ then
     echo '\t░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' && cd .. &&
     if [ ! -z "$3" ]
         then
-        python3 app.py --text "$2 I just left the studio $3 ${txn} !_ ${dataout}" --tweet 
+        python3 app.py --text "$2 I just left the studio$3 ${txn} !_ ${dataout}" --tweet 
     elif [ ! -z "$2" ]
         then
         python3 app.py --text "$2 I just left the studio ${txn} !_ ${dataout}" --tweet  
