@@ -27,11 +27,11 @@ As a continued experiment, I decided to bring these interactions on the blockcha
 
 ##### Manifesting geolocation
 
-On Aug-17-2022 03:24:05 PM +UTC, I deployed [a smart contract](https://optimistic.etherscan.io/address/0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773) on Optimism, an Ethereum L2 blockchain. Whenever I leave or arrive at the studio, I call the togglePresence() function to align the on-chain boolean called presence and the string named statement to my physical presence at the studio. That contract can be found at [contracts/AtTheStudio.sol](https://github.com/tripledoublev/timesheet/blob/master/contracts/AtTheStudio.sol) 
+On Aug-17-2022 03:24:05 PM +UTC, I deployed [a smart contract](https://optimistic.etherscan.io/address/0xaf6c153972fbc7d67feaa9f9d1d08f3c13f79773) on Optimism, an Ethereum L2 blockchain. Whenever I leave or arrive at the studio, I call the togglePresence() function to align the on-chain boolean called presence and the string named statement to my physical presence at the studio. That contract can be found at [`contracts/AtTheStudio.sol`](https://github.com/tripledoublev/timesheet/blob/master/contracts/AtTheStudio.sol) 
 
 ##### Storing environmental conditions
 
-On Oct-08-2022 03:31:14 PM +UTC, I deployed the second [smart contract](https://optimistic.etherscan.io/address/0x673acb29765fab093ddd522850f16f0b2e3d3c39) on Optimism. This second contract contains an array of weather data that is updated whenever I arrive or leave the studio. This array contains temperature, humidity, luminosity and barometric pressure data. That contract can be found at [contracts/Weatherdata.sol](https://github.com/tripledoublev/timesheet/blob/master/contracts/WeatherData.sol) 
+On Oct-08-2022 03:31:14 PM +UTC, I deployed the second [smart contract](https://optimistic.etherscan.io/address/0x673acb29765fab093ddd522850f16f0b2e3d3c39) on Optimism. This second contract contains an array of weather data that is updated whenever I arrive or leave the studio. This array contains temperature, humidity, luminosity and barometric pressure data. That contract can be found at [`contracts/Weatherdata.sol`](https://github.com/tripledoublev/timesheet/blob/master/contracts/WeatherData.sol) 
 
 ##### Contract miscellanea 
 Additionnal functions include a withdrawing option if this address was ever sent funds by mistake or as donation. setOwner allows to transfer the ownership of the contract to another address than the current one. Eth donations can be sent directly to the contract address 0xAf6C153972fBC7d67feaA9f9d1d08F3c13f79773 **on optimism** as a way to fund and support further creative blockchain explorations.
