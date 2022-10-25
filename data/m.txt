@@ -70,3 +70,4 @@
 
 1666719257, From the command line interface, I confirm that I just left the studio. Performing on-chain presence
  https://optimistic.etherscan.io/tx/0x68794bbe3fb858ec456ed94f5faf94a6f254c1db484ab0bb118b163159f684bc#eventlog !_ [...] and the light sensor measured 953.69Lux https://optimistic.etherscan.io/tx/0xdf4e0003a1e6feed445b0292d1c0c361a77cd27535497fea0037261124c3a730
+1666729409, This automated tweet confirms that I just arrived at the studio https://optimistic.etherscan.io/tx/0x7b80efb083f46b5009b70291274d9fbe6e1deff5332cf8d9aa026224379547ce#eventlog !_ [...] and the light sensor measured 1860.99Lux https://optimistic.etherscan.io/tx/0xdec96503d8ffb0cae0a76cceb431ae53ae76871df6696eaa268894520d96275f
