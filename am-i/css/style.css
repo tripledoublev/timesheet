@@ -63,6 +63,7 @@ a {
 #textcontainer {
   font-family: sans-serif;
   flex-basis: max-content;
+  z-index: 1024;
 }
 
 .bottom-left {
@@ -118,12 +119,19 @@ a {
 #datacontainer {
   font-family: sans-serif;
 }
+
+#datacontainer a:hover {
+  background-color: white;
+  color: darkviolet;
+  text-decoration: none;
+}
+
 .my-link a {
   font-family: Times;
 }
 @media (max-width: 763px) {
   .bottom-left {
-    font-size: calc(6vw + 6vh) !important;
+    font-size: calc(4.5vw + 4.55vh) !important;
   }
   .blockchain-link a,
   .consecutive-link a {
@@ -223,6 +231,9 @@ max-height:100vw;
   .rotate {
     width: 100vw;
     height:100vw;
+  }
+  text {
+    font-size: calc(1.75vw + 1.75vh) !important;
   }
 }
 
