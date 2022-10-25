@@ -67,3 +67,6 @@
 1666616125, Cryptographically, I just arrived at the studio https://optimistic.etherscan.io/tx/0xb5a1c182e0c631475a19700b25a4c9206f886c96ef69da360690dac78de910b2#eventlog !_ [...] and the indoor temperature was 22.72°C https://optimistic.etherscan.io/tx/0xfde9dcaacc77a6fbbd24bc12683fe158b588aed2bd7ecc68b662cd0d78179e5a
 1666640252, Publicly, I just left the studio https://optimistic.etherscan.io/tx/0xcc56210db9ac951d1421450afad0e1c5361366d430f1a9747f72e309ba79c4eb#eventlog !_ [...] and the light sensor measured 1796.44Lux https://optimistic.etherscan.io/tx/0x66bc66312b1b6546f7633c78fb630279d6b315aaa0ddc7e84cfabe1f46caab1c
 1666703078, I just arrived at the studio. See the following transaction as a Proof of Presence https://optimistic.etherscan.io/tx/0x91ddab0c5d440c2512994900daa04e7ef32b9315fc0fdfcbe403dea6ac0ff2f3#eventlog !_ [...] and the indoor temperature was 23.18°C https://optimistic.etherscan.io/tx/0x0cc4f65f3484c7e2684f72df6fce4110e4911cadfca8e1378b9ffdc583933bda
+
+1666719257, From the command line interface, I confirm that I just left the studio. Performing on-chain presence
+ https://optimistic.etherscan.io/tx/0x68794bbe3fb858ec456ed94f5faf94a6f254c1db484ab0bb118b163159f684bc#eventlog !_ [...] and the light sensor measured 953.69Lux https://optimistic.etherscan.io/tx/0xdf4e0003a1e6feed445b0292d1c0c361a77cd27535497fea0037261124c3a730
