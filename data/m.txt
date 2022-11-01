@@ -84,3 +84,4 @@
 1667253815, IRL and URL, I just left the studio https://optimistic.etherscan.io/tx/0xf0b23e9b75a6d7359e7a92fa6bd6c134bd887d2cde699fe86a5b12de77a752bb#eventlog !_ [...] and the humidity levels were at 20.62% https://optimistic.etherscan.io/tx/0xf08a91c03b43fcd68060447f41f55af7075112b93cf6d30a81f82a7409bd3e95
 1667313633, The ritual of logging in - 
  I just arrived at the studio https://optimistic.etherscan.io/tx/0xf460ca0ced1c4f65e73280ed24b857bd4975853402d3efce4afa3345c78b53e8#eventlog !_ [...] and the humidity levels were at 23.6% https://optimistic.etherscan.io/tx/0x360e804c25e2888a13a954493cf27206caa67cb8f7ec0b09306531694b73df2e
+1667319432, At 12:14 local time, I just left the studio to eat lunch https://optimistic.etherscan.io/tx/0xdd3c249026e99b9df042deaa3169fc31b2b298ed8adea006fda965c28f6d05ec#eventlog !_ [...] and the indoor temperature was 23.5°C https://optimistic.etherscan.io/tx/0xebedab2586bd34123bfd441b1e63f98a2fcda956700ecda34763ab205104880d
