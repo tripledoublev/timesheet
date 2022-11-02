@@ -122,43 +122,43 @@ document.addEventListener("DOMContentLoaded", async function () {
       function tickerDiv() {
         // add&remove class to display buttons and ticker
         promptDiv.classList.remove("no-dis");
-        promptDiv.classList.add("teleprompt");
-        function buttonDiv1() {
-          linkDiv1.classList.remove("no-dis");
-          linkDiv1.classList.add("consecutive-link");
-
-          function buttonDiv2() {
-            linkDiv1b.classList.remove("no-dis");
-            linkDiv1b.classList.add("silentNav");
-
-            linkDiv2.classList.remove("no-dis");
-            linkDiv2.classList.add("weather-link");
-
-            function buttonDiv3() {
-              linkDiv2b.classList.remove("no-dis");
-              linkDiv2b.classList.add("silentNav");
-
-              linkDiv3.classList.remove("no-dis");
-              linkDiv3.classList.add("blockchain-link");
-
-              function buttonDiv4() {
-                 linkDiv3b.classList.remove("no-dis");
-              linkDiv3b.classList.add("silentNav");
-                linkDiv4.classList.remove("no-dis");
-                linkDiv4.classList.add("my-link");
-                function svgData() {
-                  weatherDiv.classList.remove("no-dis");
-                  weatherDiv.classList.add("svgcontainer");        
+        promptDiv.classList.add("teleprompt");                  
+        function svgData() {
+          weatherDiv.classList.remove("no-dis");
+          weatherDiv.classList.add("svgcontainer");     
+          function buttonDiv1() {
+            linkDiv1.classList.remove("no-dis");
+            linkDiv1.classList.add("consecutive-link");
+  
+            function buttonDiv2() {
+              linkDiv1b.classList.remove("no-dis");
+              linkDiv1b.classList.add("silentNav");
+  
+              linkDiv2.classList.remove("no-dis");
+              linkDiv2.classList.add("weather-link");
+  
+              function buttonDiv3() {
+                linkDiv2b.classList.remove("no-dis");
+                linkDiv2b.classList.add("silentNav");
+  
+                linkDiv3.classList.remove("no-dis");
+                linkDiv3.classList.add("blockchain-link");
+  
+                function buttonDiv4() {
+                   linkDiv3b.classList.remove("no-dis");
+                linkDiv3b.classList.add("silentNav");
+                  linkDiv4.classList.remove("no-dis");
+                  linkDiv4.classList.add("my-link");
                 }
-                setTimeout(svgData, 1111);
+                setTimeout(buttonDiv4, 1111);
               }
-              setTimeout(buttonDiv4, 1111);
+              setTimeout(buttonDiv3, 1111);
             }
-            setTimeout(buttonDiv3, 1111);
+            setTimeout(buttonDiv2, 1111);
           }
-          setTimeout(buttonDiv2, 1111);
+          setTimeout(buttonDiv1, 6666);   
         }
-        setTimeout(buttonDiv1, 1111);
+        setTimeout(svgData, 1111);
       }
       setTimeout(tickerDiv, 1111);
     }
@@ -179,6 +179,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       const temperature = txt_lines[2].split(" ");
       const past = temperature[0];
       const change = temperature[1];
+      console.log(change)
       svgTxt['innerText' in svgTxt ? "innerText" : "textContent"] = "Indoor Temperature " + sTemp.toFixed(1) + "\u00B0C, Humidity " + sHumi.toFixed(2) + "%, Luminosity " + sLux.toFixed(1) + "lux, Barometric Pressure " + sPress.toFixed(1) + "hPa at " + timestmp + " on " + datestmp[1];
       if (statement == "I am at the studio") {
         myDiv.classList.add("present");
@@ -214,6 +215,19 @@ document.addEventListener("DOMContentLoaded", async function () {
             " \u2014 Get updates on <a href='https://twitter.com/vncntxyz'>twitter [@vncntxyz]</a>";
           otherDiv.innerHTML +=
             "                                                       ";
+        } else if (change === '0.0') {
+          otherDiv.innerHTML =
+          "Indoor temperature was " +
+          past +
+          "\u00B0C at " +
+          timestmp +
+          " when I arrived";
+        otherDiv.innerHTML += " \u2014 ";
+        otherDiv.innerHTML += "Exactly the same as the last recorded temperature";
+        otherDiv.innerHTML +=
+          " \u2014 Get updates on <a href='https://twitter.com/vncntxyz'> twitter </a>";
+        otherDiv.innerHTML +=
+          "                                                       ";
         }
       } else {
         myDiv.classList.add("absent");
@@ -241,6 +255,15 @@ document.addEventListener("DOMContentLoaded", async function () {
             " \u2014 The studio is only one of many places where art gets made.";
           otherDiv.innerHTML +=
             "                                                       ";
+        } else if (change === '0.0') {
+          otherDiv.innerHTML =
+          "Indoor temperature was " + past + "\u00B0C when I left at " + timestmp + " on " + datestmp[1];
+        otherDiv.innerHTML += " \u2014 ";
+        otherDiv.innerHTML += "Exactly the same as when I arrived";
+        otherDiv.innerHTML +=
+          " \u2014 The studio is only one of many places where art gets made.";
+        otherDiv.innerHTML +=
+          "                                                       ";
         }
       }
     });
