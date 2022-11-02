@@ -7,7 +7,7 @@
 It began when I created a simple Python script (**app.py**) that allowed me to timestamp my presence at the studio.
 I was digitizing my presence by logging *--time IN* or *--time OUT*.
 
-The data is stored in data/t.txt and became the basic material to generate a multitude of visualizations. Experimentation through this project brought me to write my own smart contract in Solidity and log my time at the studio on-chain on Optimism, a layer 2 ethereum scaling solution.
+The data is stored in [`data/t.txt`](https://github.com/tripledoublev/timesheet/blob/master/data/t.txt) and became the basic material to generate a multitude of visualizations. Experimentation through this project brought me to write my own smart contract in Solidity and log my time at the studio on-chain on Optimism, a layer 2 ethereum scaling solution.
 
 My interest in environmental sensing brought me to integrate [weather visualization](https://vincent.charlebois.info/weather/report.html) into the project.
 
