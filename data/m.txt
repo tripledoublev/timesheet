@@ -89,3 +89,5 @@
 1667342954, On movement, I just left the studio https://optimistic.etherscan.io/tx/0x72c982323a7fb49a3b687b88c86d92395e12c718152019a099ecedda79ce4d53#eventlog !_ [...] and the indoor temperature was 22.9°C https://optimistic.etherscan.io/tx/0x4a4f0212daebc90770cb7e74a057ff482c358a9cae33c2e4caf07708c8ac21c0
 1667395549, gm,
  I just arrived at the studio https://optimistic.etherscan.io/tx/0x7d9bc56442735a593de2589fc58d02e6d7a2a66920c8cf3a55289051c2e90a83#eventlog !_ [...] and the light sensor measured 1143.0Lux https://optimistic.etherscan.io/tx/0x2945f235e58281bc2273f3a7b8924db81d0b54fbe9531ddf917b650a72268636
+1667404035,  I just left the studio:
+A performance https://optimistic.etherscan.io/tx/0xc4b4045a5864fa5f89abf2b3dce0aece37950cfe424f538e31df1481a8f87954#eventlog !_ [...] and barometric pressure was at 1028.53hPa https://optimistic.etherscan.io/tx/0x2c71c8c91b0ecd84f164abb2ada213655f36a9243ceb8f783ad81320891ea091
