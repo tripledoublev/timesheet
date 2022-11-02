@@ -91,3 +91,4 @@
  I just arrived at the studio https://optimistic.etherscan.io/tx/0x7d9bc56442735a593de2589fc58d02e6d7a2a66920c8cf3a55289051c2e90a83#eventlog !_ [...] and the light sensor measured 1143.0Lux https://optimistic.etherscan.io/tx/0x2945f235e58281bc2273f3a7b8924db81d0b54fbe9531ddf917b650a72268636
 1667404035,  I just left the studio:
 A performance https://optimistic.etherscan.io/tx/0xc4b4045a5864fa5f89abf2b3dce0aece37950cfe424f538e31df1481a8f87954#eventlog !_ [...] and barometric pressure was at 1028.53hPa https://optimistic.etherscan.io/tx/0x2c71c8c91b0ecd84f164abb2ada213655f36a9243ceb8f783ad81320891ea091
+1667411745,  I just arrived at the studioat the intersection of siesta and group meetings https://optimistic.etherscan.io/tx/0xfdf5e4a2d8fbecd210f32f0d35be1168ed322c028630429e1eb1f256a14f868c#eventlog !_ [...] and the indoor temperature was 21.53°C https://optimistic.etherscan.io/tx/0x1addf7b43ab4bd720a946bfb7523e0141ffd968362b7e951f6b808365fdffd91
