@@ -92,3 +92,5 @@
 Performatively,  I just arrived at the studio https://optimistic.etherscan.io/tx/0xfa68a72a52f1cfdbf73e79bcab4e7f145c4a7550847ee2fbc8108379e1c5537e#eventlog !_ [...] and the humidity levels were at 20.34% https://optimistic.etherscan.io/tx/0x452dbe456940f7e74e9b0758445081c36b780366f91809ced56a5fcb097dfacd
 1667578909, sh log.sh OUT
  I just left the studio https://optimistic.etherscan.io/tx/0x31c868ccc5252e7094a3b7ade0011ce7b3cfddf87241399713fcd5f2a78f3301#eventlog !_ [...] and the light sensor measured 1071.67Lux https://optimistic.etherscan.io/tx/0xddaff21d5f13863be770f9a6fc70818b214affb30c2dac9f338029c1394cbbe7
+1667658104, Proof of presence
+ I just arrived at the studio https://optimistic.etherscan.io/tx/0xba56ca5a1f79c7f606bf70c8389c3877d8743c34c3335fe640243763b8a06e81#eventlog !_ [...] and the light sensor measured 1420.51Lux https://optimistic.etherscan.io/tx/0xd2082f0bf83b6c6be223183597c64fd1a24d44e7d49b3afd37a8fa6e54f88ffb
