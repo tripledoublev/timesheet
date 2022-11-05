@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 myDiv.innerHTML += " was " +
                   dataCollection[j].temp +
                   "\u00B0C, <br /> ";
-                  drawLine(ctx, aStart, [xMultiplier + (xInterval / 2), dataCollection[j].temp * 6 + 305], drawColor, 3);
+                  drawLine(ctx, aStart, [xMultiplier + (xInterval / 2), dataCollection[j].temp * 6 + 305], drawColor, 1);
                   
                 function statementDiv() {
                   // insert if last record is IN or OUT
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                     "&percnt;, <br />";
 
 
-                  drawLine(ctx, xStart, [xMultiplier + (xInterval / 2), dataCollection[j].humi * 7], 'lightblue', 2);
+                  drawLine(ctx, xStart, [xMultiplier + (xInterval / 2), dataCollection[j].humi * 7], 'lightblue', 1);
                 
                   function tickerDiv() {
                     myDiv.innerHTML +=
@@ -192,14 +192,14 @@ document.addEventListener("DOMContentLoaded", async function () {
                             myDiv.appendChild(tempChangePos);
                             tempChangePos.classList.add("warmer");
                             tempChangePos.innerHTML = "warmer";
-                            drawLine(ctx, aStart, [xMultiplier + (xInterval / 3) - 1, dataCollection[j].temp * 6 + 305], "#f31100", 3);
+                            drawLine(ctx, aStart, [xMultiplier + (xInterval / 3) - 1, dataCollection[j].temp * 6 + 305], "#f31100", 1);
                             } else if (Math.sign(tempDiff) === 1) {
                             myDiv.innerHTML +=
                                 tempDiff.toPrecision(3) * 1 + "\u00B0C ";
                             myDiv.appendChild(tempChangeNeg);
                             tempChangeNeg.classList.add("cooler");
                             tempChangeNeg.innerHTML = "cooler";
-                            drawLine(ctx, aStart, [xMultiplier + (xInterval / 2) - 1, dataCollection[j].temp * 6 + 305], "#00bcd4", 3);
+                            drawLine(ctx, aStart, [xMultiplier + (xInterval / 2) - 1, dataCollection[j].temp * 6 + 305], "#00bcd4", 1);
                             }
                             x = xMultiplier;
                             myDiv.innerHTML +=
