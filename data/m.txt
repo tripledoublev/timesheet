@@ -97,3 +97,5 @@ Performatively,  I just arrived at the studio https://optimistic.etherscan.io/tx
 1667666446, I just left the studio https://optimistic.etherscan.io/tx/0xf0f36fe9680e8933e750d3b26bcb67769e37513c962e802c2a46249a0d92cf4b#eventlog !_ [...] and the light sensor measured 771.23Lux https://optimistic.etherscan.io/tx/0x204232a1aa03a1a6a78ca63c8b83b6727b25be34d8441cbaebf07fd378bf6574
 1667845756, *Optimystic,
  I just arrived at the studio https://optimistic.etherscan.io/tx/0x9ee73ee0516ebf38f59e3c803f0eccc5610754d6068ff001c956e0ee0dd36c25#eventlog !_ [...] and the indoor temperature was 20.99°C https://optimistic.etherscan.io/tx/0x900769a09225e45c740b12eb342f4a88e86ddb1e0b2448b50475d994b38fb058
+1667859694, Without a doubt,
+ I just left the studio https://optimistic.etherscan.io/tx/0x934940c0397132c69cdf457096b7657b36ec53cf40fba417257dd0100a5b5021#eventlog !_ [...] and the indoor temperature was 22.13°C https://optimistic.etherscan.io/tx/0xfc20222bcf4c2f896f6562f820bfe90618d9d50dd79b239ed1ea286e9804a8b5
