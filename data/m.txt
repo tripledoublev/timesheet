@@ -99,3 +99,5 @@ Performatively,  I just arrived at the studio https://optimistic.etherscan.io/tx
  I just arrived at the studio https://optimistic.etherscan.io/tx/0x9ee73ee0516ebf38f59e3c803f0eccc5610754d6068ff001c956e0ee0dd36c25#eventlog !_ [...] and the indoor temperature was 20.99°C https://optimistic.etherscan.io/tx/0x900769a09225e45c740b12eb342f4a88e86ddb1e0b2448b50475d994b38fb058
 1667859694, Without a doubt,
  I just left the studio https://optimistic.etherscan.io/tx/0x934940c0397132c69cdf457096b7657b36ec53cf40fba417257dd0100a5b5021#eventlog !_ [...] and the indoor temperature was 22.13°C https://optimistic.etherscan.io/tx/0xfc20222bcf4c2f896f6562f820bfe90618d9d50dd79b239ed1ea286e9804a8b5
+1667939976, Indiscreetly,
+ I just arrived at the studio amazed by the beams of light bouncing off the desk. https://optimistic.etherscan.io/tx/0x137ae036c027de53892edd7b5fc1504bb37c2102f4a06a9b1864632cb06246cb#eventlog !_ [...] and barometric pressure was at 1037.34hPa https://optimistic.etherscan.io/tx/0xb5c1dad704e4e7d65499db1ec70eff2ea64d25c77c01bff601fad94f99e6b899
