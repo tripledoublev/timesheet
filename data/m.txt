@@ -104,3 +104,5 @@ Performatively,  I just arrived at the studio https://optimistic.etherscan.io/tx
 1667948717, blockchained (trans)actions, I just left the studio- setting the decentralised record straight https://optimistic.etherscan.io/tx/0xd83b2b9d9f5597c8dd026dd2fb5ab2be229c699a55dbc54dcabe09b42d84eef4#eventlog !_ [...] and the light sensor measured 81.44Lux https://optimistic.etherscan.io/tx/0xc5212dad92b9c3d1a8d430f80d104e63f2123ac5ec072dbd48918621991241ae
 1668016036, Inspired,
  I just arrived at the studio. It's a sunny/cold day https://optimistic.etherscan.io/tx/0x4895473a756aa5d5003507cbc131fdcec6b5504f87879a68ba40b3cdb7db3f17#eventlog !_ [...] and the indoor temperature was 17.26°C https://optimistic.etherscan.io/tx/0x14fca10015a1bbbe9569f30964fd21dfa59ccd4a1c6587fe4ae88c715cde3be7
+1668030704, Ecologies, technologies,
+ I just left the studio https://optimistic.etherscan.io/tx/0xec8df500a16880143358af22db8e955d111a6fdf5a979cdbde49787ea6e33fa9#eventlog !_ [...] and the indoor temperature was 19.04°C https://optimistic.etherscan.io/tx/0xd905b4b6c17c1665cca84901d17ea8352fb5665ebb2aa65001b6d0aadb168aff
