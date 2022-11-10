@@ -106,3 +106,5 @@ Performatively,  I just arrived at the studio https://optimistic.etherscan.io/tx
  I just arrived at the studio. It's a sunny/cold day https://optimistic.etherscan.io/tx/0x4895473a756aa5d5003507cbc131fdcec6b5504f87879a68ba40b3cdb7db3f17#eventlog !_ [...] and the indoor temperature was 17.26°C https://optimistic.etherscan.io/tx/0x14fca10015a1bbbe9569f30964fd21dfa59ccd4a1c6587fe4ae88c715cde3be7
 1668030704, Ecologies, technologies,
  I just left the studio https://optimistic.etherscan.io/tx/0xec8df500a16880143358af22db8e955d111a6fdf5a979cdbde49787ea6e33fa9#eventlog !_ [...] and the indoor temperature was 19.04°C https://optimistic.etherscan.io/tx/0xd905b4b6c17c1665cca84901d17ea8352fb5665ebb2aa65001b6d0aadb168aff
+1668086956, Good morning,
+ I just arrived at the studio https://optimistic.etherscan.io/tx/0x2250946cf182c367a439201f105f47fd2eac3fc1c93c91e769a822ca3f234591#eventlog !_ [...] and barometric pressure was at 1019.74hPa https://optimistic.etherscan.io/tx/0x17e2174e8388f814fac571843a88baa5ea3bcd94149f59b997c9bd3f191a0ad6
