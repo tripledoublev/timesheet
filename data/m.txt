@@ -115,3 +115,7 @@ Performatively,  I just arrived at the studio https://optimistic.etherscan.io/tx
 -Fetch environmental conditions
 -Update smart contracts
 -Tweet link to transaction I just arrived at the studio https://optimistic.etherscan.io/tx/0x05cb77e47de7b9060e8572538668a5d03e4a11ea12e8c6bdddfce1e7f8f00c5f#eventlog !_ [...] and the indoor temperature was 19.44°C https://optimistic.etherscan.io/tx/0xb0ed918f450760689db34479a2a2d9631c90a4c17b833556efb6c45caf75bccf
+1668279776, Logging out:
+Weather report at https://vincent.charlebois.info/weather/report.html?654
+The studio is only one of many places where art gets made.
+ I just left the studio https://optimistic.etherscan.io/tx/0x1bfb4ef154440152453a919d1334d2793e4ccec5ba647f47d01f2ee27cad5752#eventlog !_ [...] and barometric pressure was at 999.6hPa https://optimistic.etherscan.io/tx/0xe312488dde5c076f9f542c4faf4092987e77b5e49a01bb4ef517d57582404fb1
