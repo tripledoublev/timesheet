@@ -119,3 +119,5 @@ Performatively,  I just arrived at the studio https://optimistic.etherscan.io/tx
 Weather report at https://vincent.charlebois.info/weather/report.html?654
 The studio is only one of many places where art gets made.
  I just left the studio https://optimistic.etherscan.io/tx/0x1bfb4ef154440152453a919d1334d2793e4ccec5ba647f47d01f2ee27cad5752#eventlog !_ [...] and barometric pressure was at 999.6hPa https://optimistic.etherscan.io/tx/0xe312488dde5c076f9f542c4faf4092987e77b5e49a01bb4ef517d57582404fb1
+1668441396, Geolocated signals;
+ I just arrived at the studio https://optimistic.etherscan.io/tx/0xf348d6b8acad5677612b42d680af33edc337e59f73d97638989172179f96ea44#eventlog !_ [...] and the light sensor measured 1032.35Lux https://optimistic.etherscan.io/tx/0x35a35faf884c7ff0606bc49b1065e21c41f3dde9e911405ebfc66c598f9b896c
