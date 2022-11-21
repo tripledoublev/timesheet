@@ -128,3 +128,5 @@ The studio is only one of many places where art gets made.
 1668794279, 'Presence is not a binary concept but a directional one, with greater or lesser degrees possible.' I just arrived at the studio https://optimistic.etherscan.io/tx/0x0b33c5e803abde8e88712bb0bc12685b56624f386cd9c88effdc39e23f19297e#eventlog !_ [...] and the indoor temperature was 19.9°C https://optimistic.etherscan.io/tx/0x0df90df3e14c4e4b4bf191034442e68c397ee78dbc537ebf9a76533cd6d7f2b5
 1668805464, Transactional aesthetics,
  I just left the studio https://optimistic.etherscan.io/tx/0x34547344a2cb6972ecc01637f30bfa19e6788c4307919eed13f21a4122856a13#eventlog !_ [...] and barometric pressure was at 1011.79hPa https://optimistic.etherscan.io/tx/0xd0dd759ee405f920a7d9bb405a7e356ba99bdfc56c09a7f36c50981b87d6022f
+1669046775, Feels like -8 degrees C outside,
+ I just arrived at the studio https://optimistic.etherscan.io/tx/0x046cf9c1e016e379c32a7b7fc8b9486d091b7e43d663076b18657a60619a9b09#eventlog !_ [...] and barometric pressure was at 1019.85hPa https://optimistic.etherscan.io/tx/0x6cd9a1fe7f940c0e06f261e98709a22bd3094b18b942b6c3404b1370a853ce9a
