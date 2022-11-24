@@ -14,11 +14,11 @@ body {
 /* defines styles for div */
 div.textColor {
   flex: 1 1 1;
-  font-size: calc(0.4vw + 0.4vh);
+  font-size: calc(0.3vw + 0.3vh);
   word-wrap: break-word;
   border-radius: 2rem;
   margin: 0vh 0.5vw 0vh 0.5vw;
-  padding: 16px 8px;
+  padding: 8px 4px;
   text-align: center;
   transition: border-radius 2s ease-in-out 0.123s;
 }
@@ -90,7 +90,6 @@ div.consecutivebox {
   justify-content: center;
 }
 
-,
 #page-title a {
   color: black;
 }
@@ -204,7 +203,7 @@ h1 {
     width: 180vw;
   }
   .alldays div {
-    margin:1.2vw 1.2vh
+    margin:0.9vw 0.9vh
   }
 }
 
@@ -214,6 +213,6 @@ h1 {
     width: 210vw;
   }
   .alldays div {
-    margin:0.82vw 0.82vh
+    margin:0.7vw 0.7vh
   }
 }
