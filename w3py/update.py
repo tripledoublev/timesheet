@@ -5,7 +5,6 @@ from eth_account import Account
 import os
 import sys
 import time
-import random
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -53,27 +52,15 @@ signed_tx = w3.eth.account.sign_transaction(transaction, key)
 txn_hash = w3.eth.send_raw_transaction(signed_tx.rawTransaction)
 txn_receipt = w3.eth.wait_for_transaction_receipt(txn_hash)
 
-# generate random number to select which information will be tweeted
-i = random.randint(1,4)
-
 # degree sign for tweet
 degree_sign = u"\N{DEGREE SIGN}"
 
-# generate string for the statement
+# generate strings for the statement
+enviroStatement = "[...] the indoor temperature was "
+eStatement2 = 'C\nthe humidity levels were at '
+eSta3 = '%\nthe light sensor measured '
+eSta4 = 'Lux\nand barometric pressure was at '
+eSta5 = 'hPa https://optimistic.etherscan.io/tx/'
+print(enviroStatement + (str(round(sTemp * 0.01, 2))) + str(degree_sign) + eStatement2 + str(round(sHumi * 0.01, 2)) + eSta3 + str(round(sLux * 0.01, 2)) + eSta4 + str(round(sPress * 0.01, 2)) + eSta5 + txn_receipt.transactionHash.hex())
 
-if i == 1:
-    enviroStatement = "[...] and the indoor temperature was "
-    print(enviroStatement + (str(round(sTemp * 0.01, 2))) + str(degree_sign) + 'C https://optimistic.etherscan.io/tx/' + txn_receipt.transactionHash.hex())
-
-elif i == 2:
-    enviroStatement = "[...] and the humidity levels were at "
-    print(enviroStatement + str(round(sHumi * 0.01, 2)) + '% https://optimistic.etherscan.io/tx/' + txn_receipt.transactionHash.hex())
-
-elif i == 3:
-    enviroStatement = "[...] and the light sensor measured "
-    print(enviroStatement + str(round(sLux * 0.01, 2)) + 'Lux https://optimistic.etherscan.io/tx/' + txn_receipt.transactionHash.hex())
-
-elif i == 4:
-    enviroStatement = "[...] and barometric pressure was at "
-    print(enviroStatement + str(round(sPress * 0.01, 2)) + 'hPa https://optimistic.etherscan.io/tx/' + txn_receipt.transactionHash.hex())
 
