@@ -138,3 +138,8 @@ The studio is only one of many places where art gets made.
 1669330977,  I just arrived at the studio- I needed an HDMI cable. https://optimistic.etherscan.io/tx/0xabdab0341d5eb7ef690cb7477e367877aec3e11bd9f314f313c626533b09e326#eventlog !_ [...] and the indoor temperature was 19.66°C https://optimistic.etherscan.io/tx/0x40b16154b282a5865c42a51f42aca10202fdd40343f2838f5d8c18cd86b0fd6d
 1669331262,  I just left the studio. This might have been my shortest *visit* https://optimistic.etherscan.io/tx/0x8cff31ff3541498e196bf0fec8dd991540082ab33831a8a726db85d26e173a85#eventlog !_ [...] and barometric pressure was at 1020.31hPa https://optimistic.etherscan.io/tx/0xc33c7bfe14bab7e7c1399b6d6857e3a817b99be1e909041f7f3e4fff2f381041
 1669413322, I just arrived at the studio https://optimistic.etherscan.io/tx/0x92f86ebd8070a408483c54617862bba2ca9569b46538251f90c9dc86aae7a99a#eventlog !_ [...] and barometric pressure was at 1004.69hPa https://optimistic.etherscan.io/tx/0x65e7461d97253137e450f3b71cc5fdce34fba371c3bf24492fe0e428dc934502
+1669420928, As a durational performance,
+ I just left the studio https://optimistic.etherscan.io/tx/0x03b01d4dac32eff239b3f8e1ca44935245b1509a071d92ddca1b99ff8785f27f#eventlog !_ [...] the indoor temperature was 19.94°C
+the humidity levels were at 19.61%
+the light sensor measured 1.35Lux
+and barometric pressure was at 1006.94hPa https://optimistic.etherscan.io/tx/0x1e7eb1fffce1f54b4494a224e447579bb4fe02157c08bf9a4b485882255249e5
