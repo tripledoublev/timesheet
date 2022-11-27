@@ -120,12 +120,12 @@ document.addEventListener("DOMContentLoaded", async function () {
       // statement from blockchain
       myDiv.innerHTML = statement + ".";
       function tickerDiv() {
-        // add&remove class to display buttons and ticker
-        promptDiv.classList.remove("no-dis");
-        promptDiv.classList.add("teleprompt");                  
+        // add&remove class to display elements sequentially 
+        weatherDiv.classList.remove("no-dis");
+        weatherDiv.classList.add("svgcontainer");  
         function svgData() {
-          weatherDiv.classList.remove("no-dis");
-          weatherDiv.classList.add("svgcontainer");     
+          promptDiv.classList.remove("no-dis");
+          promptDiv.classList.add("teleprompt");     
           function buttonDiv1() {
             linkDiv1.classList.remove("no-dis");
             linkDiv1.classList.add("consecutive-link");
@@ -156,9 +156,9 @@ document.addEventListener("DOMContentLoaded", async function () {
             }
             setTimeout(buttonDiv2, 1111);
           }
-          setTimeout(buttonDiv1, 6666);   
+          setTimeout(buttonDiv1, 9999);   
         }
-        setTimeout(svgData, 1111);
+        setTimeout(svgData, 3333);
       }
       setTimeout(tickerDiv, 1111);
     }
