@@ -5,6 +5,7 @@ body {
 body {
   margin: 0;
   background-color: #111111;
+  display:flex;
 }
 a {
   color:white;
@@ -191,7 +192,7 @@ a {
   /* Starting position */
   transform: translateX(100%);
   /* Apply animation to this element */
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 52.8s linear infinite;
 }
 /* Move it (define the animation) */
 @keyframes scroll-left {
@@ -219,7 +220,7 @@ a {
 }
 
 .rotate {
-animation: spin 24s infinite linear;
+animation: spin 26.4s infinite linear;
 height: 50vw;
 width: 50vw;
 max-width:100vh;
