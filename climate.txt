@@ -217,3 +217,4 @@ IN Temp:19.66 Humi:19.5 Lux:61.16 Pressure:1020.35 Time:1669330920
 OUT Temp:20.14 Humi:19.37 Lux:2.32 Pressure:1020.31 Time:1669331205
 IN Temp:18.46 Humi:19.96 Lux:3.77 Pressure:1004.69 Time:1669413265
 OUT Temp:19.94 Humi:19.61 Lux:1.35 Pressure:1006.94 Time:1669420870
+IN Temp:20.21 Humi:19.21 Lux:54.18 Pressure:1014.15 Time:1669677010

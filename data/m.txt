@@ -143,3 +143,7 @@ The studio is only one of many places where art gets made.
 the humidity levels were at 19.61%
 the light sensor measured 1.35Lux
 and barometric pressure was at 1006.94hPa https://optimistic.etherscan.io/tx/0x1e7eb1fffce1f54b4494a224e447579bb4fe02157c08bf9a4b485882255249e5
+1669677068,  I just arrived at the studio. https://vincent.charlebois.info/presence Last night, I created the dashboard's french translation. https://optimistic.etherscan.io/tx/0x7760f87050ff1fdca263ca86c32f22ca007894c797f7d3dc82c49c09b220d8af#eventlog !_ [...] the indoor temperature was 20.21°C
+the humidity levels were at 19.21%
+the light sensor measured 54.18Lux
+and barometric pressure was at 1014.15hPa https://optimistic.etherscan.io/tx/0x1d3bdb8d0a183d3dd35abd32f7e4f607b2ef9bb4682ab50b18f20ceced3c8fdf
