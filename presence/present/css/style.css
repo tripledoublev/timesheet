@@ -1,0 +1,48 @@
+html,
+body {
+  height: 100vh;
+}
+body {
+  margin: 0;
+  background-color: #111111;
+}
+.flex-container {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111111;
+}
+.row {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  padding: 5px;
+  color: white;
+  text-align: center;
+}
+
+#textcontainer {
+  font-family: sans-serif;
+  flex-basis: max-content;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: calc(6.66vw + 6.66vh);
+}
+@media (max-width: 763px) {
+  .bottom-left {
+    font-size: calc(6vw + 6.5vh) !important;
+  }
+}

@@ -144,7 +144,7 @@ a {
   }
   .blockchain-link a,
   .consecutive-link a,
-  .english-link a {
+  .english-link a  {
     border: 2px solid white;
     padding: 10px 18px;
   }

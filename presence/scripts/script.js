@@ -86,11 +86,11 @@ document.addEventListener("DOMContentLoaded", async function () {
   const linkDiv4 = document.getElementById("link4");
   const linkDiv5 = document.getElementById("link5");
 
+
   const linkDiv1b = document.getElementById("link1b");
   const linkDiv2b = document.getElementById("link2b");
   const linkDiv3b = document.getElementById("link3b");
   const linkDiv4b = document.getElementById("link4b");
-
   
   const svgTxt = document.getElementById("changeText")
   const weatherDiv = document.getElementById("svg-container");
@@ -121,12 +121,16 @@ document.addEventListener("DOMContentLoaded", async function () {
   
     function statementDiv() {
       // statement from blockchain
-      myDiv.innerHTML = statement + ".";
-      function tickerDiv() {
+      if (statement == "I am at the studio") {
+        myDiv.innerHTML = "je suis &#224; l'atelier" + ".";
+      } else {
+        myDiv.innerHTML = "je ne suis pas &#224; l'atelier" + "."
+      } 
+      function svgData() {
         // add&remove class to display elements sequentially 
         weatherDiv.classList.remove("no-dis");
         weatherDiv.classList.add("svgcontainer");  
-        function svgData() {
+        function tickerDiv() {
           promptDiv.classList.remove("no-dis");
           promptDiv.classList.add("teleprompt");     
           function buttonDiv1() {
@@ -168,18 +172,18 @@ document.addEventListener("DOMContentLoaded", async function () {
           }
           setTimeout(buttonDiv1, 9999);   
         }
-        setTimeout(svgData, 4444);
+        setTimeout(tickerDiv, 4444);
       }
-      setTimeout(tickerDiv, 2222);
+      setTimeout(svgData, 2222);
     }
     setTimeout(statementDiv, 2222);
     myDiv.classList.remove("bottom-left");
     myDiv.classList.add("flex-item");
-    myDiv.innerHTML = "At this moment...";
+    myDiv.innerHTML = "&#192; ce moment pr&#233;cis,";
   }
 
   setTimeout(updateDiv, 3333);
-  var myRequest = new Request("present.txt");
+  var myRequest = new Request("../am-i/present.txt");
   fetch(myRequest).then(function (response) {
     return response.text().then(function (text) {
       const txt_lines = text.split(/\r?\n/);
@@ -190,52 +194,52 @@ document.addEventListener("DOMContentLoaded", async function () {
       const past = temperature[0];
       const change = temperature[1];
       console.log(change)
-      svgTxt['innerText' in svgTxt ? "innerText" : "textContent"] = "Indoor Temperature " + sTemp.toFixed(1) + "\u00B0C, Humidity " + sHumi.toFixed(2) + "%, Luminosity " + sLux.toFixed(1) + "lux, Barometric Pressure " + sPress.toFixed(1) + "hPa at " + timestmp + " on " + datestmp[1];
+      svgTxt['innerText' in svgTxt ? "innerText" : "textContent"] = "Température intérieur " + sTemp.toFixed(1) + "\u00B0C, Humidité " + sHumi.toFixed(2) + "%, Luminosité " + sLux.toFixed(1) + "lux, Pression barométrique " + sPress.toFixed(1) + "hPa à " + timestmp + " le " + datestmp[1];
       if (statement == "I am at the studio") {
         myDiv.classList.add("present");
         if (Math.sign(change) === -1) {
           otherDiv.innerHTML =
-            "Indoor temperature was " +
+            "La temp&#233;rature int&#233;rieure &#233;tait de " +
             past +
-            "\u00B0C at " +
+            "\u00B0C &#224;	" +
             timestmp +
-            " when I arrived";
+            " lorsque je suis arriv&#233;";
           otherDiv.innerHTML += " \u2014 " + change * -1 + "\u00B0C ";
           otherDiv.appendChild(tempChange);
           tempChange.classList.add("warmer");
-          tempChange.innerHTML = "warmer";
-          otherDiv.innerHTML += " than last recorded temperature";
+          tempChange.innerHTML = "au-dessus";
+          otherDiv.innerHTML += " de la derni&#232;re temp&#233;rature enregistr&#233;e";
           otherDiv.innerHTML +=
-            " \u2014 Get the <a href='https://vincent.charlebois.info/weather'>full weather report</a>.";
+            " \u2014 Un <a href='https://vincent.charlebois.info/weather'>relev&#233; m&#233;t&#233;o complet</a> est disponible.";
           otherDiv.innerHTML +=
             "                                                       ";
         } else if (Math.sign(change) === 1) {
           otherDiv.innerHTML =
-            "Indoor temperature was " +
+            "La temp&#233;rature int&#233;rieure &#233;tait de " +
             past +
-            "\u00B0C at " +
+            "\u00B0C &#224;	" +
             timestmp +
-            " when I arrived";
+            " quand je suis arriv&#233;e";
           otherDiv.innerHTML += " \u2014 " + change * 1 + "\u00B0C ";
           otherDiv.appendChild(tempChange);
           tempChange.classList.add("cooler");
-          tempChange.innerHTML = "cooler";
-          otherDiv.innerHTML += " than last recorded temperature";
+          tempChange.innerHTML = "en dessous ";
+          otherDiv.innerHTML += " de la derni&#232;re mesure de temp&#233;rature";
           otherDiv.innerHTML +=
-            " \u2014 Get updates on <a href='https://twitter.com/vncntxyz'>twitter [@vncntxyz]</a>";
+            " \u2014 Visitez <a href='https://twitter.com/vncntxyz'>twitter [@vncntxyz]</a> pour des mises &#224;	jour automatis&#233;es";
           otherDiv.innerHTML +=
             "                                                       ";
         } else if (change === '0.0') {
           otherDiv.innerHTML =
-          "Indoor temperature was " +
+          "La temp&#233;rature int&#233;rieure &#233;tait de " +
           past +
-          "\u00B0C at " +
+          "\u00B0C &#224;	" +
           timestmp +
-          " when I arrived";
+          " quand je suis arriv&#233;";
         otherDiv.innerHTML += " \u2014 ";
-        otherDiv.innerHTML += "Exactly the same as the last recorded temperature";
+        otherDiv.innerHTML += "Exactement la même temp&#233;rature que la mesure pr&#233;c&#233;dente";
         otherDiv.innerHTML +=
-          " \u2014 Get updates on <a href='https://twitter.com/vncntxyz'> twitter </a>";
+          " \u2014 Pour des mises &#224;	jour automatiques, suivez-moi sur <a href='https://twitter.com/vncntxyz'> twitter </a>";
         otherDiv.innerHTML +=
           "                                                       ";
         }
@@ -243,35 +247,35 @@ document.addEventListener("DOMContentLoaded", async function () {
         myDiv.classList.add("absent");
         if (Math.sign(change) === -1) {
           otherDiv.innerHTML =
-            "Indoor temperature was " + past + "\u00B0C when I left at " + timestmp + " on " + datestmp[1];
+            "La temp&#233;rature int&#233;rieure &#233;tait de " + past + "\u00B0C lorsque j'ai quitt&#233; &#224;	" + timestmp + " le " + datestmp[1];
           otherDiv.innerHTML += " \u2014 " + change * -1 + "\u00B0C ";
           otherDiv.appendChild(tempChange);
           tempChange.classList.add("warmer");
-          tempChange.innerHTML = "warmer";
-          otherDiv.innerHTML += " than when I arrived";
+          tempChange.innerHTML = "plus chaud";
+          otherDiv.innerHTML += " que lorsque je suis arriv&#233;";
           otherDiv.innerHTML +=
-            " \u2014 The studio is only one of many places where art gets made.";
+            " \u2014 Le studio n'est qu'un des nombreux endroits où l'art est cr&#233;&#233;.";
           otherDiv.innerHTML +=
             "                                                       ";
         } else if (Math.sign(change) === 1) {
           otherDiv.innerHTML =
-            "Indoor temperature was " + past + "\u00B0C when I left at " + timestmp + " on " + datestmp[1];
+            "La temp&#233;rature int&#233;rieure &#233;tait de " + past + "\u00B0C lorsque j'ai quitt&#233; &#224;	" + timestmp + " le " + datestmp[1];
           otherDiv.innerHTML += " \u2014 " + change * 1 + "\u00B0C ";
           otherDiv.appendChild(tempChange);
           tempChange.classList.add("cooler");
-          tempChange.innerHTML = "cooler";
-          otherDiv.innerHTML += " than when I arrived";
+          tempChange.innerHTML = "en dessous";
+          otherDiv.innerHTML += " de la temp&#233;rature enregistr&#233;e &#224; mon arriv&#233;";
           otherDiv.innerHTML +=
-            " \u2014 The studio is only one of many places where art gets made.";
+            " \u2014 Le studio n'est qu'un des nombreux endroits où l'art est cr&#233;&#233;.";
           otherDiv.innerHTML +=
             "                                                       ";
         } else if (change === '0.0') {
           otherDiv.innerHTML =
-          "Indoor temperature was " + past + "\u00B0C when I left at " + timestmp + " on " + datestmp[1];
+          "La temp&#233;rature int&#233;rieure &#233;tait de " + past + "\u00B0C lorsque j'ai quitt&#233; &#224;	" + timestmp + " le " + datestmp[1];
         otherDiv.innerHTML += " \u2014 ";
-        otherDiv.innerHTML += "Exactly the same as when I arrived";
+        otherDiv.innerHTML += "Exactement la même temp&#233;rature qu'&#233; mon arriv&#233;";
         otherDiv.innerHTML +=
-          " \u2014 The studio is only one of many places where art gets made.";
+          " \u2014 Le studio n'est qu'un des nombreux endroits où l'art est cr&#233;&#233;.";
         otherDiv.innerHTML +=
           "                                                       ";
         }
