@@ -6,9 +6,11 @@ body {
   margin: 0;
   background-color: #111111;
   display:flex;
+  overflow: hidden;
 }
 a {
   color:white;
+  transition: all 0.5s ease-in-out;
 }
 .flex-container {
   height: 100%;
@@ -42,13 +44,17 @@ a {
   justify-content: center;
 }
 .row2 {
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   align-items: center;
+}
+
+.row2 a {
+  text-align: center;
 }
 
 .flex-item {
@@ -61,6 +67,10 @@ a {
   font-weight: 100;
 }
 
+.text-stroke {
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 2px;
+}
 #textcontainer {
   font-family: sans-serif;
   flex-basis: max-content;
@@ -104,7 +114,7 @@ a {
 .consecutive-link a,
 .weather-link a,
 .english-link a {
-  font-size: calc(1.75vw + 1.05vh);
+  font-size: calc(1.05vw + 1.05vh);
   color: white;
   text-decoration: none;
   border: 3px solid white;
@@ -120,7 +130,6 @@ a {
   color: black;
   background-color: white;
   border-radius: 28px;
-  transition: all 0.5s ease-in-out;
 }
 .blockchain-link a,
 .consecutive-link a,
@@ -136,7 +145,6 @@ a {
   text-decoration: none;
   padding-left: 1rem;
   padding-right: 1rem;
-  transition: all 0.5s ease-in-out;
 }
 
 .my-link a {
@@ -174,13 +182,13 @@ a {
 
 .teleprompt {
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
   left: 0;
   width: 100%;
   height: auto;
 }
 .teleprompt .flex-item {
-  font-size: calc(2.05vw + 2.15vh);
+  font-size: calc(1.05vw + 1.15vh);
   float: left;
   white-space: nowrap;
 }
@@ -202,7 +210,7 @@ a {
   /* Starting position */
   transform: translateX(100%);
   /* Apply animation to this element */
-  animation: scroll-left 42s linear infinite;
+  animation: scroll-left 39s linear infinite;
 }
 /* Move it (define the animation) */
 @keyframes scroll-left {
@@ -210,7 +218,7 @@ a {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-300%);
+    transform: translateX(-200%);
   }
 }
 
@@ -220,7 +228,7 @@ a {
       transform: translateX(100%);
     }
     100% {
-      transform: translateX(-555%);
+      transform: translateX(-444%);
     }
   }
 }

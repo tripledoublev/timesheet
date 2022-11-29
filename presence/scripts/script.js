@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       } 
       function svgData() {
         // add&remove class to display elements sequentially 
+        myDiv.classList.add("text-stroke");
         weatherDiv.classList.remove("no-dis");
         weatherDiv.classList.add("svgcontainer");  
         function tickerDiv() {
