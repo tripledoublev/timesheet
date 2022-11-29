@@ -231,8 +231,8 @@ a {
 
 .rotate {
 animation: spin 26.4s infinite linear;
-height: 50vmin;
-width: 50vmin;
+height: 100vmin;
+width: 100vmin;
 max-width:100vmin;
 max-height:100vmin;
 }
