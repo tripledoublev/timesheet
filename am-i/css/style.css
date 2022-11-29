@@ -67,9 +67,13 @@ a {
   z-index: 1024;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .bottom-left {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   left: 20px;
   color: white;
   font-size: calc(4.5vw + 4.5vh);
@@ -227,10 +231,10 @@ a {
 
 .rotate {
 animation: spin 26.4s infinite linear;
-height: 50vw;
-width: 50vw;
-max-width:100vh;
-max-height:100vw;
+height: 50vmin;
+width: 50vmin;
+max-width:100vmin;
+max-height:100vmin;
 }
 @keyframes spin {
   from {transform:rotate(0deg);}
@@ -239,8 +243,8 @@ max-height:100vw;
 
 @media (max-width: 763px) {
   .rotate {
-    width: 100vw;
-    height:100vw;
+    width: 100vmin;
+    height:100vmin;
   }
   text {
     font-size: calc(1.75vw + 1.75vh) !important;
@@ -248,13 +252,13 @@ max-height:100vw;
 }
 @media (min-width:764px) and (max-width:963px) {
   .rotate {
-    width: 90vw;
-    height:90vw;
+    width: 90vmin;
+    height:90vmin;
   }
 }
 
 .svgcontainer {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: grid;
   overflow: hidden;

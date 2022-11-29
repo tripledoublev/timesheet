@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   
     function statementDiv() {
       // statement from blockchain
+      myDiv.classList.add("uppercase");
       if (statement == "I am at the studio") {
         myDiv.innerHTML = "je suis &#224; l'atelier" + ".";
       } else {
