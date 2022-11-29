@@ -246,10 +246,10 @@ max-height:100vw;
     font-size: calc(1.75vw + 1.75vh) !important;
   }
 }
-@media (max-width:963px) {
+@media (min-width:764px) and (max-width:963px) {
   .rotate {
-    width: 80vw;
-    height:80vw;
+    width: 90vw;
+    height:90vw;
   }
 }
 
