@@ -40,7 +40,7 @@ div.textColor {
   text-decoration: none;
   font-weight: bold;
   font-family: Helvetica, sans-serif;
-  font-size: calc(1.2vw + 1.2vh);
+  font-size: calc(1vw + 1vh);
 }
 
 .indexbox .textColor,
