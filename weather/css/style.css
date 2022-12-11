@@ -193,11 +193,11 @@ a:focus-visible {
 }
 
 canvas {
-  width: 100vw;
+  width: 80vw;
   height: 100vh;
   z-index: 86;
-  left: 0;
-  top: 0;
+  left: 4%;
+  top: 18%;
   position: absolute;
 }
 
