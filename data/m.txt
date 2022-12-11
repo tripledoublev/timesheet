@@ -201,3 +201,7 @@ and barometric pressure was at 1031.9hPa https://optimistic.etherscan.io/tx/0x07
 the humidity levels were at 19.65%
 the light sensor measured 889.18Lux
 and barometric pressure was at 1030.99hPa https://optimistic.etherscan.io/tx/0x6e28ee980efbd96a25c0751cd6fe0ab74b8692c4baf6756f48f50d88105dfc0e
+1670786549, I run a bash scrip that acknowledges my presence and fetches current weather data. web3.py brings this information on Optimism. I just arrived at the studio https://optimistic.etherscan.io/tx/0x4682a950d07fa16c051d74678abf16482b2ab0dd8fb7965a8c39d91f58a16562#eventlog !_ [...] the indoor temperature was 17.65°C
+the humidity levels were at 13.12%
+the light sensor measured 419.45Lux
+and barometric pressure was at 1023.26hPa https://optimistic.etherscan.io/tx/0x10164d0f3545fd74bcb5eb5c7ecaa0c54b72b06ddeefb8bea6b6477da9a22dc0
