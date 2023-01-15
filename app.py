@@ -96,8 +96,8 @@ else:
         else:    
             #print("////")
             #print("Logging " + status)
-            # !! used to add a new line but it seems to be working without it
-            #txt_file.write("\n")
+            # !! what is up with extra new lines
+            txt_file.write("\n")
             # and write to file
             txt_file.write(status + ', ' + str(timeNow) + ', ' + str(dateNow))
             # and notify user
