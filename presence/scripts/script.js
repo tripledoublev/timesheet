@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       const past = temperature[0];
       const change = temperature[1];
       console.log(change)
-      svgTxt['innerText' in svgTxt ? "innerText" : "textContent"] = "Température intérieur " + sTemp.toFixed(1) + "\u00B0C, Humidité " + sHumi.toFixed(2) + "%, Luminosité " + sLux.toFixed(1) + "lux, Pression barométrique " + sPress.toFixed(1) + "hPa à " + timestmp + " le " + datestmp[1];
+      svgTxt['innerText' in svgTxt ? "innerText" : "textContent"] = "Température intérieure " + sTemp.toFixed(1) + "\u00B0C, Humidité " + sHumi.toFixed(2) + "%, Luminosité " + sLux.toFixed(1) + "lux, Pression barométrique " + sPress.toFixed(1) + "hPa à " + timestmp + " le " + datestmp[1];
       if (statement == "I am at the studio") {
         myDiv.classList.add("present");
         if (Math.sign(change) === -1) {
