@@ -33,7 +33,9 @@ div.textColor {
 .indexbox > .textColor {
   margin: 0.5vh 0.5vw 0.5vh 0.5vw;
 }
-
+.indexbox .textColor a {
+  padding:0.5rem;
+}
 .textColor a,
 #page-title a {
   padding: 1rem 2rem 1rem 2rem;
