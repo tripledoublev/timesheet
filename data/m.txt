@@ -364,3 +364,7 @@ and barometric pressure was at 1015.11hPa https://optimistic.etherscan.io/tx/0x3
   File "/home/pi/.local/lib/python3.7/site-packages/web3/manager.py", line 171, in formatted_response
     raise ValueError(response["error"])
 ValueError: {'code': -32000, 'message': 'invalid transaction: nonce too low'} !_ 
+1674520411, Inscribing my presence on a decentralised clock I just arrived at the studio https://optimistic.etherscan.io/tx/0xed09749d60f757d81af6c73f6e046254d8ef6899636b821a7649967b7ab399e3#eventlog !_ [...] the indoor temperature was 18.14°C
+the humidity levels were at 19.02%
+the light sensor measured 80.55Lux
+and barometric pressure was at 1007.26hPa https://optimistic.etherscan.io/tx/0x13b201e237b1417d902e8aea13e59c2482891e76aa4783d98ce9569979ef4ca6
