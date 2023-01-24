@@ -368,3 +368,7 @@ ValueError: {'code': -32000, 'message': 'invalid transaction: nonce too low'} !_
 the humidity levels were at 19.02%
 the light sensor measured 80.55Lux
 and barometric pressure was at 1007.26hPa https://optimistic.etherscan.io/tx/0x13b201e237b1417d902e8aea13e59c2482891e76aa4783d98ce9569979ef4ca6
+1674521535, Redefining presence. I just left the studio https://optimistic.etherscan.io/tx/0x21ee68573f9fc9491efb015872b0b5671bb93399a297eaa601b05c57615c9db3#eventlog !_ [...] the indoor temperature was 18.46°C
+the humidity levels were at 19.82%
+the light sensor measured 64.26Lux
+and barometric pressure was at 1007.35hPa https://optimistic.etherscan.io/tx/0x3176ed0f19e40dbf49f2bc2f73e8eab526c2c9cdcd0c8b4b792920ff7ba59315
