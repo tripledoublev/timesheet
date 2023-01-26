@@ -376,3 +376,17 @@ and barometric pressure was at 1007.35hPa https://optimistic.etherscan.io/tx/0x3
 the humidity levels were at 16.85%
 the light sensor measured 9.86Lux
 and barometric pressure was at 1015.68hPa https://optimistic.etherscan.io/tx/0x7a6d336c490bbd3041540de797d71744f68dc67aee9f60d3c20f061da77d2bc0
+1674694844, Performative Transaction; I just left the studio Traceback (most recent call last):
+  File "toggle.py", line 74, in <module>
+    globals()[sys.argv[1]]()
+  File "toggle.py", line 54, in main
+    txn_hash = w3.eth.send_raw_transaction(signed_tx.rawTransaction)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/eth.py", line 831, in send_raw_transaction
+    return self._send_raw_transaction(transaction)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/module.py", line 60, in caller
+    null_result_formatters)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/manager.py", line 201, in request_blocking
+    null_result_formatters)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/manager.py", line 171, in formatted_response
+    raise ValueError(response["error"])
+ValueError: {'code': -32603, 'message': 'request failed or timed out'} !_ 
