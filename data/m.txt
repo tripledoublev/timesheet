@@ -390,3 +390,7 @@ and barometric pressure was at 1015.68hPa https://optimistic.etherscan.io/tx/0x7
   File "/home/pi/.local/lib/python3.7/site-packages/web3/manager.py", line 171, in formatted_response
     raise ValueError(response["error"])
 ValueError: {'code': -32603, 'message': 'request failed or timed out'} !_ 
+1674851753, I just arrived at the studio https://optimistic.etherscan.io/tx/0xde731050ca48ee1fa5861ee57b774c1b0c0ef611c0322f3770bf43fea2ca3b47#eventlog !_ [...] the indoor temperature was 18.89°C
+the humidity levels were at 17.86%
+the light sensor measured 420.5Lux
+and barometric pressure was at 1015.83hPa https://optimistic.etherscan.io/tx/0x4957de680c4e7e5dcbe6f3e276f5ebcaa26bfa9b1a799fc38cece5c83daee6e6
