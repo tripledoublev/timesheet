@@ -394,3 +394,7 @@ ValueError: {'code': -32603, 'message': 'request failed or timed out'} !_
 the humidity levels were at 17.86%
 the light sensor measured 420.5Lux
 and barometric pressure was at 1015.83hPa https://optimistic.etherscan.io/tx/0x4957de680c4e7e5dcbe6f3e276f5ebcaa26bfa9b1a799fc38cece5c83daee6e6
+1674865080, Performative transactions. I just left the studio https://optimistic.etherscan.io/tx/0x7ca1d0d770e4726e647cedb2980dcd78db9077b650dbdd6eb39a7dabdfab4a4a#eventlog !_ [...] the indoor temperature was 21.08°C
+the humidity levels were at 17.48%
+the light sensor measured 81.44Lux
+and barometric pressure was at 1015.68hPa https://optimistic.etherscan.io/tx/0x943a504ccd504403cfa0e13f6275ededfa7f9724ca1b747c4e5ae027b63a9a94
