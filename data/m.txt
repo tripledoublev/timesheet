@@ -537,3 +537,4 @@ Traceback (most recent call last):
   File "/home/pi/.local/lib/python3.7/site-packages/requests/adapters.py", line 565, in send
     raise ConnectionError(e, request=request)
 requests.exceptions.ConnectionError: HTTPSConnectionPool(host='optimism-mainnet.infura.io', port=443): Max retries exceeded with url: /v3/9715c9bf2b9c47109c84cabf0fbcaae5 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0xb4f46c70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+1675817034, It seems like I just left the studio.
