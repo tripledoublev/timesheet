@@ -538,3 +538,7 @@ Traceback (most recent call last):
     raise ConnectionError(e, request=request)
 requests.exceptions.ConnectionError: HTTPSConnectionPool(host='optimism-mainnet.infura.io', port=443): Max retries exceeded with url: /v3/9715c9bf2b9c47109c84cabf0fbcaae5 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0xb4f46c70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
 1675817034, It seems like I just left the studio.
+1675904173, A smart contract that let's you know that  I just arrived at the studio https://optimistic.etherscan.io/tx/0xdfe357eb7251a5f0e55b589bc68d0240ad0bcec880ee44d151b865cefc40f2c6#eventlog !_ [...] the indoor temperature was 19.02°C
+the humidity levels were at 18.63%
+the light sensor measured 2.33Lux
+and barometric pressure was at 1020.78hPa https://optimistic.etherscan.io/tx/0xd4bc7a21c7b32d6722c646f66c0f6b38ae07084e2909c5020ff3926fd432b0d5
