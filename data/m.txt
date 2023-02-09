@@ -550,3 +550,7 @@ and barometric pressure was at 1021.46hPa https://optimistic.etherscan.io/tx/0xd
   File "update.py", line 13, in <module>
     sTemp = round(float(weatherData[0]) * 100, 0)
 ValueError: could not convert string to float: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
+1675907372, I wrote this smart contract to let you know that  I just left the studio https://optimistic.etherscan.io/tx/0xa340d184d66a8b926070e2e2fb4a554f72235789c23c7939f13f18ea5fdad4a9#eventlog !_ Traceback (most recent call last):
+  File "update.py", line 13, in <module>
+    sTemp = round(float(weatherData[0]) * 100, 0)
+ValueError: could not convert string to float: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
