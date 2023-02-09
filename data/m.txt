@@ -546,3 +546,7 @@ and barometric pressure was at 1020.78hPa https://optimistic.etherscan.io/tx/0xd
 the humidity levels were at 19.09%
 the light sensor measured 1.16Lux
 and barometric pressure was at 1021.46hPa https://optimistic.etherscan.io/tx/0xda599262f63b551680e4cf634e6630ccfdb1150a46ea159118c4b3d1f8eb83f6
+1675907111, I wrote this smart contract to let you know that  I just left the studio https://optimistic.etherscan.io/tx/0xe218a3fe4e9f8ffe54f60c60ede8082144fb07aca9f99a38cba7b136baf67abc#eventlog !_ Traceback (most recent call last):
+  File "update.py", line 13, in <module>
+    sTemp = round(float(weatherData[0]) * 100, 0)
+ValueError: could not convert string to float: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
