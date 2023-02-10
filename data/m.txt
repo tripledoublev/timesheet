@@ -558,3 +558,7 @@ ValueError: could not convert string to float: '░░░░░░░░░░�
 the humidity levels were at 21.15%
 the light sensor measured 46.98Lux
 and barometric pressure was at 1008.35hPa https://optimistic.etherscan.io/tx/0x0fb7d61fe643f5524571d56fe59bad88efcd5bc7a90699d208e260950bb0476b
+1675992940, I just left the studio https://optimistic.etherscan.io/tx/0xebfaa39bd8a1a024c292b800be08f9788ab1cc48ef59b44c697823703669b9d3#eventlog !_ [...] the indoor temperature was 20.1°C
+the humidity levels were at 20.17%
+the light sensor measured 46.1Lux
+and barometric pressure was at 1006.27hPa https://optimistic.etherscan.io/tx/0x53de25b131d93bef71702677896b57e08b1af9404a268877f67d301e763ab090
