@@ -554,3 +554,7 @@ ValueError: could not convert string to float: '░░░░░░░░░░�
   File "update.py", line 13, in <module>
     sTemp = round(float(weatherData[0]) * 100, 0)
 ValueError: could not convert string to float: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
+1675988950, I just arrived at the studio https://optimistic.etherscan.io/tx/0x90c82f272d92ef8131766b216ad0978486b34da53948870b6f022be6cdf2a4d0#eventlog !_ [...] the indoor temperature was 18.45°C
+the humidity levels were at 21.15%
+the light sensor measured 46.98Lux
+and barometric pressure was at 1008.35hPa https://optimistic.etherscan.io/tx/0x0fb7d61fe643f5524571d56fe59bad88efcd5bc7a90699d208e260950bb0476b
