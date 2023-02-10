@@ -542,3 +542,15 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='optimism-mainnet.
 the humidity levels were at 18.63%
 the light sensor measured 2.33Lux
 and barometric pressure was at 1020.78hPa https://optimistic.etherscan.io/tx/0xd4bc7a21c7b32d6722c646f66c0f6b38ae07084e2909c5020ff3926fd432b0d5
+1675906925, A performative transaction to let you know that  I just left the studio https://optimistic.etherscan.io/tx/0x07d63e6ef79215c08f595d3cdcb04120ef3f4150354b89ba538eb7b322cbda7a#eventlog !_ [...] the indoor temperature was 19.9°C
+the humidity levels were at 19.09%
+the light sensor measured 1.16Lux
+and barometric pressure was at 1021.46hPa https://optimistic.etherscan.io/tx/0xda599262f63b551680e4cf634e6630ccfdb1150a46ea159118c4b3d1f8eb83f6
+1675907111, I wrote this smart contract to let you know that  I just left the studio https://optimistic.etherscan.io/tx/0xe218a3fe4e9f8ffe54f60c60ede8082144fb07aca9f99a38cba7b136baf67abc#eventlog !_ Traceback (most recent call last):
+  File "update.py", line 13, in <module>
+    sTemp = round(float(weatherData[0]) * 100, 0)
+ValueError: could not convert string to float: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
+1675907372, I wrote this smart contract to let you know that  I just left the studio https://optimistic.etherscan.io/tx/0xa340d184d66a8b926070e2e2fb4a554f72235789c23c7939f13f18ea5fdad4a9#eventlog !_ Traceback (most recent call last):
+  File "update.py", line 13, in <module>
+    sTemp = round(float(weatherData[0]) * 100, 0)
+ValueError: could not convert string to float: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
