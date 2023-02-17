@@ -113,7 +113,7 @@ a:focus-visible {
   .top-left {
     font-size: calc(6vw + 6.5vh) !important;
     padding-left:2vw;
-    padding-top:9vh;
+    padding-top:4vh;
     width:60vw;
   }
   .blockchain-link a,
