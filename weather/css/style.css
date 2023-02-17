@@ -114,7 +114,7 @@ a:focus-visible {
     font-size: calc(6vw + 6.5vh) !important;
     padding-left:2vw;
     padding-top:9vh;
-    width:96vw;
+    width:60vw;
   }
   .blockchain-link a,
   .consecutive-link a {
