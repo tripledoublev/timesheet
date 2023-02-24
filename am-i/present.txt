@@ -1,3 +1,3 @@
-Out: 2023-02-23 19:46:38
-I am not at the studio
-18.96 -0.69
+In: 2023-02-24 11:55:42
+I am at the studio
+20.2 -1.24
