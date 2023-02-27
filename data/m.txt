@@ -631,3 +631,7 @@ and barometric pressure was at 1027.43hPa https://optimistic.etherscan.io/tx/0x8
 the humidity levels were at 11.89%
 the light sensor measured 90.31Lux
 and barometric pressure was at 1007.19hPa https://optimistic.etherscan.io/tx/0x06e0901d445f7ddc8d2a9379708d76e91948c8a2917f1b752e9c16e889705a93
+1677459694, A transaction to let you know that I just left the studio https://optimistic.etherscan.io/tx/0x9d58e26f89b404f477a0cd4252fb5984fbcd4aefe735c912b8718c9a7565412b#eventlog !_ [...] the indoor temperature was 21.38°C
+the humidity levels were at 11.47%
+the light sensor measured 89.43Lux
+and barometric pressure was at 1007.16hPa https://optimistic.etherscan.io/tx/0x4de616e25de4bd8aaaedcd5518c87876c423ebb7aee5fbf19907978cd3fbddc9
