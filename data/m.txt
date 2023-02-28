@@ -635,3 +635,114 @@ and barometric pressure was at 1007.19hPa https://optimistic.etherscan.io/tx/0x0
 the humidity levels were at 11.47%
 the light sensor measured 89.43Lux
 and barometric pressure was at 1007.16hPa https://optimistic.etherscan.io/tx/0x4de616e25de4bd8aaaedcd5518c87876c423ebb7aee5fbf19907978cd3fbddc9
+1677624409, This is the last time that I will let you know that I just arrived at the studio https://optimistic.etherscan.io/tx/0x5bdd3b986c5c167babaee6ebe3a34e497c42556d10a2890e0785d067619df28c#eventlog !_ Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 841, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0xb4f34c30>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/adapters.py", line 499, in send
+    timeout=timeout,
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='optimism-mainnet.infura.io', port=443): Max retries exceeded with url: /v3/9715c9bf2b9c47109c84cabf0fbcaae5 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0xb4f34c30>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "update.py", line 38, in <module>
+    gas_estimate = contract.functions.updateData(int(sTemp), int(sHumi), int(sLux), int(sPress)).estimate_gas() * 20
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/contract.py", line 1061, in estimate_gas
+    **self.kwargs
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/contract.py", line 1644, in estimate_gas_for_function
+    return web3.eth.estimate_gas(estimate_transaction, block_identifier)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/eth.py", line 868, in estimate_gas
+    return self._estimate_gas(transaction, block_identifier)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/module.py", line 60, in caller
+    null_result_formatters)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/manager.py", line 197, in request_blocking
+    response = self._make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/manager.py", line 150, in _make_request
+    return request_func(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/signing.py", line 149, in middleware
+    return make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/formatting.py", line 94, in middleware
+    response = make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/gas_price_strategy.py", line 90, in middleware
+    return make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/formatting.py", line 94, in middleware
+    response = make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/attrdict.py", line 33, in middleware
+    response = make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/formatting.py", line 94, in middleware
+    response = make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/formatting.py", line 87, in middleware
+    web3_formatters_builder(w3, method),
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/validation.py", line 140, in build_method_validators
+    w3_chain_id = w3.eth.chain_id
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/eth.py", line 632, in chain_id
+    return self._chain_id()
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/module.py", line 60, in caller
+    null_result_formatters)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/manager.py", line 197, in request_blocking
+    response = self._make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/manager.py", line 150, in _make_request
+    return request_func(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/signing.py", line 149, in middleware
+    return make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/formatting.py", line 94, in middleware
+    response = make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/gas_price_strategy.py", line 90, in middleware
+    return make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/formatting.py", line 94, in middleware
+    response = make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/attrdict.py", line 33, in middleware
+    response = make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/formatting.py", line 94, in middleware
+    response = make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/formatting.py", line 94, in middleware
+    response = make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/formatting.py", line 94, in middleware
+    response = make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/buffered_gas_estimate.py", line 40, in middleware
+    return make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/formatting.py", line 94, in middleware
+    response = make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/middleware/exception_retry_request.py", line 114, in middleware
+    return make_request(method, params)
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/providers/rpc.py", line 91, in make_request
+    **self.get_request_kwargs()
+  File "/home/pi/.local/lib/python3.7/site-packages/web3/_utils/request.py", line 102, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)  # type: ignore
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/sessions.py", line 635, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='optimism-mainnet.infura.io', port=443): Max retries exceeded with url: /v3/9715c9bf2b9c47109c84cabf0fbcaae5 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0xb4f34c30>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
