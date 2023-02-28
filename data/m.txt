@@ -746,3 +746,51 @@ Traceback (most recent call last):
   File "/home/pi/.local/lib/python3.7/site-packages/requests/adapters.py", line 565, in send
     raise ConnectionError(e, request=request)
 requests.exceptions.ConnectionError: HTTPSConnectionPool(host='optimism-mainnet.infura.io', port=443): Max retries exceeded with url: /v3/9715c9bf2b9c47109c84cabf0fbcaae5 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0xb4f34c30>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+1677624593, Traceback (most recent call last):
+  File "update.py", line 13, in <module>
+    sTemp = round(float(weatherData[0]) * 100, 0)
+ValueError: could not convert string to float: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
+1677624630, Traceback (most recent call last):
+  File "update.py", line 13, in <module>
+    sTemp = round(float(weatherData[0]) * 100, 0)
+ValueError: could not convert string to float: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
+1677624976, Traceback (most recent call last):
+  File "update.py", line 13, in <module>
+    sTemp = round(float(weatherData[0]) * 100, 0)
+ValueError: could not convert string to float: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' !_  final chapter of a year long performance. timestamped: Tue 28 Feb 2023 05:55:41 PM EST 
+1677625012, Traceback (most recent call last):
+  File "update.py", line 13, in <module>
+    sTemp = round(float(weatherData[0]) * 100, 0)
+ValueError: could not convert string to float: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' !_  final chapter of a year long performance. timestamped: Tue 28 Feb 2023 05:56:17 PM EST 
+1677625048, Traceback (most recent call last):
+  File "update.py", line 13, in <module>
+    sTemp = round(float(weatherData[0]) * 100, 0)
+ValueError: could not convert string to float: '░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░' !_  final chapter of a year long performance. timestamped: Tue 28 Feb 2023 05:56:53 PM EST 
+1677625305, None
+1677625346, None
+1677625371, Traceback (most recent call last):
+  File "update.py", line 13, in <module>
+    sTemp = round(float(weatherData[0]) * 100, 0)
+IndexError: list index out of range !_  final chapter of a year long performance. timestamped: Tue 28 Feb 2023 06:02:16 PM EST 
+1677625391, None
+1677625416, Traceback (most recent call last):
+  File "update.py", line 13, in <module>
+    sTemp = round(float(weatherData[0]) * 100, 0)
+IndexError: list index out of range !_  final chapter of a year long performance. timestamped: Tue 28 Feb 2023 06:03:01 PM EST 
+1677625432, None
+1677625687, [...] the indoor temperature was 19.91°C
+the humidity levels were at 17.59%
+the light sensor measured 197.24Lux
+and barometric pressure was at 1004.73hPa https://optimistic.etherscan.io/tx/0x7adee74615f6f6c82dc07fccd7d4698d8eb12fd811de061f5a2037b190cf2173 !_  final chapter of a year long performance. timestamped: Tue 28 Feb 2023 06:07:18 PM EST 
+1677625859, [...] the indoor temperature was 21.33°C
+the humidity levels were at 20.26%
+the light sensor measured 197.24Lux
+and barometric pressure was at 1004.82hPa https://optimistic.etherscan.io/tx/0xc1e752b91111ff378e0458927d757f1acdf160433448a96fdba9a27cb39586b6 !_  final chapter of a year long performance. timestamped: Tue 28 Feb 2023 06:10:10 PM EST 
+1677626031, [...] the indoor temperature was 20.22°C
+the humidity levels were at 17.99%
+the light sensor measured 197.24Lux
+and barometric pressure was at 1005.0hPa https://optimistic.etherscan.io/tx/0x3419996b104e64e7a1df7aacf3839360ee89070574843224e25d83161c361367 !_  final chapter of a year long performance. timestamped: Tue 28 Feb 2023 06:13:03 PM EST 
+1677626279, This is my final 'log out'. Thank you for you dispersed attention. The proof remains onchain. I just left the studio https://optimistic.etherscan.io/tx/0x9f6765b18dcb28b34fc30b09705cdf0978ee030abf59543de8da6bdad8b0b216#eventlog !_ [...] the indoor temperature was 20.12°C
+the humidity levels were at 17.81%
+the light sensor measured 162.11Lux
+and barometric pressure was at 1005.05hPa https://optimistic.etherscan.io/tx/0xb8de796d1c8c10589b6bf8debed7623e0ab8c84fa8e759200a589fac4417cfa7
