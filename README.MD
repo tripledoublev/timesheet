@@ -13,7 +13,7 @@ My interest in environmental sensing brought me to integrate [weather visualizat
 
 #### The end
 
-I [logged out of the studio for the last time](https://optimistic.etherscan.io/tx/0x9f6765b18dcb28b34fc30b09705cdf0978ee030abf59543de8da6bdad8b0b216#eventlog) on Feb-28-2023 11:17:10 PM +UTC as my lease ended.
+I [`logged out of the studio for the last time`](https://optimistic.etherscan.io/tx/0x9f6765b18dcb28b34fc30b09705cdf0978ee030abf59543de8da6bdad8b0b216#eventlog) on Feb-28-2023 11:17:10 PM +UTC as my lease ended.
 
 ## [Am I at the studio?](https://vincent.charlebois.info/am-i/)
 
